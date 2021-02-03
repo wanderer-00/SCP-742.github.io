@@ -230,44 +230,56 @@
             color: red;
         }
 
+        /* BOTTOM */
         .bottom {
-            /* блок с контактной информацией*/
-            background: rgba(52, 52, 52, 1);
-            min-height: 100px;
+            background-color: rgba(34, 34, 34, 0.8);
+            border-radius: 25px 25px 0 0;
+            border: 2px solid #7E7D7D;
+        }
+
+        /* bottomText */
+        .bottomText {
+            font-size: 40px;
+            padding: 40px 0 40px 20px;
+            color: gray;
+        }
+
+        /* Строка данных аккаунта */
+        .bottomAk {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: no-wrap;
+            padding: 20px 0 20px 20px;
+            border-top: 1px solid grey;
+        }
+
+        /* div Иконок аккаунтов */
+        .AkIco {
+            flex-basis: 15%;
+        }
+
+        /* Иконки аккаунтов */
+        .AkIco1 {
             width: 100%;
-        }
-
-        .vk {
-            /* "страницы разработчика" */
-            color: #FF1493;
-            margin: 20px;
-            font-size: 30px;
-        }
-
-        .vk1 {
-            /* блок страницы */
-            border: 1px solid red;
-            background: rgba(21, 21, 221, 0.2);
-            align-items: center;
-            justify-content: center;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        .vk2 {
-            align-items: center;
-            justify-content: center;
-            /* имя страницы */
-            text-decoration: none;
-            color: white;
-            font-size: 50px;
-        }
-
-        .ico {
-            /* иконки страниц */
             border-radius: 50%;
-            position: bottom;
+        }
+
+        /* Имя аккаунта */
+        .AkName {
+            flex-basis: 70%;
+            font-size: 60px;
+            margin: auto 0 auto 20px;
+            height: 60px;
+            color: #FFA000;
+        }
+
+        /* ICO соцсети */
+        .PlAk {
+            flex-basis: 15%;
+        }
+
+        .PlAk1 {
+            width: 100%;
         }
 
     </style>
