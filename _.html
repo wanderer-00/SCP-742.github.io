@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Где остановился?</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #343434;
+            font-family: Arial;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #container{
+            color: white;
+            border: 2px solid #FFA000;
+            margin: 10px;
+        }
+        #imgBlock, #textBlock{
+            vertical-align: top; 
+            padding: 10px;
+            display: inline-block;
+        }
+        #imgBlock{
+            background: ;
+        }
+        #img{
+            height: 350px;
+        }
+        #textBlock{
+            margin-top: 0;
+        }
+        #name{
+            font-size: 40px;
+            color: #FFA000;
+        }
+        #sezon, #seria, #time{
+            font-size: 30px;
+        }
+        
+    /* Кнопки */
+        #lineButton, #blockButton {
+            color: white;
+            border: 4px solid #FFA000;
+            margin: 10px;
+            padding: 0px 20px;
+            font-size: 70px;
+            background: transparent;
+        }
+    </style>
+    
+    <button id="lineButton">line</button>
+    <button id="blockButton">block</button>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/_/Mr.robot.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="">
+                <font id='name'>Mr.Robot</font></a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>эпизод: 9</font><br>
+            <font id='time'>время: 00:00</font>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Скитальцы.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/skital-cy">
+            <font id='name'>Скитальцы</font></a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>эпизод: 10</font><br>
+            <font id='time'>время: 00:00</font>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Связь сердец. По случайному пути.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/svyaz-serdec-po-sluchajnomu-puti">
+            <font id='name'>Связь сердец</font></a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>серия: 13</font><br>
+            <font id='time'>время: 11:24</font>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Шерлок из Кабуки-тё.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/sherlok-iz-kabuki-te">
+            <font id='name'>Шерлок из Кабуки-тё</font></a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>серия: 7</font><br>
+            <font id='time'>время: 00:00</font>
+        </div>
+    </div>
+
+<!--<div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Путешествие Элейны.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/puteshestvie-elejny">
+            <font id='name'>Путешествие Элейны</font></a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>серия: 11</font><br>
+            <font id='time'>время: 00:00</font>
+        </div>
+    </div>
+-->
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/В подземелье я пойду, там красавицу найду 2.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/v-podzemel-e-ya-pojdu-tam-krasavicu-najdu-2" id='name'>
+            В подземелье я пойду, там красавицу найду 3</a><br>
+            <font id='sezon'>сезон: 3</font><br> 
+            <font id='seria'>серия: </font><br>
+            <font id='time'>время: 05:24</font>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Призрачный мир мириады цветов.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/prizrachnyj-mir-miriady-cvetov" id='name'>
+            Призрачный мир мириады цветов</a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>серия: 5</font><br>
+            <font id='time'>время: 08:30</font><br>
+            <font id='time'>озвучка: AniDUB</font>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Чёрный клевер.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/chernyj-klever-tv" id='name'>
+            Чёрный клевер</a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>серия: 58</font><br>
+            <font id='time'>время: 00:00</font><br>
+            <font id='time'>озвучка: AniLibria</font>
+        </div>
+    </div>
+
+    <!--<div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="">
+        </div>
+        <div id="textBlock">
+            <a href="" id='name'>
+            </a><br>
+            <font id='sezon'>сезон: </font><br> 
+            <font id='seria'>серия: </font><br>
+            <font id='time'>время: </font><br>
+            <font id='time'>озвучка: </font>
+        </div>
+    </div>-->
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Хантер х Хантер (1999).jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/ohotnik-h-ohotnik" id='name'>
+            Хантер х Хантер (1999)
+            </a><br>
+            <font id='sezon'>сезон: 1</font><br> 
+            <font id='seria'>серия: 13</font><br>
+            <font id='time'>время: 00:00</font><br>
+            <font id='time'>озвучка: </font>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id='imgBlock'>
+            <img id='img' src="img/anime/Волчица и пряности OVA.jpg">
+        </div>
+        <div id="textBlock">
+            <a href="https://yummyanime.club/catalog/item/volchica-i-pryanosti-ova" id='name'>
+            Волчица и пряности OVA
+            </a><br>
+            <font id='sezon'>сезон: 1 OVA</font><br> 
+            <font id='seria'>серия: 1</font><br>
+            <font id='time'>время: 00:00</font><br>
+            <font id='time'>озвучка: </font>
+        </div>
+    </div>    
+
+    <script>
+        document.getElementById('lineButton').onclick = LINE;
+        
+        function LINE(){ /* строчный режим */
+            var IB = document.getElementById('imgBlock');
+            IB.style.cssText = 'background: green;';
+        }
+
+    </script>
+</body>
+</html>

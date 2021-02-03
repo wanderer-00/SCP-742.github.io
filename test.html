@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/testFoto/favicon.png" type="image/png">
+    <title>TEST - это моя песочница</title>
+</head>
+    <style>
+
+
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: #000;
+            font-family: Calibri;
+        }
+        #container{
+            width: 100wh;
+            padding: 10px;
+        }
+        #name{
+            font-size: 40px;
+            padding: 10px;
+            color: #AEEA00;
+        }
+        #o{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    /* SLIIDER control */
+        #slider{
+            width: 500px;
+            height: 125px;
+            border: 4px solid #343434;
+            overflow: hidden;
+        }
+        #line1{
+            height: 100%;
+            width: 1000px;
+            position: relative;
+            left:0;
+            transition: all ease 0.5s;
+        }
+        #line1::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #sliderIMG{
+            height: 125px;
+            float:left;
+        }
+        #sliderIco{
+            background: none;
+        }
+        
+        /* Кнопки управления */
+        #buttonLeft, #buttonRight{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background: transparent;
+            border: none !important;
+        }
+
+
+        
+    /* AUTO Slider */
+        #line{
+            width: 1000px;
+            position: relative;
+            left:0;
+            transition: all ease 0.5s;
+        }
+        #line::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+
+    /* Обработка фото */
+        #slide{
+            width: 640px;
+            height: 426px;
+            border: 3px solid white;
+            position: relative;
+            overflow: hidden;
+            background: blue;
+        }
+        #one, two{
+            width: 640px;
+            height: 426px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+
+
+    /* Волна */
+        #box{
+            font-family: consolas;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        #volna{
+            position: relative;
+            -webkit-box-reflect: below -12px linear-gradient(
+            transparent, rgba(0,0,0,0.3));/*0.2*/
+        }
+        #volna span{
+            text-transform: uppercase;
+            display: inline-block;
+            position: relative;
+            color: white;
+            font-size: 6em;/*2em*/
+            animation: animate 2s ease-in-out infinite;/*1s*/
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes animate
+        {
+            0%{
+                transform: translateY(0px);
+            }
+            20%{
+                transform: translateY(-60px);/*-20px*/
+            }
+            40%,100%{
+                transform: translateY(0px);
+            }
+        }
+
+
+
+    /* AHEGAO */
+        #ahegao_container{
+            min-width: 100wh;
+            min-height: 100vh;
+            display: flex;
+            background: white;
+            justify-content: center;
+        }
+        #ahegao_video{
+            position: relative;
+            height: 100%;
+        }
+
+
+
+    /* Player */
+        .player{
+            width: 500px;
+            background: white;
+        }
+        .player .player_img{
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+        .player .player_img img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .player audio {
+            width: 100%;
+            outline: none;
+        }
+        #player_name{
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+    
+<body>
+
+
+
+<!-- Loading... -->
+    <div id="box">
+        <div id="volna">
+            <span style='--i:1;'>L</span>
+            <span style='--i:2;'>o</span>
+            <span style='--i:3;'>a</span>
+            <span style='--i:4;'>d</span>
+            <span style='--i:5;'>i</span>
+            <span style='--i:6;'>n</span>
+            <span style='--i:7;'>g</span>
+        </div>
+    </div>
+
+
+
+<!-- Ahegao 
+    <div id="ahegao_container">
+        <video src='video/Ahegao%20(online-video-cutter.com).mp4' id="ahegao_video">
+        </video>
+    </div>
+-->
+
+
+<!-- SLIDER auto -->
+    <div id="container">
+        <div id='name'>AUTO Slider</div>
+        <div id="o">
+            <div id='slider'>
+                <div id='line'>
+                    <img id='sliderIMG' src="img/web/badoo.png">
+                    <img id='sliderIMG' src="img/web/bebo.png">
+                    <img id='sliderIMG' src="img/web/behance.png">
+                    <img id='sliderIMG' src="img/web/blogger.png">
+                    <img id='sliderIMG' src="img/web/deviantart.png">
+                    <img id='sliderIMG' src="img/web/digg.png">
+                    <img id='sliderIMG' src="img/web/disqus.png">
+                    <img id='sliderIMG' src="img/web/dribbble.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- SLIDER control -->
+    <div id="container">
+        <div id='name'>Control Slider</div>
+        <div id="o">
+            <button id="buttonRight"><img style='width: 80px;' src="img/icoFunction/left-arrow.png"></button>
+            <div id='slider'>
+                <div id='line1'>
+                    <img id='sliderIMG' src="img/web/badoo.png" alt="">
+                    <img id='sliderIMG' src="img/web/bebo.png" alt="">
+                    <img id='sliderIMG' src="img/web/behance.png" alt="">
+                    <img id='sliderIMG' src="img/web/blogger.png" alt="">
+                    <img id='sliderIMG' src="img/web/deviantart.png" alt="">
+                    <img id='sliderIMG' src="img/web/digg.png" alt="">
+                    <img id='sliderIMG' src="img/web/disqus.png" alt="">
+                    <img id='sliderIMG' src="img/web/dribbble.png" alt="">
+                </div>
+            </div>
+            <button id='buttonLeft'><img style='width: 80px;' src="img/icoFunction/right-arrow.png"></button>
+        </div>
+    </div>
+    
+    
+    
+<!-- Обработка фото -->
+    <div id="container">
+        <div id="name">Обработка фото</div>
+        <div id="o">
+        <div id='slide'>
+            <div id='one'>
+                <img style='width: 640px' src="img/testFoto/11.jpg">
+            </div>
+            <div id='two'>
+                <img style='width: 640px' src="img/testFoto/UNGe3OcoTGA.jpg">
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- Player -->
+    <div id="container">
+    <div id="name">Player v1.0</div>
+    <div id="o">
+        
+   
+    <div class="player">
+        <div class="player_img">
+            <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+        </div>
+        <audio controls>
+            <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+        </audio>
+    </div>
+   
+   
+    </div>
+    </div>
+
+
+
+<!-- Player v2.0 -->
+    <div id="container">
+    <div id="name">Player v2.0</div>
+    <div id="o">
+        
+   
+    <div class="player">
+        <div id="player_name">Fytch - Sirens Over Paris</div>
+        <div class="player_img">
+            <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+        </div>
+        <audio controls>
+            <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+        </audio>
+    </div>
+   
+   
+    </div>
+    </div>
+   
+   
+    <script>
+        
+        
+        
+    /* SLIIDER control */
+        var left1 = 0;
+        document.getElementById('buttonLeft').onclick = sliderLeft;
+        function sliderLeft(){
+            var line = document.getElementById('line1');
+            left1 = left1 -125;
+            if (left1 <= -500){
+                left1 = -500;
+            }
+            line.style.left = left1+'px';
+        }
+        
+        
+        document.getElementById('buttonRight').onclick = sliderRight;
+        function sliderRight(){
+            var line = document.getElementById('line1');
+            left1 = left1 +125;
+            if (left1 >= 0){
+                left1 = 0;
+            }
+            line.style.left = left1+'px';
+        }
+        
+        
+        
+    /* SLIIDER auto */
+        autoSlider();
+        var left = 0;
+        var timer;
+        
+        function autoSlider(){
+            timer = setTimeout(function(){
+                var line = document.getElementById('line');
+                left = left -125;
+                if (left < -500){
+                    left = 0;
+                    clearTimeout(timer);
+                }
+                line.style.left = left+'px';
+                autoSlider();
+            }, 2000);
+        }
+        
+        
+        
+        
+    /* Обработка фото */
+        document.getElementById('slide').onmousemove = function (event){
+            var x = event.offsetX;
+            console.log(x);
+            document.getElementById('one').style.width = x + 'px';
+        }
+        /*document.getElementById('slide').onmouseleave = function (event){
+            document.getElementById('one').style.width = '1280px';
+        }*/
+        
+        
+        
+        var myVideo = document.getElementById("ahegao_video");
+
+    </script>
+</body>
+</html>
