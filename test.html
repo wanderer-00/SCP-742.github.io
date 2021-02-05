@@ -117,6 +117,13 @@
             position: relative;
             -webkit-box-reflect: below -12px linear-gradient(
             transparent, rgba(0,0,0,0.3));/*0.2*/
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;           /* Non-prefixed version, currently
+                                              not supported by any browser */
         }
         #volna span{
             text-transform: uppercase;
@@ -139,23 +146,6 @@
                 transform: translateY(0px);
             }
         }
-
-
-
-    /* AHEGAO */
-        #ahegao_container{
-            min-width: 100wh;
-            min-height: 100vh;
-            display: flex;
-            background: white;
-            justify-content: center;
-        }
-        #ahegao_video{
-            position: relative;
-            height: 100%;
-        }
-
-
 
     /* Player */
         .player{
@@ -183,12 +173,24 @@
             padding: 10px;
             font-size: 20px;
         }
+        
+/* ПАЛИТРА */
+        #palitra{
+            width: 50%;
+            border: 5px solid white;
+            display: flex;
+            flex-wrap: no-wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        #t{
+            height: 100px;
+            flex-basis: 25%;
+        }
     </style>
     
 <body>
-
-
-
 <!-- Loading... -->
     <div id="box">
         <div id="volna">
@@ -201,16 +203,6 @@
             <span style='--i:7;'>g</span>
         </div>
     </div>
-
-
-
-<!-- Ahegao 
-    <div id="ahegao_container">
-        <video src='video/Ahegao%20(online-video-cutter.com).mp4' id="ahegao_video">
-        </video>
-    </div>
--->
-
 
 <!-- SLIDER auto -->
     <div id="container">
@@ -312,8 +304,15 @@
    
     </div>
     </div>
-   
-   
+    
+<!-- ПАЛИТРА -->
+    <div id="palitra">
+        <div id="t" style='background: rgba(21,21,221,0.2);'></div>
+        <div id="t" style='background: #FFA000;'></div>
+        <div id="t" style='background: ;'></div>
+        <div id="t" style='background: darkgrey;'></div>
+    </div>
+    
     <script>
         
         
