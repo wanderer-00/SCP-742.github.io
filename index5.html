@@ -7,112 +7,49 @@
 
     <style type="text/css">
         body {
+            color: white;
             margin: 0px;
             padding: 0px;
             background: #343434 url(img/fon.jpg);
-            /* Фоновый цвет и фоновый рисунок*/
             background-attachment: fixed;
-            /* Фон страницы фиксируется */
             background-repeat: no-repeat;
-            /* "repeat-x" Изображение повторяется по горизонтали */
             background-size: cover;
-            /* "contain" - масштабирует картинку так, чтобы хотя бы одна сторона картинки целиком поместилась в заданную область*/
             background-position: 0px 0px;
-            /* позиция y.x */
         }
 
         a {
             text-decoration: none;
+            color: red;
         }
 
-        .header {
-            margin-bottom: 20px;
-            background: rgba(21, 21, 21, 0.2);
-            /*background: [rgb, rgba(red(0-255), green(0-255), blue(0-255), прозрачность[0-1]), #ffffff]*/
-            align-items: center;
-            /*выравнивает[y]: center, top, bottom */
-            z-index: ;
-            /*положение[z]*/
-            height: 120px;
+/* HEADER */
+        #header {
             width: 100%;
-            border-bottom: 1px solid #343434;
-            /*border-[bottom, left, right, top]: [толщина] [стиль] [цвет]; */
+            height: 120px;
             box-shadow: 0px 5px 25px 0px black;
-            /*box-shadow: [x] [y] [плотность] [размытие] [цвет]; */
+            background: rgba(21, 21, 21, 0.2);
+            align-items: center;
+            border-bottom: 1px solid #343434;
+            margin-bottom: 150px;
+        }
+        
+        #headerIMG {
+            height: 120px;
         }
 
-        .knopka_poisk {
-            justify-content: center;
-            border-radius: 10px;
-            align-items: center;
+        #search {
+            width: 85px;
+            float: right;
+            border: 3px solid #7e7d7d;
             margin: 5px;
             padding: 10px;
             display: flex;
-            border: 3px solid white;
-            width: 85px;
-            float: right;
-        }
-
-
-
-
-
-        .razdels {
-            background: rgba(52, 52, 200, 0);
-            position: relative;
-            display: flex;
             align-items: center;
+            border-radius: 10px;
             justify-content: center;
-            float: left;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
         }
 
-        .razdel {
-            border-radius: 0px 25px 0px 0px;
-            background: #343434;
-            font-size: 30px;
-            padding: 10px;
-            opacity: 1;
-            border: 2px solid white;
-            color: yellow;
-        }
-
-        .razdel:hover {
-            border-bottom: 2px solid rgba(52, 52, 52, 1);
-        }
-
-        .a-razdel {
-            color: yellow;
-        }
-
-        .a-razdel:hover {
-            border-bottom: 0px solid red;
-            color: orange;
-        }
-
-
-
-
-        .svaip_gallery {
-            margin: 50px 0px 50px 0px;
-            border-bottom: 2px solid #7e7d7d;
-            box-sizing: border-box;
-            background: rgba(52, 52, 52, 1);
-            position: relative;
-            padding: 30px 0px 30px 0px;
-            display: flex;
-            height: auto;
-            width: 100%;
-        }
-
-        .s {
-            margin: 10px;
-        }
-
-
-        /* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
+/* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
         .content {
             border-bottom: 0px;
             border-right: 2px solid #7e7d7d;
@@ -182,7 +119,7 @@
             opacity: 1;
         }
 
-
+/* НАВИГАТОР */
         .y {
             background-color: rgba(32, 32, 32, 0.8);
             justify-content: right;
@@ -230,7 +167,7 @@
             color: red;
         }
 
-        /* BOTTOM */
+/* BOTTOM BLOCK */
         .bottom {
             background-color: rgba(34, 34, 34, 0.8);
             border-radius: 25px 25px 0 0;
@@ -286,53 +223,14 @@
 </head>
 
 <body>
-
-
-    <bgsound src="audio/!.mp3" loop="1" volume="-1000" balance="0" />
-
-
-    <!-- СТРОКА ПОИСКА -->
-    <div class="header">
-        <a href="">
-            <img src="img/logo.png" style="background: ; height: 120px; ">
-            <img src="img/123.png" style="background: ; height: 120px; ">
-        </a>
-
-        <a href="">
-            <div class="knopka_poisk">
-                <img src="img/vpoisk.png" height="80px" />
-            </div>
-        </a>
+    <!-- HEADER -->
+    <div id='header'>
+        <img id='headerIMG' src="img/logo.png">
+        <img id='headerIMG' src="img/123.png">
+        <div id='search'>
+            <img src="img/search.png" height="80px" />
+        </div>
     </div>
-
-    <!--<font style="color: #660000; font-size:135px;">-->
-
-    <div class="razdels">
-        <div class="razdel">Picture</div>
-        <div class="razdel">Gif</div>
-        <a href="audio.html">
-            <div class="razdel">Audio</div>
-        </a>
-        <div class="razdel">Жанры</div>
-        <div class="razdel"><a href="../test/test.html" class="a-razdel">TEST</a></div>
-    </div>
-
-
-
-    <div class="svaip_gallery">
-        <div class=""><img src="img/picture/1.jpg" class="s" height="400px" /></div>
-        <div class=""><img src="img/picture/2.jpg" class="s" height="400px" /></div>
-        <div class=""><img src="img/picture/11.jpeg" class="s" height="400px" /></div>
-        <!--<div class="name">Убийца Акаме</div>-->
-    </div>
-
-
-
-
-    <div class="fon"><img></div>
-
-
-
 
     <div class="y">
         <!-- путеводитель, наводка -->
@@ -375,10 +273,6 @@
             </a>
         </div>
     </div>
-
-
-
-
 
     <div class="content">
 
@@ -522,11 +416,5 @@
         </a>
     </div>
 
-
-    <!--
-rgba(21,21,221,0.2)
--->
-
 </body>
-
 </html>
