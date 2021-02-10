@@ -1,0 +1,299 @@
+<!DOCTIPE html>
+<html>
+<head>
+	<title>CISCO</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Work Sans', sans-serif;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:visited {
+            color: #FFFFFF; /* Цвет посещенных ссылок */
+        }
+        a:active {
+            color: #999999; /* Цвет активных ссылок */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #351c75;
+        }
+        h3{
+            font-size: 26.5px;
+        }
+        
+        
+        #place_global{
+            background-color: red;
+        }
+        
+        
+    /* Hello page */
+        #box{
+            height: 100vh;
+            width: 100%;
+            background-color: #FCE5CD;
+        }
+        #text{
+            margin: auto;
+            text-align: center;
+            background-color: ;
+            
+            margin: 0;
+            transform: translate(-50%, -50%);
+            position: absolute; 
+            top: 50%; 
+            left: 50%;
+            
+            /* запрет на выделение текста */
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;           /* Non-prefixed version, currently
+                                              not supported by any browser */
+        }
+        /* LINE */
+        #line{
+            width: 96%;
+            bottom: 0;
+            padding: 2%;
+            position: absolute;
+            background-color: #351c75;
+        }
+        #lineText{
+            color: #e69138;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        /* COLOR */
+        #purple{
+            color: #351c75;
+            font-size: 70px;
+            font-weight: 600;
+        }
+        #orange{
+            color: #e69138;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        
+        
+        #book{
+            width: 94%;
+            padding: 3%;
+            background-color: white;
+        }
+        
+    /* ПОЛЕ ДЛЯ КОДА */
+        #codePlace{
+            color: white;
+            width: 96%;
+            padding: 2%;
+            border-radius: 5px;
+            background-color: #2d2d2d;
+        }
+        
+        #grey{
+            color: #999999;
+        }
+        #white{
+            color: #ffffff;
+        }
+        
+    /* ПОДВАЛ */
+        #down_box{
+            color: #FFFFFF;
+            padding: 10px;
+            font-size: 12px;
+            background-color: #351C75;
+        }
+        
+        
+        
+        
+        
+        
+        #z{
+            color:#FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="place_global">
+    
+    <div id="box">
+        <div id='text'>
+            <font id='purple'>CISCO :)</font><br/>
+            <font id='orange'>directory</font>
+        </div>
+    
+        <div id="line">
+            <font id='lineText'>синтаксис - основа</font>
+        </div>
+    </div>
+    
+    <div id="book">
+    
+    <div id="codePlace">Синтакситс:</div>
+
+<pre id="codePlace"><font style='color:#e2777a;'>#E2777A - </font>
+<font style='color:#F8C555;'>#F8C555 - </font>
+<font style='color:#999999;'>#999999 - комментарий</font>
+<font style='color:#7ec699;'>#7EC699 - </font>
+<font style='color:#CC99CD;'>#CC99CD - </font>
+<font style='color:#67CDCC;'>#67CDCC - оператор</font>
+<font style='color:#F08D49;'>#F08D49 - </font></pre>
+    
+    <h2><font style='color: #351c75;'>Для описания команд будут использоваться некоторые символы.</font></h2>
+    [ ] – в этих скобках находится необязательный параметр какой либо команды<br/>
+    | – этим символом разделяются альтернативные параметры команды(или то или то)<br/>
+        <font style='color:red;'>В дальнейшем заменить на синтаксис!!!</font><br/><br/>
+    
+    
+    <div id="codePlace" style='color:#F8C555;'>
+        <b>show ip eigrp neighbors [x] [details]</b> <font id="z">- можно посмотреть таблицу соседей протокола EIGRP. X это номер автономной системы, слово [details] расширяет вывод</font><br/>
+    <b>show ip eigrp interfaces [x] [details]</b> – отображает информацию протокола EIGRP для каждого интерфейса.Номер автономной системы ограничивает вывод, слово details расширяет вывод<br/>
+    <b>show ip eigrp topology [x] [ip-address][mask]] [all-links]</b> – выводит все маршруты, резервные и основные.С помощью необязательных параметров можно ограничить(отфильтровать) вывод на основе автономной системы, или адреса сети.Необязательный параметр [all-links] отображает не только активные маршруты, но и все имеющиеся маршруты топологии сети протокола EIGRP.<br/>
+    <b>show ip eigrp traffic [x]</b> – показывает число отправленных/полученных пакетов протокола EIGRP. Можно отфильтровать вывод задав [x](номер автономной системы).<br/>
+    </div>
+    
+    <h3>Команды для отладки протокола EIGRP.</h3>
+    <b>debug eigrp fsm</b> – этой командой можно посмотреть как работает алгоритм DUAL,как срабатывает резервный маршрут, как добавляются и удаляются маршруты.<br/>
+    <b>debug eigrp packets</b> – показывает передачу и прием пакетов протокола EIGRP.Например пакеты приветствия, обновления маршрутов, запросы или ответы на запрос.В пакетах используются номера последовательности и номера подтверждений используемые фирменным алгоритмом надежной доставки данных протокола EIGRP.<br/>
+    <b>router eirgp [№]</b> - смена номера автономной системы<br/>
+    <b>auto-summary</b>
+    <br/><br/>
+
+    <h3>OSPFv2</h3>
+
+    <b>router ospf [x]</b> - задать индетификатор процесса, [x]-число<br/>
+    <b>router-id [x.x.x.x]</b> - индетификатор маршрутизатора, [x]-число<br/>
+    <b>passive-interface [G0/0]</b>	- настроить интерфей, как пассивный<br/>
+    <b>network [IP] [Mask_инвертированная] area 0</b><br/>
+    <b>end</b> - конец процесса<br/>
+    <b>ip ospf priority [число]</b> - установка приориетета для интерфейса<br/>
+    <b>show ip ospf interface [#]</b> - проверка статуса роутеров
+    
+    <h3>OSPFv3</h3>
+    
+    <b>ipv6 ospf [x] area [y]</b> - [x]=id процесса, [y]=номер области<br/>
+    <b>ipv6 router ospf [x]</b> - [x]=id процесса<br/>
+    <b></b><br/>
+    
+    <h3>Вход/Выход/Перезагрузка</h3>
+
+    <b>enable</b> — вход в привилегированный режим EXEC<br/>
+    <b>exit</b> — команда для возвращения назад по дереву конфигурирования<br/>
+    <b>reload</b> — перезагрузка устройства<br/>
+
+
+    <h3>Безопасность</h3>
+
+    <b>enable password</b>— безопасный доступ к привилегированному режиму<br/>
+    <b>enable secret</b> — зашифрованный пароль для доступа к привилегированному режиму<br/>
+    <b>service password</b>	-encryption — шифрование паролей enable и console<br/>
+    <b>banner motd</b> — настройка баннера MOTD<br/>
+    <b>line console 0</b> — безопасный доступ к консоли<br/>
+	<b>Справочная информация router ?</b> — список поддерживаемых протоколов маршрутизатора<br/>
+
+
+    <h3>Тайм-ауты</h3>
+    
+    <b>exec-timeout</b> — увеличение времени таймаута<br/>
+
+
+    <h3>SHOW</h3>
+
+    <b>show</b>	— фильтрация выходных данных<br/>
+    <b>show mac-address-table</b> — вывод таблицы MAC-адресов<br/>
+    <b>show arp</b> — вывод таблицы ARP<br/>
+    <b>show flash</b> — проверка содержимого флеш-памяти<br/>
+    <b>show history</b> — история команд<br/>
+    <b>show running-config</b> — Вывод текущей конфигурации коммутатора/маршрутизатора<br/>
+    <b>show ip interface brief</b> — сведения об IP-адресе, портах и интерфейсах устройства<br/>
+    <b>show ip router</b> — вывод таблицы маршрутизации<br/>
+    <b>show vlan</b> — вывод сведений о существующих VLAN.<br/>
+
+
+    <h3>IPv4</h3>
+
+    <b>ip address</b> — настройка параметров IPv4 на интерфейсе маршрутизатора<br/>
+    <b>ip route</b> — настройка статического маршрута IPv4<br/>
+    <b>ip default-gateway</b> — шлюз по умолчанию для коммутатора<br/>
+
+
+    <h3>IPv6</h3>
+
+    <b>show ipv6 route static</b> — проверка статических маршрутов IPv6<br/>
+    <b>ipv6 route</b> — настройка статического маршрута IPv6<br/>
+    <b>ipv6 address</b> — настройка параметров IPv6 на интерфейсе маршрутизатора<br/>
+    <b>ipv6 unicast-routing</b> — включение пересылки IPv6 пакетов на маршрутизаторе<br/>
+
+    <h3>LOOPBACK</h3>
+    
+    <b>interface loopback</b> — настройка интерфейса loopback на маршрутизаторе<br/>
+
+    <h3>VLAN</h3>
+    
+    <b>vlan</b> — объявление (создание) нового VLAN
+    <b>name</b>	— присвоение имени для VLAN
+    <b>no shutdown</b> — включение VLAN
+    <b>shutdown</b> — отключение VLAN
+    <b>interface vlan</b> — настройка IP-адреса для интерфейса VLAN коммутатора
+
+    <h3>Работа с интерфейсами</h3>
+    <b>int range</b> — выбор интерфейсов в указанном диапазоне
+
+    <h3>Файлы конфигурации</h3>
+    <b>erase startup-config</b> — сброс настроек конфигурации startup-config<br/>
+    <b>copy startup-config flash</b> — сохранение файла загрузочной конфигурации во флеш-память<br/>
+    <b>copy running-config startup-config</b> — сохранение файлов конфигурации в NVRAM<br/><br/>
+
+
+    <h3>Протокол DHCP</h3>
+
+    Настройка DHCP пула — Полная настройка DHCP пула на сетевом устройстве<br/><br>
+
+    <b>ip dhcp pool</b> — Создание нового пула DHCP<br/>
+    <b>network</b> — Диапазон сети для пула DHCP<br/>
+    <b>defaul-router</b> — Шлюз по умолчанию для пула DHCP<br/>
+    <b>dns-server</b> — DNS-адрес сервера для пула DHCP<br/>
+    <b>lease</b> — Срок аренды IP-адреса для пула DHCP<br/>
+    <b>domain-name</b> — Адрес домена для пула DHCP<br/>
+    <b>ip dhcp excluded-address</b> — Исключение IP-адреса из пула DHCP<br/>
+
+
+    <h3>Port-Security</h3>
+
+    <b>switchport port-security</b>	— Активация функции port-security<br/>
+    <b>switchport port-security maximum</b>	— Количество MAC-адресов на порт устройства<br/>
+    <b>switchport port-security aging time</b> — Время старения MAC-адреса<br/>
+    <b>switchport port-security mac-address sticky</b> — Запись MAC-адреса в рабочую конфигурацию (липкие MAC-адреса)<br/>
+    <b>switchport port-security violation</b> — Запрет на передачу данных для MAC-адресов<br/>
+
+    <b>network 192.168.10.#6# 0.0.0.3 area 0</b> - #не 0# указываем шаблонную маску<br/><br/>
+    
+    <font style='color: red;'>НЕКОТОРЫЕ ИЗ ПРИВЕДЕННЫХ КОМАНД МОГУТ НЕ РАБОТАТЬ НА ЭМУЛЯТОРЕ  Cisco Packet Tracer!!!</font>
+    
+    </div>
+<!-- BOOK END -->
+
+    
+
+    
+    <!-- ПОДВАЛ -->
+    <div id="down_box">
+        <a href="https://animate.style/" id="">https://animate.style</a>
+    </div>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTIPE html>
+<html>
+<head>
+	<style type='text/css'>
+	body{
+	    color: ;
+	    margin: 20px;
+	    padding: 0;
+	    font-family: 'Work Sans', sans-serif;
+	}
+        
+    /* ПОЛЕ ДЛЯ КОДА */
+    #codePlace{
+        color: white;
+        width: 96%;
+        padding: 2%;
+        font-family: monospace;
+        border-radius: 5px;
+        background-color: #2d2d2d;
+	}
+	#command{
+	    color: pink;
+	}
+	#green{
+	    color: yellow;
+	}
+	#zz{
+	    color: #67CDCC;
+	}
+    
+    #name{
+        color: #7EC699;    
+    }
+	</style>
+	
+</head>
+
+
+
+<body>
+
+	<h1>LINUX</h1>
+	
+<pre id="codePlace"><font style='color:#e2777a;'>#E2777A - </font>
+<font style='color:#F8C555;'>#F8C555 - </font>
+<font style='color:#999999;'>#999999 - комментарий</font>
+<font style='color:#7ec699;'>#7EC699 - имя пользователя</font>
+<font style='color:#CC99CD;'>#CC99CD - </font>
+<font style='color:#67CDCC;'>#67CDCC - путь</font>
+<font style='color:#F08D49;'>#F08D49 - </font></pre>
+	
+	//Дата
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>date</font>
+Tue Feb  9 05:28:27 UTC 2021</pre>
+	
+	//Вывод страницы руковотства
+	<div id='codePlace'>
+        <font id='name'>linux@linux</font>:<font id='zz'>~</font>$ <font id='command'>man date</font><br/>
+        Tue Feb  9 05:28:27 UTC 2021
+    </div>
+
+	<pre id='codePlace'>
+<font id='green'>Горячие клавиши команды man:</font>
+<b>Клавиша</b>							<b>Назначение</b> 
+H or h 							Отображение справки по команде man
+Q or q 							Выйти, закрыть man 
+Spacebar or f or PageDown 				Перелистывание страницы вперед 
+b or PageUp 						Перелистывание страницы назад 
+Enter or down arrow 					На одну строку вниз 
+Up arrow 						На одну строку вверх 
+/ followed by text to search 				Искать вперед 
+? followed by text to search 				Искать назад 
+n 							Перейти к следующему найденному тексту 
+N 							Перейти к предыдущему найденному тексту
+	</pre>
+	
+	//Для поиска страниц реководства по ключевому слову используется опция -k
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>man -k </font>password</pre>
+
+	//Для отображения имеющихся страниц руководства для одной команды используется опция -f
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>man -f </font>passwd
+or
+<font id='zz'>:~$</font> <font id='command'>whatis </font>passwd</pre>
+
+	//Для просмотра требуемой страницы укажите её номер после команды man.
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'> man 5 </font>passwd</pre>
+
+	Для просмотра краткой справки и вывода списка опций используется опция команд --help 
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>date --help</font></pre>
+	
+	//Некоторые программы имеют более детальную документация, которая расположена в директории /usr/share/doc
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>ls /usr/share/doc</font></pre>
+
+	<h3>Поиск файлов</h3>
+	//Команда locate позволяет определить расположение файлов
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>locate crontab </font></pre>
+
+	//Для поиска по точному совпадению необходимо использовать опцию -b
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>locate -b </font>"\crontab"</pre>
+
+	//Для поиска команд, исполняемых и конфигурационных файлов применяется команда whereis
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>whereis </font>passwd
+passwd: /usr/bin/passwd /etc/passwd /usr/share/man/man1/passwd.1.gz 
+/usr/share/man/man1/passwd.1ssl.gz /usr/share/man/man5/passwd.5.gz</pre>
+
+	//Узнать текущуу директорию
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>pwd</font>
+/home/sysadmin</pre>
+
+	//Пременная $HOME содержит запись о вашей домешней директории
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>echo $HOME</font>
+/home/sysadmin </pre>
+
+	//Для перемещения по каталогам применяется команда cd
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>cd /</font>
+<font id='zz'>:/$</font> <font id='command'></font></pre>
+
+	//Для возврата в домашнюю директорию 
+	<pre id='codePlace'>
+<font id='zz'>:/$</font> <font id='command'>cd~</font>
+<font id='zz'>:~$</font> <font id='command'></font></pre>
+
+	//Перейдите в каталог bash
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>cd bash</font></pre>
+
+	//Для возврата на один уровень вверх
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>cd ..</font></pre>
+
+	<h2>Вывод списка файлов и директорий</h2>
+
+	<pre id='codePlace'>
+<font id='zz'>:/usr/share/dict$</font> <font id='command'>ls</font>
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  
+Цветовая индикация. 
+Цвет Тип файла 
+Черный или белый Обычный файл 
+Синий Директория 
+Голубой Символьная ссылка (ярлык) 
+Зеленый Исполняемый файл (программа)</pre>
+
+	//Для вывода всех файлов, включая скрытые
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>ls -a</font>
+.             .bashrc   .selected_editor  Downloads  Public
+..            .cache    Desktop           Music      Templates                
+.bash_logout  .profile  Documents         Pictures   Videos</pre>
+
+	//Вывод списка файлов рукурсивно в директории
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>ls -R</font>/etc/udev
+/etc/udev:
+rules.d  udev.conf
+/etc/udev/rules.d:
+70-persistent-cd.rules  README
+<font id='zz'>:~$</font></pre>
+
+	//При рабое с ls можно использовать подстановочные символы. Опция -d предовращает вывод файлов из поддиректорий
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>ls -d </font>/etc/s*
+/etc/screenrc   /etc/services  /etc/skel    /etc/subgid-  /etc/sudoers.d        
+/etc/securetty  /etc/shadow    /etc/ssh     /etc/subuid   /etc/sysctl.conf      
+/etc/security   /etc/shadow-   /etc/ssl     /etc/subuid-  /etc/sysctl.d         
+/etc/selinux    /etc/shells    /etc/subgid  /etc/sudoers  /etc/systemd
+<font id='zz'>:~$</font> <font id='command'>ls -d </font>/etc/????
+/etc/bind  /etc/dpkg  /etc/mtab  /etc/perl  /etc/udev                           
+/etc/dhcp  /etc/motd  /etc/newt  /etc/skel
+<font id='zz'>:~$</font> <font id='command'>ls -d </font>/etc/[abcd]*
+/etc/adduser.conf            /etc/binfmt.d              /etc/crontab            
+/etc/alternatives            /etc/ca-certificates       /etc/dbus-1             
+/etc/apm                     /etc/ca-certificates.conf  /etc/debconf.conf       
+/etc/apparmor                /etc/calendar              /etc/debian_version     
+/etc/apparmor.d              /etc/console-setup         /etc/default            
+/etc/apt                     /etc/cron.d                /etc/deluser.conf       
+/etc/bash.bashrc             /etc/cron.daily            /etc/depmod.d           
+/etc/bash_completion         /etc/cron.hourly           /etc/dhcp               
+/etc/bind                    /etc/cron.monthly          /etc/dpkg               
+/etc/bindresvport.blacklist  /etc/cron.weekly                </pre>
+
+	<h2>Копирование, перемещение и удаление фалов и директорий</h2>
+	//Копирование файлов
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>cp</font>/etc/hosts hosts </pre>
+
+	//Удалить файл
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>rm </font>hosts</pre>
+
+	//Удаление пустой директории
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'>rmdir</font></pre>
+
+	//
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'></font></pre>
+
+	//
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'></font></pre>
+
+	//
+	<pre id='codePlace'>
+<font id='zz'>:~$</font> <font id='command'></font></pre>
+
+
+
+	
+
+
+
+
+
+
+
+
+
+</body>
+</html>
