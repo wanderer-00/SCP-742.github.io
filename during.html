@@ -1,95 +1,160 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>В процессе...</title>
     <style>
-        body{
+        body {
             color: aquamarine;
             margin: 0;
             padding: 0;
             background: #343434;
             font-family: sans-serif;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: aquamarine;
         }
-        h1{
+
+        h1 {
             padding-left: 2%;
         }
-        #cluster{
+
+        #cluster {
             width: 100%
         }
-        #container{
+
+        #container {
             width: 96%;
             margin: 2%;
             display: flex;
             flex-wrap: no-wrap;
             flex-direction: row;
         }
-        #content, #content2{
+
+        #content,
+        #content2 {
             width: 50%;
             background: #444444;
             text-align: center;
             flex-basis: 25%;
             justify-content: center;
         }
-        #content2{
+
+        #content2 {
             flex-basis: 50%;
         }
-        #poster{
+
+        #poster {
             width: 94%;
             padding-top: 18px;
 
         }
-        #card{
+
+        #card {
             margin: auto;
             width: 80%;
             min-height: 69%;
             margin-top: 18px;
             border-radius: 10px;
             background-color: #343434;
-            
+
         }
+
+
+
+        .button-6 {
+            background: transparent;
+            border-width: 0;
+            position: relative;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .button-6 span {
+            display: block;
+            position: relative;
+            z-index: 3;
+            background: #41294a;
+            color: white;
+            padding: 0 30px;
+            line-height: 40px;
+        }
+
+        .button-6:before {
+            content: "";
+            position: absolute;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            left: -5px;
+            top: -5px;
+            background: #ff2c54;
+            z-index: 1;
+            transition: .4s ease-out;
+        }
+
+        .button-6:after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            right: -5px;
+            bottom: -5px;
+            background: #41ebdf;
+            transition: .4s ease-out .1s;
+        }
+
+        .button-6:hover:before {
+            transform: translate(5px, 5px);
+        }
+
+        .button-6:hover:after {
+            transform: translate(-5px, -5px);
+        }
+
     </style>
 </head>
+
 <body>
-<!-- ОГЛАВЛЕНИЕ -->
+    <!-- ОГЛАВЛЕНИЕ -->
     <h1>DURING</h1>
-   
-<!-- 1 -->   
+
+    <!-- 1 -->
     <div id="cluster">
         <div id="container">
-           
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/nepriznannyj-shkoloj-vladyka-demonov-sil-nejshij-vladyka-demonov-v-istorii-postupaet-v-akademiyu-pererodivshis-svoim-potomkom">
-                    <img src="img/anime/Непризнанный школой владыка демонов.jpg" id='poster'><br/>
-                    <font>Непризнанный школой владыка демонов</font><br/>
+                    <img src="img/anime/Непризнанный школой владыка демонов.jpg" id='poster'><br />
+                    <font>Непризнанный школой владыка демонов</font><br />
                     <font>1/7/00:00</font>
                 </a>
             </div>
-            
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/chernyj-klever-tv">
-                    <img src="img/anime/Чёрный клевер.jpg" id='poster'><br/>
-                    <font>Чёрный клевер</font><br/>
+                    <img src="img/anime/Чёрный клевер.jpg" id='poster'><br />
+                    <font>Чёрный клевер</font><br />
                     <font>1/58/00:00</font>
                 </a>
             </div>
 
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/ohotnik-h-ohotnik">
-                    <img src="img/anime/Хантер х Хантер (1999).jpg" id='poster'><br/>
-                    <font>Хантер х Хантер (1999)</font><br/>
+                    <img src="img/anime/Хантер х Хантер (1999).jpg" id='poster'><br />
+                    <font>Хантер х Хантер (1999)</font><br />
                     <font>1/13/00:00</font>
                 </a>
             </div>
 
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/volchica-i-pryanosti-ova">
-                    <img src="img/anime/Волчица и пряности OVA.jpg" id='poster'><br/>
-                    <font>Волчица и пряности OVA</font><br/>
+                    <img src="img/anime/Волчица и пряности OVA.jpg" id='poster'><br />
+                    <font>Волчица и пряности OVA</font><br />
                     <font>0/1/00:00</font>
                 </a>
             </div>
@@ -99,96 +164,96 @@
     </div>
 
 
-<!-- 2 -->
+    <!-- 2 -->
     <div id="cluster">
         <div id="container">
-           
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/somali-i-lesnoj-duh">
-                    <img src="img/anime/somali-i-lesnoj-duh.jpg" id='poster'><br/>
-                    <font>Сомали и лесной дух</font><br/>
+                    <img src="img/anime/somali-i-lesnoj-duh.jpg" id='poster'><br />
+                    <font>Сомали и лесной дух</font><br />
                     <font>1/7/00:00</font>
                 </a>
             </div>
-            
+
             <div id="content">
                 <a href="">
-                    <img src="img/anime/Скитальцы.jpg" id='poster'><br/>
-                    <font>Скитальцы</font><br/>
+                    <img src="img/anime/Скитальцы.jpg" id='poster'><br />
+                    <font>Скитальцы</font><br />
                     <font>1/10/00:00</font>
                 </a>
             </div>
-            
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/kengan-asura-2">
-                    <img src="img/anime/kengan-asura-2.jpg" id='poster'><br/>
-                    <font>Кэнган Асура 2</font><br/>
+                    <img src="img/anime/kengan-asura-2.jpg" id='poster'><br />
+                    <font>Кэнган Асура 2</font><br />
                     <font>2/5/00:00</font>
                 </a>
             </div>
-            
+
             <div id="content">
                 <a href="">
-                    <img src="" id='poster'><br/>
-                    <font>Name</font><br/>
+                    <img src="" id='poster'><br />
+                    <font>Name</font><br />
                     <font>0/0/00:00</font>
                 </a>
             </div>
-            
+
         </div>
     </div>
-           
-<!-- 3 -->
+
+    <!-- 3 -->
     <div id="cluster">
         <div id="container">
-           
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/skital-cy">
-                    <img src="img/anime/Связь сердец. По случайному пути.jpg" id='poster'><br/>
-                    <font>Связь сердец</font><br/>
+                    <img src="img/anime/Связь сердец. По случайному пути.jpg" id='poster'><br />
+                    <font>Связь сердец</font><br />
                     <font>1/13/11:24</font>
                 </a>
             </div>
 
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/sherlok-iz-kabuki-te">
-                    <img src="img/anime/Шерлок из Кабуки-тё.jpg" id='poster'><br/>
-                    <font>Шерлок из Кабуки-тё</font><br/>
+                    <img src="img/anime/Шерлок из Кабуки-тё.jpg" id='poster'><br />
+                    <font>Шерлок из Кабуки-тё</font><br />
                     <font>1/7/00:00</font>
                 </a>
             </div>
-            
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/v-podzemel-e-ya-pojdu-tam-krasavicu-najdu-2">
-                    <img src="img/anime/В подземелье я пойду, там красавицу найду 2.jpg" id='poster'><br/>
-                    <font>В подземелье я пойду, там красавицу найду 3</font><br/>
+                    <img src="img/anime/В подземелье я пойду, там красавицу найду 2.jpg" id='poster'><br />
+                    <font>В подземелье я пойду, там красавицу найду 3</font><br />
                     <font>3/0/05:24</font>
                 </a>
             </div>
-            
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/prizrachnyj-mir-miriady-cvetov">
-                    <img src="img/anime/Призрачный мир мириады цветов.jpg" id='poster'><br/>
-                    <font>Призрачный мир мириады цветов</font><br/>
+                    <img src="img/anime/Призрачный мир мириады цветов.jpg" id='poster'><br />
+                    <font>Призрачный мир мириады цветов</font><br />
                     <font>1/5/08:30</font>
                 </a>
             </div>
-            
+
         </div>
     </div>
 
-<!-- 4 -->
+    <!-- 4 -->
     <div id="cluster">
         <div id="container">
-           
+
             <div id="content">
                 <a href="https://yummyanime.club/catalog/item/mag-celitel-novyj-start">
-                    <img src="img/anime/mag-celitel-novyj-start.jpg" id='poster'><br/>
-                    <font>Маг-целитель: Новый старт</font><br/>
+                    <img src="img/anime/mag-celitel-novyj-start.jpg" id='poster'><br />
+                    <font>Маг-целитель: Новый старт</font><br />
                     <font>1/5/00:00</font>
                 </a>
             </div>
-            
+
             <!--<div id="content1">
                 <a href="">
                     <img src="" id='poster'><br/>
@@ -196,17 +261,22 @@
                     <font>Name</font><br/>
                     <font>0/0/00:00</font>
                 </a>
-            </div>--> 
-            
+            </div>-->
+
             <div id="content2">
                 <a href="">
-                    <img src="img/_/Mr.robot.jpg" id='poster'><br/>
-                    <font>Mr.Robot</font><br/>
+                    <img src="img/_/Mr.robot.jpg" id='poster'><br />
+                    <font>Mr.Robot</font><br />
                     <font>1/9/00:00</font>
                 </a>
             </div>
+
+            
+
         </div>
     </div>
 
+
 </body>
+
 </html>
