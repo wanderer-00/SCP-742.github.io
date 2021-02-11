@@ -25,33 +25,31 @@
             text-decoration: none;
         }
 
-        .header {
-            margin-bottom: 20px;
-            background: rgba(21, 21, 21, 0.2);
-            /*background: [rgb, rgba(red(0-255), green(0-255), blue(0-255), прозрачность[0-1]), #ffffff]*/
-            align-items: center;
-            /*выравнивает[y]: center, top, bottom */
-            z-index: ;
-            /*положение[z]*/
-            height: 120px;
+/* HEADER */
+        #header {
             width: 100%;
-            border-bottom: 1px solid #343434;
-            /*border-[bottom, left, right, top]: [толщина] [стиль] [цвет]; */
+            height: 120px;
             box-shadow: 0px 5px 25px 0px black;
-            /*box-shadow: [x] [y] [плотность] [размытие] [цвет]; */
-        }
-
-        .knopka_poisk {
-            justify-content: center;
-            border-radius: 10px;
+            background: rgba(21, 21, 21, 0.2);
             align-items: center;
+            border-bottom: 1px solid #343434;
+            margin-bottom: 150px;
+        }
+        #headerIMG {
+            height: 120px;
+        }
+        #search {
+            width: 85px;
+            float: right;
+            border: 3px solid #7e7d7d;
             margin: 5px;
             padding: 10px;
             display: flex;
-            border: 3px solid white;
-            width: 85px;
-            float: right;
+            align-items: center;
+            border-radius: 10px;
+            justify-content: center;
         }
+
 
 
         /* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
@@ -228,19 +226,13 @@
 </head>
 
 <body>
-
-    <!-- СТРОКА ПОИСКА -->
-    <div class="header">
-        <a href="">
-            <img src="img/logo.png" style="background: ; height: 120px; ">
-            <img src="img/123.png" style="background: ; height: 120px; ">
-        </a>
-
-        <a href="">
-            <div class="knopka_poisk">
-                <img src="img/vpoisk.png" height="80px" />
-            </div>
-        </a>
+    <!-- HEADER -->
+    <div id='header'>
+        <img id='headerIMG' src="img/logo.png">
+        <img id='headerIMG' src="img/123.png">
+        <div id='search'>
+            <img src="img/search.png" height="80px" />
+        </div>
     </div>
 
 
