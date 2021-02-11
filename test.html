@@ -1,197 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/testFoto/favicon.png" type="image/png">
     <title>TEST - это моя песочница</title>
 </head>
-    <style>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: #000;
+        font-family: Calibri;
+    }
 
+    #container {
+        width: 100wh;
+        padding: 10px;
+    }
 
+    #name {
+        font-size: 40px;
+        padding: 10px;
+        color: #AEEA00;
+    }
 
-        body {
-            margin: 0px;
-            padding: 0px;
-            background: #000;
-            font-family: Calibri;
-        }
-        #container{
-            width: 100wh;
-            padding: 10px;
-        }
-        #name{
-            font-size: 40px;
-            padding: 10px;
-            color: #AEEA00;
-        }
-        #o{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    #o {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 
     /* SLIIDER control */
-        #slider{
-            width: 500px;
-            height: 125px;
-            border: 4px solid #343434;
-            overflow: hidden;
-        }
-        #line1{
-            height: 100%;
-            width: 1000px;
-            position: relative;
-            left:0;
-            transition: all ease 0.5s;
-        }
-        #line1::after{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        #sliderIMG{
-            height: 125px;
-            float:left;
-        }
-        #sliderIco{
-            background: none;
-        }
-        
-        /* Кнопки управления */
-        #buttonLeft, #buttonRight{
-            width: 100px;
-            height: 100px;
-            display: inline-block;
-            background: transparent;
-            border: none !important;
-        }
+    #slider {
+        width: 500px;
+        height: 125px;
+        border: 4px solid #343434;
+        overflow: hidden;
+    }
+
+    #line1 {
+        height: 100%;
+        width: 1000px;
+        position: relative;
+        left: 0;
+        transition: all ease 0.5s;
+    }
+
+    #line1::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    #sliderIMG {
+        height: 125px;
+        float: left;
+    }
+
+    #sliderIco {
+        background: none;
+    }
+
+    /* Кнопки управления */
+    #buttonLeft,
+    #buttonRight {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        background: transparent;
+        border: none !important;
+    }
 
 
-        
+
     /* AUTO Slider */
-        #line{
-            width: 1000px;
-            position: relative;
-            left:0;
-            transition: all ease 0.5s;
-        }
-        #line::after{
-            content: '';
-            display: block;
-            clear: both;
-        }
+    #line {
+        width: 1000px;
+        position: relative;
+        left: 0;
+        transition: all ease 0.5s;
+    }
+
+    #line::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 
 
 
     /* Обработка фото */
-        #slide{
-            width: 640px;
-            height: 426px;
-            border: 3px solid white;
-            position: relative;
-            overflow: hidden;
-            background: blue;
-        }
-        #one, two{
-            width: 640px;
-            height: 426px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            overflow: hidden;
-        }
+    #slide {
+        width: 640px;
+        height: 426px;
+        border: 3px solid white;
+        position: relative;
+        overflow: hidden;
+        background: blue;
+    }
+
+    #one,
+    two {
+        width: 640px;
+        height: 426px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+    }
 
 
 
     /* Волна */
-        #box{
-            font-family: consolas;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #000;
-        }
-        #volna{
-            position: relative;
-            -webkit-box-reflect: below -12px linear-gradient(
-            transparent, rgba(0,0,0,0.3));/*0.2*/
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none;   /* Chrome/Safari/Opera */
-            -khtml-user-select: none;    /* Konqueror */
-            -moz-user-select: none;      /* Firefox */
-            -ms-user-select: none;       /* Internet Explorer/Edge */
-            user-select: none;           /* Non-prefixed version, currently
+    #box {
+        font-family: consolas;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+    }
+
+    #volna {
+        position: relative;
+        -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+        /*0.2*/
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: none;
+        /* Konqueror */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
                                               not supported by any browser */
-        }
-        #volna span{
-            text-transform: uppercase;
-            display: inline-block;
-            position: relative;
-            color: white;
-            font-size: 6em;/*2em*/
-            animation: animate 2s ease-in-out infinite;/*1s*/
-            animation-delay: calc(0.1s * var(--i));
-        }
-        @keyframes animate
-        {
-            0%{
-                transform: translateY(0px);
-            }
-            20%{
-                transform: translateY(-60px);/*-20px*/
-            }
-            40%,100%{
-                transform: translateY(0px);
-            }
+    }
+
+    #volna span {
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        color: white;
+        font-size: 6em;
+        /*2em*/
+        animation: animate 2s ease-in-out infinite;
+        /*1s*/
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateY(0px);
         }
 
+        20% {
+            transform: translateY(-60px);
+            /*-20px*/
+        }
+
+        40%,
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
     /* Player */
-        .player{
-            width: 500px;
-            background: white;
-        }
-        .player .player_img{
-            position: relative;
-            width: 100%;
-            height: 500px;
-        }
-        .player .player_img img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .player audio {
-            width: 100%;
-            outline: none;
-        }
-        #player_name{
-            padding: 10px;
-            font-size: 20px;
-        }
-        
-/* ПАЛИТРА */
-        #palitra{
-            width: 50%;
-            border: 5px solid white;
-            display: flex;
-            flex-wrap: no-wrap;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        #t{
-            height: 100px;
-            flex-basis: 25%;
-        }
-    </style>
-    
+    .player {
+        width: 500px;
+        background: #F1F3F4;
+    }
+
+    .player .player_img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
+    .player .player_img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .player audio {
+        width: 100%;
+        outline: none;
+    }
+
+    #player_name {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    /* ПАЛИТРА */
+    #palitra {
+        width: 50%;
+        border: 5px solid white;
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #t {
+        height: 100px;
+        flex-basis: 25%;
+    }
+
+
+
+
+
+
+    /* GLASS */
+    #white {
+        width: 100%;
+        height: 100vh;
+        background-color: #CCC;
+    }
+
+    .wrapper {
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        display: block;
+    }
+
+    .progressbar-wrapper {
+        width: 300px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .progressbar {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform: rotateX(-20deg) rotateY(-30deg);
+    }
+
+    .side {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(254, 254, 254, 0.3);
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .bottom {
+        box-shadow: 10px 10px 50px 5px rgba(90, 90, 90, 0.7);
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+    }
+
+    .top {
+        transform: translate(0, -100%) rotateX(90deg);
+        transform-origin: bottom;
+    }
+
+    .back {
+        transform: translateZ(-60px);
+    }
+
+    .left {
+        width: 60px;
+        transform: rotateY(90deg);
+        transform-origin: left;
+        background-color: rgba(225, 0, 120, 0.6);
+    }
+
+    .bar {
+        height: 100%;
+        background-color: rgba(225, 0, 120, 0.6);
+        box-shadow: 5px 5px 50px 5px rgba(225, 0, 120, 0.3);
+        width: 70%;
+    }
+</style>
+
 <body>
-<!-- Loading... -->
+    <!-- Loading... -->
     <div id="box">
         <div id="volna">
             <span style='--i:1;'>L</span>
@@ -204,7 +304,7 @@
         </div>
     </div>
 
-<!-- SLIDER auto -->
+    <!-- SLIDER auto -->
     <div id="container">
         <div id='name'>AUTO Slider</div>
         <div id="o">
@@ -225,7 +325,7 @@
 
 
 
-<!-- SLIDER control -->
+    <!-- SLIDER control -->
     <div id="container">
         <div id='name'>Control Slider</div>
         <div id="o">
@@ -245,126 +345,150 @@
             <button id='buttonLeft'><img style='width: 80px;' src="img/icoFunction/right-arrow.png"></button>
         </div>
     </div>
-    
-    
-    
-<!-- Обработка фото -->
+
+
+
+    <!-- Обработка фото -->
     <div id="container">
         <div id="name">Обработка фото</div>
         <div id="o">
-        <div id='slide'>
-            <div id='one'>
-                <img style='width: 640px' src="img/testFoto/11.jpg">
-            </div>
-            <div id='two'>
-                <img style='width: 640px' src="img/testFoto/UNGe3OcoTGA.jpg">
-            </div>
+            <div id='slide'>
+                <div id='one'>
+                    <img style='width: 640px' src="img/testFoto/11.jpg">
+                </div>
+                <div id='two'>
+                    <img style='width: 640px' src="img/testFoto/UNGe3OcoTGA.jpg">
+                </div>
             </div>
         </div>
     </div>
-    
 
-<!-- Player -->
+
+    <!-- Player -->
     <div id="container">
-    <div id="name">Player v1.0</div>
-    <div id="o">
-        
-   
-    <div class="player">
-        <div class="player_img">
-            <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+        <div id="name">Player v1.0</div>
+        <div id="o">
+
+
+            <div class="player">
+                <div class="player_img">
+                    <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+                </div>
+                <audio controls>
+                    <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+                </audio>
+            </div>
+
+
         </div>
-        <audio controls>
-            <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
-        </audio>
-    </div>
-   
-   
-    </div>
     </div>
 
 
 
-<!-- Player v2.0 -->
+    <!-- Player v2.0 -->
     <div id="container">
-    <div id="name">Player v2.0</div>
-    <div id="o">
-        
-   
-    <div class="player">
-        <div id="player_name">Fytch - Sirens Over Paris</div>
-        <div class="player_img">
-            <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+        <div id="name">Player v2.0</div>
+        <div id="o">
+
+
+            <div class="player">
+                <div id="player_name">Fytch - Sirens Over Paris</div>
+                <div class="player_img">
+                    <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+                </div>
+                <audio controls>
+                    <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+                </audio>
+            </div>
+
+
         </div>
-        <audio controls>
-            <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
-        </audio>
     </div>
-   
-   
-    </div>
-    </div>
-    
-<!-- ПАЛИТРА -->
+
+    <!-- ПАЛИТРА -->
     <div id="palitra">
         <div id="t" style='background: rgba(21,21,221,0.2);'></div>
         <div id="t" style='background: #FFA000;'></div>
         <div id="t" style='background: ;'></div>
         <div id="t" style='background: darkgrey;'></div>
     </div>
-    
+
+
+    <!-- CSS GLASS -->
+    <div id="white">
+
+        <div class="wrapper">
+            <div class="progressbar-wrapper">
+                <div class="progressbar">
+                    <div class="side front">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="side back">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="side top">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="side bottom">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="side left"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script>
-        
-        
-        
-    /* SLIIDER control */
+        /* SLIIDER control */
         var left1 = 0;
         document.getElementById('buttonLeft').onclick = sliderLeft;
-        function sliderLeft(){
+
+        function sliderLeft() {
             var line = document.getElementById('line1');
-            left1 = left1 -125;
-            if (left1 <= -500){
+            left1 = left1 - 125;
+            if (left1 <= -500) {
                 left1 = -500;
             }
-            line.style.left = left1+'px';
+            line.style.left = left1 + 'px';
         }
-        
-        
+
+
         document.getElementById('buttonRight').onclick = sliderRight;
-        function sliderRight(){
+
+        function sliderRight() {
             var line = document.getElementById('line1');
-            left1 = left1 +125;
-            if (left1 >= 0){
+            left1 = left1 + 125;
+            if (left1 >= 0) {
                 left1 = 0;
             }
-            line.style.left = left1+'px';
+            line.style.left = left1 + 'px';
         }
-        
-        
-        
-    /* SLIIDER auto */
+
+
+
+        /* SLIIDER auto */
         autoSlider();
         var left = 0;
         var timer;
-        
-        function autoSlider(){
-            timer = setTimeout(function(){
+
+        function autoSlider() {
+            timer = setTimeout(function() {
                 var line = document.getElementById('line');
-                left = left -125;
-                if (left < -500){
+                left = left - 125;
+                if (left < -500) {
                     left = 0;
                     clearTimeout(timer);
                 }
-                line.style.left = left+'px';
+                line.style.left = left + 'px';
                 autoSlider();
             }, 2000);
         }
-        
-        
-        
-        
-    /* Обработка фото */
-        document.getElementById('slide').onmousemove = function (event){
+
+
+
+
+        /* Обработка фото */
+        document.getElementById('slide').onmousemove = function(event) {
             var x = event.offsetX;
             console.log(x);
             document.getElementById('one').style.width = x + 'px';
@@ -372,11 +496,13 @@
         /*document.getElementById('slide').onmouseleave = function (event){
             document.getElementById('one').style.width = '1280px';
         }*/
-        
-        
-        
+
+
+
         var myVideo = document.getElementById("ahegao_video");
 
+
+        /* GLASS */
+        $('.bar').width('80%');
     </script>
-</body>
-</html>
+</body></html>
