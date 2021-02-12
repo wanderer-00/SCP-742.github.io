@@ -1,11 +1,14 @@
+/* frm */   /* форматированно */
+/* del */   /* удалить (выявление багов) */
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
 body {
+    font-family: 'Open sans';
     background: orange;
     padding: 0;
     margin: 0;
 }
-
 @keyframes harlem {
     0% {
         transform: scale(1);
@@ -70,7 +73,7 @@ h2 {
 
 
 h4 {
-    margin: 0 0 5px 29px;
+    margin: 0;    /* frm *//* margin: 0 0 5px 29px; */
     padding: 0;
     font-size: 14px;
     line-height: 14px;
@@ -159,7 +162,7 @@ label.main:hover:before {
     left: 0;
     transform-origin: 0% 0%;
     /* координаты точки, относительно которой производится трансформация */
-    transition: all 0.9s ease-in;
+    transition: all 0.3s ease-in;
     /* скорость приближения этого блока */
 }
 
@@ -340,9 +343,15 @@ td > #heart6:checked ~ label.icons:before {
     transition: all 0.15s linear;
 }
 
+#stabilitron{
+    background-color: aqua;
+}
 .info {
     position: absolute;
-    left: 95px;
+    width: 70%;/* frm *//* left: 95px; */
+    margin: 0% 15%;
+    text-align: center;
+    
     top: 460px;
     transition: all 0.3s ease-in;
 }
