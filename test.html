@@ -289,6 +289,14 @@
         box-shadow: 5px 5px 50px 5px rgba(225, 0, 120, 0.3);
         width: 70%;
     }
+    
+    
+    
+    
+    /* TEST PLACEs */
+    #testPlaceZ{
+        background-color: beige;
+    }
 </style>
 
 <body>
@@ -439,6 +447,81 @@
             </div>
         </div>
 
+    </div>
+    
+    <div id="testPlaceZ">
+    
+       <selection id="screen">
+           <input type="checkbox" name="check" id="button" value="none">
+           <lable for="button" id="main"></lable>
+           
+           <div id="coverImage"></div>
+           <div id="search"></div>
+           <div id="bodyPlayer"></div>
+           
+            <table id="list">
+                <tr id="song">
+                    <td id="nr"><h5>1</h5></td>
+                    <td id="title"><h6>Mob 100</h6></td>
+                    <td id="lenght"><h5>1:11</h5></td>
+                    <td><input type="checkbox" id="heart"><lable for="heart" id="icons"></lable></td>
+                </tr>  
+
+                <tr id="song">
+                    <td id="nr"><h5>2</h5></td>
+                    <td id="title"><h6>Demons</h6></td>
+                    <td id="lenght"><h5>2:22</h5></td>
+                    <td><input type="checkbox" id="heart"><lable for="heart" id="icons"></lable></td>
+                </tr>  
+
+                <tr id="song">
+                    <td id="nr"><h5>3</h5></td>
+                    <td id="title"><h6>Demons</h6></td>
+                    <td id="lenght"><h5>3:33</h5></td>
+                    <td><input type="checkbox" id="heart"><lable for="heart" id="icons"></lable></td>
+                </tr>  
+            
+
+                <tr id="song">
+                    <td id="nr"><h5>4</h5></td>
+                    <td id="title"><h6>Demons</h6></td>
+                    <td id="lenght"><h5>4:44</h5></td>
+                    <td><input type="checkbox" id="heart"><lable for="heart" id="icons"></lable></td>
+                </tr>  
+            
+                <tr id="song">
+                    <td id="nr"><h5>5</h5></td>
+                    <td id="title"><h6>Demons</h6></td>
+                    <td id="lenght"><h5>5:55</h5></td>
+                    <td><input type="checkbox" id="heart"><lable for="heart" id="icons"></lable></td>
+                </tr>  
+            </table>
+            
+            <div id="shadow"></div>
+            
+            <div id="info">
+                <h4>Mob 100 - %</h4>
+            </div>
+            
+            <audio preload id="audio" controls>
+                <source src='audio/audio/[p/Mob AMV_CBR_256k.mp3'>
+            </audio>
+            
+            <table id="playerZ">
+                <td><input type="checkbox" id="backward"><lable for="backward" id="backward"></lable></td>
+                <td><input type="checkbox" id="play" title="play" onclick="togglePlayPause()"><lable for="play" id="play"></lable></td>
+                <td><input type="checkbox" id="forward"><lable for="forward" id="forward"></lable></td>
+            </table>
+            
+            <table id="foother">
+                <td><input type="checkbox" id="love" checked ><lable for="love" id="love"></lable></td>
+                <td><input type="checkbox" id="repeat" checked ><lable for="repeat" id="repeat"></lable></td>
+                <td><input type="checkbox" id="shuffle" checked ><lable for="shuffle" id="shuffle"></lable></td>
+                <td><input type="checkbox" id="options" checked ><lable for="options" id="options"></lable></td>
+            </table>
+            
+       </selection>
+    
     </div>
     <script>
         /* SLIIDER control */
