@@ -347,10 +347,17 @@ td > #heart6:checked ~ label.icons:before {
     background-color: aqua;
 }
 .info {
+    color: white;
     position: absolute;
-    width: 70%;/* frm *//* left: 95px; */
+    width: 66%;/* frm *//* left: 95px; */
     margin: 0% 15%;
     text-align: center;
+    overflow: hidden;
+    /* Обрезаем все, что не помещается в область */
+    white-space: nowrap;
+    /* Запрещаем перенос строк */
+    box-shadow: inset -20px 0px 10px rgba(255,0,0,1);
+    padding: 2%;
     
     top: 460px;
     transition: all 0.3s ease-in;
