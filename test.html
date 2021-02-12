@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/testFoto/favicon.png" type="image/png">
     <title>TEST - это моя песочница</title>
+    <script src="https://kit.fontawesome.com/44a29f837f.js" crossorigin="anonymous"></script>
 </head>
 <style>
     body {
@@ -297,6 +298,10 @@
     #testPlaceZ{
         background-color: beige;
     }
+    
+    
+    /* Player v3.0 */
+    @import url()
 </style>
 
 <body>
@@ -520,6 +525,8 @@
                 <td><input type="checkbox" id="options" checked ><lable for="options" id="options"></lable></td>
             </table>
             
+            <div id="current"><h2>Mob 100</h2></div>
+            
        </selection>
     
     </div>
@@ -589,5 +596,20 @@
 
         /* GLASS */
         $('.bar').width('80%');
+        
+        
+        /* Player v3.0 */
+        var audio = document.getElementById('audio');
+        var playpause = document.getElementById("play");
+
+        function togglePlayPause() {
+            if(audio.paused || audio.ended) {
+                playpause.title = "Pause";
+                audio.play();
+            } else {
+                playpause.title = "Play";
+                audio.pause();
+            }
+        }
     </script>
 </body></html>
