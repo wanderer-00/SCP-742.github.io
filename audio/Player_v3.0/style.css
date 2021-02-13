@@ -244,6 +244,18 @@ label.main:hover:before {
     transition: all 0.11s ease-in;
 }
 
+
+#titleZ{
+    width: 215px;
+    background-color:;/* frm */
+    white-space: nowrap;
+    /* Запрещаем перенос строк */
+    overflow: hidden;
+    /* Обрезаем все, что не помещается в область */
+}
+
+
+
 .list tr:hover .title {
     padding-left: 5px;
     width: 210px;
@@ -349,6 +361,7 @@ td > #heart6:checked ~ label.icons:before {
 .info {
     color: white;
     position: absolute;
+    
     width: 66%;/* frm *//* left: 95px; */
     margin: 0% 15%;
     text-align: center;
@@ -356,11 +369,20 @@ td > #heart6:checked ~ label.icons:before {
     /* Обрезаем все, что не помещается в область */
     white-space: nowrap;
     /* Запрещаем перенос строк */
-    box-shadow: inset -20px 0px 10px rgba(255,0,0,1);
-    padding: 2%;
+    padding-left: 4%;
+    padding-right: 0%;
     
     top: 460px;
     transition: all 0.3s ease-in;
+}
+#shadowH4{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -20px 0px 10px rgba(17,17,17,0.98);
+    
 }
 
 .screen > #magicButton:checked ~ .info {
