@@ -25,11 +25,27 @@
         a {
             text-decoration: none;
         }
+        .cluster{
+            max-width: 820px;
+            display: inherit;
+            height: 100vh;
+        }
+        .stabilitron{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
 
         /* HEADER */
         #header {
             width: 100%;
             height: 120px;
+            height: 18vh;
             box-shadow: 0px 5px 25px 0px black;
             background: rgba(21, 21, 21, 0.2);
             align-items: center;
@@ -235,129 +251,133 @@
 </head>
 
 <body>
+    <div class="cluster">
+    <div class="stabilitron">
 
-    <!-- HEADER -->
-    <div id='header'>
-        <img id='headerIMG' src="img/logo.png">
-        <img id='headerIMG' src="img/123.png">
-        <div id='search'>
-            <img src="img/search.png" height="80px" />
-        </div>
-    </div>
-
-    <!-- КОМПАС -->
-    <div class="y">
-        <div class="yy">
-            <a href="index10.html">
-                <div class="yyy">Назад</div>
-            </a>
-            <a href="index7.html">
-                <div class="yyy">7</div>
-            </a>
-            <a href="index8.html">
-                <div class="yyy">8</div>
-            </a>
-            <a href="index9.html">
-                <div class="yyy">9</div>
-            </a>
-            <a href="index10.html">
-                <div class="yyy">10</div>
-            </a>
-            <a href="index11.html">
-                <div class="yyy xxx">11</div>
-            </a>
-            <a href="index12.html">
-                <div class="yyy">00</div>
-            </a>
-            <a href="index13.html">
-                <div class="yyy">00</div>
-            </a>
-            <a href="">
-                <div class="yyy">...</div>
-            </a>
-            <a href="index12.html">
-                <div class="yyy">Далее</div>
-            </a>
-        </div>
-    </div>
-    <!-- КОМПАС -->
-
-    <div class="content">
-        <div class="blockh">
-            <div class="hovergallery">
-                <a href="https://for.kinohype.top/1477-kod-8-2019.html">
-                    <font style="color: white; font-size: 50px;">CODE8</font>
-                </a><br>
-                <img src="img/film/code-8.jpg" />
+        <!-- HEADER -->
+        <div id='header'>
+            <img id='headerIMG' src="img/logo.png">
+            <img id='headerIMG' src="img/123.png">
+            <div id='search'>
+                <img src="img/search.png" height="80px" />
             </div>
         </div>
 
-       <div class="blockh">
-       
-        <!-- BUTTON -->
-        <a href='index1.html'>
-            <button class="button-6"><span>Посмотрено</span></button>
-        </a><br />
-
-        <a href='during.html'>
-            <button class="button-6"><span>Смотрю</span></button>
-        </a><br />
-        <!-- BUTTON -->
+        <!-- КОМПАС -->
+        <div class="y">
+            <div class="yy">
+                <a href="index10.html">
+                    <div class="yyy">Назад</div>
+                </a>
+                <a href="index7.html">
+                    <div class="yyy">7</div>
+                </a>
+                <a href="index8.html">
+                    <div class="yyy">8</div>
+                </a>
+                <a href="index9.html">
+                    <div class="yyy">9</div>
+                </a>
+                <a href="index10.html">
+                    <div class="yyy">10</div>
+                </a>
+                <a href="index11.html">
+                    <div class="yyy xxx">11</div>
+                </a>
+                <a href="index12.html">
+                    <div class="yyy">00</div>
+                </a>
+                <a href="index13.html">
+                    <div class="yyy">00</div>
+                </a>
+                <a href="">
+                    <div class="yyy">...</div>
+                </a>
+                <a href="index12.html">
+                    <div class="yyy">Далее</div>
+                </a>
+            </div>
         </div>
-    </div>
+        <!-- КОМПАС -->
 
-    <!-- КОМПАС -->
-    <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
-        <div class="yy">
-            <a href="index10.html">
-                <div class="yyy">Назад</div>
-            </a>
-            <a href="index7.html">
-                <div class="yyy">7</div>
-            </a>
-            <a href="index8.html">
-                <div class="yyy">8</div>
-            </a>
-            <a href="index9.html">
-                <div class="yyy">9</div>
-            </a>
-            <a href="index10.html">
-                <div class="yyy">10</div>
-            </a>
-            <a href="index11.html">
-                <div class="yyy xxx">11</div>
-            </a>
-            <a href="index12.html">
-                <div class="yyy">00</div>
-            </a>
-            <a href="index13.html">
-                <div class="yyy">00</div>
-            </a>
-            <a href="">
-                <div class="yyy">...</div>
-            </a>
-            <a href="index12.html">
-                <div class="yyy">Далее</div>
-            </a>
-        </div>
-    </div>
-    <!-- КОМПАС -->
-
-    <!-- BOTTOM BLOCK -->
-    <div class="bottom">
-        <div class="bottomText">Страница разработчика:</div>
-
-        <a href="https://vk.com/v_o_r_a_c_i_t_y">
-            <div class="bottomAk">
-                <div class="AkIco">
-                    <img src="img/ico.png" class="AkIco1">
-                </div>
-                <div class="AkName">Deus Vult</div>
-                <div class="PlAk">
-                    <img src="img/web/vk.png" class="PlAk1">
+        <!-- КОНТЕНТ -->
+        <div class="content">
+            <div class="blockh">
+                <div class="hovergallery">
+                    <a href="https://for.kinohype.top/1477-kod-8-2019.html">
+                        <font style="color: white; font-size: 50px;">CODE8</font>
+                    </a><br>
+                    <img src="img/film/code-8.jpg" />
                 </div>
             </div>
-        </a>
+
+            <div class="blockh" style="padding: 0;">
+
+                <!-- BUTTON -->
+                <a href='during.html'>
+                    <button class="button-6"><span>Смотрю</span></button>
+                </a><br />
+                <!-- BUTTON -->
+
+            </div>
+        </div>
+        <!-- КОНТЕНТ -->
+
+        <!-- КОМПАС -->
+        <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
+            <div class="yy">
+                <a href="index10.html">
+                    <div class="yyy">Назад</div>
+                </a>
+                <a href="index7.html">
+                    <div class="yyy">7</div>
+                </a>
+                <a href="index8.html">
+                    <div class="yyy">8</div>
+                </a>
+                <a href="index9.html">
+                    <div class="yyy">9</div>
+                </a>
+                <a href="index10.html">
+                    <div class="yyy">10</div>
+                </a>
+                <a href="index11.html">
+                    <div class="yyy xxx">11</div>
+                </a>
+                <a href="index12.html">
+                    <div class="yyy">00</div>
+                </a>
+                <a href="index13.html">
+                    <div class="yyy">00</div>
+                </a>
+                <a href="">
+                    <div class="yyy">...</div>
+                </a>
+                <a href="index12.html">
+                    <div class="yyy">Далее</div>
+                </a>
+            </div>
+        </div>
+        <!-- КОМПАС -->
+
+        <!-- BOTTOM BLOCK -->
+        <div class="bottom">
+            <div class="bottomText">Страница разработчика:</div>
+
+            <a href="https://vk.com/v_o_r_a_c_i_t_y">
+                <div class="bottomAk">
+                    <div class="AkIco">
+                        <img src="img/ico.png" class="AkIco1">
+                    </div>
+                    <div class="AkName">Deus Vult</div>
+                    <div class="PlAk">
+                        <img src="img/web/vk.png" class="PlAk1">
+                    </div>
+                </div>
+            </a>
+        </div>
+        </div>
+
     </div>
 
 </body></html>
