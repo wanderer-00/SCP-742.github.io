@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>email</title>
@@ -10,174 +10,55 @@
             font-family: sans-serif;
         }
 
-        a {
-            text-decoration: none;
-        }
-
-
         .menu a {
             text-decoration: none;
-
         }
 
-        .menu li {
+        menu li{
             position: relative;
-            list-style: none;
         }
 
         .menu_list {
             display: flex;
         }
-
-        .menu_list>li {
-            margin: 0 10px 0 0;
-            height: 40px;
-            line-height: 40px;
-            background-color: white;
+        .menu_list>li{
+            margin: 0 10x 0 0;
         }
-
-        .menu_list>li .sub-menu_list {
-            display: block;
+        .menu_list>li:hover .sub-menu_list{
+            
         }
-
-        .menu_link {
-            padding: 0px;
-            color: #4081EC;
+        .menu_link{
+            color: white;
         }
-
-        .sub-menu_list {
-            background-color: #939393;
+        .sub-menu_list{
             position: absolute;
-            display: none;
-        }
-
-        .sub-menu_link {
-            color: red;
-            border: 1px solid red;
-        }
-
-        .sub-menu_list>li:hover .sub-sub-menu_list {
-            display: block;
-        }
-        .sub-sub-menu_list{
-            height: 40px;
-        }
-        #ico-site{
-            height: 100%;
+            left: 0;
+            top: 20px;
+            background: white;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="cluster">
+
     <nav class="menu">
-        <ui class="menu_list">
-
-            <li><a href="" class='menu_link'>
-                    leo805745@gmail.com</a>
-
-            <lu class="sub-menu_list">
-            <li><a href="" class='sub-menu_link'></a></li>
-            <li><a href="" class='sub-menu_link'>2LV</a></li>
-            <li><a href="" class='sub-menu_link'>2LV</a></li>
-            </lu>
+        <ul class="menu_list">
+            <li><a href="" class="menu_link">1LV</a>
+                <ul class="sub-menu_list">
+                    <li><a href="" class="sub-menu_link">2LV</a></li>
+                    <li><a href="" class="sub-menu_link">2LV</a></li>
+                    <li><a href="" class="sub-menu_link">2LV</a></li>
+                </ul>
             </li>
-
-
-            <li><a href="" class='menu_link'>SCP742@gmail.com</a>
-
-                <lu class="sub-menu_list">
-
-            <li><a href="" class='sub-menu_link'>2LV</a>
-                <lu class="sub-sub-menu_list">
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            </lu>
-            </li>
-
-            <li><a href="" class='sub-menu_link'>2LV</a>
-                <lu class="sub-sub-menu_list">
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            </lu>
-            </li>
-
-            <li><a href="" class='sub-menu_link'>2LV</a>
-                <lu class="sub-sub-menu_list">
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            </lu>
-            </li>
-            </lu>
-            </li>
-
-            <li><a href="" class='menu_link'>anime.twice.two@gmail.com</a>
-            
-            <lu class="sub-menu_list">
-            <li><a href="" class='sub-menu_link'>
-                <img id='ico-site' src="img/yummyanime.png">
-                yummyanime</a>
-            <li><a href="" class='sub-menu_link'>2LV</a></li>
-            <li><a href="" class='sub-menu_link'>2LV</a></li>
-            </lu>
-            
-            </li>
-            <li><a href="" class='menu_link'>1LV</a>
-
-                <lu class="sub-menu_list">
-
-            <li><a href="" class='sub-menu_link'>2LV</a>
-                <lu class="sub-sub-menu_list">
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            </lu>
-            </li>
-
-            <li><a href="" class='sub-menu_link'>2LV</a>
-                <lu class="sub-sub-menu_list">
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            </lu>
-            </li>
-
-            <li><a href="" class='sub-menu_link'>2LV</a>
-                <lu class="sub-sub-menu_list">
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            <li><a href="" class='sub-sub-menu_link'>3LV</a></li>
-            </lu>
-            </li>
-            </lu>
-            </li>
-        </ui>
+            <li><a href="" class="menu_link">1LV</a></li>
+            <li><a href="" class="menu_link">1LV</a></li>
+        </ul>
     </nav>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    
+
+
+    <!--
+    https://www.youtube.com/watch?v=zf59Rg_KYk8&t=435s
+    -->
 
 </body></html>
