@@ -7,24 +7,21 @@
     <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <style type="text/css">
-        /*html { height: 100%; } - по всей высоте окна браузера*/
         body {
             color: white;
             margin: 0px;
             padding: 0px;
             background: #343434 url(img/fon.jpg);
             font-family: sans-serif;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
             background-size: cover;
+            background-repeat: no-repeat;
             background-position: 0px 0px;
+            background-attachment: fixed;
         }
 
         a {
-            text-decoration: none;
-
-
             color: red;
+            text-decoration: none;
         }
 
         /* HEADER */
@@ -52,45 +49,6 @@
             align-items: center;
             border-radius: 10px;
             justify-content: center;
-        }
-
-
-
-
-        .lineTab {
-            background: rgba(52, 52, 200, 0);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            float: left;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        .Tab {
-            border-radius: 0px 25px 0px 0px;
-            background: #343434;
-            font-size: 30px;
-            padding: 10px;
-            opacity: 1;
-            border: 2px solid white;
-            border-left: 0;
-            color: yellow;
-        }
-
-        .Tab:hover {
-            border-bottom: 2px solid rgba(52, 52, 52, 1);
-        }
-
-        .a-Tab {
-            color: yellow;
-        }
-
-        .a-Tab:hover {
-            border-bottom: 0px solid red;
-            color: orange;
         }
 
 
@@ -181,7 +139,7 @@
 
 
 
-
+        /* КОМПАС */
         .y {
             background-color: rgba(32, 32, 32, 0.8);
             justify-content: right;
@@ -228,6 +186,8 @@
         }
 
 
+
+        /* COUB */
         .c1 {
             background-color: #121212;
             border-bottom: 2px solid #7e7d7d;
@@ -435,6 +395,7 @@
 
         #sliderIco {
             background: none;
+
     </style>
 </head>
 
@@ -449,29 +410,14 @@
         </div>
     </div>
 
-    <!-- ЛИНИЯ ВКЛАДОК -->
-    <div class="lineTab">
-
-        <a href="Music/audio.html">
-            <div class="Tab">Audio v.1.0</div>
-        </a>
-
-        <a href="Music/audio2.html">
-            <div class="Tab">Audio v.2.0</div>
-        </a>
-
-    </div>
-
-
     <!-- AUTO SLIDER -->
     <div class="svaip_gallery">
         <div id='slider'>
             <div id='line'>
                 <a href='https://www.youtube.com/watch?v=cHnNzEFY0qQ'>
-                <img id='sliderIMG' src="img/game/Mordhau.jpg">
+                    <img id='sliderIMG' src="img/game/Mordhau.jpg">
                 </a> <!-- Mordhau  -->
                 <img id='sliderIMG' src="img/anime/Скитальцы.jpg">
-                <img id='sliderIMG' src="img/anime/Связь сердец. По случайному пути.jpg">
                 <img id='sliderIMG' src="img/anime/Путешествие Элейны.jpg">
                 <img id='sliderIMG' src="img/_/Mr.robot.jpg">
                 <img id='sliderIMG' src="img/anime/91 Days.jpg">
@@ -486,8 +432,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- COUB 100 -->
     <div class="c1">
@@ -509,7 +453,6 @@
         <div class="c1_2">Fate away</div>
 
         <video class="c1_3" controls loop>
-            <!-- ВИДЕО -->
             <source src="COUB/video/1.mp4">
         </video>
 
@@ -539,12 +482,10 @@
     </div>
 
 
-    <!-- путеводитель, наводка -->
+    <!-- КОМПАС -->
     <div class="y">
         <div class="yy">
-            <a href="index1.html">
-                <div class="yyy xxx">1</div>
-            </a>
+            <div class="yyy xxx">1</div>
             <a href="index2.html">
                 <div class="yyy">2</div>
             </a>
@@ -580,9 +521,6 @@
             </a>
         </div>
     </div>
-
-
-
 
 
     <div class="content">
@@ -651,11 +589,9 @@
     <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
 
 
-        <!-- путеводитель, наводка -->
+        <!-- КОМПАС -->
         <div class="yy">
-            <a href="index1.html">
-                <div class="yyy xxx">1</div>
-            </a>
+            <div class="yyy xxx">1</div>
             <a href="index2.html">
                 <div class="yyy">2</div>
             </a>
@@ -711,10 +647,9 @@
 
     <!--  
     ¡i¡
-
-
 rgba(21,21,221,0.2)
 -->
+   
     <script>
         /* SLIIDER auto */
         autoSlider();
@@ -733,5 +668,8 @@ rgba(21,21,221,0.2)
                 autoSlider();
             }, 3000);
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
