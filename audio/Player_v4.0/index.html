@@ -5,16 +5,21 @@
     <title>Player v4</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             color: rgb(168, 161, 149);
             font-family: sans-serif;
             background-color: #181A1B;
         }
 
         #box {
-            margin: 20px;
-            padding: 15px;
-            border-top: 1px solid rgb(168, 161, 149);
+            margin: 0px 20px 0px 20px;
+            padding: 10px;
             border-bottom: 1px solid rgb(168, 161, 149);
+        }
+        #box:first-child{
+            margin-top: 20px;
+            border-top: 1px solid rgb(168, 161, 149);
         }
 
         .play {
@@ -38,16 +43,36 @@
 
 <body>
     <div id="box">
-        <audio id="player" src="../audio/COUB/Blackbear - IDFC (coub).mp3"></audio>
+        <audio id="player" src="../audio/COUB/Blackbear-IDFC_coub.mp3"></audio>
         <div>
             <button onclick="document.getElementById('player').play()">Play</button>
             <button onclick="document.getElementById('player').pause()">Pause</button>
-            <button onclick="document.getElementById('player').volume += 0.1">Vol+ </button>
-            <button onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
+            <button onclick="document.getElementById('player').volume += 0.1">Vol+0.1 </button>
+            <button onclick="document.getElementById('player').volume -= 0.1">Vol-0.1 </button>
+            <font id='name'>Blackbear - IDFC</font>
         </div>
     </div>
 
-    <script>
+    <div id="box">
+        <audio id="player1" src="../audio/COUB/Glassey-ARVFZ-TRCKRTRT_coub.mp3"></audio>
+        <div>
+            <button onclick="document.getElementById('player1').play()">Play</button>
+            <button onclick="document.getElementById('player1').pause()">Pause</button>
+            <button onclick="document.getElementById('player1').volume += 0.1">Vol+0.1 </button>
+            <button onclick="document.getElementById('player1').volume -= 0.1">Vol-0.1 </button>
+            <font id='name'>Glassey - ARVFZ - TRCKRTRT</font>
+        </div>
+    </div>
+    
+    <div id="box">
+        <audio id="player2" src="../audio/COUB/Tincup-Lost_coub.mp3"></audio>
+        <div>
+            <button onclick="document.getElementById('player2').play()">Play</button>
+            <button onclick="document.getElementById('player2').pause()">Pause</button>
+            <button onclick="document.getElementById('player2').volume += 0.1">Vol+0.1 </button>
+            <button onclick="document.getElementById('player2').volume -= 0.1">Vol-0.1 </button>
+            <font id='name'>Tincup - Lost</font>
+        </div>
+    </div>
 
-    </script>
 </body></html>
