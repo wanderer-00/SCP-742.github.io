@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Player v4</title>
@@ -58,6 +59,7 @@
         }
 
         #name {}
+
     </style>
 </head>
 
@@ -95,23 +97,22 @@
             <font id='name'>Tincup - Lost</font>
         </div>
     </div>
-    
-    
-    <button>ttt</button>
-   
-    <script>
 
-        if ($('player').paused) {
-            $('player').play();
-        } else {
-            $('player').pause();
+    <audio id="myTune" src='../audio/COUB/Tincup-Lost_coub.mp3'></audio>
+    <button type="button" onclick="aud_play_pause()">Play/Pause</button>
+
+    <script>
+        function aud_play_pause() {
+            var myAudio = document.getElementById("myTune");
+            if (myAudio.paused) {
+                myAudio.play();
+            } else {
+                myAudio.pause();
+            }
         }
 
-
-
-
-        var myAudio = document.getElmentById("player");
-        alert(myAudio.duration); // Длительность
     </script>
 
-</body></html>
+</body>
+
+</html>
