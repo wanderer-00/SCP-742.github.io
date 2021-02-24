@@ -296,12 +296,20 @@
 
     /* TEST PLACEs */
     #testPlaceZ {
+        padding: 10px;
         background-color: beige;
     }
 
+    /*  */
+    #codePlace {
+        color: #7EC699;
+        border-radius: 5px;
+        background-color: #2d2d2d;
+    }
 
     /* Player v3.0 */
     @import url()
+
 </style>
 
 <body>
@@ -624,7 +632,50 @@
     }
     -->
 
+    <!-- Play/Pause -->
+    <div id="testPlaceZ">
+        <button>Воспроизведение</button>
+
+        <pre id="codePlace">
+    $('#player').on('play', function() {
+    //Меняем текст кнопки на "Пауза"
+    });
+
+    $('#player').on('pause', function() {
+    //Меняем текст кнопки на "Воспроизвести"
+    });
+    </pre>
+
+        Ну и в обработчике клика проверяете, если стоит на паузе - то по клику воспроизводить, если играет - то ставить на паузу. Типа:
+
+        <pre id="codePlace">
+    if($('#player').paused) {
+    $('#player').play();
+    } else {
+    $('#player').pause();
+    }
+    </pre>
+    </div>
+
+    <!--
+    /* уведомление */
+    alert( 'text' );
+    
+    /* Условие */
+    if (year == 2015) {
+        alert( "" );
+        alert( "" );
+    }
+    else{
+        alert( "" );
+        alert( "" );   
+    }
+    
+    -->
+       
     <script>
+
+        
         /* SLIIDER control */
         var left1 = 0;
         document.getElementById('buttonLeft').onclick = sliderLeft;

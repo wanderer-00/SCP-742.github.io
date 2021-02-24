@@ -11,15 +11,18 @@
             font-family: sans-serif;
             background-color: #181A1B;
         }
-        button{
+
+        button {
             cursor: pointer;
         }
+
         #box {
             margin: 0px 20px 0px 20px;
             border-bottom: 1px solid rgb(168, 161, 149);
             padding: 10px;
         }
-        #box:first-child{
+
+        #box:first-child {
             margin-top: 20px;
             border-top: 1px solid rgb(168, 161, 149);
         }
@@ -38,25 +41,29 @@
             border-left: 15px solid #007AB3;
             cursor: pointer;
         }
-        #audioBox{
+
+        #audioBox {
             display: inline-block;
         }
-        #icoBox{
+
+        #icoBox {
             margin: 0;
             padding: 0;
             display: inline-block;
             height: 40px;
         }
-        #ico{
+
+        #ico {
             height: 100%;
         }
+
         #name {}
     </style>
 </head>
 
 <body>
     <div id="box">
-        
+
         <audio id="player" src="../audio/COUB/Blackbear-IDFC_coub.mp3"></audio>
         <div id='audioBox'>
             <button onclick="document.getElementById('player').play()">Play</button>
@@ -64,7 +71,6 @@
             <button onclick="document.getElementById('player').volume += 0.1">+ </button>
             <button onclick="document.getElementById('player').volume -= 0.1">- </button>
             <font id='name'>Blackbear - IDFC</font>
-
         </div>
     </div>
 
@@ -78,7 +84,7 @@
             <font id='name'>Glassey - ARVFZ - TRCKRTRT</font>
         </div>
     </div>
-    
+
     <div id="box">
         <audio id="player2" src="../audio/COUB/Tincup-Lost_coub.mp3"></audio>
         <div id='audioBox'>
@@ -89,5 +95,23 @@
             <font id='name'>Tincup - Lost</font>
         </div>
     </div>
+    
+    
+    <button>ttt</button>
+   
+    <script>
+
+        if ($('player').paused) {
+            $('player').play();
+        } else {
+            $('player').pause();
+        }
+
+
+
+
+        var myAudio = document.getElmentById("player");
+        alert(myAudio.duration); // Длительность
+    </script>
 
 </body></html>
