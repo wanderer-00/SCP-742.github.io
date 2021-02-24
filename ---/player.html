@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PLAYERs</title>
+    <style>
+        /* ОБЩИЙ СТИЛЬ ДОКУМЕНТА */
+        body {
+            color: white;
+            font-family: sans-serif;
+            background-color: #2D2D2D;
+        }
+
+        /* ОБНУЛЕНИЕ СТАНД. СТИЛЕЙ ССЫЛОК */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* КОММЕНТАРИЙ */
+        #komentariy {
+            color: grey;
+        }
+
+        /* КНОПКА-ТРЕУГОЛЬНИК */
+        button {
+
+            /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
+            padding: 0;
+            border: none;
+            font: inherit;
+            color: inherit;
+            background-color: transparent;
+
+            /* ПОСТРОЙКА ТРЕУГОЛЬНИКА */
+            border: 16px solid transparent;
+            border-left: 26px solid #007AB3;
+
+            /* КУРСОР-ПАЛЕЦ ПРИ НАВЕДЕНИИ */
+            cursor: pointer;
+
+            vertical-align: middle;
+        }
+
+        /* ИКОНКА ТРЕКА */
+        #box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: no-wrap;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        #icoTrek {
+            display: inline-block;
+            flex-basis: 10%;
+            background: red;
+        }
+
+        #ico {
+            /* ИСПРАВЛЕНИЕ БАГА С ИЗОБРАЖЕНИЕМ [ОТСТУП СНИЗУ] */
+            display: block;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        #ttt {
+            flex-basis: 70%;
+        }
+        #name{
+        }
+    </style>
+</head>
+
+<body>
+    <!-- КОММЕНТАРИЙ -->
+    <font id='komentariy'>
+        1 событие обеспечивает паузу/воспр. для всех композиций, но не выкл. прошлую композицию при запуске новой :(
+    </font>
+    <hr />
+
+    <!-- ТРЕКИ -->
+    v1.0<br />
+    <a href="javascript:void(0)" onclick="aud_play_pause(this)">
+        <i class="control icon-play">PLAY#1</i>
+        <audio class="xnine-player" src="../audio/audio/COUB/Blackbear-IDFC_coub.mp3" preload="auto"></audio>
+    </a>
+    <hr />
+
+    v1.1<br />
+    <a href="javascript:void(0)" onclick="aud_play_pause(this)">
+        <button class="control icon-play"></button>
+        <audio class="xnine-player" src="../audio/audio/COUB/Tincup-Lost_coub.mp3" preload="auto"></audio>
+    </a>
+    <hr />
+
+    v1.2
+    <div id="box">
+        <div id="icoTrek">
+            <img id='ico' src="../audio/img/twenty_one_pilots.jpg">
+        </div>
+        <div id="ttt">
+            <div id="name">
+                twenty one pilots - Stressed Out
+            </div>
+            <div id="playX">
+                <a href="javascript:void(0)" onclick="aud_play_pause(this)">
+                    <button class="control icon-play"></button>
+                    <audio class="xnine-player" src="../audio/audio/COUB/twenty_one_pilots-Stressed_Out_coub.mp3" preload="auto"></audio>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- СКРИПТ -->
+    <script>
+        /* v1 */
+        function aud_play_pause(object) {
+            var myAudio = object.querySelector(".xnine-player");
+            var myIcon = object.querySelector(".control");
+            if (myAudio.paused) {
+                myIcon.className = "control icon-pause";
+                myAudio.play();
+            } else {
+                myIcon.className = "control icon-play";
+                myAudio.pause();
+            }
+        }
+    </script>
+</body></html>
