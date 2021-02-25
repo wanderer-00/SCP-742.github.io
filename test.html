@@ -171,7 +171,7 @@
         }
     }
 
-    /* Player */
+    /* Player v0.1 & v0.2 */
     .player {
         width: 500px;
         background: #F1F3F4;
@@ -201,6 +201,8 @@
         padding: 10px;
         font-size: 20px;
     }
+
+
 
     /* ПАЛИТРА */
     #palitra {
@@ -308,8 +310,60 @@
     }
 
     /* Player v3.0 */
-    @import url()
+    /* @import url() */
+        
+    /* Player v0.3 */
+    /* СТИЛЬ ОКРУЖЕНИЯ */
+    
+    #container_v_0_3 {
+        width: 100wh;
+        padding: 10px;
+        background: url(img/picture/2.jpg);
+    }
+    /* ПОДПИСЬ */
+    #name_v_0_3 {
+        font-size: 40px;
+        padding: 10px;
+        color: #AEEA00;
+        display: block;
+        background-color: #F1F3F4;
+    }
+    /* СТАБИЛИТРОН */
+    #o_v_0_3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* СТИЛЬ ПЛЕЕРА */
+    .player_v_0_3 {
+        width: 500px;
+        background: #F1F3F4;
+    }
 
+    .player_v_0_3 .player_img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
+    .player_v_0_3 .player_img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .player_v_0_3 audio {
+        width: 100%;
+        outline: none;
+    }
+
+    #player_name_v_0_3 {
+        padding: 10px;
+        font-size: 20px;
+    }   
 </style>
 
 <body>
@@ -386,9 +440,9 @@
     </div>
 
 
-    <!-- Player -->
+    <!-- Player v0.1 -->
     <div id="container">
-        <div id="name">Player v1.0</div>
+        <div id="name">Player v0.1</div>
         <div id="o">
 
 
@@ -407,9 +461,9 @@
 
 
 
-    <!-- Player v2.0 -->
+    <!-- Player v0.2 -->
     <div id="container">
-        <div id="name">Player v2.0</div>
+        <div id="name">Player v0.2</div>
         <div id="o">
 
 
@@ -420,6 +474,26 @@
                 </div>
                 <audio controls>
                     <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+                </audio>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Player v0.3 -->
+    <div id="container_v_0_3">
+        <div id="name_v_0_3">Player v0.3</div>
+        <div id="o_v_0_3">
+
+
+            <div class="player_v_0_3">
+                <div id="player_name_v_0_3">ITSOKTOCRY - POP, LOCK & DROPDEAD</div>
+                <div class="player_v_0_3">
+                    <img src="audio/img/0.jpg" alt="обложка потерялась ;(">
+                </div>
+                <audio controls>
+                    <source src='audio/audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3' type="audio/mp3">
                 </audio>
             </div>
 
@@ -672,10 +746,8 @@
     }
     
     -->
-       
-    <script>
 
-        
+    <script>
         /* SLIIDER control */
         var left1 = 0;
         document.getElementById('buttonLeft').onclick = sliderLeft;
