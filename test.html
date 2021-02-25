@@ -311,33 +311,34 @@
 
     /* Player v3.0 */
     /* @import url() */
-        
+
     /* Player v0.3 */
     /* СТИЛЬ ОКРУЖЕНИЯ */
-    
+
     #container_v_0_3 {
         width: 100wh;
         padding: 10px;
-        background: url(img/picture/2.jpg);
     }
+
     /* ПОДПИСЬ */
     #name_v_0_3 {
         font-size: 40px;
         padding: 10px;
         color: #AEEA00;
         display: flex;
-        background-color: #F1F3F4;
     }
+
     /* СТАБИЛИТРОН */
     #o_v_0_3 {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     /* СТИЛЬ ПЛЕЕРА */
     .player_v_0_3 {
         width: 500px;
-        
+
         background: #F1F3F4;
     }
 
@@ -364,10 +365,81 @@
     #player_name_v_0_3 {
         padding: 10px;
         font-size: 20px;
-    }   
+    }
+
+    /* v04 */
+    #box_v04 {
+        width: 96%;
+        height: 80px;
+        margin: 2%;
+        background-color: #F1F3F4;
+
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+    }
+
+    #ico_v04 {
+        height: 100%;
+        background-color: red;
+    }
+
+    #img_v04 {
+        height: 100%;
+    }
+
+    /* audio & name */
+    #body_v04 {
+        overflow: hidden;
+        flex-basis: 100%;
+    }
+
+    #name_v04 {
+        color: black;
+        height: 50%;
+        padding-left: 20px;
+        /* НАСТРОЙКА ШРИФТОВ */
+        font-size: 22px;
+        font-weight: 550;
+        font-family: sans-serif;
+        /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
+        display: flex;
+        align-items: center;
+    }
+
+    #player_v04 {
+        height: 50%;
+        /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
+        overflow: hidden;
+        /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #player_v04 audio {
+        width: 100%;
+        outline: none;
+    }
 </style>
 
 <body>
+
+    <!-- Player v04 -->
+    <div id="box_v04">
+        <div id="ico_v04">
+            <img id=img_v04 src="audio/img/empty.gif">
+        </div>
+        <div id="body_v04">
+            <div id="name_v04">Kumarion - 1984 </div>
+            <div id="player_v04">
+                <audio controls>
+                    <source src='audio/audio/N_E_W/Kumarion - 1984.mp3' type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+
     <!-- Loading... -->
     <div id="box">
         <div id="volna">
@@ -449,10 +521,10 @@
 
             <div class="player">
                 <div class="player_img">
-                    <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+                    <img src="audio/img/1235.jpg" alt="">
                 </div>
                 <audio controls>
-                    <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+                    <source src='audio/audio/N_E_W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
                 </audio>
             </div>
 
@@ -471,10 +543,10 @@
             <div class="player">
                 <div id="player_name">Fytch - Sirens Over Paris</div>
                 <div class="player_img">
-                    <img src="audio/audio/img/IcoTrek/1235.jpg" alt="">
+                    <img src="audio/img/1235.jpg" alt="">
                 </div>
                 <audio controls>
-                    <source src='audio/audio/N E W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+                    <source src='audio/audio/N_E_W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
                 </audio>
             </div>
 
@@ -501,6 +573,8 @@
 
         </div>
     </div>
+
+
 
     <!-- ПАЛИТРА -->
     <div id="palitra">
