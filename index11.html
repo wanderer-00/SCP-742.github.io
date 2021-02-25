@@ -17,18 +17,20 @@
             background-position: 0px 0px;
             background-attachment: fixed;
         }
+
         a {
             color: red;
             text-decoration: none;
         }
-        
-        
-        
-        .cluster{
+
+
+
+        .cluster {
             display: inherit;
             height: 100vh;
         }
-        .stabilitron{
+
+        .stabilitron {
             max-width: 100%;
             min-width: 970px;
             height: 100%;
@@ -248,135 +250,214 @@
             border: 1px solid #343434;
             color: grey;
         }
+        
+        /* СТИЛИЗАЦИЯ КНОПОК */
+        .button-6 {
+            padding: 0;
+            padding-left: 5px;
+            padding-top: 5px;
+            min-width: 600px;
+            max-width: 1000px;
+            margin: 2vh 0;
+            background: transparent;
+            border-width: 0;
+            position: relative;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5vh;
+            transition: .3s;
+
+        }
+
+        .button-6 span {
+            display: block;
+            position: relative;
+            z-index: 3;
+            background: #41294a;
+            color: white;
+            padding: 0 30px;
+            line-height: ;
+        }
+
+        .button-6:before {
+            content: "";
+            position: absolute;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            left: -5px;
+            top: -5px;
+            background: #ff2c54;
+            z-index: 1;
+            transition: .4s ease-out;
+        }
+
+        .button-6:after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            right: -10px;
+            bottom: -10px;
+            background: #41ebdf;
+            transition: .4s ease-out .1s;
+        }
+
+        .button-6:hover:before {
+            transform: translate(10px, 10px);
+        }
+
+        .button-6:hover:after {
+            transform: translate(-10px, -10px);
+        }
     </style>
 </head>
 
 <body>
     <div class="cluster">
-    <div class="stabilitron">
+        <div class="stabilitron">
 
-        <!-- HEADER -->
-        <div id='header'>
-            <img id='headerIMG' src="img/logo.png">
-            <img id='headerIMG' src="img/123.png">
-            <div id='search'>
-                <img src="img/search.png" height="80px" />
-            </div>
-        </div>
-
-        <!-- КОМПАС -->
-        <div class="y">
-            <div class="yy">
-                <a href="index10.html">
-                    <div class="yyy">Назад</div>
-                </a>
-                <a href="index7.html">
-                    <div class="yyy">7</div>
-                </a>
-                <a href="index8.html">
-                    <div class="yyy">8</div>
-                </a>
-                <a href="index9.html">
-                    <div class="yyy">9</div>
-                </a>
-                <a href="index10.html">
-                    <div class="yyy">10</div>
-                </a>
-                <a href="index11.html">
-                    <div class="yyy xxx">11</div>
-                </a>
-                <a href="index12.html">
-                    <div class="yyy">00</div>
-                </a>
-                <a href="index13.html">
-                    <div class="yyy">00</div>
-                </a>
-                <a href="">
-                    <div class="yyy">...</div>
-                </a>
-                <a href="index12.html">
-                    <div class="yyy">Далее</div>
-                </a>
-            </div>
-        </div>
-        <!-- КОМПАС -->
-
-        <!-- КОНТЕНТ -->
-        <div class="content">
-            <div class="blockh">
-                <div class="hovergallery">
-                    <a href="page/code_8/code_8.html">
-                        <font style="color: white; font-size: 50px;">CODE8</font>
-                    </a><br>
-                    <img src="img/film/code-8.jpg" />
+            <!-- HEADER -->
+            <div id='header'>
+                <img id='headerIMG' src="img/logo.png">
+                <img id='headerIMG' src="img/123.png">
+                <div id='search'>
+                    <img src="img/search.png" height="80px" />
                 </div>
             </div>
 
-            <div class="blockh" style="padding: 0;">
-
-                <!-- BUTTON -->
-                <a href='during.html'>
-                    <button class="button-6"><span>Смотрю</span></button>
-                </a><br />
-                <!-- BUTTON -->
-
+            <!-- КОМПАС -->
+            <div class="y">
+                <div class="yy">
+                    <a href="index10.html">
+                        <div class="yyy">Назад</div>
+                    </a>
+                    <a href="index7.html">
+                        <div class="yyy">7</div>
+                    </a>
+                    <a href="index8.html">
+                        <div class="yyy">8</div>
+                    </a>
+                    <a href="index9.html">
+                        <div class="yyy">9</div>
+                    </a>
+                    <a href="index10.html">
+                        <div class="yyy">10</div>
+                    </a>
+                    <a href="index11.html">
+                        <div class="yyy xxx">11</div>
+                    </a>
+                    <a href="index12.html">
+                        <div class="yyy">00</div>
+                    </a>
+                    <a href="index13.html">
+                        <div class="yyy">00</div>
+                    </a>
+                    <a href="">
+                        <div class="yyy">...</div>
+                    </a>
+                    <a href="index12.html">
+                        <div class="yyy">Далее</div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <!-- КОНТЕНТ -->
+            <!-- КОМПАС -->
 
-        <!-- КОМПАС -->
-        <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
-            <div class="yy">
-                <a href="index10.html">
-                    <div class="yyy">Назад</div>
-                </a>
-                <a href="index7.html">
-                    <div class="yyy">7</div>
-                </a>
-                <a href="index8.html">
-                    <div class="yyy">8</div>
-                </a>
-                <a href="index9.html">
-                    <div class="yyy">9</div>
-                </a>
-                <a href="index10.html">
-                    <div class="yyy">10</div>
-                </a>
-                <a href="index11.html">
-                    <div class="yyy xxx">11</div>
-                </a>
-                <a href="index12.html">
-                    <div class="yyy">00</div>
-                </a>
-                <a href="index13.html">
-                    <div class="yyy">00</div>
-                </a>
-                <a href="">
-                    <div class="yyy">...</div>
-                </a>
-                <a href="index12.html">
-                    <div class="yyy">Далее</div>
-                </a>
-            </div>
-        </div>
-        <!-- КОМПАС -->
-
-        <!-- BOTTOM BLOCK -->
-        <div class="bottom">
-            <div class="bottomText">Страница разработчика:</div>
-
-            <a href="https://vk.com/v_o_r_a_c_i_t_y">
-                <div class="bottomAk">
-                    <div class="AkIco">
-                        <img src="img/ico.png" class="AkIco1">
-                    </div>
-                    <div class="AkName">Deus Vult</div>
-                    <div class="PlAk">
-                        <img src="img/web/vk.png" class="PlAk1">
+            <!-- КОНТЕНТ -->
+            <div class="content">
+                <div class="blockh">
+                    <div class="hovergallery">
+                        <a href="page/code_8/code_8.html">
+                            <font style="color: white; font-size: 50px;">CODE8</font>
+                        </a><br>
+                        <img src="img/film/code-8.jpg" />
                     </div>
                 </div>
-            </a>
-        </div>
+
+                <div class="blockh" style="padding: 0;">
+
+                    <!-- BUTTON -->
+                    <a href='during.html'>
+                        <button class="button-6"><span>Смотрю</span></button>
+                    </a><br />
+
+                    <a href='test.html'>
+                        <button class="button-6"><span>TEST</span></button>
+                    </a><br />
+
+                    <a href='audio/Player_v1.0/audio.html'>
+                        <button class="button-6"><span>Audio v1.0</span></button>
+                    </a><br />
+
+                    <a href='audio/Player_v2.0/audio2.html'>
+                        <button class="button-6"><span>Audio v2.0</span></button>
+                    </a><br />
+
+                    <a href='audio/Player_v3.0/index.html'>
+                        <button class="button-6"><span>Audio v3.0</span></button>
+                    </a><br />
+
+                    <a href='video/Video_maket_v1.0/index.html'>
+                        <button class="button-6"><span>Video maket v1.0</span></button>
+                    </a><br />
+                    <!-- BUTTON -->
+
+                </div>
+            </div>
+            <!-- КОНТЕНТ -->
+
+            <!-- КОМПАС -->
+            <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
+                <div class="yy">
+                    <a href="index10.html">
+                        <div class="yyy">Назад</div>
+                    </a>
+                    <a href="index7.html">
+                        <div class="yyy">7</div>
+                    </a>
+                    <a href="index8.html">
+                        <div class="yyy">8</div>
+                    </a>
+                    <a href="index9.html">
+                        <div class="yyy">9</div>
+                    </a>
+                    <a href="index10.html">
+                        <div class="yyy">10</div>
+                    </a>
+                    <a href="index11.html">
+                        <div class="yyy xxx">11</div>
+                    </a>
+                    <a href="index12.html">
+                        <div class="yyy">00</div>
+                    </a>
+                    <a href="index13.html">
+                        <div class="yyy">00</div>
+                    </a>
+                    <a href="">
+                        <div class="yyy">...</div>
+                    </a>
+                    <a href="index12.html">
+                        <div class="yyy">Далее</div>
+                    </a>
+                </div>
+            </div>
+            <!-- КОМПАС -->
+
+            <!-- BOTTOM BLOCK -->
+            <div class="bottom">
+                <div class="bottomText">Страница разработчика:</div>
+
+                <a href="https://vk.com/v_o_r_a_c_i_t_y">
+                    <div class="bottomAk">
+                        <div class="AkIco">
+                            <img src="img/ico.png" class="AkIco1">
+                        </div>
+                        <div class="AkName">Deus Vult</div>
+                        <div class="PlAk">
+                            <img src="img/web/vk.png" class="PlAk1">
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
     </div>
