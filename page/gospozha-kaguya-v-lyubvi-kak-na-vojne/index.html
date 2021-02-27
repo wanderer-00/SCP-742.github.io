@@ -12,7 +12,6 @@
             padding: 0;
             font-family: sans-serif;
         }
-
         button {
             /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
             padding: 0;
@@ -21,13 +20,13 @@
             color: inherit;
             background-color: transparent;
         }
-
+        /* фон позди плеера */
         #box {
             height: 100vh;
             width: 100%;
             background: black;
         }
-
+        /* стабилизатор */
         #sub_box {
             color: white;
             width: 1100px;
@@ -95,14 +94,6 @@
             border: 2px solid red;
         }
 
-
-        #pult {
-            height: 36px;
-            display: inline;
-            border-left: 1px solid white;
-            border-right: 1px solid white;
-        }
-
         #container {
             display: flex;
             flex-wrap: nowrap;
@@ -123,7 +114,9 @@
 
         #left_box iframe {
             margin: 0;
-            padding: 0;
+            padding: 0!important;
+            width: 100%;
+            height: 408px;
         }
 
         #right_box {
@@ -138,6 +131,9 @@
             white-space: nowrap;
             /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
             overflow: hidden;
+        }
+        #player{
+            padding: 0!important;
         }
 
         :root {
@@ -193,7 +189,7 @@
             </div>
             <div id="container">
                 <div id="left_box">
-                    <iframe id='player' src="//kodik.info/seria/397790/44726c6b0d325d3eb9bed1425ac8c729/720p" width="100%" height=408 frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+                    <iframe id='player' src="//kodik.info/seria/397790/44726c6b0d325d3eb9bed1425ac8c729/720p" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
                     <div id="panel">
                         <div id="serial">Сериия:</div>
                         <div id="cluster">

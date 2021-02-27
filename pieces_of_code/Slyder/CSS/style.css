@@ -1,0 +1,104 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: #343434;
+}
+img{
+    height: 200px;
+}
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+.slider{
+    padding: 50px;
+    position: relative;
+}
+.slider .slick-arrow {
+    margin: -px 0 0 0;
+    background: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+}
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url(../img/right-arrow.png) 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url(../img/left-arrow.png) 0 0 / 100% no-repeat;
+}
+/* Точки (булиты) */
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+}
+/* Активная точка */
+.slider .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 1px solid white;
+}
+/* Элемент точки */
+.slider .slick-dots li button{
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.slider__Item{
+    text-align: center;
+    /* ЭФФЕКТ ВЫДЕЛЕНИЯ ЦЕНТРАЛЬНОГО СЛАЙДА */
+    opacity: 0.5;
+    transition: all 0.3s ease 0s;
+    /* */
+}
+.slider__Item .slick-active {
+    /* ЭФФЕКТ ВЫДЕЛЕНИЯ ЦЕНТРАЛЬНОГО СЛАЙДА */
+    opacity: 1;
+}
