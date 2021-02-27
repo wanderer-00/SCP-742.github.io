@@ -13,6 +13,15 @@
         font-family: sans-serif;
     }
 
+    button {
+        /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+    }
+
     #box {
         height: 100vh;
         width: 100%;
@@ -20,6 +29,7 @@
     }
 
     #sub_box {
+        color: white;
         width: 1100px;
         background: black;
         position: relative;
@@ -27,33 +37,45 @@
         transform: translate(-50%, 0);
     }
 
-    #container {
-        background-color: mediumvioletred;
-    }
+    #name_age_box {}
 
     #name {
-        color: white;
-        padding: 10px 0px 0px 10px;
+        padding: 25px 0px 0px 10px;
     }
 
     #age {
-        color: white;
+        color: gray;
+        /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
+        user-select: none;
         padding: 0 0 10px 10px;
         font-size: 25px;
     }
 
     #panel {
+        /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
+        width: 700px;
         user-select: none;
         padding: 10px;
         background-color: #161616;
+        display: flex;
+    }
+
+    #serial {
+        color: darkgray;
+        padding-right: 10px;
+        font-size: 20px;
+        /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #segment {
-        color: white;
         width: 36px;
         height: 36px;
-        font-size: 20px;
         border: 2px solid #161616;
+        margin: 0 5px;
+        font-size: 20px;
         border-radius: 5px;
         /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
         display: inline-flex;
@@ -62,17 +84,17 @@
     }
 
     #segment:hover {
-        color: white;
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
-        border: 2px solid red;
-        border-radius: 5px;
-        /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        border: 2px solid rgba(255, 255, 255, .15);
     }
+
+    #segment:active {
+        border: 2px solid red;
+    }
+
+    #segment:first-child {
+        border: 2px solid red;
+    }
+
 
     #pult {
         height: 36px;
@@ -81,38 +103,119 @@
         border-right: 1px solid white;
     }
 
-    #serial {
-        color: white;
-        padding-right: 10px;
+    #container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        background-color: #0D0E0E;
+    }
+
+    #left_box {
+        flex-basis: 720px;
+        background: orange;
+    }
+
+    #video_box {
+        width: 100%;
+        height: 300px;
+        background-color: antiquewhite;
+    }
+
+    #left_box iframe {
+        margin: 0;
+        padding: 0;
+    }
+
+    #right_box {
+        overflow: hidden;
+        padding: 2%;
+        flex-basis: ;
         font-size: 20px;
-        /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+    }
+
+    #cluster {
+        /* Запрещаем перенос строк */
+        white-space: nowrap;
+        /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
+        overflow: hidden;
     }
 </style>
 
 <body>
     <img src="img/1.png" style="width: 100%;">
+
     <div id="box">
         <div id="sub_box">
-            <h1 id="name">Госпожа Кагуя: в любви, как на войне</h1>
-            <div id="age">16+</div>
+            <div id="name_age_box">
+                <h1 id="name">Госпожа Кагуя: в любви, как на войне</h1>
+                <div id="age">16+</div>
+            </div>
             <div id="container">
-                <iframe src="//kodik.info/seria/461356/3172a01301de7730b67aef1e23970a0b/720p" width="720" height="406" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
-                <div id="panel">
-                    <div id="serial">Сериия:</div>
-                    <div id="segment">1</div>
-                    <div id="segment">2</div>
-                    <div id="segment">3</div>
-                    <div id="segment">4</div>
-                    <div id="segment">5</div>
-                    <div id="segment">6</div>
-                    <div id="segment">7</div>
-                    <div id="segment">8</div>
+                <div id="left_box">
+                    <div id="video_box"></div>
+                    <div id="panel">
+                        <div id="serial">Сериия:</div>
+                        <div id="segment">1</div>
+                        <div id="segment">2</div>
+                        <div id="segment">3</div>
+                        <div id="segment">4</div>
+                        <div id="segment">5</div>
+                        <div id="segment">6</div>
+                        <div id="segment">7</div>
+                        <div id="segment">8</div>
+                    </div>
                 </div>
+                <div id="right_box"></div>
             </div>
         </div>
     </div>
 
+    <div id="box">
+        <div id="sub_box">
+            <div id="name_age_box">
+                <h1 id="name">Госпожа Кагуя: в любви, как на войне</h1>
+                <div id="age">16+</div>
+            </div>
+            <div id="container">
+                <div id="left_box">
+                    <iframe id='player' src="//kodik.info/seria/397790/44726c6b0d325d3eb9bed1425ac8c729/720p" width="100%" height=408 frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+                    <div id="panel">
+                        <div id="serial">Сериия:</div>
+                        <div id="cluster">
+                            <button id="segment">1</button>
+                            <button id="segment">2</button>
+                            <button id="segment">3</button>
+                            <button id="segment">4</button>
+                            <button id="segment">5</button>
+                            <button id="segment">6</button>
+                            <button id="segment">7</button>
+                            <button id="segment">8</button>
+                            <button id="segment">9</button>
+                            <button id="segment">10</button>
+                            <button id="segment">11</button>
+                            <button id="segment">12</button>
+                            <button id="segment">13</button>
+                            <button id="segment">14</button>
+                            <button id="segment">15</button>
+                            <button id="segment">16</button>
+                            <button id="segment">17</button>
+                            <button id="segment">18</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="right_box">
+                    убрать iframe отступ
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type='text/javascript'>
+        document.getElementById("segment").onclick = function() {
+            this.disabled = true;
+            
+        }
+        document.getElementById("player").element.style.style.width="100px";
+    </script>
 </body></html>
