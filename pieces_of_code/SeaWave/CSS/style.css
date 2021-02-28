@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mixColor{
+    /* ФОНОВОЕ ИЗОБРАЖЕНИЕ */
+    background: url(../img/1.jpg) center no-repeat;
+    /* ВЫСОТА 100% ЭКРАНА */
+    height: 100vh;
+    /* МАШТАБИРОВАНИЕ */
+    background-size: cover;/* Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+    display: flex;
+    
+    /* ПОЗИЦИОНИРОВАНИЕ ДЛЯ ТЕКСТА ВНУТРИ ТЕГА */
+    /* CENTER Y */
+    align-items: center;
+    /* CENTER X */
+    justify-content: center;
+}
+.mixColor h1{
+    /* РАЗМЕР ШРИФТА */
+    font-size: 9rem;
+    /* ЦВЕТ */
+    color: rgba(255,255,255,.3);
+    background: url(../img/3.png) repeat;
+    animation: wave 10s infinite;
+}
+
+@keyframes wave{
+    from{
+        background-position: left 0 top 20px;
+    }
+    to{
+        background-position: left 1452px top 20px;
+    }
+}
