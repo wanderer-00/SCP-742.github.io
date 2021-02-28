@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        html,
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            color: black;
             margin: 0;
             padding: 0;
             font-family: sans-serif;
         }
+
         button {
             /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
             padding: 0;
@@ -20,26 +23,36 @@
             color: inherit;
             background-color: transparent;
         }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
         /* фон позди плеера */
         #box {
             height: 100vh;
             width: 100%;
             background: black;
         }
+
         /* стабилизатор */
         #sub_box {
             color: white;
             width: 1100px;
             background: black;
+            /* ЦЕНТРИРОВАНИЕ */
             position: relative;
+            /* СМЕЩЕНИЕ НА ПОЛОВИНУ ОТ РАЗМЕРА РОДИТЕЛЯ */
             left: 50%;
+            /* СМЕЩЕНИЕ НА ПОЛОВИНУ ОТ СВОЕГО РАЗМЕРА */
             transform: translate(-50%, 0);
         }
 
         #name_age_box {}
 
         #name {
-            padding: 25px 0px 0px 10px;
+            padding: 12px 0px 6px 10px;
         }
 
         #age {
@@ -50,19 +63,61 @@
             font-size: 25px;
         }
 
+
+
+        #container {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            background-color: #0D0E0E;
+        }
+
+        /* ЛЕВАЯ СТОРОНА ПЛЕЕРА */
+        #left_box {
+            flex-basis: 720px;
+            background: orange;
+        }
+
+        /* КОНТЕЙНЕР ПОД ВИДЕО [ МАКЕТ ] */
+        #video_box {
+            width: 720px;
+            height: 408px;
+            background-color: antiquewhite;
+        }
+
+        #player {
+            width: 100%;
+            height: 408px;
+        }
+
         #panel {
             /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
-            width: 700px;
+            width: 720px;
             user-select: none;
             padding: 10px;
             background-color: #161616;
             display: flex;
         }
 
+        /* ПОДПИСЬ */
         #serial {
             color: darkgray;
             padding-right: 10px;
             font-size: 20px;
+            /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* НАСТРОЙКИ СЕГМЕНТА */
+        .segment {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #161616;
+            margin: 0 5px;
+            font-size: 20px;
+            border-radius: 5px;
             /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
             display: inline-flex;
             justify-content: center;
@@ -82,48 +137,16 @@
             align-items: center;
         }
 
-        #segment:hover {
+        .segment:hover {
             border: 2px solid rgba(255, 255, 255, .15);
         }
 
-        #segment:active {
+        .segment:active {
             border: 2px solid red;
         }
 
-        #segment:first-child {
+        .segment:first-child {
             border: 2px solid red;
-        }
-
-        #container {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            background-color: #0D0E0E;
-        }
-
-        #left_box {
-            flex-basis: 720px;
-            background: orange;
-        }
-
-        #video_box {
-            width: 100%;
-            height: 300px;
-            background-color: antiquewhite;
-        }
-
-        #left_box iframe {
-            margin: 0;
-            padding: 0!important;
-            width: 100%;
-            height: 408px;
-        }
-
-        #right_box {
-            overflow: hidden;
-            padding: 2%;
-            flex-basis: ;
-            font-size: 20px;
         }
 
         #cluster {
@@ -132,9 +155,16 @@
             /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
             overflow: hidden;
         }
-        #player{
-            padding: 0!important;
+
+        /* ПРАВАЯ СТОРОНА ПЛЕЕРА */
+        #right_box {
+            overflow: hidden;
+            padding: 2%;
+            flex-basis: ;
+            font-size: 20px;
         }
+
+
 
         :root {
             /* :root is a clever way of saying "the outer-most element" */
@@ -153,7 +183,9 @@
 </head>
 
 <body>
+    <!--
     <img src="img/1.png" style="width: 100%;">
+    -->
 
     <div id="box">
         <div id="sub_box">
@@ -166,7 +198,7 @@
                     <div id="video_box"></div>
                     <div id="panel">
                         <div id="serial">Сериия:</div>
-                        <div id="segment">1</div>
+                        <input id="segment" type="button" valie='1' onclick="alert('+++')">
                         <div id="segment">2</div>
                         <div id="segment">3</div>
                         <div id="segment">4</div>
@@ -193,25 +225,15 @@
                     <div id="panel">
                         <div id="serial">Сериия:</div>
                         <div id="cluster">
-                            <button id="segment">1</button>
-                            <button id="segment">2</button>
-                            <button id="segment">3</button>
-                            <button id="segment">4</button>
-                            <button id="segment">5</button>
-                            <button id="segment">6</button>
-                            <button id="segment">7</button>
-                            <button id="segment">8</button>
-                            <button id="segment">9</button>
-                            <button id="segment">10</button>
-                            <button id="segment">11</button>
-                            <button id="segment">12</button>
-                            <button id="segment">13</button>
-                            <button id="segment">14</button>
-                            <button id="segment">15</button>
-                            <button id="segment">16</button>
-                            <button id="segment">17</button>
-                            <button id="segment">18</button>
-
+                            <button class='segment' value='1'>1</button>
+                            <button class="segment" value='2'>2</button>
+                            <button class="segment" value='3'>3</button>
+                            <button class="segment" value='4'>4</button>
+                            <button class="segment" value='5'>5</button>
+                            <button class="segment" value='6'>6</button>
+                            <button class="segment" value='7'>7</button>
+                            <button class="segment" value='8'>8</button>
+                            <button class="segment" value='9'>9</button>
                         </div>
                     </div>
                 </div>
@@ -228,10 +250,18 @@
     <footer></footer>
 </body>
 <script type='text/javascript'>
-    var input = document.querySelector('input')
+    //alert('Beta-test версия сайта, ориентированна на PC :)');
+
+    /*var input = document.querySelector('input')
     var footer = document.querySelector('footer')
 
     input.addEventListener('change', function() {
         footer.style.setProperty('--footer-color', input.value)
-    })
+    })*/
+
+    // ПЕРЕКЛЮЧЕНИЕ СЕРИЙ
+
+    segment.onclick = function() {
+        alert('сработало');
+    };
 </script></html>

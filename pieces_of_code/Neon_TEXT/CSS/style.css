@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    font-size: 1.4em;
+    font-family: sans-serif;
+    background-color: #292929;
+}
+.text{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    font-size: 3em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: url(../img/1.jpg);
+    background-position: cover;
+    background-attachment: fixed;
+}
+.text h1{
+    /* В ВЕРХНИЙ РЕГИСТР */
+    text-transform: uppercase;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px pink, 0 0 40px pink, 0 0 50px pink, 0 0 60px pink, 0 0 70px pink;
+    }
+    to{
+        text-shadow: 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple, 0 0 80px purple;
+    }
+}
+
+section{
+    position: relative;
+    padding: 20px;
+    top: 100vh;
+    
+}
+p{
+    margin-bottom: 10px;
+}

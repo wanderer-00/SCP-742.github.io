@@ -15,12 +15,27 @@
         *{
             box-sizing: border-box;
         }
-        
-        
+        #aa{
+            padding: 10px;
+        }
         
     </style>
 </head>
 <body>
-
+    <a src="/ffdd" id='aa' color="pink" onclick="alert(src1)">+++</a>
 </body>
+    <script>
+        var aa = document.getElementById("aa");
+        var src1 = document.getAttribute("padding");
+
+        /* ДОБАВЛЕНИЕ ТЕКСЛА В ТЕГ */
+        function name () {
+            document.getElementById('id элемента').append('добавляемый текст');
+        }
+        /* ЗАМЕНА ТЕКСТА ТЕГА */
+        function name1() {
+            document.getElementById('id элемента').innerHTML = 'заменит прошлый текст на этот';
+        }
+        /*  */
+    </script>
 </html>
