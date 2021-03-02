@@ -33,6 +33,8 @@
             height: 1px;
             background-color: aquamarine;
         }
+        
+        /* ОБНУЛЕНИЕ СТИЛЕЙ */
         /* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
         :active, :hover, :focus {
             outline: 0;
@@ -40,14 +42,16 @@
             /* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
             box-shadow: 0;
         }
-        
-        input:active{
-            border: 2px solid red;
+        input{
+            /* ПРОЗРАЧНЫЙ ФОН */
+            background-color: transparent;
+            /* DEL ОБВОДКА */
+            outline: 0;
+            outline-offset: 0;
+            /* DEL ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+            box-shadow: 0;
         }
-        
-        input:focus{
-            border: 2px solid red;
-        }
+
 
         /* фон позди плеера */
         #box {
@@ -138,19 +142,11 @@
         /* НАСТРОЙКИ СЕГМЕНТА */
         #segment {
             color: white;
-            width: 36px;
-            height: 36px;
             border: 2px solid #161616;
             margin: 0 5px;
+            padding: 8px;
             font-size: 20px;
             border-radius: 5px;
-            
-            /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            
-            background-color: transparent;
         }
 
         #segment:hover {
