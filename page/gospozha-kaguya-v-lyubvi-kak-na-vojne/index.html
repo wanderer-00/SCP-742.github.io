@@ -33,9 +33,12 @@
             height: 1px;
             background-color: aquamarine;
         }
-        input:active, :hover, :focus {
+        /* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
+        :active, :hover, :focus {
             outline: 0;
             outline-offset: 0;
+            /* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+            box-shadow: 0;
         }
         input:active{
             border: 2px solid red;
@@ -215,7 +218,6 @@
                     выделение текущей серии<br/>
                     <hr>
                     внутриплеерная реклама, используй ADblock<br/>
-                    
                 </div>
             </div>
         </div>
