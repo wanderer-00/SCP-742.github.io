@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>color</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            /* :root is a clever way of saying "the outer-most element" */
+
+            --footer-color: #ff4545;
+            /* the default */
+        }
+
+        footer {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--footer-color)
+        }
+    </style>
 </head>
 <body>
     <label>Choose a footer color:</label>
@@ -14,7 +36,7 @@
     // ПЕРЕКРАС
     var input = document.querySelector('input')
     var footer = document.querySelector('footer')
-
+    
     input.addEventListener('change', function() {
         footer.style.setProperty('--footer-color', input.value)
     })
