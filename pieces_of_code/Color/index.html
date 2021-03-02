@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+<head>
+    <meta charset="UTF-8">
+    <title>color</title>
+</head>
+<body>
+    <label>Choose a footer color:</label>
+    <input type="color" value="#ff4545">
+
+    <footer></footer>
+</body>
+<script>
+    // ПЕРЕКРАС
+    var input = document.querySelector('input')
+    var footer = document.querySelector('footer')
+
+    input.addEventListener('change', function() {
+        footer.style.setProperty('--footer-color', input.value)
+    })
+</script></html>
