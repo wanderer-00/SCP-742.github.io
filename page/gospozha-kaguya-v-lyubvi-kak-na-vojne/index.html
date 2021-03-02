@@ -40,6 +40,7 @@
             /* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
             box-shadow: 0;
         }
+        
         input:active{
             border: 2px solid red;
         }
@@ -159,7 +160,11 @@
         #segment:active {
             border: 2px solid red;
         }
-
+        
+        #segment:focus {
+            border: 2px solid darkseagreen;
+        }
+        
         #cluster {
             /* Запрещаем перенос строк */
             white-space: nowrap;
