@@ -166,11 +166,7 @@ input {
 }
 
 #segment:hover {
-    border: 2px solid rgba(255, 255, 255, .15);
-}
-
-#segment:active {
-    border: 2px solid red;
+    border: 2px solid rgba(255, 255, 255, .05);
 }
 
 #segment:focus {
