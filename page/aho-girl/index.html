@@ -23,23 +23,29 @@
                     <div id="videoBox">
                         <iframe id='player' src="//kodik.info/seria/118100/b8aeb2c48de51c5a7a662f126eec13b7/720p" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
                     </div>
-                    <div id="panel">
+                    <div id="eee">
                         <div id="serial">Сериия:</div>
                         <div id="cluster">
-                            <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
-                            <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
-                            <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
-                            <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
-                            <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
-                            <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
-                            <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
-                            <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
-                            <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
-                            <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
-                            <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
-                            <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
-                            <input id="segment" type="button" value="AMV" onclick="s13(document.getElementById('player'))">
+                            <div id="line">
+                                <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
+                                <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
+                                <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
+                                <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
+                                <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
+                                <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
+                                <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
+                                <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
+                                <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
+                                <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
+                                <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
+                                <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="AMV" onclick="s13(document.getElementById('player'))">
+                            </div>
                         </div>
+                    <div id="controller">
+                        <input id="segment" type="button" value="<" onclick="left1()">
+                        <input id="segment" type="button" value=">" onclick="right1()">
+                    </div>
                     </div>
                 </div>
                 <div id="right_box">
@@ -122,6 +128,24 @@
     
     function s13(frame) {
         frame.src = urls[12];
+    };
+    
+    var left = 0;
+    var line = document.getElementById('line');
+    function left1() {
+        left = left + 50;
+        if (left > 0) {
+            left = 0;
+        }
+        line.style.left = left + 'px';
+    };
+
+    function right1() {
+        left = left - 50;
+        if (left < -250) {
+            left = -250;
+        }
+        line.style.left = left + 'px';
     };
     
 
