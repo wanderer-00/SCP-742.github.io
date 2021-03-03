@@ -130,26 +130,34 @@
         frame.src = urls[12];
     };
     
+    
+    
+    
+    
+    
+
     var left = 0;
     var line = document.getElementById('line');
+    
     function left1() {
-        left = left + 50;
+        left = left + 260;
         if (left > 0) {
             left = 0;
         }
         line.style.left = left + 'px';
     };
-
-    function right1() {
-        left = left - 50;
-        if (left < -250) {
-            left = -250;
-        }
+    
+    function right1(){
+        left = left - 260;
+        if (left < -260) {
+            left = -260;
+            }
         line.style.left = left + 'px';
     };
     
 
 
+    
     // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
     alert('Beta-test версия сайта, ориентированна на PC :)');
 </script></html>

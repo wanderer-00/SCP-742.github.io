@@ -152,6 +152,7 @@ input {
 #line{
     position: relative;
     left: 0;
+    transition: all ease 0.5s;
 }
 
 /* НАСТРОЙКИ СЕГМЕНТА */
