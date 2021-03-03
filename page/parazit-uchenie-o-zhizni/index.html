@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Паразит: учение о жизни</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+<!--   
+   <img src="img/1.png" style="width: 100%;">-->
+    
+
+    <div id="box">
+        <div id="sub_box">
+            <div id="name_age_box">
+                <h1 id="name">Паразит: учение о жизни</h1>
+                <div id="age">16+</div>
+            </div>
+            <div id="container">
+                <div id="left_box">
+                    <div id="videoBox">
+                        <iframe id='player' src="//kodik.info/seria/547581/b44a567b4e4672c077f7be0c3b4a937e/720p" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+                    </div>
+                    <div id="eee">
+                        <div id="serial">Сериия:</div>
+                        <div id="cluster">
+                            <div id="line">
+                                <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
+                                <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
+                                <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
+                                <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
+                                <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
+                                <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
+                                <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
+                                <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
+                                <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
+                                <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
+                                <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
+                                <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="13" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="14" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="15" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="16" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="17" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="18" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="19" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="20" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="21" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="22" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="23" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="24" onclick="s12(document.getElementById('player'))">
+                            </div>
+                        </div>
+                    <div id="controller">
+                        <input id="segment" type="button" value="<" onclick="left1()">
+                        <input id="segment" type="button" value=">" onclick="right1()">
+                    </div>
+                    </div>
+                </div>
+                <div id="right_box">
+                    понять как убрал iframe отступ<br/>
+                    <hr>
+                    выделение текущей серии<br/>
+                    <hr>
+                    внутриплеерная реклама, используй ADblock<br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type='text/javascript'>
+    // ПЕРЕКЛЮЧЕНИЕ СЕРИЙ
+    /* МАССИВ С URL */
+    var urls = ["//kodik.info/seria/547581/b44a567b4e4672c077f7be0c3b4a937e/720p",  // 1
+                "//kodik.info/seria/547582/2f903b73c5565eb66986713171c151cc/720p",  // 2
+                "//kodik.info/seria/547583/3d17b1b8b09d3ddb1a22f568e885b15b/720p",  // 3
+                "//kodik.info/seria/547584/e4a2f2a77f36af74b3eedf627e46d34c/720p",  // 4
+                "//kodik.info/seria/547585/69ba7533d0cb324ffce6f84ffe74ad58/720p",  // 5
+                "//kodik.info/seria/547586/061f5c4624773fe0600f1dd2ae4a8842/720p",  // 6
+                "//kodik.info/seria/547587/c243f885045d991fdc5becdbad496837/720p",  // 7
+                "//kodik.info/seria/547588/fb2e66686e920cd0a0ee0d0159fc1a1b/720p",  // 8
+                "//kodik.info/seria/547589/491a1fab572026dae171ae2c42f2dc26/720p",  // 9
+                "//kodik.info/seria/547590/e0f0baf24f434e4f0babfe5de2860f69/720p",  // 10
+                "//kodik.info/seria/547591/359af3b86b57f4e5190835bbc386131d/720p",  // 11
+                "//kodik.info/seria/547592/77fca0c92f0d6dd9fb48fe0817e9597a/720p",  // 12
+                "//kodik.info/seria/547593/76c0d4a9108965b6c02e49427cf37e3b/720p",  // 13
+                "//kodik.info/seria/547594/ffe208e7fb688981af6ebfa9263f5e2e/720p",  // 14
+                "//kodik.info/seria/547595/c4394c91b3ebfbaa7a53aa5898be2d11/720p",  // 15
+                "//kodik.info/seria/547596/8539d0ebf04bf993edd140cd69a3760e/720p",  // 16
+                "//kodik.info/seria/547597/13c19a9fb787d42f759635e3eacd6615/720p",  // 17
+                "//kodik.info/seria/547598/cf8879a5a5324055c5aa68ff41cae0d6/720p",  // 18
+                "//kodik.info/seria/547599/06def28e42a0425f04854e71f8355732/720p",  // 19
+                "//kodik.info/seria/547600/e9f3609f7fe258bd8d2a6c2215292a2a/720p",  // 20
+                "//kodik.info/seria/547601/c6a18ac0ce17edde32c016a20a1da4b9/720p",  // 21
+                "//kodik.info/seria/547602/4273349d7fcc54adb2775f167fbc0622/720p",  // 22
+                "//kodik.info/seria/547603/bcede51dcdfaa2f9f440ff26289de913/720p",  // 23
+                "//kodik.info/seria/547604/812fc35f7c538621cb4c6392bbade57f/720p",  // 24
+                ];
+    
+    function s1(frame) {
+        frame.src = urls[0];
+    };
+
+    function s2(frame) {
+        frame.src = urls[1];
+    };
+
+    function s3(frame) {
+        frame.src = urls[2];
+    };
+
+    function s4(frame) {
+        frame.src = urls[3];
+    };
+
+    function s5(frame) {
+        frame.src = urls[4];
+    };
+
+    function s6(frame) {
+        frame.src = urls[5];
+    };
+
+    function s7(frame) {
+        frame.src = urls[6];
+    };
+
+    function s8(frame) {
+        frame.src = urls[7];
+    };
+
+    function s9(frame) {
+        frame.src = urls[8];
+    };
+
+    function s10(frame) {
+        frame.src = urls[9];
+    };
+
+    function s11(frame) {
+        frame.src = urls[10];
+    };
+
+    function s12(frame) {
+        frame.src = urls[11];
+    };
+    
+    function s13(frame) {
+        frame.src = urls[12];
+    };
+    
+    
+    
+    
+    
+    
+
+    var left = 0;
+    var line = document.getElementById('line');
+    
+    function left1() {
+        left = left + 260;
+        if (left > 0) {
+            left = 0;
+        }
+        line.style.left = left + 'px';
+    };
+    
+    function right1(){
+        left = left - 260;
+        if (left < -960) {
+            left = -960;
+            }
+        line.style.left = left + 'px';
+    };
+    
+
+
+    
+    // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
+    alert('Beta-test версия сайта, ориентированна на PC :)');
+</script></html>
