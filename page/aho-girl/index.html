@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aho girl</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+<!--   
+   <img src="img/1.png" style="width: 100%;">-->
+    
+
+    <div id="box">
+        <div id="sub_box">
+            <div id="name_age_box">
+                <h1 id="name">Aho girl</h1>
+                <div id="age">16+</div>
+            </div>
+            <div id="container">
+                <div id="left_box">
+                    <div id="videoBox">
+                        <iframe id='player' src="//kodik.info/seria/118100/b8aeb2c48de51c5a7a662f126eec13b7/720p" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+                    </div>
+                    <div id="panel">
+                        <div id="serial">Сериия:</div>
+                        <div id="cluster">
+                            <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
+                            <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
+                            <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
+                            <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
+                            <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
+                            <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
+                            <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
+                            <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
+                            <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
+                            <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
+                            <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
+                            <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
+                            <input id="segment" type="button" value="AMV" onclick="s13(document.getElementById('player'))">
+                        </div>
+                    </div>
+                </div>
+                <div id="right_box">
+                    понять как убрал iframe отступ<br/>
+                    <hr>
+                    выделение текущей серии<br/>
+                    <hr>
+                    внутриплеерная реклама, используй ADblock<br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type='text/javascript'>
+    // ПЕРЕКЛЮЧЕНИЕ СЕРИЙ
+    /* МАССИВ С URL */
+    var urls = ["//kodik.info/seria/118100/b8aeb2c48de51c5a7a662f126eec13b7/720p",  // 1
+                "//kodik.info/seria/128398/52febd1738ffdc12257c3e359ae64252/720p",  // 2
+                "//kodik.info/seria/128399/1827b234b7d80abf547c885b41aff235/720p",  // 3
+                "//kodik.info/seria/128400/fc0feca56fe6205ab00318e04d524d6b/720p",  // 4
+                "//kodik.info/seria/128464/4cbcdcb157b0b0a6514ab22de0d6195d/720p",  // 5
+                "//kodik.info/seria/128465/eabfa12e4cb16f91a755b876269b7f6c/720p",  // 6
+                "//kodik.info/seria/128466/c631d8e40196cab58a09d2255320616a/720p",  // 7
+                "//kodik.info/seria/129198/52add65e65790074feb3493f17749fe6/720p",  // 8
+                "//kodik.info/seria/129199/e18646e2ee575317a1ab42040803c1ac/720p",  // 9
+                "//kodik.info/seria/129696/a84f2e903e6569602e29ce1b5b79ea87/720p",  // 10
+                "//kodik.info/seria/129697/15c98dfe822b8b6550fff4e0947b4a04/720p",  // 11
+                "//kodik.info/seria/130356/4a52f8b638240b6d80ddcfcd1036bdc0/720p",  // 12
+                "../../video/Video_maket_v1.0/video/comments-that-make-me-cry.mp4",  // AMV
+                ];
+    
+    function s1(frame) {
+        frame.src = urls[0];
+    };
+
+    function s2(frame) {
+        frame.src = urls[1];
+    };
+
+    function s3(frame) {
+        frame.src = urls[2];
+    };
+
+    function s4(frame) {
+        frame.src = urls[3];
+    };
+
+    function s5(frame) {
+        frame.src = urls[4];
+    };
+
+    function s6(frame) {
+        frame.src = urls[5];
+    };
+
+    function s7(frame) {
+        frame.src = urls[6];
+    };
+
+    function s8(frame) {
+        frame.src = urls[7];
+    };
+
+    function s9(frame) {
+        frame.src = urls[8];
+    };
+
+    function s10(frame) {
+        frame.src = urls[9];
+    };
+
+    function s11(frame) {
+        frame.src = urls[10];
+    };
+
+    function s12(frame) {
+        frame.src = urls[11];
+    };
+    
+    function s13(frame) {
+        frame.src = urls[12];
+    };
+    
+
+
+    // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
+    alert('Beta-test версия сайта, ориентированна на PC :)');
+</script></html>
