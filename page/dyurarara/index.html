@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Дюрарара!!</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+<!--   
+   <img src="img/1.png" style="width: 100%;">-->
+    
+
+    <div id="box">
+        <div id="sub_box">
+            <div id="name_age_box">
+                <h1 id="name">Дюрарара!!</h1>
+                <div id="age">Age: ?</div>
+            </div>
+            <div id="container">
+                <div id="left_box">
+                    <div id="videoBox">
+                        <iframe id='player' src="//kodik.info/seria/157522/db687272a520a11ce30aa7d2e66ca083/720p" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+                    </div>
+                    <div id="eee">
+                        <div id="serial">Сериия:</div>
+                        <div id="cluster">
+                            <div id="line">
+                                <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
+                                <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
+                                <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
+                                <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
+                                <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
+                                <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
+                                <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
+                                <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
+                                <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
+                                <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
+                                <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
+                                <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="13" onclick="s13(document.getElementById('player'))">
+                            </div>
+                        </div>
+                    <div id="controller">
+                        <input id="segment" type="button" value="<" onclick="left1()">
+                        <input id="segment" type="button" value=">" onclick="right1()">
+                    </div>
+                    </div>
+                </div>
+                <div id="right_box">
+                    понять как убрал iframe отступ<br/>
+                    <hr>
+                    выделение текущей серии<br/>
+                    <hr>
+                    внутриплеерная реклама, используй ADblock<br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type='text/javascript'>
+    // ПЕРЕКЛЮЧЕНИЕ СЕРИЙ
+    /* МАССИВ С URL */
+    var urls = ["//kodik.info/seria/157522/db687272a520a11ce30aa7d2e66ca083/720p",  // 1
+				"",  // 2
+				"",  // 3
+				"",  // 4
+				"",  // 5
+				"",  // 6
+				"",  // 7
+				"",  // 8
+				"",  // 9
+				"",  // 10
+				"",  // 11
+				"",  // 12
+                ];
+    
+    function s1(frame) {
+        frame.src = urls[0];
+    };
+
+    function s2(frame) {
+        frame.src = urls[1];
+    };
+
+    function s3(frame) {
+        frame.src = urls[2];
+    };
+
+    function s4(frame) {
+        frame.src = urls[3];
+    };
+
+    function s5(frame) {
+        frame.src = urls[4];
+    };
+
+    function s6(frame) {
+        frame.src = urls[5];
+    };
+
+    function s7(frame) {
+        frame.src = urls[6];
+    };
+
+    function s8(frame) {
+        frame.src = urls[7];
+    };
+
+    function s9(frame) {
+        frame.src = urls[8];
+    };
+
+    function s10(frame) {
+        frame.src = urls[9];
+    };
+
+    function s11(frame) {
+        frame.src = urls[10];
+    };
+
+    function s12(frame) {
+        frame.src = urls[11];
+    };
+    
+    function s13(frame) {
+        frame.src = urls[12];
+    };
+    
+    var left = 0;
+    var line = document.getElementById('line');
+    
+    function left1() {
+        left = left + 250;
+        if (left > 0) {
+            left = 0;
+        }
+        line.style.left = left + 'px';
+    };
+    
+    function right1(){
+        left = left - 250;
+        if (left < -250) {
+            left = -250;
+            }
+        line.style.left = left + 'px';
+    };
+    
+
+
+    
+    // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
+    alert('Beta-test версия сайта, ориентированна на PC :)');
+</script></html>
