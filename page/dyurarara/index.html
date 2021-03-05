@@ -39,7 +39,20 @@
                                 <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
                                 <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
                                 <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="спэшл 1" onclick="s13(document.getElementById('player'))">
                                 <input id="segment" type="button" value="13" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="14" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="15" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="16" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="17" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="18" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="19" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="20" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="21" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="22" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="23" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="24" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="спэшл 2" onclick="s13(document.getElementById('player'))">
                             </div>
                         </div>
                     <div id="controller">
@@ -54,6 +67,8 @@
                     выделение текущей серии<br/>
                     <hr>
                     внутриплеерная реклама, используй ADblock<br/>
+                    <hr>
+                    адаптив для мобильных устройств<br/>
                 </div>
             </div>
         </div>
@@ -65,16 +80,30 @@
     /* МАССИВ С URL */
     var urls = ["//kodik.info/seria/157522/db687272a520a11ce30aa7d2e66ca083/720p",  // 1
 				"//kodik.info/seria/157523/7bd9d30116966d27f8730eee03ed23c8/720p",  // 2
-				"",  // 3
-				"",  // 4
-				"",  // 5
-				"",  // 6
-				"",  // 7
-				"",  // 8
-				"",  // 9
-				"",  // 10
-				"",  // 11
-				"",  // 12
+				"//kodik.info/seria/157524/0b5adfc18f31ed52c4369b3469737deb/720p",  // 3
+				"//kodik.info/seria/157525/003c4c51dc86bcf01deff0165808fdc0/720p",  // 4
+				"//kodik.info/seria/157526/876e20df8c18cb543fde66c8f59465d4/720p",  // 5
+				"//kodik.info/seria/157527/ad3459c463598b458c46a35d368f6a80/720p",  // 6
+				"//kodik.info/seria/157528/3af4ab7b7b773c187d1b906a623d75c6/720p",  // 7
+				"//kodik.info/seria/157529/90aa9fd15da24afaec55f91a1c65a95c/720p",  // 8
+				"//kodik.info/seria/157530/42ac64143f225cbd0fe281005b870be6/720p",  // 9
+				"//kodik.info/seria/157531/4ff6cd91aeb0c85f683df5738d191261/720p",  // 10
+				"//kodik.info/seria/157532/a9293a7e96cd2e3d275938c4149bbb70/720p",  // 11
+				"//kodik.info/seria/157533/100dd68bce951a938ed23dc30043fa65/720p",  // 12
+				"//kodik.info/seria/639932/db687272a520a11ce30aa7d2e66ca083/720p",  // СПЭШЛ1
+				"//kodik.info/seria/157534/31a1b9586cf07fba3ee5cb801d8c380b/720p",  // 13
+				"//kodik.info/seria/157535/3b9a72cf544dc277717afbe7e38f94ab/720p",  // 14
+				"//kodik.info/seria/157536/628c5451b1829ab46ef01594dcde55f6/720p",  // 15
+				"//kodik.info/seria/157537/100394d30a228792168ea4fd69a6e380/720p",  // 16
+				"//kodik.info/seria/157538/4b8b5b07bdb3f1b12c1a6da0be6bd556/720p",  // 17
+				"//kodik.info/seria/157539/2d72f55728567b4bf0d35b8ac2525517/720p",  // 18
+				"//kodik.info/seria/157540/f331b1a01c1bc017bca852fc962154ee/720p",  // 19
+				"//kodik.info/seria/157541/84c80ba827b4f7925fab471c560b8369/720p",  // 20
+				"//kodik.info/seria/157542/ce443b17fba7fea60bf6bccd72db2e13/720p",  // 21
+				"//kodik.info/seria/157543/16f041626170c4d1d1485f8d4e5d0cc0/720p",  // 22
+				"//kodik.info/seria/157544/763f5acd68465a650d11376eb22e8ff9/720p",  // 23
+				"//kodik.info/seria/157545/200e03686b9a8e478039095c31af879f/720p",  // 24
+				"//kodik.info/seria/639933/7bd9d30116966d27f8730eee03ed23c8/720p",  // СПЭШЛ2
                 ];
     
     function s1(frame) {
@@ -129,6 +158,67 @@
         frame.src = urls[12];
     };
     
+    function s14(frame) {
+        frame.src = urls[13];
+    };
+    
+    function s15(frame) {
+        frame.src = urls[14];
+    };
+    
+    function s16(frame) {
+        frame.src = urls[15];
+    };
+    
+    function s17(frame) {
+        frame.src = urls[16];
+    };
+    
+    function s18(frame) {
+        frame.src = urls[17];
+    };
+    
+    function s19(frame) {
+        frame.src = urls[18];
+    };
+    
+    function s20(frame) {
+        frame.src = urls[19];
+    };
+    
+    function s21(frame) {
+        frame.src = urls[20];
+    };
+    
+    function s22(frame) {
+        frame.src = urls[21];
+    };
+    
+    function s23(frame) {
+        frame.src = urls[22];
+    };
+    
+    function s24(frame) {
+        frame.src = urls[23];
+    };
+    
+    function s25(frame) {
+        frame.src = urls[24];
+    };
+    
+    function s26(frame) {
+        frame.src = urls[25];
+    };
+    
+    function s27(frame) {
+        frame.src = urls[26];
+    };
+    
+    function s28(frame) {
+        frame.src = urls[27];
+    };
+    
+
     var left = 0;
     var line = document.getElementById('line');
     
@@ -142,8 +232,8 @@
     
     function right1(){
         left = left - 250;
-        if (left < -250) {
-            left = -250;
+        if (left < -2500) {
+            left = -2500;
             }
         line.style.left = left + 'px';
     };
