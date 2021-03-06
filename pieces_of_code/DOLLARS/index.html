@@ -18,31 +18,14 @@
         }
 
         h1 {
-            font-size: 9vh
+            font-size: 9vh;
         }
-
-        button {
-            width: 210px;
-            color: white;
-            padding: 6px;
-            border: 2px solid gray;
-            border-radius: 12px;
-            background-color: #111011;
-            margin-top: 40px;
-            text-align: center;
-        }
-        /* ОБНУЛЕНИЕ СТИЛЕЙ */
-        input {
-            padding: 0;
-            margin: 0;
-            border: 0;
-            border: none;
-        }
-        /* НОВЫЕ СТИЛИ */
-        input {
-            width: 220px;
-            padding: 6px;
-            border-radius: 100px;
+        
+        
+        /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
+        :active, :hover, :focus {
+            outline: 0;
+            outline-offset: 0;
         }
         
         #stabilitron {
@@ -52,7 +35,9 @@
             transform: translate(-50%, 0);
             text-align: center;
         }
-
+        
+        
+        /* ВНЕШНЕЕ КОЛЬЦО */
         #ring_1 {
             width: 400px;
             height: 400px;
@@ -63,33 +48,94 @@
             border: 2px solid white;
             border-radius: 50%;
 
-            margin: 40px 0;
+            margin-top: 40px;
+            
+            /* ТЕНИ */
+            box-shadow: 
+                      0 0 16px 4px white,
+                inset 0 0 9px 1px white;
         }
-
+        /* ВНУТРЕННЕЕ КОЛЬЦО */
         #ring_2 {
-            width: 360px;
-            height: 360px;
-            border: 10px solid white;
+            width: 356px;
+            height: 356px;
+            border: 6px solid white;
             border-radius: 50%;
 
             display: flex;
             justify-content: center;
             align-items: center;
+            
+            /* ТЕНИ */
+            box-shadow: 
+                      0px 0px 10px 4px white,
+                inset 0px 0px 4px 1px white;
         }
-
+        #DOLLARS{
+            width: 300px;
+        }
+        
+        
+        /* СТРОКА С ВВОДОМ ПАРОЛЯ */
+        /* БЛОК СТРОКИ */
+        #intro{
+            margin-top: 54px;
+        }
+        /* 'PASSWORD' */
         #password_ {
             font-weight: 600;
             display: inline-flex;
+            font-size: 15px;
+        }
+        /* ОБНУЛЕНИЕ СТИЛЕЙ <input> */
+        input {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border: none;
+        }
+        /* НОВЫЕ СТИЛИ <input> */
+        input {
+            width: 208px;
+            padding: 6px;
+            border-radius: 100px;
+            box-shadow: white 0 0 6px; 
+        }        
+
+        
+        /* КНОПКА */
+        button {
+            width: 210px;
+            color: white;
+            padding: 6px;
+            border: 2px solid gray;
+            border-radius: 12px;
+            background-color: #111011;
+            margin-top: 40px;
+            text-align: center;
+        }
+        button:active, button:focus {
+            opacity: 0.4;
+            
+        }
+        
+        
+        /* МАКЕТ */
+        #maket{
+            position: absolute;
+            top:-81px;
+            left: -12px;
         }
     </style>
 </head>
 
 <body>
-    <!--    <img src="img/1.png" width="100%">-->
+<!--        <img id='maket' src="img/1.png" width="100%">-->
     <div id="stabilitron">
         <div id="ring_1">
             <div id="ring_2">
-                <h1>DOLLARS</h1>
+<!--                <h1>DOLLARS</h1>-->
+                <img id='DOLLARS' src="img/2.png" >
             </div>
         </div>
         <div id="intro">

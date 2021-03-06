@@ -25,6 +25,11 @@
             border: 0;
             border: none;
         }
+        /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
+        :active, :hover, :focus {
+            outline: 0;
+            outline-offset: 0;
+        }
     </style>
 </head>
 <body>
