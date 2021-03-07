@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> + | - </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #343434;
+        }
+        #box{
+            margin-top: 100px;
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0)
+        }
+        #V {
+            width: 49%;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        #V- {
+            width: 49%;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <video id='V' poster='img/poster/+.png' loop>
+            <source src='video/+.mp4' type="video/mp4">
+        </video>
+        <video id='V-' poster='img/poster/-.png' loop>
+            <source src='video/-.mp4' type="video/mp4">
+        </video>
+        <button class='btn-ok'>play</button>
+    </div>
+    <script>
+
+    </script>
+</body></html>

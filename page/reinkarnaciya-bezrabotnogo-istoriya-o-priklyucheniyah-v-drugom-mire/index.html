@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Реинкарнация безработного: История о приключениях в другом мире</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+<!--   
+   <img src="img/1.png" style="width: 100%;">-->
+    
+
+    <div id="box">
+        <div id="sub_box">
+            <div id="name_age_box">
+                <h1 id="name">Реинкарнация безработного: История о приключениях в другом мире</h1>
+                <div id="age">???</div>
+            </div>
+            <div id="container">
+                <div id="left_box">
+                    <div id="videoBox">
+                        <iframe id='player' src="//kodik.info/seria/764900/a3150da7d278be5d01f7e29ce2c7d1f1/720p" frameborder="0" AllowFullScreen allow="autoplay *; fullscreen *"></iframe>
+                    </div>
+                    <div id="eee">
+                        <div id="serial">Сериия:</div>
+                        <div id="cluster">
+                            <div id="line">
+                                <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
+                                <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
+                                <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
+                                <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
+                                <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
+                                <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
+                                <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
+                                <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
+<!--
+                                <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
+                                <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
+                                <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
+                                <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
+                                <input id="segment" type="button" value="13" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="14" onclick="s14(document.getElementById('player'))">
+                                <input id="segment" type="button" value="15" onclick="s15(document.getElementById('player'))">
+                                <input id="segment" type="button" value="16" onclick="s16(document.getElementById('player'))">
+                                <input id="segment" type="button" value="17" onclick="s17(document.getElementById('player'))">
+                                <input id="segment" type="button" value="18" onclick="s18(document.getElementById('player'))">
+                                <input id="segment" type="button" value="19" onclick="s19(document.getElementById('player'))">
+                                <input id="segment" type="button" value="20" onclick="s20(document.getElementById('player'))">
+                                <input id="segment" type="button" value="21" onclick="s21(document.getElementById('player'))">
+                                <input id="segment" type="button" value="22" onclick="s22(document.getElementById('player'))">
+                                <input id="segment" type="button" value="23" onclick="s23(document.getElementById('player'))">
+                                <input id="segment" type="button" value="24" onclick="s24(document.getElementById('player'))">
+-->
+                            </div>
+                        </div>
+                    <div id="controller">
+                        <input id="segment" type="button" value="<" onclick="left1()">
+                        <input id="segment" type="button" value=">" onclick="right1()">
+                    </div>
+                    </div>
+                </div>
+                <div id="right_box">
+                    понять как убрал iframe отступ<br/>
+                    <hr>
+                    выделение текущей серии<br/>
+                    <hr>
+                    внутриплеерная реклама, используй ADblock<br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type='text/javascript'>
+    // ПЕРЕКЛЮЧЕНИЕ СЕРИЙ
+    /* МАССИВ С URL */
+    var urls = ["//kodik.info/seria/764900/a3150da7d278be5d01f7e29ce2c7d1f1/720p",  // 1
+                "//kodik.info/seria/769963/45c7a8202ae61596e4935ef73d17ccee/720p",  // 2
+                "//kodik.info/seria/775489/34ffbb7c23b4a5ee6abd63deaaf3a4ea/720p",  // 3
+                "//kodik.info/seria/780890/394de7c562c160c9164cbbc86c3aae55/720p",  // 4
+                "//kodik.info/seria/783735/d0f8ad63c1c27ef04d6845604accbf43/720p",  // 5
+                "//kodik.info/seria/787717/7972a83043949d265c49db8c8b6fa301/720p",  // 6
+                "//kodik.info/seria/791802/3943f429739a9c139a4ae31471eefa28/720p",  // 7
+                "//kodik.info/seria/794510/8fdf83459c10786f22d26772fdf7de7e/720p",  // 8
+                "",  // 9
+                "",  // 10
+                "",  // 11
+                "",  // 12
+                "",  // 13
+                "",  // 14
+                "",  // 15
+                "",  // 16
+                "",  // 17
+                "",  // 18
+                "",  // 19
+                "",  // 20
+                "",  // 21
+                "",  // 22
+                "",  // 23
+                "",  // 24
+                ];
+    
+    function s1(frame) {
+        frame.src = urls[0];
+    };
+
+    function s2(frame) {
+        frame.src = urls[1];
+    };
+
+    function s3(frame) {
+        frame.src = urls[2];
+    };
+
+    function s4(frame) {
+        frame.src = urls[3];
+    };
+
+    function s5(frame) {
+        frame.src = urls[4];
+    };
+
+    function s6(frame) {
+        frame.src = urls[5];
+    };
+
+    function s7(frame) {
+        frame.src = urls[6];
+    };
+
+    function s8(frame) {
+        frame.src = urls[7];
+    };
+
+    function s9(frame) {
+        frame.src = urls[8];
+    };
+
+    function s10(frame) {
+        frame.src = urls[9];
+    };
+
+    function s11(frame) {
+        frame.src = urls[10];
+    };
+
+    function s12(frame) {
+        frame.src = urls[11];
+    };
+    
+    function s13(frame) {
+        frame.src = urls[12];
+    };
+    
+    function s14(frame) {
+        frame.src = urls[13];
+    };
+    
+    function s15(frame) {
+        frame.src = urls[14];
+    };
+    
+    function s16(frame) {
+        frame.src = urls[15];
+    };
+    
+    function s17(frame) {
+        frame.src = urls[16];
+    };
+    
+    function s18(frame) {
+        frame.src = urls[17];
+    };
+    
+    function s19(frame) {
+        frame.src = urls[18];
+    };
+    
+    function s20(frame) {
+        frame.src = urls[19];
+    };
+    
+    function s21(frame) {
+        frame.src = urls[20];
+    };
+    
+    function s22(frame) {
+        frame.src = urls[21];
+    };
+    
+    function s23(frame) {
+        frame.src = urls[22];
+    };
+    
+    function s24(frame) {
+        frame.src = urls[23];
+    };
+    
+    function s25(frame) {
+        frame.src = urls[24];
+    };
+    
+
+    
+    
+    
+    
+
+    var left = 0;
+    var line = document.getElementById('line');
+    
+    function left1() {
+        left = left + 260;
+        if (left > 0) {
+            left = 0;
+        }
+        line.style.left = left + 'px';
+    };
+    
+    function right1(){
+        left = left - 260;
+        if (left < -0) {
+            left = -0;
+            }
+        line.style.left = left + 'px';
+    };
+    
+
+
+    
+    // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
+    alert('Beta-test версия сайта, ориентированна на PC :)');
+</script></html>
