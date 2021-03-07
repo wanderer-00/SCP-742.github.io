@@ -126,52 +126,48 @@
         }
 
 
+    /* МОДИФИЦИРОВАНИЕ 07.03.21 */
+        /* КОМПАС */
         .y {
-            background-color: rgba(32, 32, 32, 0.8);
-            justify-content: right;
-            border-bottom: 2px solid #7e7d7d;
-            border-radius: 25px 0px 0px 0px;
-            border-right: 2px solid #7e7d7d;
-            border-left: 2px solid #7e7d7d;
-            border-top: 2px solid #7e7d7d;
-            height: auto;
+            border: 2px solid #7e7d7d;
+            border-radius: 25px 0 0 0;
             width: 100%;
+            background-color: rgba(32, 32, 32, 0.8);
+            
+            /* border & padding входят в расчёт размера */
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
-
         .yy {
-            background-color: rgba(0, 0, 255, 0);
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            height: 60px;
-            width: 83%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+            margin: 50px 0;
+            display: flex;
+            /* item по центру */
+            justify-content: center;
         }
-
         .yyy {
             background-color: rgba(32, 32, 32, 1);
-            border-radius: 5px;
-            text-align: center;
-            font-size: 30px;
-            padding: 6px 15px 6px 15px;
+            padding: 6px 15px;
             margin: 3px;
-            float: left;
+            /* НАСТРОКА ГРАНИЦ */
+            border-radius: 5px;
             border: 1px solid grey;
-            width: auto;
+            /* СТИЛИЗАЦИЯ ШРИФТА */
             color: #7e7d7d;
+            font-size: 1.88em; /* 30px */
         }
-
+        .xxx {
+            background-color: rgba(40, 40, 40, 1);
+            border: 1px solid #343434;
+            color: grey;
+        }
         .yyy:hover {
             background-color: rgba(40, 40, 40, 1);
             border: 1px solid #343434;
             color: red;
         }
+
+
 
 
         /* BOTTOM */

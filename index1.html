@@ -17,6 +17,11 @@
             background-repeat: no-repeat;
             background-position: 0px 0px;
             background-attachment: fixed;
+            
+            /* border & padding входят в расчёт размера */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
         a {
@@ -152,53 +157,46 @@
 
 
 
-
+    /* МОДИФИЦИРОВАНИЕ 07.03.21 */
         /* КОМПАС */
         .y {
-            background-color: rgba(32, 32, 32, 0.8);
-            justify-content: right;
             border: 2px solid #7e7d7d;
-            border-radius: 25px 0px 0px 0px;
-            height: auto;
+            border-radius: 25px 0 0 0;
             width: 100%;
+            background-color: rgba(32, 32, 32, 0.8);
+            
+            /* border & padding входят в расчёт размера */
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
-
         .yy {
-            margin: 50px auto 50px auto;
-            height: 60px;
-            width: 83%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
+            margin: 50px 0;
+            display: flex;
+            /* item по центру */
+            justify-content: center;
         }
-
         .yyy {
             background-color: rgba(32, 32, 32, 1);
-            border-radius: 5px;
-            text-align: center;
-            font-size: 30px;
-            padding: 6px 15px 6px 15px;
+            padding: 6px 15px;
             margin: 3px;
-            float: left;
+            /* НАСТРОКА ГРАНИЦ */
+            border-radius: 5px;
             border: 1px solid grey;
-            width: auto;
+            /* СТИЛИЗАЦИЯ ШРИФТА */
             color: #7e7d7d;
+            font-size: 1.88em; /* 30px */
         }
-
         .xxx {
             background-color: rgba(40, 40, 40, 1);
             border: 1px solid #343434;
             color: grey;
         }
-
         .yyy:hover {
             background-color: rgba(40, 40, 40, 1);
             border: 1px solid #343434;
             color: red;
         }
-
 
 
         /* COUB */
@@ -619,11 +617,9 @@
         </div>
 
     </div>
-
+    
+    <!-- КОМПАС -->
     <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
-
-
-        <!-- КОМПАС -->
         <div class="yy">
             <div class="yyy xxx">1</div>
             <a href="index2.html">

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Градиент</title>
+    <style>
+        div {
+            width: 400px;
+            height: 300px;
+            background-image:
+                linear-gradient(to top, transparent, red),
+                linear-gradient(to right, green, yellow, blue);
+            background-size: 100% 100%, 2000% 100%;
+            animation: move 5s infinite;
+        }
+
+        @keyframes move {
+            from {
+                background-position: center center, left center;
+            }
+
+            to {
+                background-position: center center, right center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
+
+<body onload="start()" onresize="resize()" onorientationchange="resize()" onmousedown="context.fillStyle='rgba(0,0,0,'+opacity+')'" onmouseup="context.fillStyle='rgb(0,0,0)'">
+<canvas id="starfield" style="background-color: rgb(0, 0, 0); --darkreader-inline-bgcolor:#000000; position: absolute;" data-darkreader-inline-bgcolor="" width="1366" height="635"></canvas>
+<div id="adsense" style="position: absolute; background-color: transparent; display: block; --darkreader-inline-bgcolor:transparent; left: 319px; top: 620px; width: 728px; height: 15px;" data-darkreader-inline-bgcolor="">
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+
+<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+<script type="text/javascript"> var _uacct='UA-241365-1'; urchinTracker(); </script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Переводчик"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Исходный текст</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Предложить лучший вариант перевода</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: rgb(204, 204, 204); background-color: rgb(204, 204, 204); height: 1px; border: none; --darkreader-inline-color:#e8d7ba; --darkreader-inline-bgcolor:#403e38; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-color="" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" data-darkreader-inline-fill="" style="--darkreader-inline-fill:none;"></circle></svg></div></div></body>
