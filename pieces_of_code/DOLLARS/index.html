@@ -20,14 +20,16 @@
         h1 {
             font-size: 9vh;
         }
-        
-        
+
+
         /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
-        :active, :hover, :focus {
+        :active,
+        :hover,
+        :focus {
             outline: 0;
             outline-offset: 0;
         }
-        
+
         #stabilitron {
             /* ПОЗИЦИОНИРОВАНИЕ */
             position: absolute;
@@ -35,8 +37,8 @@
             transform: translate(-50%, 0);
             text-align: center;
         }
-        
-        
+
+
         /* ВНЕШНЕЕ КОЛЬЦО */
         #ring_1 {
             width: 400px;
@@ -49,12 +51,13 @@
             border-radius: 50%;
 
             margin-top: 40px;
-            
+
             /* ТЕНИ */
-            box-shadow: 
-                      0 0 16px 4px white,
+            box-shadow:
+                0 0 16px 4px white,
                 inset 0 0 9px 1px white;
         }
+
         /* ВНУТРЕННЕЕ КОЛЬЦО */
         #ring_2 {
             width: 356px;
@@ -65,28 +68,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             /* ТЕНИ */
-            box-shadow: 
-                      0px 0px 10px 4px white,
+            box-shadow:
+                0px 0px 10px 4px white,
                 inset 0px 0px 4px 1px white;
         }
-        #DOLLARS{
+
+        #DOLLARS {
             width: 300px;
         }
-        
-        
+
+
         /* СТРОКА С ВВОДОМ ПАРОЛЯ */
         /* БЛОК СТРОКИ */
-        #intro{
+        #intro {
             margin-top: 54px;
         }
+
         /* 'PASSWORD' */
         #password_ {
             font-weight: 600;
             display: inline-flex;
             font-size: 15px;
         }
+
         /* ОБНУЛЕНИЕ СТИЛЕЙ <input> */
         input {
             padding: 0;
@@ -94,15 +100,16 @@
             border: 0;
             border: none;
         }
+
         /* НОВЫЕ СТИЛИ <input> */
         input {
             width: 208px;
             padding: 6px;
             border-radius: 100px;
-            box-shadow: white 0 0 6px; 
-        }        
+            box-shadow: white 0 0 6px;
+        }
 
-        
+
         /* КНОПКА */
         button {
             width: 210px;
@@ -114,34 +121,70 @@
             margin-top: 40px;
             text-align: center;
         }
-        button:active, button:focus {
+
+        button:active,
+        button:focus {
             opacity: 0.4;
-            
+
         }
-        
-        
+
+
         /* МАКЕТ */
-        #maket{
+        #maket {
             position: absolute;
-            top:-81px;
+            top: -81px;
             left: -12px;
+        }
+        #box{
+            display: inline-block;
+        }
+        .D_, .O_, .L_, .A_, .R_, .S_, {
+            display: inline-flex;
+        }
+        #cluster{
+            width: 287px;
+            height: 49px;
+            display: inline-grid;
+            grid-template-rows: repeat(7, 1fr);
+            grid-template-columns: repeat(41, 1fr);
+        }
+        #x{
+            border-radius: 50%;
+            background-color: black;
+        }
+        #o{
+            border-radius: 50%;
+            background-color: white;
         }
     </style>
 </head>
 
 <body>
-<!--        <img id='maket' src="img/1.png" width="100%">-->
+    <!--        <img id='maket' src="img/1.png" width="100%">-->
     <div id="stabilitron">
+       
         <div id="ring_1">
             <div id="ring_2">
-<!--                <h1>DOLLARS</h1>-->
-                <img id='DOLLARS' src="img/2.png" >
+
+                <div id="cluster">
+                    <div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div>
+                    <div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div>
+                    <div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div>
+                    <div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div>
+                    <div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div>
+                    <div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div>
+                    <div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="x"></div><div id="x"></div><div id="o"></div><div id="o"></div><div id="o"></div><div id="x"></div>
+                </div>
+                
             </div>
         </div>
+        
         <div id="intro">
             <div id="password_">PASSWORD:</div>
             <input type="text">
         </div>
+        
         <button>ENTER</button>
     </div>
+    
 </body></html>
