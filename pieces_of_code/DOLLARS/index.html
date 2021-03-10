@@ -190,20 +190,21 @@
             <input id='pasw' type="text">
         </div>
         
-        <button onclick="r();">ENTER</button>
+        <button onclick="log_in();">ENTER</button>
     </div>
     <script>
-        function r(){
+        function log_in(){
         // ПРЕДПОЛОГАЕМЫЙ ПОЛЬЗОВАТЕЛЕМ ПАРОЛЬ
         var pasw = document.getElementById('pasw').value;
         // ИСТИННЫЙ ПАРОЛЬ
-        var sub_pasw = 123;
+        var sub_pasw = 2468;
         // ЕСЛИ ПАРОЛЬ СОВПАДАЕТ ТО
         if (pasw == sub_pasw)
             // ВЫВЕСТИ 1
             {window.location.assign('../../index1.html');}
             // ИНАЧЕ ВЫВЕСТИ 0
-            else{alert(0);}
+            else{window.location.assign('../../index.html');
+                 alert('Досвидания :3');}
         }
         
         
