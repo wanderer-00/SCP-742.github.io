@@ -112,7 +112,6 @@ input {
 /* ЛЕВАЯ СТОРОНА ПЛЕЕРА */
 #left_box {
     width: 720px;
-    background: red;
 }
 
 #videoBox {
