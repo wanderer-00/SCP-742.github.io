@@ -8,6 +8,20 @@ body {
     font-family: sans-serif;
 }
 
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #18191d;
+}
+::-webkit-scrollbar-thumb {
+    background: #3b4146;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #474e54;
+}
+
 button {
     /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
     padding: 0;
@@ -91,15 +105,14 @@ input {
 
 #container {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    width: 100%;
     background-color: #0D0E0E;
 }
 
 /* ЛЕВАЯ СТОРОНА ПЛЕЕРА */
 #left_box {
-    flex-basis: 720px;
-    background: black;
+    width: 720px;
+    background: red;
 }
 
 #videoBox {
@@ -121,7 +134,7 @@ input {
 
 #panel {
     /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
-    width: 720px;
+    width: 100%;
     user-select: none;
     padding: 10px;
     background-color: #161616;
@@ -172,6 +185,11 @@ input {
 #right_box {
     overflow: hidden;
     padding: 2%;
-    flex-basis: ;
+    width: 380px;
     font-size: 20px;
+}
+@media (max-width: 1111px) {
+    /* УДАЛЕНИЕ ПРАВОЙ ПАНЕЛИ */
+    #right_box {display: none}
+    #sub_box{width: 720px}
 }

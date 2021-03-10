@@ -4,45 +4,84 @@
     <meta charset="UTF-8">
     <title>DirectorY</title>
     <style>
-        /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
+    /* ЕДЕНИЦЫ */
+        
+        
+        
+    /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
         html{
             box-sizing: border-box;
         }
         *, *:after, *:before{
             box-sizing: inherit;
         }
-        /* АЛЬТЕРНАТИВА */
+    /* АЛЬТЕРНАТИВА */
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        #aa{
-            padding: 10px;
-        }
-        /* ОБНУЛЕНИЕ СТИЛЕЙ */
+        
+        
+    /* ОБНУЛЕНИЕ СТИЛЕЙ */
         input {
             padding: 0;
             margin: 0;
             border: 0;
             border: none;
         }
-        /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
+    /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
         :active, :hover, :focus {
             outline: 0;
             outline-offset: 0;
         }
+        
+        
         #syntax{
             color: darkseagreen;
             font-family: sans-serif;
             padding: 10px;
             background-color: #333333;
         }
+        
+/*  TEXT  */
+        #text{
+            /* ЦВЕТ */
+            color: white;
+            /* ВЫСОТА ШРИФТА */
+            font-size: 20px;
+            /* ТИП ШРИФТА */
+            font-family: sans-serif;
+            /* МЕЖСТРОЧНЫЙ ИНТЕРВАЛ */
+            line-height: 1;    
+        }
     </style>
 </head>
 <body>
-<!-- ТЕКСТ -->
-    <div id="syntax">line-height: множитель[1] | значение[ px|in|pt|vh|em|rem ] | проценты[100%] | normal | inherit ;</div>
+<!-- ЕДЕНИЦЫ ИЗМЕРЕНИЯ -->
+    <pre>
+vh - процент от высоты отображаемого окна
+    </pre>
+
+
+<!-- ЦВЕТ -->
+<pre id='syntax'>
+rgba(0,0,0,1)
+#FFFFFF
+black
+</pre>
+
+
+<!-- TEXT -->
+    <pre id='syntax'>
+color: ;
+text-transform: capitalize | lowercase | uppercase | none | inherit
+    </pre>
+
+<!-- IMG -->
+    
+
+<!-- AUDIO -->
 
 <!-- VIDEO -->
     <video controls >
