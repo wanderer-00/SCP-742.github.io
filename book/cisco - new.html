@@ -95,6 +95,7 @@
         #codePlace{
             color: white;
             width: 96%;
+            margin: 0 0 20px 0;
             padding: 2%;
             border-radius: 5px;
             background-color: #2d2d2d;
@@ -123,6 +124,13 @@
         #z{
             color:#FFFFFF;
         }
+        
+        /* SYNTAX */
+        #comand{color: #7EC699;}
+        #parameter{color: #CC99CD;}
+        #comment{color: #999999;}
+        
+        
     </style>
 </head>
 <body>
@@ -141,24 +149,31 @@
     
     <div id="book">
     
-    <div id="codePlace">Синтакситс:</div>
-
+    <h3>Синтаксис</h3>
 <pre id="codePlace"><font style='color:#e2777a;'>#E2777A - </font>
 <font style='color:#F8C555;'>#F8C555 - </font>
 <font style='color:#999999;'>#999999 - комментарий</font>
-<font style='color:#7ec699;'>#7EC699 - </font>
-<font style='color:#CC99CD;'>#CC99CD - </font>
+<font style='color:#7ec699;'>#7EC699 - команда</font>
+<font style='color:#CC99CD;'>#CC99CD - параметр</font>
 <font style='color:#67CDCC;'>#67CDCC - оператор</font>
 <font style='color:#F08D49;'>#F08D49 - </font></pre>
     
     <h2><font style='color: #351c75;'>Для описания команд будут использоваться некоторые символы.</font></h2>
     [ ] – в этих скобках находится необязательный параметр какой либо команды<br/>
     | – этим символом разделяются альтернативные параметры команды(или то или то)<br/>
-        <font style='color:red;'>В дальнейшем заменить на синтаксис!!!</font><br/><br/>
+    <font style='color:red;'>В дальнейшем заменить на синтаксис!!!</font><br/><br/>
+    
+    
+    <h3>Разведка :)</h3>
+    <div id="codePlace">
+        <font id='comand'>show ip route</font> - информацция о сетях<br/>
+        <font id='comand'>show ip int</font> <font id='parameter'>brief</font> - инфо о интерфейсах данного R<br/>
+        <font id='comment'>brief - сокращение сводки</font><br/>
+    </div>
     
     
     <div id="codePlace" style='color:#F8C555;'>
-        <b>show ip eigrp neighbors [x] [details]</b> <font id="z">- можно посмотреть таблицу соседей протокола EIGRP. X это номер автономной системы, слово [details] расширяет вывод</font><br/>
+    <b>show ip eigrp neighbors [x] [details]</b> <font id="z">- можно посмотреть таблицу соседей протокола EIGRP. X это номер автономной системы, слово [details] расширяет вывод</font><br/>
     <b>show ip eigrp interfaces [x] [details]</b> – отображает информацию протокола EIGRP для каждого интерфейса.Номер автономной системы ограничивает вывод, слово details расширяет вывод<br/>
     <b>show ip eigrp topology [x] [ip-address][mask]] [all-links]</b> – выводит все маршруты, резервные и основные.С помощью необязательных параметров можно ограничить(отфильтровать) вывод на основе автономной системы, или адреса сети.Необязательный параметр [all-links] отображает не только активные маршруты, но и все имеющиеся маршруты топологии сети протокола EIGRP.<br/>
     <b>show ip eigrp traffic [x]</b> – показывает число отправленных/полученных пакетов протокола EIGRP. Можно отфильтровать вывод задав [x](номер автономной системы).<br/>
