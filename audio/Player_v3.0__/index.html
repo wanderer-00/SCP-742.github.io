@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player_v3.1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/44a29f837f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="screen">
+        <input type="checkbox" name="check" id="magicButton" value="None">
+        <label for="magicButton" class="main"></label>
+
+        <div class="coverImage"></div>
+        <div class="search"></div>
+        <div class="bodyPlayer"></div>
+
+        <table class="list">
+
+
+            <!-- 1 -->
+            <tr class="song">
+                <td class="nr"><h5>1</h5></td>
+                <td class="title"><h6 style="color: #ff564c;">$UICIDEBOY$ - $OUTH</h6></td>
+                <td class="length"><h5>2:49</h5></td>
+                <td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td>
+            </tr>
+
+            <!-- 2 -->
+            <tr class="song">
+                <td class="nr"><h5>2</h5></td>
+                <td class="title"><div id="titleZ"><h6>Fall Out Boy - Young And Menace</h6></div></td>
+                <td class="length"><h5>3:43</h5></td>
+                <td><input type="checkbox" id="heart1" checked><label for="heart1" class="icons"></label></td>
+            </tr>
+
+            <!-- 3 -->
+            <tr class="song">
+                <td class="nr"><h5>3</h5></td>
+                <td class="title"><h6>Local train</h6></td>
+                <td class="length"><h5>3:22</h5></td>
+                <td><input type="checkbox" id="heart2"><label for="heart2" class="icons"></label></td>
+            </tr>
+
+            <!-- 4 -->
+            <tr class="song">
+                <td class="nr"><h5>4</h5></td>
+                <td class="title"><h6>My King</h6></td>
+                <td class="length"><h5>3:50</h5></td>
+                <td><input type="checkbox" id="heart3"><label for="heart3" class="icons"></label></td>
+            </tr>
+
+            <!-- 5 -->
+            <tr class="song">
+                <td class="nr"><h5>5</h5></td>
+                <td class="title"><h6>New Love</h6></td>
+                <td class="length"><h5>3:18</h5></td>
+                <td><input type="checkbox" id="heart4" checked><label for="heart4" class="icons"></label></td>
+            </tr>
+
+            <!-- 6 -->
+            <tr class="song">
+                <td class="nr"><h5>6</h5></td>
+                <td class="title"><h6>Bad Guy</h6></td>
+                <td class="length"><h5>2:42</h5></td>
+                <td><input type="checkbox" id="heart5"><label for="heart5" class="icons"></label></td>
+            </tr>
+
+
+        </table>
+
+        <div class="shadow"></div>
+        
+        <!--<div id="stabilitron"><!-- frm -->
+        
+        <!--<div id="shadovH4"></div>-->
+        
+        <div class="info">
+            <h4 id="info">$UICIDEBOY$ - $OUTH</h4>
+            <!--<div id="shadowH4"></div>-->
+        </div>
+        
+        <!--</div>-->
+
+        <audio preload id="audio" controls>
+            <source src="../audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3">
+        </audio>
+
+        <table class="player">
+            <td><input type="checkbox" id="backward"><label for="backward" class="backward" onclick="back()"></label></td>
+            <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"><label for="play" class="play"></label></td>
+            <td><input type="checkbox" id="forward"><label for="forward" class="forward" onclick="next()"></label></td>
+        </table>
+
+        <table class="footer">
+            <td><input type="checkbox" id="love" checked><label for="love" class="love"></label></td>
+            <td><input type="checkbox" id="repeat"><label for="repeat" class="repeat"></label></td>
+            <td><input type="checkbox" id="shuffle"><label for="shuffle" class="shuffle"></label></td>
+            <td><input type="checkbox" id="options"><label for="options" class="options"></label></td>
+        </table>
+
+        <div class="current">
+            <h2>Demons</h2>
+        </div>
+    </section>
+    
+    <a href="https://github.com/Himeld23/MP3-Player">Author</a><br/>
+    <a href="https://www.youtube.com/channel/UCC4E_6H74CPJ3_mFaaM3jXA">Author YouTube</a><br/>
+    <a href="https://www.youtube.com/watch?v=guwSh93MYZo&t=40s">Video tutorial YouTube</a>
+    
+    <script>
+        var audio = document.getElementById('audio');
+        var playpause = document.getElementById("play");
+
+        function togglePlayPause() {
+            // если аудио на паузе или окончено, то
+            if (audio.paused || audio.ended) {
+                // иконка паузы
+                playpause.title = "Pause";
+                // проигрывать аудио
+                audio.play();
+            } else {
+                // иконка проигрывания
+                playpause.title = "Play";
+                // остановить аудио
+                audio.pause();
+            }
+        }
+        
+        // массив с URL(audio)
+        var urls = [
+        /*  1  */"../audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3",
+        /*  2  */"../audio/top/Fall Out Boy - Young And Menace.mp3",
+        /*  3  */"../audio/top/Hirano Yoshihisa - Low of Solipsism.mp3",
+        /*  4  */"../audio/top/Mob AMV_CBR_256k.mp3",
+        /*  5  */"../audio/top/Pendulum-Tarantula_(SYN_Remix)-spaces.im.mp3",
+        /*  6  */"../audio/top/RØNIN - ALL GIRLS ARE THE SAME.mp3",
+        /*  7  */"../audio/top/Sally_face_Vse_moi_druzya_vhodyat_vo_vkus__(hewbi.com).mp3",
+        /*  8  */"../audio/top/Sub Urban - Freak.mp3",
+        /*  9  */"../audio/top/Sub Urban, REI AMI - Freak.mp3",
+        /*  10 */"../audio/top/Zella Day x Matstubs - East of Eden (Remix).mp3",
+        /*  11 */"../audio/top/",
+        ];
+        
+        // массив имён треков
+        var name = [
+        /*  1  */"$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE",
+        /*  2  */"Fall Out Boy - Young And Menace",
+        /*  3  */"Hirano Yoshihisa - Low of Solipsism",
+        /*  4  */"",
+        /*  5  */"",
+        /*  6  */"",
+        /*  7  */"",
+        ];
+        
+        // счётчик номера трека
+        var number_audio = 1;
+        // счётчик проигрывания audio
+        var on_off = 0;
+        
+        // включить следующий трек
+        function next(){
+            
+            
+            
+            // Включено ли аудио?
+            if(audio.paused || audio.ended)
+                {on_off = 0;}
+            else{on_off = 1};
+            
+            // прибавить 1 к счётчику
+            number_audio ++;
+            // сменить URL(audio) на следующие
+            audio.src = urls[number_audio];
+            
+            
+            if (on_off == 1) {
+                // проигрывать аудио
+                audio.play();
+            };
+        };
+        
+        // включить предыдущий трек
+        function back(){
+            
+            // Включено ли аудио?
+            if(audio.paused || audio.ended)
+                {on_off = 0;}
+            else{on_off = 1};
+            
+            number_audio --;
+            audio.src = urls[number_audio];
+            
+            
+            if (on_off == 1) {
+                // проигрывать аудио
+                audio.play();
+            };
+        };
+    </script>
+</body>
+
+</html>
