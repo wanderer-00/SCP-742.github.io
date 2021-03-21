@@ -41,7 +41,7 @@
             <!-- 1 -->
             <tr class="song">
                 <td class="nr"><h5>1</h5></td>
-                <td class="title"><h6 style="color: #ff564c;">$UICIDEBOY$ - $OUTH</h6></td>
+                <td class="title"><h6 id='title'>$UICIDEBOY$ - $OUTH</h6></td>
                 <td class="length"><h5>2:49</h5></td>
                 <td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td>
             </tr>
@@ -130,9 +130,10 @@
     
     <script>
         var audio = document.getElementById('audio');
-        var playpause = document.getElementById("play");
+        var playpause = document.getElementById('play');
         // передача переменной элемента info ( название трека )
         var name_audio = document.getElementById('info');
+        var icon_1 = document.getElementsByClassName('coverImage');
 
         
         
@@ -164,7 +165,6 @@
         /*  9  */"",
         ];
 
-        
         
         
         function togglePlayPause() {
@@ -203,7 +203,9 @@
         
         // включить следующий трек
         function next(){
-            
+            function bbb (){
+                icon_1.style.backgroundImage = "url(../img/cover.png)";  
+            };
             
             // не перелистывать вперед, если играет последний трек 
             if(number_audio == 1){}

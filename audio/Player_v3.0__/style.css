@@ -148,7 +148,8 @@ label.main:hover:before {
 }
 
 .coverImage {
-    background: url('../img/s.jpg') center no-repeat;
+    background-image: url('../img/s.jpg');
+/*    background: url('../img/s.jpg') center no-repeat;*/
     /* расположение обложки */
     /* при комментировании на этой строке проявляется интересный эффект */
     background-size: cover;
@@ -238,6 +239,7 @@ label.main:hover:before {
 }
 
 .title {
+    color: white;
     width: 215px;
     text-align: left;
     text-indent: 15px;
@@ -362,18 +364,20 @@ td > #heart6:checked ~ label.icons:before {
     color: white;
     position: absolute;
     
-    width: 66%;/* frm *//* left: 95px; */
-    margin: 0% 15%;
+    
+    width: 100%;/* frm *//* left: 95px; */
+    margin: 0% 0%;
     text-align: center;
     overflow: hidden;
     /* Обрезаем все, что не помещается в область */
     white-space: nowrap;
     /* Запрещаем перенос строк */
-    padding-left: 4%;
+    padding-left: 0%;
     padding-right: 0%;
     
     top: 460px;
     transition: all 0.3s ease-in;
+
 }
 #shadowH4{
     top: 0;
