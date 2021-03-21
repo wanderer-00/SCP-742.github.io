@@ -1,3 +1,20 @@
+<!-- СДЕЛАНО: -->
+
+<!-- ВСЕ ИМЕНА ТРЕКОВ БЕРУТЬСЯ ИЗ МАССИВА -->
+<!-- ВСЕ URL ТРЕКОВ БЕРУТЬСЯ ИЗ МАССИВА -->
+<!-- ОГРАНИЧЕНИЕ НА ПЕРЕЛИСТЫВАНИЕ ЗА ПОСЛЕДНИЙ И ПЕРВЫЙ ТРЕК -->
+<!--  -->
+
+
+
+<!-- СДЕЛАТЬ -->
+
+<!-- СМЕНА ИКОНКИ ПАУЗЫ ПРИ ОКОНЧАНИИ ТРЕКА -->
+<!-- НАЛАДИТЬ РАБОТУ REPEATE И ТД. -->
+<!-- СМЕНА ОБЛОЖЕК -->
+<!--  -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,32 +57,32 @@
             <!-- 3 -->
             <tr class="song">
                 <td class="nr"><h5>3</h5></td>
-                <td class="title"><h6>Local train</h6></td>
-                <td class="length"><h5>3:22</h5></td>
+                <td class="title"><h6>-</h6></td>
+                <td class="length"><h5>00:00</h5></td>
                 <td><input type="checkbox" id="heart2"><label for="heart2" class="icons"></label></td>
             </tr>
 
             <!-- 4 -->
             <tr class="song">
                 <td class="nr"><h5>4</h5></td>
-                <td class="title"><h6>My King</h6></td>
-                <td class="length"><h5>3:50</h5></td>
+                <td class="title"><h6>-</h6></td>
+                <td class="length"><h5>00:00</h5></td>
                 <td><input type="checkbox" id="heart3"><label for="heart3" class="icons"></label></td>
             </tr>
 
             <!-- 5 -->
             <tr class="song">
                 <td class="nr"><h5>5</h5></td>
-                <td class="title"><h6>New Love</h6></td>
-                <td class="length"><h5>3:18</h5></td>
+                <td class="title"><h6>-</h6></td>
+                <td class="length"><h5>00:00</h5></td>
                 <td><input type="checkbox" id="heart4" checked><label for="heart4" class="icons"></label></td>
             </tr>
 
             <!-- 6 -->
             <tr class="song">
                 <td class="nr"><h5>6</h5></td>
-                <td class="title"><h6>Bad Guy</h6></td>
-                <td class="length"><h5>2:42</h5></td>
+                <td class="title"><h6>-</h6></td>
+                <td class="length"><h5>00:00</h5></td>
                 <td><input type="checkbox" id="heart5"><label for="heart5" class="icons"></label></td>
             </tr>
 
@@ -79,14 +96,14 @@
         <!--<div id="shadovH4"></div>-->
         
         <div class="info">
-            <h4 id="info">$UICIDEBOY$ - $OUTH</h4>
+            <h4 id="info"></h4>
             <!--<div id="shadowH4"></div>-->
         </div>
         
         <!--</div>-->
 
-        <audio preload id="audio" controls>
-            <source src="../audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3">
+        <audio preload id="audio" controls loop>
+            <source src="">
         </audio>
 
         <table class="player">
@@ -114,6 +131,10 @@
     <script>
         var audio = document.getElementById('audio');
         var playpause = document.getElementById("play");
+        // передача переменной элемента info ( название трека )
+        var name_audio = document.getElementById('info');
+
+        
 
         function togglePlayPause() {
             // если аудио на паузе или окончено, то
@@ -133,38 +154,56 @@
         // массив с URL(audio)
         var urls = [
         /*  1  */"../audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3",
-        /*  2  */"../audio/top/Fall Out Boy - Young And Menace.mp3",
-        /*  3  */"../audio/top/Hirano Yoshihisa - Low of Solipsism.mp3",
-        /*  4  */"../audio/top/Mob AMV_CBR_256k.mp3",
-        /*  5  */"../audio/top/Pendulum-Tarantula_(SYN_Remix)-spaces.im.mp3",
-        /*  6  */"../audio/top/RØNIN - ALL GIRLS ARE THE SAME.mp3",
-        /*  7  */"../audio/top/Sally_face_Vse_moi_druzya_vhodyat_vo_vkus__(hewbi.com).mp3",
-        /*  8  */"../audio/top/Sub Urban - Freak.mp3",
-        /*  9  */"../audio/top/Sub Urban, REI AMI - Freak.mp3",
-        /*  10 */"../audio/top/Zella Day x Matstubs - East of Eden (Remix).mp3",
-        /*  11 */"../audio/top/",
+        /*  2  */"../audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3",
+        /*  3  */"../audio/N_E_W/",
+
         ];
         
         // массив имён треков
-        var name = [
+        var names = [
         /*  1  */"$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE",
-        /*  2  */"Fall Out Boy - Young And Menace",
-        /*  3  */"Hirano Yoshihisa - Low of Solipsism",
+        /*  2  */"ITSOKTOCRY - POP, LOCK & DROPDEAD",
+        /*  3  */"",
+        ];
+        
+        // массив с обложками треков
+        var icons1 = [
+        /*  1  */"",
+        /*  2  */"",
+        /*  3  */"",
         /*  4  */"",
         /*  5  */"",
         /*  6  */"",
         /*  7  */"",
+        /*  8  */"",
+        /*  9  */"",
         ];
         
+
+        
         // счётчик номера трека
-        var number_audio = 1;
-        // счётчик проигрывания audio
+        var number_audio = 0;
+        var ico = 0;
+        // счётчик "включенно ли audio [ 0-выкл | 1-вкл ] "
         var on_off = 0;
+        
+        
+        
+        // НАЧАЛЬНЫЙ ТРЕК
+        audio.src = urls[number_audio];
+        // НАЧАЛЬНОЕ НАЗВАНИЕ ТРЕКА
+        name_audio.innerHTML = names[number_audio];
+        
+        
+        
         
         // включить следующий трек
         function next(){
             
             
+            // не перелистывать вперед, если играет последний трек 
+            if(number_audio == 1){}
+            else{
             
             // Включено ли аудио?
             if(audio.paused || audio.ended)
@@ -173,19 +212,26 @@
             
             // прибавить 1 к счётчику
             number_audio ++;
-            // сменить URL(audio) на следующие
+            // сменить URL(audio) на следующие (в массиве)
             audio.src = urls[number_audio];
+            // сменить название трека на следующее (в массиве)
+            name_audio.innerHTML = names[number_audio];
             
             
             if (on_off == 1) {
                 // проигрывать аудио
                 audio.play();
             };
+            };
         };
         
         // включить предыдущий трек
         function back(){
-            
+
+            // не перелистывать назад, если играет первый трек 
+            if(number_audio == 0){}
+            else{
+                
             // Включено ли аудио?
             if(audio.paused || audio.ended)
                 {on_off = 0;}
@@ -193,11 +239,13 @@
             
             number_audio --;
             audio.src = urls[number_audio];
+            name_audio.innerHTML = names[number_audio];
             
             
             if (on_off == 1) {
                 // проигрывать аудио
                 audio.play();
+            };
             };
         };
     </script>
