@@ -85,9 +85,6 @@ input {
     top: 50%;
     /* СМЕЩЕНИЕ НА ПОЛОВИНУ ОТ СВОЕГО РАЗМЕРА */
     transform: translate(-50%, -50%);
-    
-    background: red;
-
 }
 
 /* DIV( NAME & AGE ) */
