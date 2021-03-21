@@ -105,7 +105,7 @@ input {
 }
 
 
-
+/* DIV( ВИДЕО & ОПИСАНИЕ ) */
 #container {
     display: flex;
     width: 100%;
@@ -191,6 +191,7 @@ input {
     font-size: 20px;
     background: blue;
 }
+/* ТРАНСФОРМЕРРРРРРР */
 @media (max-width: 1111px) {
     /* УДАЛЕНИЕ ПРАВОЙ ПАНЕЛИ */
     #right_box {display: none;}
