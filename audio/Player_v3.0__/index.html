@@ -135,21 +135,6 @@
         var name_audio = document.getElementById('info');
 
         
-
-        function togglePlayPause() {
-            // если аудио на паузе или окончено, то
-            if (audio.paused || audio.ended) {
-                // иконка паузы
-                playpause.title = "Pause";
-                // проигрывать аудио
-                audio.play();
-            } else {
-                // иконка проигрывания
-                playpause.title = "Play";
-                // остановить аудио
-                audio.pause();
-            }
-        }
         
         // массив с URL(audio)
         var urls = [
@@ -178,6 +163,25 @@
         /*  8  */"",
         /*  9  */"",
         ];
+
+        
+        
+        
+        function togglePlayPause() {
+            // если аудио на паузе или окончено, то
+            if (audio.paused || audio.ended) {
+                // иконка паузы
+                playpause.title = "Pause";
+                // проигрывать аудио
+                audio.play();
+            } else {
+                // иконка проигрывания
+                playpause.title = "Play";
+                // остановить аудио
+                audio.pause();
+            }
+        }
+        
         
 
         
