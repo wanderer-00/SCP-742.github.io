@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+                /* scroll bar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            max-height: 8px;
+        }
+        ::-webkit-scrollbar-track:vertical {
+            background: #262626;
+        }
+        
+        /*  */
+        ::-webkit-scrollbar-thumb:vertical  {
+            background: gray;
+        }
+        
+        /* scroll цвет при наведении */
+        ::-webkit-scrollbar-thumb:vertical:hover {
+            background: white;
+        }
+        
+        /* уголок */
+        ::-webkit-scrollbar-corner {
+            background: #262626;
+        }
+        
+
+        body{
+            background: #123456;
+        }
+        #box{
+            box-sizing: border-box;
+            background: #333333;
+            overflow: scroll;
+            width: 408px;
+            height: 600px;
+        }
+        #sub-box{
+            background: #222222;
+            width: 380px;
+            height: 100px;
+            margin: 10px 10px;
+            display: flex;
+        }
+        #icon{
+            width: 100px;
+            height: 100%;
+            background: red;
+
+        }
+        #icon img{
+            width: 100%;
+            height: 100%;
+        }
+        #description{
+            color: white;
+            font-size: 20px;
+            font-family: sans-serif;
+            
+            padding: 10px;
+            width: 280px;
+            height: 100%;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="sub-box">
+            <div id="icon">
+                <img src="../../audio/img/2rbina%202rista.jpg" alt="">
+            </div>
+            <div id="description">
+                qqq
+            </div>
+        </div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+        <div id="sub-box"></div>
+    </div>
+</body>
+</html>
