@@ -218,25 +218,6 @@
 
 
 
-    /* ПАЛИТРА */
-    #palitra {
-        width: 50%;
-        border: 5px solid white;
-        display: flex;
-        flex-wrap: no-wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #t {
-        height: 100px;
-        flex-basis: 25%;
-    }
-
-
-
-
 
 
     /* GLASS */
@@ -435,24 +416,16 @@
         width: 100%;
         outline: none;
     }
+    
+    
+    input,
+    textarea,
+    [contenteditable] {
+            caret-color: red;
+    }
 </style>
 
 <body>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="audio/img/empty.gif">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Kumarion - 1984 </div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='audio/audio/N_E_W/Kumarion - 1984.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
 
     <!-- Loading... -->
     <div id="box">
@@ -535,10 +508,10 @@
 
             <div class="player">
                 <div class="player_img">
-                    <img src="audio/img/1235.jpg" alt="">
+                    <img src="audio/img/зло.jpg" alt="">
                 </div>
                 <audio controls>
-                    <source src='audio/audio/N_E_W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
+                    <source src='audio/audio/N_E_W/Sagath - З.Л.О..mp3' type="audio/mp3">
                 </audio>
             </div>
 
@@ -557,7 +530,7 @@
             <div class="player">
                 <div id="player_name">Fytch - Sirens Over Paris</div>
                 <div class="player_img">
-                    <img src="audio/img/1235.jpg" alt="">
+                    <img src="audio/img/Fytch - Sirens Over Paris.jpg" alt="">
                 </div>
                 <audio controls>
                     <source src='audio/audio/N_E_W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
@@ -569,34 +542,25 @@
     </div>
 
     <!-- Player v0.3 -->
-    <div id="container_v_0_3">
-        <div id="name_v_0_3">Player v0.3</div>
-        <div id="o_v_0_3">
+    <div id="container">
+        <div id="name">Player v0.3</div>    
 
-
-            <div class="player_v_0_3">
-                <div id="player_name_v_0_3">ITSOKTOCRY - POP, LOCK & DROPDEAD</div>
-                <div class="player_v_0_3">
-                    <img src="audio/img/0.jpg" alt="обложка потерялась ;(">
-                </div>
-                <audio controls>
-                    <source src='audio/audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3' type="audio/mp3">
-                </audio>
+        <div id="box_v04">
+            <div id="ico_v04">
+                <img id=img_v04 src="audio/img/empty.gif">
             </div>
-
-
+            <div id="body_v04">
+                <div id="name_v04">Kumarion - 1984 </div>
+                <div id="player_v04">
+                    <audio controls>
+                        <source src='audio/audio/N_E_W/Kumarion - 1984.mp3' type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
         </div>
     </div>
+    
 
-
-
-    <!-- ПАЛИТРА -->
-    <div id="palitra">
-        <div id="t" style='background: rgba(21,21,221,0.2);'></div>
-        <div id="t" style='background: #FFA000;'></div>
-        <div id="t" style='background: ;'></div>
-        <div id="t" style='background: darkgrey;'></div>
-    </div>
 
 
     <!-- CSS GLASS -->
@@ -625,139 +589,7 @@
 
     </div>
 
-    <div id="testPlaceZ">
-
-        <selection id="screen">
-            <input type="checkbox" name="check" id="button" value="none">
-            <lable for="button" id="main"></lable>
-
-            <div id="coverImage"></div>
-            <div id="search"></div>
-            <div id="bodyPlayer"></div>
-
-            <table id="list">
-                <tr id="song">
-                    <td id="nr">
-                        <h5>1</h5>
-                    </td>
-                    <td id="title">
-                        <h6>Mob 100</h6>
-                    </td>
-                    <td id="lenght">
-                        <h5>1:11</h5>
-                    </td>
-                    <td><input type="checkbox" id="heart">
-                        <lable for="heart" id="icons"></lable>
-                    </td>
-                </tr>
-
-                <tr id="song">
-                    <td id="nr">
-                        <h5>2</h5>
-                    </td>
-                    <td id="title">
-                        <h6>Demons</h6>
-                    </td>
-                    <td id="lenght">
-                        <h5>2:22</h5>
-                    </td>
-                    <td><input type="checkbox" id="heart">
-                        <lable for="heart" id="icons"></lable>
-                    </td>
-                </tr>
-
-                <tr id="song">
-                    <td id="nr">
-                        <h5>3</h5>
-                    </td>
-                    <td id="title">
-                        <h6>Demons</h6>
-                    </td>
-                    <td id="lenght">
-                        <h5>3:33</h5>
-                    </td>
-                    <td><input type="checkbox" id="heart">
-                        <lable for="heart" id="icons"></lable>
-                    </td>
-                </tr>
-
-
-                <tr id="song">
-                    <td id="nr">
-                        <h5>4</h5>
-                    </td>
-                    <td id="title">
-                        <h6>Demons</h6>
-                    </td>
-                    <td id="lenght">
-                        <h5>4:44</h5>
-                    </td>
-                    <td><input type="checkbox" id="heart">
-                        <lable for="heart" id="icons"></lable>
-                    </td>
-                </tr>
-
-                <tr id="song">
-                    <td id="nr">
-                        <h5>5</h5>
-                    </td>
-                    <td id="title">
-                        <h6>Demons</h6>
-                    </td>
-                    <td id="lenght">
-                        <h5>5:55</h5>
-                    </td>
-                    <td><input type="checkbox" id="heart">
-                        <lable for="heart" id="icons"></lable>
-                    </td>
-                </tr>
-            </table>
-
-            <div id="shadow"></div>
-
-            <div id="info">
-                <h4>Mob 100 - %</h4>
-            </div>
-
-            <audio preload id="audio" controls>
-                <source src='audio/audio/[p/Mob AMV_CBR_256k.mp3'>
-            </audio>
-
-            <table id="playerZ">
-                <td><input type="checkbox" id="backward">
-                    <lable for="backward" id="backward"></lable>
-                </td>
-                <td><input type="checkbox" id="play" title="play" onclick="togglePlayPause()">
-                    <lable for="play" id="play"></lable>
-                </td>
-                <td><input type="checkbox" id="forward">
-                    <lable for="forward" id="forward"></lable>
-                </td>
-            </table>
-
-            <table id="foother">
-                <td><input type="checkbox" id="love" checked>
-                    <lable for="love" id="love"></lable>
-                </td>
-                <td><input type="checkbox" id="repeat" checked>
-                    <lable for="repeat" id="repeat"></lable>
-                </td>
-                <td><input type="checkbox" id="shuffle" checked>
-                    <lable for="shuffle" id="shuffle"></lable>
-                </td>
-                <td><input type="checkbox" id="options" checked>
-                    <lable for="options" id="options"></lable>
-                </td>
-            </table>
-
-            <div id="current">
-                <h2>Mob 100</h2>
-            </div>
-
-        </selection>
-
-    </div>
-
+<input type="text">
     <!--
         body {
             margin: 0px;
@@ -795,30 +627,6 @@
     }
     -->
 
-    <!-- Play/Pause -->
-    <div id="testPlaceZ">
-        <button>Воспроизведение</button>
-
-        <pre id="codePlace">
-    $('#player').on('play', function() {
-    //Меняем текст кнопки на "Пауза"
-    });
-
-    $('#player').on('pause', function() {
-    //Меняем текст кнопки на "Воспроизвести"
-    });
-    </pre>
-
-        Ну и в обработчике клика проверяете, если стоит на паузе - то по клику воспроизводить, если играет - то ставить на паузу. Типа:
-
-        <pre id="codePlace">
-    if($('#player').paused) {
-    $('#player').play();
-    } else {
-    $('#player').pause();
-    }
-    </pre>
-    </div>
 
     <!--
     /* уведомление */

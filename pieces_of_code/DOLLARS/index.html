@@ -30,6 +30,10 @@
             outline-offset: 0;
         }
 
+        input{
+            font-family: monospace;
+        }
+
         #stabilitron {
             /* ПОЗИЦИОНИРОВАНИЕ */
             position: absolute;
@@ -101,6 +105,12 @@
             margin: 0;
             border: 0;
             border: none;
+            -webkit-text-security: disc; 
+/*
+input { -webkit-text-security: circle; }
+input { -webkit-text-security: square; }
+input { -webkit-text-security: disc;
+*/
         }
 
         /* НОВЫЕ СТИЛИ <input> */
@@ -162,6 +172,16 @@
             box-shadow:
                       0px 0px 8px 2px white;
         }
+        
+        
+        
+        
+        input,
+        textarea,
+        [contenteditable] {
+            caret-color: #eee;
+        }
+        
     </style>
 </head>
 
@@ -187,7 +207,7 @@
         
         <div id="intro">
             <div id="password_">PASSWORD:</div>
-            <input id='pasw' type="text">
+            <input id='pasw' name="password"  maxlength="25">
         </div>
         
         <button onclick="log_in();">ENTER</button>
