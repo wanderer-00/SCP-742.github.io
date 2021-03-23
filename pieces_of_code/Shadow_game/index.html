@@ -18,6 +18,7 @@
             left:50%;
             position: absolute;
             transform: translate(-50%, 0);
+            
         }
         
     /* ОБЩИЙ СТАНДАРТ */
@@ -26,6 +27,11 @@
             width: 400px;
             height: 400px;
             border-radius: 70px;
+            
+            /* БЛОКИ ПО СЕРЕДИНЕ РОДИТЕЛЯ */
+            margin-left: auto;
+            margin-right: auto;
+            
         }
         .box:last-child{
             margin-bottom: 100px;
@@ -49,7 +55,7 @@
     /* ВУЛКАН */
         .mix{
             box-shadow:
-                28px 28px 50px 0 rgba(34,34,34,0.16),    
+                28px 28px 50px 0 rgba(13,39,80,0.16),    
                 -23px -23px 45px 0 #FFFFFF,
                 inset -31px -31px 43px 0 rgba(255,255,255,0.64),    
                 inset 26px 2px 48px 0 rgba(13,39,80,0.16);
@@ -57,6 +63,7 @@
     </style>
 <body>
     <div id="stabilitron">
+        <img src="img/1.jpg" alt="">
         <!-- ХОЛМ -->
         <div class="box hill"></div>
         <!-- ЯМА -->
