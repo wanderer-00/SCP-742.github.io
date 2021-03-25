@@ -8,6 +8,12 @@ body {
     font-family: sans-serif;
 }
 
+/* SCROLL BAR */
+::-webkit-scrollbar {width: 8px; height: 8px;}
+::-webkit-scrollbar-track {background: #18191d;}
+::-webkit-scrollbar-thumb {background: #3b4146;}
+::-webkit-scrollbar-thumb:hover {background: #474e54;}
+
 button {
     /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
     padding: 0;
@@ -99,7 +105,6 @@ input {
 /* ЛЕВАЯ СТОРОНА ПЛЕЕРА */
 #left_box {
     width: 720px;
-    background: black;
 }
 
 #videoBox {
@@ -118,7 +123,8 @@ input {
     width: 100%;
     height: 408px;
 }
-#eee{
+/**/
+#panel{
     width: 720px;
     /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
     user-select: none;
@@ -156,7 +162,7 @@ input {
 }
 
 /* НАСТРОЙКИ СЕГМЕНТА */
-#segment {
+.segment {
     color: white;
     border: 2px solid #161616;
     margin: 0 5px;
@@ -165,11 +171,11 @@ input {
     border-radius: 5px;
 }
 
-#segment:hover {
+.segment:hover {
     border: 2px solid rgba(255, 255, 255, .15);
 }
 
-#segment:focus {
+.segment:focus {
     border: 2px solid darkseagreen;
 }
 
@@ -177,6 +183,13 @@ input {
 
 /* ПРАВАЯ СТОРОНА ПЛЕЕРА */
 #right_box {
+    width: 380px;
     padding: 2%;
     font-size: 20px;
+    overflow: hidden;
+}
+@media (max-width: 1111px) {
+    /* УДАЛЕНИЕ ПРАВОЙ ПАНЕЛИ */
+    #right_box {display: none}
+    #sub_box{width: 720px}
 }

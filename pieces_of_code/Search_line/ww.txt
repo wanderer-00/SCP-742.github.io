@@ -6,6 +6,9 @@
 
 {"name":"Gon Freecss",
         "anime":"Hunter x hunter",
-        "wand":{"wood":"holly","core":"phoenix feather","length":11},
-        "image":"img/Gon Freecss.jpg"}
+        "image":"img/Gon Freecss.jpg"},
+
+{"name":"-",
+        "anime":"-",
+        "image":"-"}
 ]

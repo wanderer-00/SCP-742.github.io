@@ -1,0 +1,56 @@
+[
+{"name":"5 сантиметров в секунду",
+        "type":"Аниме",
+        "serial":true,
+        "url":"../page/5-santimetrov-v-secundu/5-santimetrov-v-secundu.html",
+        "image":"../img/anime/5-santimetrov-v-secundu.jpg"},
+
+{"name":"91 Days",
+        "type":"Аниме",
+        "serial":true,
+        "wand":{"wood":"holly","core":"phoenix feather","length":11},
+        "url":"",
+        "image":"../img/anime/91-day.jpg"},
+
+{"name":"Агент Паранойи",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../img/anime/Агент Паранойи.jpg"},
+
+{"name":"Ангельские ритмы",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../img/anime/Ангельские ритмы.jpg"},
+
+{"name":"Атака титанов",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../img/anime/Атака титанов 1.jpg"},
+
+{"name":"Атака титанов 2",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../img/anime/Атака титанов 2.jpg"},
+
+{"name":"Атака титанов 3",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../img/anime/Атака титанов 3.jpg"},
+
+{"name":"Атака титанов: без сожалений",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../img/anime/Атака титанов. без сожалений.jpg"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../"}
+]
