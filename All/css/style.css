@@ -40,7 +40,7 @@ a{
     padding: 10px 20px;
     display: grid;
     grid-template-columns: 57fr 1fr;
-    /*  */
+    /* схема расстановки областей */
     grid-template-areas:
         'name image'
         'house image';
