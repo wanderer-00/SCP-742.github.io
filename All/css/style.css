@@ -40,6 +40,7 @@ a{
     padding: 10px 20px;
     display: grid;
     grid-template-columns: 57fr 1fr;
+    /*  */
     grid-template-areas:
         'name image'
         'house image';
@@ -47,11 +48,13 @@ a{
 }
 
 .character > h2 {
+    /* присвоение области */
     grid-area: name;
     margin-bottom: 0px;
 }
 
 .character > p {
+    /* присвоение области */
     grid-area: house;
     margin: 0;
     margin-top: 0px;
@@ -59,9 +62,8 @@ a{
 
 .character > img {
     max-height: 100px;
+    /* присвоение области */
     grid-area: image;
-    position: absolute
-    right: 0px;
 }
 
 #searchBar {
