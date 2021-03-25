@@ -52,5 +52,31 @@
         "type":"Аниме",
         "serial":true,
         "url":"",
-        "image":"../"}
+        "image":"../"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "url":"",
+        "image":"../"},
+
+
 ]
