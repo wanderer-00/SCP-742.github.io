@@ -11,12 +11,16 @@ h1 {
     color: #eee;
     margin-bottom: 30px;
 }
+h2{
+    margin: 0px;
+}
 a{
     color: white;
+    display: block;
     text-decoration: none;
 }
 .container {
-    padding: 40px;
+    padding: 30px;
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
@@ -35,7 +39,7 @@ a{
     border-radius: 3px;
     padding: 10px 20px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 57fr 1fr;
     grid-template-areas:
         'name image'
         'house image';
@@ -50,12 +54,14 @@ a{
 .character > p {
     grid-area: house;
     margin: 0;
-    margin-top: -18px;
+    margin-top: 0px;
 }
 
 .character > img {
     max-height: 100px;
     grid-area: image;
+    position: absolute
+    right: 0px;
 }
 
 #searchBar {
