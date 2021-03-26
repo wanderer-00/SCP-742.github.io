@@ -33,7 +33,7 @@ const displayCharacters = (characters) => {
                 <a href="${character.url}">
                     <h2>${character.name}</h2>
                 </a>
-                <p>Type: ${character.type}</p>
+                <p>during: ${character.during}</p>
                 <img src="${character.image}"></img>
             </li>
         `;
