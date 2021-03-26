@@ -791,22 +791,6 @@
         "url":"",
         "image":"../img/anime/re-zero-[ova].jpg"},
 
-{"name":"",
-        "type":"Аниме",
-        "serial":true,
-        "during":false,
-        "time":0,
-        "url":"",
-        "image":"../img/anime/"},
-
-{"name":"",
-        "type":"Аниме",
-        "serial":true,
-        "during":false,
-        "time":0,
-        "url":"",
-        "image":"../img/anime/"},
-
 {"name":"re-zero-2",
         "type":"Аниме",
         "serial":true,
