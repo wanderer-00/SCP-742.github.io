@@ -17,7 +17,7 @@ searchBar.addEventListener('keyup', (e) => {
 const loadCharacters = async () => {
     try {
 //        const res = await fetch('https://hp-api.herokuapp.com/api/characters');
-        const res = await fetch('config.txt');
+        const res = await fetch('config.js');
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
     } catch (err) {

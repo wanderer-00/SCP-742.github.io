@@ -7,18 +7,43 @@ body {
 * {
     box-sizing: border-box;
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+    max-height: 8px;
+}
+::-webkit-scrollbar-track:vertical {
+    background: #262626;
+}
+/*  */
+::-webkit-scrollbar-thumb:vertical {
+    background: gray;
+}
+/* scroll цвет при наведении */
+::-webkit-scrollbar-thumb:vertical:hover {
+    background: white;
+}
+/* уголок */
+::-webkit-scrollbar-corner {
+    background: #262626;
+}
+
 h1 {
     color: #eee;
     margin-bottom: 30px;
 }
-h2{
+
+h2 {
     margin: 0px;
 }
-a{
+
+a {
     color: white;
     display: block;
     text-decoration: none;
 }
+
 .container {
     padding: 30px;
     margin: 0 auto;
@@ -86,4 +111,8 @@ a{
     position: absolute;
     top: 7px;
     right: 15px;
+}
+.author{
+    color: rgba(255,255,255,.16);
+    position: absolute;
 }
