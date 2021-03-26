@@ -567,7 +567,7 @@
         "url":"",
         "image":"../img/anime/moja-gerojskaja-akademija-4.jpg"},
         
-{"name":"Моя геройская академия: 2 героя",
+{"name":"Моя геройская академия: Два героя",
         "type":"Аниме",
         "serial":true,
         "during":false,
@@ -623,13 +623,13 @@
         "url":"",
         "image":"../img/anime/o-moem-pererozhdenii-v-sliz-2.jpg"},
     
-{"name":"",
+{"name":"One Punch-men",
         "type":"Аниме",
         "serial":true,
         "during":false,
         "time":0,
         "url":"",
-        "image":"../img/anime/"},
+        "image":"../img/anime/one-punch-man.jpg"},
     
 {"name":"",
         "type":"Аниме",
