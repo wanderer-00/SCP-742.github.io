@@ -919,6 +919,14 @@
         "url":"",
         "image":"../img/anime/strana-chudes-smertnikov.jpg"},
 
+{"name":"Страна чудес смертников [ova]",
+        "type":"Аниме",
+        "serial":true,
+        "during":false,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/strana-chudes-smertnikov-[ova].jpg"},
+
 {"name":"Связанные болью",
         "type":"Аниме",
         "serial":true,
@@ -1263,13 +1271,21 @@
         "url":"",
         "image":"../img/anime/voennaja-hronika-malenkoj-devochki.jpg"},
 
-{"name":"",
+{"name":"Военная хроника маленькой девочки [фильм]",
+        "type":"Аниме",
+        "serial":false,
+        "during":true,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/voennaja-hronika-malenkoj-devochki-film.jpg"},
+
+{"name":"Милый во Франксе",
         "type":"Аниме",
         "serial":true,
         "during":true,
         "time":0,
         "url":"",
-        "image":"../img/anime/"},
+        "image":"../img/anime/milyj-vo-frankse.jpg"},
 
 {"name":"",
         "type":"Аниме",
