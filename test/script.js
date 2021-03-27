@@ -1,0 +1,1 @@
+const writeText = document.getElementById('box');

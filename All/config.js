@@ -1247,18 +1247,18 @@
         "url":"",
         "image":"../img/anime/dorohedoro.jpg"},
 
-{"name":"",
+{"name":"Детройт, город металла",
         "type":"Аниме",
         "serial":true,
         "during":false,
         "time":0,
         "url":"",
-        "image":"../img/anime/"},
+        "image":"../img/anime/dmc.jpg"},
 
 {"name":"",
         "type":"Аниме",
         "serial":true,
-        "during":false,
+        "during":true,
         "time":0,
         "url":"",
         "image":"../img/anime/"}
