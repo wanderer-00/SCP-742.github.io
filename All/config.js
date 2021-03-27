@@ -1255,6 +1255,22 @@
         "url":"",
         "image":"../img/anime/dmc.jpg"},
 
+{"name":"Военная хроника маленькой девочки",
+        "type":"Аниме",
+        "serial":true,
+        "during":true,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/voennaja-hronika-malenkoj-devochki.jpg"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "during":true,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/"},
+
 {"name":"",
         "type":"Аниме",
         "serial":true,
