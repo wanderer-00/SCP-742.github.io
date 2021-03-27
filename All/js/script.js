@@ -25,6 +25,7 @@ const loadCharacters = async () => {
     }
 };
 
+/*  */
 const displayCharacters = (characters) => {
     const htmlString = characters
         .map((character) => {
@@ -43,3 +44,4 @@ const displayCharacters = (characters) => {
 };
 
 loadCharacters();
+
