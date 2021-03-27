@@ -1250,7 +1250,7 @@
 {"name":"Детройт, город металла",
         "type":"Аниме",
         "serial":true,
-        "during":false,
+        "during":true,
         "time":0,
         "url":"",
         "image":"../img/anime/dmc.jpg"},

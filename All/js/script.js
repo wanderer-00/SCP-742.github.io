@@ -32,9 +32,7 @@ const loadCharacters = async () => {
 const displayCharacters = (characters) => {
     const htmlString = characters.map((character) => {
         // return - останавливает выполнение функции
-        return
-        // вставка текста в литераллах
-        `
+        return`
             <li class="character">
                 <a href="${character.url}">
                     <h2>${character.name}</h2>
