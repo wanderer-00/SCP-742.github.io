@@ -1293,7 +1293,7 @@
         "during":1,
         "time":0,
         "url":"https://yummyanime.club/catalog/item/hroniki-nepobedimogo-bahamuta",
-        "image":"../img/anime/"},
+        "image":"../img/anime/hroniki-nepobedimogo-bahamuta.jpg"},
 
 {"name":"",
         "type":"Аниме",
