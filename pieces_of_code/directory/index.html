@@ -4,67 +4,96 @@
     <meta charset="UTF-8">
     <title>DirectorY</title>
     <style>
+        body{
+            background: #343434;
+        }
         
         
-        
-    /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
-        html{
+        /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
+        html {
             box-sizing: border-box;
         }
-        *, *:after, *:before{
+
+        *,
+        *:after,
+        *:before {
             box-sizing: inherit;
         }
-    /* АЛЬТЕРНАТИВА */
-        *{
+
+        /* АЛЬТЕРНАТИВА */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-    /* ОБНУЛЕНИЕ СТИЛЕЙ */
+
+        /* ОБНУЛЕНИЕ СТИЛЕЙ */
         input {
             padding: 0;
             margin: 0;
             border: 0;
             border: none;
         }
-    /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
-        :active, :hover, :focus {
+
+        /* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
+        :active,
+        :hover,
+        :focus {
             outline: 0;
             outline-offset: 0;
         }
 
-    /* SCROLLBAR */
-        ::-webkit-scrollbar              { /* 1 - скроллбар */ }
-        ::-webkit-scrollbar-button       { /* 2 - кнопка */ }
-        ::-webkit-scrollbar-track        { /* 3 - трек */ }
-        ::-webkit-scrollbar-track-piece  { /* 4 - видимая часть трека */ }
-        ::-webkit-scrollbar-thumb        { /* 5 - ползунок */ }
-        ::-webkit-scrollbar-corner       { /* 6 - уголок */ }
-        ::-webkit-resizer                { /* 7 - изменение размеров */ }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        #syntax{
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            /* 1 - скроллбар */
+        }
+
+        ::-webkit-scrollbar-button {
+            /* 2 - кнопка */
+        }
+
+        ::-webkit-scrollbar-track {
+            /* 3 - трек */
+        }
+
+        ::-webkit-scrollbar-track-piece {
+            /* 4 - видимая часть трека */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            /* 5 - ползунок */
+        }
+
+        ::-webkit-scrollbar-corner {
+            /* 6 - уголок */
+        }
+
+        ::-webkit-resizer {
+            /* 7 - изменение размеров */
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #syntax {
             color: darkseagreen;
             font-family: sans-serif;
             padding: 10px;
             background-color: #333333;
         }
-        
-/*  TEXT  */
-        #text{
+
+        /*  TEXT  */
+        #text {
             /* ЦВЕТ */
             color: white;
             /* ВЫСОТА ШРИФТА */
@@ -72,46 +101,51 @@
             /* ТИП ШРИФТА */
             font-family: sans-serif;
             /* МЕЖСТРОЧНЫЙ ИНТЕРВАЛ */
-            line-height: 1;    
+            line-height: 1;
         }
     </style>
 </head>
+
 <body>
-<!-- ЕДЕНИЦЫ ИЗМЕРЕНИЯ -->
-<!--
+    <!-- ЕДЕНИЦЫ ИЗМЕРЕНИЯ -->
+    <!--
 vh - процент от высоты отображаемого окна
 px - пиксель
 % - процент от размера родителя
 -->
 
 
-<!-- ЦВЕТ -->
-<!--
+    <!-- ЦВЕТ -->
+    <!--
 rgba(0,0,0,1)
 #FFFFFF
 black
 -->
 
 
-<!-- TEXT -->
+    <!-- TEXT -->
+<!--
     <pre id='syntax'>
     text-transform: capitalize | lowercase | uppercase | none | inherit
     </pre>
+-->
 
-<!-- IMG -->
-    
+    <!-- IMG -->
 
-<!-- AUDIO -->
-<audio src=""></audio>
 
-<!-- VIDEO -->
+    <!-- AUDIO -->
+<!--    <audio src=""></audio>-->
+
+    <!-- VIDEO -->
+<!--
     <video>
         <source src="dir/film.mp4" type="video/mp4">
         <source src="dir/film.ogv" type="video/ogg">
         <source src="dir/film.webm" type="video/webm">
     </video>
-       
-<!--
+-->
+
+    <!--
 autoplay     - Видео начинает воспроизводиться автоматически после загрузки страницы.
 controls     - Добавляет панель управления к видеоролику.
 height       - Задает высоту области для воспроизведения видеоролика.
@@ -121,62 +155,79 @@ poster       - Указывает адрес картинки, которая б
 preload      - Используется для загрузки видео вместе с загрузкой веб-страницы.
 src          - Указывает путь к воспроизводимому видеоролику.
 -->
-    
-    
-    
-    
-    
-    <a src="/ffdd" id='aa' color="pink" onclick="alert(src1)">+++</a>
-</body>
-    <script>
-        var aa = document.getElementById("aa");
-        var src1 = document.getAttribute("padding");
 
-        /* ДОБАВЛЕНИЕ ТЕКСЛА В ТЕГ */
-        function name () {
-            document.getElementById('id элемента').append('добавляемый текст');
-        }
-        /* ЗАМЕНА ТЕКСТА ТЕГА */
-        function name1() {
-            document.getElementById('id элемента').innerHTML = 'заменит прошлый текст на этот';
-        }
-        
-        
-        
-        
-        // ПОДСЧИТАТЬ КОЛИЧЕСТВО ЭЛЕМЕНТОВ С ОПРЕДЕЛЁННЫМ КЛАССОМ
-        
-        // document.getElementsByClassName("classstringhere").length
-        // Метод document.getElementsByClassName("classstringhere") возвращает массив всех элементов с этим именем класса, поэтому .length дает вам их количество.
-        
-        var x = document.getElementsByClassName("y").length;
-        
-        // x - переменная, хранящая количество элементов с классом "y"
-        
-        
-        
-        
-        
-        
-        /* ДОБАВЛЕНИЕ ТЕКСЛА В ТЕГ */
-        
-        document.getElementById('x').innerHTML = 'text';
-        
-        // x - тег в который надо поместить текст
-        // 'text' - помещаемый текст
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </script>
-</html>
+
+
+
+
+<!--    <a src="/ffdd" id='aa' color="pink" onclick="alert(src1)">+++</a>-->
+    
+    <input type="text">
+    <p id="lll">123</p>
+    
+
+</body>
+<script>
+    // МЕТОДЫ
+
+    // возвращает строку в вверхнем регистре
+    // .toUpperCase()
+
+
+
+
+    // возвращает длину строки
+    // alert( "Привет, мир!".length ); // 12
+
+    // ПОДСЧИТАТЬ КОЛИЧЕСТВО ЭЛЕМЕНТОВ С ОПРЕДЕЛЁННЫМ КЛАССОМ
+
+    // document.getElementsByClassName("classstringhere").length
+    // Метод document.getElementsByClassName("classstringhere") возвращает массив всех элементов с этим именем класса, поэтому .length дает вам их количество.
+
+//    var x = document.getElementsByClassName("y").length;
+
+    // x - переменная, хранящая количество элементов с классом "y"
+
+
+
+
+    // ПЕРЕДАЧА ЭЛЕМЕНТА
+    // document.getElementById("ИМЯ_КЛАССА");
+    // document.getElementsByClassName("ИМЯ_КЛАССА");
+
+
+//    var aa = document.getElementById("aa");
+//    var src1 = document.getAttribute("padding");
+//
+//    /* ДОБАВЛЕНИЕ ТЕКСЛА В ТЕГ */
+//    function name() {
+//        document.getElementById('id элемента').append('добавляемый текст');
+//    }
+//    /* ЗАМЕНА ТЕКСТА ТЕГА */
+//    function name1() {
+//        document.getElementById('id элемента').innerHTML = 'заменит прошлый текст на этот';
+//    }
+
+
+
+// <input type="text">
+// <p class="l"></p>
+// С помощью свойства value мы можем получить данные из этого поля ввода. А после, например, вывести их в консоль:
+
+ var paragraph = document.getElementsById("lll");
+
+ let input = document.querySelector('input');
+
+// тег p будет содержать то, что ввели в input
+paragraph.textContent = input.value;
+
+
+
+
+    /* ДОБАВЛЕНИЕ ТЕКСЛА В ТЕГ */
+
+//    document.getElementById('x').innerHTML = 'text';
+
+    // x - тег в который надо поместить текст
+    // 'text' - помещаемый текст
+</script></html>
