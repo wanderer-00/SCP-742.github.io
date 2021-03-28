@@ -1287,6 +1287,22 @@
         "url":"",
         "image":"../img/anime/milyj-vo-frankse.jpg"},
 
+{"name":"Хроники непобедимого Бахамута",
+        "type":"Аниме",
+        "serial":true,
+        "during":1,
+        "time":0,
+        "url":"https://yummyanime.club/catalog/item/hroniki-nepobedimogo-bahamuta",
+        "image":"../img/anime/"},
+
+{"name":"",
+        "type":"Аниме",
+        "serial":true,
+        "during":true,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/"},
+
 {"name":"",
         "type":"Аниме",
         "serial":true,
@@ -1294,5 +1310,4 @@
         "time":0,
         "url":"",
         "image":"../img/anime/"}
-
 ]
