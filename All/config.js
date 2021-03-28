@@ -1290,7 +1290,7 @@
 {"name":"Хроники непобедимого Бахамута",
         "type":"Аниме",
         "serial":true,
-        "during":1,
+        "during":5,
         "time":0,
         "url":"https://yummyanime.club/catalog/item/hroniki-nepobedimogo-bahamuta",
         "image":"../img/anime/hroniki-nepobedimogo-bahamuta.jpg"},
