@@ -4,255 +4,61 @@
 <head>
     <title>OverLord III</title>
     <meta name="" content="text/html" charset="UTF-8">
-
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background: #343434 url(../../img/fon_page.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 0px 0px;
-            background-attachment: fixed;
-        }
-
-        .header {
-            width: 100%;
-            height: 120px;
-            box-shadow: 0px 5px 25px 0px black;/*box-shadow: [x] [y] [плотность] [размытие] [цвет]; */
-            background: rgba(21, 21, 21, 0.2);
-            align-items: center;/*выравнивает[y]: center, top, bottom */
-            border-bottom: 1px solid #343434;/*border-[bottom, left, right, top]: [толщина] [стиль] [цвет]; */
-            margin-bottom: 150px;
-        }
-
-        .search {
-            width: 85px;
-            float: right;
-            border: 3px solid #7e7d7d;
-            margin: 5px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            border-radius: 10px;
-            justify-content: center;
-        }
-
-        .hovergallery img {
-            position: relative;
-            width: 600px;
-            -webkit-transform: scale(0.9);
-            /*Webkit: уменьшаем размер до 0.8*/
-            -moz-transform: scale(0.9);
-            /*Mozilla: масштабирование*/
-            -o-transform: scale(0.9);
-            /*Opera: масштабирование*/
-            -webkit-transition-duration: 0.5s;
-            /*Webkit: длительность анимации*/
-            -moz-transition-duration: 0.5s;
-            /*Mozilla: длительность анимации*/
-            -o-transition-duration: 0.5s;
-            /*Opera: длительность анимации*/
-            opacity: 0.8;
-            /*Начальная прозрачность изображений*/
-        }
-
-        .hovergallery img:hover {
-            -webkit-transform: scale(1.0);
-            /*Webkit: увеличиваем размер до 1.2x*/
-            -moz-transform: scale(1.0);
-            /*Mozilla: масштабирование*/
-            -o-transform: scale(1.0);
-            /*Opera: масштабирование*/
-            box-shadow: 0px 0px 30px gray;
-            /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
-            -webkit-box-shadow: 0px 0px 30px gray;
-            /*Webkit: тени*/
-            -moz-box-shadow: 0px 0px 30px gray;
-            /*Mozilla: тени*/
-            opacity: 1;
-        }
-
-        .blockh {
-            /* ОСНОВНОЙ КОНТЕЙНЕР */
-            border: 2px solid #7e7d7d;
-            position: relative;
-            text-align: center;
-            padding-top: 30px;
-            border-radius: 25px 0px 0 0;
-            background-color: rgba(32, 32, 32, 1);
-        }
-
-        .o1 {
-            /* РЕЙТИНГ */
-            background: rgba(32, 32, 32, 0.9);
-            margin: 0 25% 40px 25%;
-            border: 2px solid white;
-            height: 40px;
-            width: 50%;
-        }
-
-        .o2 {
-            /* ЕДИНИЦЫ РЕЙТИНГА */
-            width: 10%;
-            float: left;
-            height: 100%;
-            background: rgba(255, 190, 0, 1);
-            box-sizing: border-box;
-            border-right: 2px solid black;
-        }
-
-        .o2:last-child {
-            border-right: 0px;
-        }
-
-        .op {
-            color: #7e7d7d;
-            margin: 4%;
-            font-size: 12px;
-        }
-
-        .ip1 {
-            background-color: #7e7d7d;
-            border-radius: 5px;
-            align-items: center;
-            font-size: 10px;
-            position: relative;
-            padding: 5px;
-            color: black;
-            left: left;
-        }
-
-        /* ССЫЛКИ НА СОЦ СЕТИ */
-        .line_ico {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-        }
-        .container_ico {
-            order: 999;
-            border: 2px solid #7e7d7d;
-            margin-left: auto;
-            border-radius: 25px 0px 0px 0px;
-            border-bottom:0;
-            background-color: rgba(32, 32, 32, 0.8);
-        }
-        .box_ico {
-            float: left;
-            padding: 20px 10px 20px 0;
-        }
-        .box_ico:first-child {
-            float: left;
-            padding: 20px 10px 20px 20px;
-        }
-        .ico {
-            height: 90px;
-        }
-
-        .VORASITY {
-            background-color: ping;
-            border: 1px solid yellow;
-        }
-
-        .center {
-            text-align: center;
-            font-size: 13px;
-        }
-
-        #rr {
-            position: absolute;
-            opacity: 0%;
-            width: 100%;
-        }
-
-        .opening {
-            width: 100%;
-            margin: 0 0 100px 0;
-        }
-        #block_op{
-            display: flex;
-            flex-flow: row wrap;
-        }
-        #opening{
-            color: #7e7d7d;
-            margin: 10px 0 0 0;
-            padding: 10px;
-            font-size: 40px;
-            border-top: 2px solid #7e7d7d;
-            flex-basis: auto;
-            border-right: 2px solid #7e7d7d;
-            border-radius: 0 25px 0 0;
-        }
-
-        #screenShot {
-            border-radius: 25px;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-
-    <div class="header">
+    <!-- HEADER -->
+    <div id='header'>
         <a href="../../index.html">
             <img src="../../img/logo.png" style="background: ; height: 120px; ">
             <img src="../../img/123.png" style="background: ; height: 120px; ">
         </a>
 
-        <a href="">
-            <div class="search">
-                <img src="../../img/search.png" height="80px" />
+        <a href=''>
+            <div id='search'>
+                <img src='../../img/search.png' height='80px' />
             </div>
         </a>
     </div>
 
 
     <!-- ИКОНКИ СОЦ СЕТЕЙ -->
-    <div class="line_ico">
-        <div class="container_ico">
-            <div class="box_ico"><img class="ico" src="../../img/web/youtube.png"></div>
-            <div class="box_ico"><img class="ico" src="../../img/web/vk.png"></div>
-            <div class="box_ico"><img class="ico" src="../../img/web/whatsapp.png"></div>
-            <div class="box_ico"><img class="ico" src="../../img/web/google-plus.png"></div>
+    <div id='line_ico'>
+        <div id='container_ico'>
+            <div id="box_ico"><img id="ico" src="../../img/web/youtube.png"></div>
+            <div id="box_ico"><img id="ico" src="../../img/web/vk.png"></div>
+            <div id="box_ico"><img id="ico" src="../../img/web/whatsapp.png"></div>
+            <div id="box_ico"><img id="ico" src="../../img/web/google-plus.png"></div>
         </div>
     </div>
 
-    <!-- рейтинг -->
-    <div class="blockh">
-        <div class="hovergallery">
-            <font style="color: white; font-size: 50px;">OverLord III</font><br>
-            <img src="../../img/anime/OverLord.jpg" />
-            <div class="o1">
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-                <div class="o2"></div>
-            </div>
-            <font color="orange" size="20px" align="center">10/10</font>
 
+    <!-- CLASTER -->
+    <div id='claster'>
+        <div id='touch'>
+           
+            <!-- НАЗВАНИЕ -->
+                <font style="color: white; font-size: 50px;">OverLord III</font><br>
+            
+            <!-- ОБЛОЖКА -->
+            <img src="../../img/anime/../../img/anime/OverLord.jpg" />
 
             <!-- ОПИСАНИЕ -->
-            <div class="op">
-                <p align="left">После событий в королевстве Ре-Эстизе, Айнз Ул Гоун и его прислужники решают обратить внимание на следующею страну – империю Бахарут. В скором времени группа «рабочих» из Бахарута получила заказ от имперского аристократа на исследование таинственной гробницы, обнаруженной неподалёку от королевского города Э-Рантэла. Тем временем между Ре-Эстизе и Бахарутом назревает очередная война.</p>
+            <div id='info'>
+                <p>После событий в королевстве Ре-Эстизе, Айнз Ул Гоун и его прислужники решают обратить внимание на следующею страну – империю Бахарут. В скором времени группа «рабочих» из Бахарута получила заказ от имперского аристократа на исследование таинственной гробницы, обнаруженной неподалёку от королевского города Э-Рантэла. Тем временем между Ре-Эстизе и Бахарутом назревает очередная война.</p>
             </div>
 
-            <div class="center">
+            <!-- ПРИМЕЧАНИЯ -->
+            <div id='center'>
                 <font color="#D50000">Добавлен опенинг на японском языке</font><br>
-                <font color="#AEEA00">Код этой HTML-страници очень плохо оптимизированн [286 line]</font><br>
+                <font color="#AEEA00">Код этой HTML-страници очень плохо оптимизированн [286 => 92 line]</font><br>
                 <font color="#FFC400">Требуется более точное описание</font>
             </div>
 
             <!-- ИНФО -->
             <div>
-                <p class="op" align="left">
+                <p id='info'>
                     <b>Год: </b>2018<br>
                     <b>Релиз: </b><font color="orange">10/ 7/ 2018</font><br>
                     <b>Источник: </b>оригинал<br>
