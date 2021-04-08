@@ -21,15 +21,15 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-    background: #18191d;
+    background: #18191d
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #3b4146;
+    background: #3b4146
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #474e54;
+    background: #474e54
 }
 
 /* HEADER */
@@ -176,6 +176,8 @@ a {
     border: 1px solid #343434;
     color: red;
 }
+
+
 
 
 /* BOTTOM */
