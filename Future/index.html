@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>All</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id='header'>
+        <img id='headerIMG' src="../img/logo.png">
+        <img id='headerIMG' src="../img/123.png">
+    </div>
+
+    <div class="content">
+
+        <!-- ПОИСК -->
+        <div id="searchWrapper">
+            <input type="text" name="searchBar" id="searchBar" placeholder="Введи название аниме [ е ≠ ё ]" />
+        </div>
+
+        <!-- ФИЛЬТР -->
+        <div class="cluster">
+            <div class="during d" onclick="during();">Посмотренно</div>
+            <div class="not-during d" onclick="not-during_();">Предстоит</div>
+        </div>
+
+        <!-- КОНТЕНТ -->
+        <ul id="charactersList"></ul>
+
+    </div>
+    
+    <!--  Автор техники  -->
+    <a class="author" href="https://www.youtube.com/watch?v=wxz5vJ1BWrc">
+        Author: https://www.youtube.com/watch?v=wxz5vJ1BWrc
+    </a>
+    
+    <script src="js/script.js"></script>
+</body></html>

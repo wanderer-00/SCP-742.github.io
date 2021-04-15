@@ -1,0 +1,205 @@
+body {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: #343434 url(../../img/fon.jpg);
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-attachment: fixed;
+}
+
+* {
+    /* border & padding входят в расчёт размера */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {width: 8px; max-height: 8px;}
+::-webkit-scrollbar-track:vertical {background: #262626;}
+::-webkit-scrollbar-thumb:vertical {background: gray;}
+/* scroll цвет при наведении */
+::-webkit-scrollbar-thumb:vertical:hover {background: white;}
+
+
+/* уголок */
+::-webkit-scrollbar-corner {
+    background: #262626;
+}
+
+
+a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 50px;
+}
+
+/* HEADER */
+#header {
+    width: 100%;
+    height: 120px;
+    box-shadow: 0px 5px 25px 0px black;
+    background: rgba(21, 21, 21, 0.2);
+    align-items: center;
+    border-bottom: 1px solid #343434;
+    margin-bottom: 50px;
+}
+
+#headerIMG {
+    height: 120px;
+}
+
+#search {
+    width: 85px;
+    float: right;
+    border: 3px solid #7e7d7d;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+/* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
+.content {
+    border: 2px solid #7e7d7d;
+    text-align: center;
+    position: relative;
+    display: block;
+    background-color: rgba(32, 32, 32, .8);
+    /* цвет фона */
+    height: auto;
+    /* высота блока */
+    /* ширина блока */
+    border-radius: 25px;
+    /* скругление углов [Элипс - 10px/20px; ] */
+
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.blockh {
+    background-color: rgba(32, 32, 32, 0.8);
+    border-bottom: 2px solid #7e7d7d;
+    padding-top: 30px;
+    background: red;
+}
+
+.blockh:last-child {
+    background-color: rgba(32, 32, 32, 0.8);
+    border-bottom: 0px solid #7e7d7d;
+    padding-top: 30px;
+}
+
+.hovergallery {
+    color: red;
+}
+
+.hovergallery img {
+    position: relative;
+    width: 600px;
+    -webkit-transform: scale(0.9);
+    /*Webkit: уменьшаем размер до 0.8*/
+    -moz-transform: scale(0.9);
+    /*Mozilla: масштабирование*/
+    -o-transform: scale(0.9);
+    /*Opera: масштабирование*/
+    -webkit-transition-duration: 0.5s;
+    /*Webkit: длительность анимации*/
+    -moz-transition-duration: 0.5s;
+    /*Mozilla: длительность анимации*/
+    -o-transition-duration: 0.5s;
+    /*Opera: длительность анимации*/
+    opacity: 0.8;
+    /*Начальная прозрачность изображений*/
+}
+
+.hovergallery img:hover {
+    -webkit-transform: scale(1.0);
+    /*Webkit: увеличиваем размер до 1.2x*/
+    -moz-transform: scale(1.0);
+    /*Mozilla: масштабирование*/
+    -o-transform: scale(1.0);
+    /*Opera: масштабирование*/
+    box-shadow: 0px 0px 30px gray;
+    /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
+    -webkit-box-shadow: 0px 0px 30px gray;
+    /*Webkit: тени*/
+    -moz-box-shadow: 0px 0px 30px gray;
+    /*Mozilla: тени*/
+    opacity: 1;
+}
+
+    
+
+/*
+#charactersList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+*/
+
+
+#searchBar {
+    color: #F495BF;
+    width: 100%;
+    height: 32px;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #2B2B2B;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #121212;
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+#searchWrapper::after {
+    content: '🔍';
+    position: absolute;
+    top: 7px;
+    right: 15px;
+}
+
+.author {
+    color: rgba(255, 255, 255, .16);
+    padding: 40px 20px;
+}
+
+.cluster {
+    display: flex;
+}
+
+.d {
+    color: lightslategrey;
+    font-size: 0.8em;
+
+    padding: 4px 10px;
+    display: inline;
+
+    background-color: #121212;
+
+    border: 1px solid #2B2B2B;
+    border-top: 0;
+    border-radius: 0 0 0 4px;
+
+}
+
+.d:last-child {
+    border-left: 0;
+    border-radius: 0 0 4px 0;
+}
