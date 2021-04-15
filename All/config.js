@@ -1295,6 +1295,14 @@
         "url":"https://yummyanime.club/catalog/item/hroniki-nepobedimogo-bahamuta",
         "image":"../img/anime/hroniki-nepobedimogo-bahamuta.jpg"},
 
+{"name":"Кабанэри железной крепости",
+        "type":"Аниме",
+        "serial":true,
+        "during":true,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/kabaneri-zheleznoj-kreposti.jpg"},
+
 {"name":"",
         "type":"Аниме",
         "serial":true,

@@ -34,7 +34,7 @@ const loadCharacters = async () => {
     // Конструкция try...catch пытается выполнить инструкции в блоке try, и, в случае ошибки, выполняет блок catch.
     try {
         // const res = await fetch('https://hp-api.herokuapp.com/api/characters');
-        const res = await fetch('config.js');
+        const res = await fetch('../../All/config.js');
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
     // переменная err (можно выбрать и другое название)
