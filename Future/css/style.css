@@ -80,10 +80,8 @@ h1{
     height: auto;
     /* высота блока */
     /* ширина блока */
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     /* скругление углов [Элипс - 10px/20px; ] */
-
-    padding: 30px;
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
@@ -91,13 +89,7 @@ h1{
 
 .blockh {
     background-color: rgba(32, 32, 32, 0.8);
-    border-bottom: 2px solid #7e7d7d;
-    padding-top: 30px;
-}
-
-.blockh:last-child {
-    background-color: rgba(32, 32, 32, 0.8);
-    border-bottom: 0px solid #7e7d7d;
+    border-top: 2px solid #7e7d7d;
     padding-top: 30px;
 }
 
@@ -142,14 +134,9 @@ h1{
 
     
 
-/*
 #charactersList {
     padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
 }
-*/
 
 
 #searchBar {
@@ -165,6 +152,7 @@ h1{
 
 #searchWrapper {
     position: relative;
+    
 }
 
 #searchWrapper::after {
@@ -181,6 +169,7 @@ h1{
 
 .cluster {
     display: flex;
+    padding: 0 30px;
 }
 
 .d {
