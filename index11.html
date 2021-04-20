@@ -5,320 +5,9 @@
     <title>11</title>
     <meta name="" content="text/html" charset="UTF-8">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <style type="text/css">
-        body {
-            color: white;
-            margin: 0px;
-            padding: 0px;
-            background: #343434 url(img/fon.jpg);
-            font-family: sans-serif;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 0px 0px;
-            background-attachment: fixed;
-        }
-
-        a {
-            color: red;
-            text-decoration: none;
-        }
-
-        /* scroll bar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #18191d;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b4146;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #474e54;
-        }
-
-        .cluster {
-            display: inherit;
-            height: 100vh;
-        }
-
-        .stabilitron {
-            max-width: 100%;
-            min-width: 970px;
-            height: 100%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-
-        /* HEADER */
-        #header {
-            width: 100%;
-            height: 120px;
-            height: 18vh;
-            box-shadow: 0px 5px 25px 0px black;
-            background: rgba(21, 21, 21, 0.2);
-            align-items: center;
-            border-bottom: 1px solid #343434;
-            margin-bottom: 150px;
-        }
-
-        #headerIMG {
-            height: 120px;
-        }
-
-        #search {
-            width: 85px;
-            float: right;
-            border: 3px solid #7e7d7d;
-            margin: 5px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            border-radius: 10px;
-            justify-content: center;
-        }
-
-
-
-        /* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
-        .content {
-            border-bottom: 0px;
-            border-right: 2px solid #7e7d7d;
-            border-left: 2px solid #7e7d7d;
-            border-top: 0px;
-            text-align: center;
-            position: relative;
-            display: block;
-            background-color: rgba(32, 32, 32, 0);
-            /* цвет фона */
-            height: auto;
-            /* высота блока */
-            width: 718;
-            /* ширина блока */
-            border-radius: 0px 0px 25px 25px;
-            /* скругление углов [Элипс - 10px/20px; ] */
-        }
-
-        .blockh {
-            background-color: rgba(32, 32, 32, 0.8);
-            border-bottom: 2px solid #7e7d7d;
-            padding-top: 30px;
-        }
-
-        .blockh:last-child {
-            background-color: rgba(32, 32, 32, 0.8);
-            border-bottom: 0px solid #7e7d7d;
-            padding-top: 30px;
-        }
-
-        .hovergallery {
-            color: red;
-        }
-
-        .hovergallery img {
-            position: relative;
-            width: 600px;
-            -webkit-transform: scale(0.9);
-            /*Webkit: уменьшаем размер до 0.8*/
-            -moz-transform: scale(0.9);
-            /*Mozilla: масштабирование*/
-            -o-transform: scale(0.9);
-            /*Opera: масштабирование*/
-            -webkit-transition-duration: 0.5s;
-            /*Webkit: длительность анимации*/
-            -moz-transition-duration: 0.5s;
-            /*Mozilla: длительность анимации*/
-            -o-transition-duration: 0.5s;
-            /*Opera: длительность анимации*/
-            opacity: 0.8;
-            /*Начальная прозрачность изображений*/
-        }
-
-        .hovergallery img:hover {
-            -webkit-transform: scale(1.0);
-            /*Webkit: увеличиваем размер до 1.2x*/
-            -moz-transform: scale(1.0);
-            /*Mozilla: масштабирование*/
-            -o-transform: scale(1.0);
-            /*Opera: масштабирование*/
-            box-shadow: 0px 0px 30px gray;
-            /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
-            -webkit-box-shadow: 0px 0px 30px gray;
-            /*Webkit: тени*/
-            -moz-box-shadow: 0px 0px 30px gray;
-            /*Mozilla: тени*/
-            opacity: 1;
-        }
-
-
-    /* МОДИФИЦИРОВАНИЕ 07.03.21 */
-        /* КОМПАС */
-        .y {
-            /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
-            user-select: none;
-            border: 2px solid #7e7d7d;
-            border-radius: 25px 0 0 0;
-            width: 100%;
-            background-color: rgba(32, 32, 32, 0.8);
-            
-            /* border & padding входят в расчёт размера */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        .yy {
-            margin: 50px 0;
-            display: flex;
-            /* item по центру */
-            justify-content: center;
-        }
-        .yyy {
-            background-color: rgba(32, 32, 32, 1);
-            padding: 6px 15px;
-            margin: 3px;
-            /* НАСТРОКА ГРАНИЦ */
-            border-radius: 5px;
-            border: 1px solid grey;
-            /* СТИЛИЗАЦИЯ ШРИФТА */
-            color: #7e7d7d;
-            font-size: 1.88em; /* 30px */
-        }
-        .xxx {
-            background-color: rgba(40, 40, 40, 1);
-            border: 1px solid #343434;
-            color: grey;
-        }
-        .yyy:hover {
-            background-color: rgba(40, 40, 40, 1);
-            border: 1px solid #343434;
-            color: red;
-        }
-
-
-
-        /* BOTTOM */
-        .bottom {
-            background-color: rgba(34, 34, 34, 0.8);
-            border-radius: 25px 25px 0 0;
-            border: 2px solid #7E7D7D;
-        }
-
-        /* bottomText */
-        .bottomText {
-            font-size: 40px;
-            padding: 40px 0 40px 20px;
-            color: gray;
-        }
-
-        /* Строка данных аккаунта */
-        .bottomAk {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: no-wrap;
-            padding: 20px 0 20px 20px;
-            border-top: 1px solid grey;
-        }
-
-        /* div Иконок аккаунтов */
-        .AkIco {
-            flex-basis: 15%;
-        }
-
-        /* Иконки аккаунтов */
-        .AkIco1 {
-            width: 100%;
-            border-radius: 50%;
-        }
-
-        /* Имя аккаунта */
-        .AkName {
-            flex-basis: 66%;
-            font-size: 60px;
-            margin: auto 0 auto 20px;
-            height: 60px;
-            color: #FFA000;
-        }
-
-        /* ICO соцсети */
-        .PlAk {
-            flex-basis: 15%;
-        }
-
-        .PlAk1 {
-            width: 100%;
-        }
-
-
-        .xxx {
-            background-color: rgba(40, 40, 40, 1);
-            border: 1px solid #343434;
-            color: grey;
-        }
         
-        /* СТИЛИЗАЦИЯ КНОПОК */
-        .button-6 {
-            padding: 0;
-            padding-left: 5px;
-            padding-top: 5px;
-            min-width: 600px;
-            max-width: 1000px;
-            margin: 2vh 0;
-            background: transparent;
-            border-width: 0;
-            position: relative;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 5vh;
-            transition: .3s;
-
-        }
-
-        .button-6 span {
-            display: block;
-            position: relative;
-            z-index: 3;
-            background: #41294a;
-            color: white;
-            padding: 0 30px;
-            line-height: ;
-        }
-
-        .button-6:before {
-            content: "";
-            position: absolute;
-            width: calc(100% + 5px);
-            height: calc(100% + 5px);
-            left: -5px;
-            top: -5px;
-            background: #ff2c54;
-            z-index: 1;
-            transition: .4s ease-out;
-        }
-
-        .button-6:after {
-            content: "";
-            position: absolute;
-            width: calc(100% + 5px);
-            height: calc(100% + 5px);
-            right: -10px;
-            bottom: -10px;
-            background: #41ebdf;
-            transition: .4s ease-out .1s;
-        }
-
-        .button-6:hover:before {
-            transform: translate(10px, 10px);
-        }
-
-        .button-6:hover:after {
-            transform: translate(-10px, -10px);
-        }
     </style>
 </head>
 
@@ -372,45 +61,67 @@
                     </div>
                 </div>
 
-                <div class="blockh" style="padding: 0;">
+                <div class="blockh" style="text-align: left; padding: 26px;">
 
                     <!-- BUTTON -->
                     <a href='during.html'>
-                        <button class="button-6"><span>Смотрю</span></button>
-                    </a><br />
+                        <button class="yyy"><span>Смотрю</span></button>
+                    </a>
 
                     <a href='test.html'>
-                        <button class="button-6"><span>TEST</span></button>
-                    </a><br />
+                        <button class="yyy"><span>TEST</span></button>
+                    </a>
 
                     <a href='audio/Player_v1.0/audio.html'>
-                        <button class="button-6"><span>Audio v1.0</span></button>
-                    </a><br />
+                        <button class="yyy"><span>Audio v1.0</span></button>
+                    </a>
 
                     <a href='audio/Player_v2.0/audio2.html'>
-                        <button class="button-6"><span>Audio v2.0</span></button>
-                    </a><br />
+                        <button class="yyy"><span>Audio v2.0</span></button>
+                    </a>
 
                     <a href='audio/Player_v3.0/index.html'>
-                        <button class="button-6"><span>Audio v3.0</span></button>
-                    </a><br />
-
+                        <button class="yyy"><span>Audio v3.0</span></button>
+                    </a>
+                                        
+                    <a href='audio/Player_v3.1/index.html'>
+                        <button class="yyy"><span>Audio v3.1</span></button>
+                    </a>
+                                        
+                    <a href='audio/Player_v4.0/index.html'>
+                        <button class="yyy"><span>Audio v4.0</span></button>
+                    </a>
+                    
                     <a href='video/Video_maket_v1.0/index.html'>
-                        <button class="button-6"><span>Video maket v1.0</span></button>
-                    </a><br />
+                        <button class="yyy"><span>Video maket v1.0</span></button>
+                    </a>
                     
                     <a href='pieces_of_code/DOLLARS/index.html'>
-                        <button class="button-6"><span>DOLLARS</span></button>
-                    </a><br />
+                        <button class="yyy"><span>DOLLARS</span></button>
+                    </a>
                     
                     <a href='all.html'>
-                        <button class="button-6"><span>All</span></button>
-                    </a><br />
+                        <button class="yyy"><span>All</span></button>
+                    </a>
                         
-                    <a href='Future/index.html'>
-                        <button class="button-6"><span>All</span></button>
-                    </a><br />
+                    <a href='pieces_of_code/Menu/index.html'>
+                        <button class="yyy"><span>Прототип заметок</span></button>
+                    </a>
+                                            
+                    <a href='pieces_of_code/STAR/Starfield.html'>
+                        <button class="yyy"><span>Star</span></button>
+                    </a>
                     
+                    <a href='pieces_of_code/Блок с прокруткой/index.html'>
+                        <button class="yyy"><span>Блок с скроллом</span></button>
+                    </a>
+                                        
+                    <a href='#'>
+                        <button class="yyy"><span>-</span></button>
+                    </a>
+
+                    
+
                     <!-- BUTTON -->
 
                 </div>
