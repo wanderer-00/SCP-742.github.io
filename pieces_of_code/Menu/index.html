@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- -не- рабочая механика перетаскивания элемента -->
+    <!--  https://jqueryui.com/draggable/  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $(".navigator").draggable();
+    } );
+    </script>
+    
+</head>
+<body>
+    <div class="navigator">
+        <div class="toggle"></div>
+        <ul>
+            <!-- 1 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home</span>
+                </a>
+            </li>
+            <!-- 2 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home1</span>
+                </a>
+            </li>
+            <!-- 3 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home2</span>
+                </a>
+            </li>
+            <!-- 4 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home2</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <a class='Author' href="https://www.youtube.com/watch?v=sI2Oe7EkKMI">Author: https://www.youtube.com/watch?v=sI2Oe7EkKMI</a>
+    
+    <script>
+        // передача элемента 'navigator' константе
+        const navigator = document.querySelector('.navigator');
+        
+        // при даблклике
+        document.querySelector('.toggle').ondblclick = function(){
+            // добавляет к классу 'toggle' класс 'active'
+            this.classList.toggle('active');
+            // добавляет к классу 'navigator' класс 'active'
+            navigator.classList.toggle('active');
+            // класс 'active' трансформирует меню 'navigator' путём изменения его размеров, добавления новых элементов, изменение старых
+        }
+    </script>
+    
+</body>
+</html>
