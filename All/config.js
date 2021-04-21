@@ -1303,18 +1303,18 @@
         "url":"",
         "image":"../img/anime/kabaneri-zheleznoj-kreposti.jpg"},
 
-{"name":"",
+{"name":"У меня мало друзей: Эпизод 0",
         "type":"Аниме",
         "serial":true,
-        "during":true,
+        "during":false,
         "time":0,
-        "url":"",
-        "image":"../img/anime/"},
+        "url":"https://yummyanime.club/catalog/item/u-menya-malo-druzej-ova-1",
+        "image":"../img/anime/u-menya-malo-druzej-[ova-1].jpg"},
 
 {"name":"",
         "type":"Аниме",
         "serial":true,
-        "during":true,
+        "during":false,
         "time":0,
         "url":"",
         "image":"../img/anime/"}
