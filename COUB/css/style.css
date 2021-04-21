@@ -4,6 +4,26 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+.test{
+    position: absolute;
+    opacity: 70%;
+    top: -70px;
+}
+.box{
+    z-index: 10;
+}
 .searchBox{
-    background: darkseagreen;
+    background: red;
+    height: 140px;
+    display: flex;
+    align-items: center;
+}
+.search{
+    color: white;
+    height: 100px;
+    font-size: 50px;
+    background: black;
+    border-radius: 20px;
+    padding-left: 70px;
 }
