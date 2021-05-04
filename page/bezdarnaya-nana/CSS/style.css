@@ -129,7 +129,7 @@ input {
     /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
     user-select: none;
     background-color: #161616;
-    
+
 }
 /* ПОДПИСЬ */
 #serial {
@@ -188,7 +188,7 @@ input {
     font-size: 20px;
     overflow: hidden;
 }
-@media (max-width: 1111px) {
+@media (orientation: portrait) {
     /* УДАЛЕНИЕ ПРАВОЙ ПАНЕЛИ */
     #right_box {display: none}
     #sub_box{width: 720px}

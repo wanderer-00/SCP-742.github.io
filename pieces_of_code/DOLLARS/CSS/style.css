@@ -1,0 +1,201 @@
+:root{
+    --color: rgb(255, 204, 0) /*#00fff2*/;
+}
+
+/* КО ВСЕМУ ДОКУМЕНТУ */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* ВОСПОЛЬЗУЙСЯ, ЕСЛИ ТЫ РАЗРАБОТЧИК, ХОРОШАЯ ФИТЧА... */
+    /* border: 1px solid purple; */
+}
+
+/* К ВИДИМОЙ ЧАСТИ САЙТА - "BODY" */
+html,
+body {
+    height: 100%;
+    color: white;
+    background-color: black;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+input,
+input:after,
+input:before,
+textarea {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+/* "...Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a..." */
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {width: 14px}
+::-webkit-scrollbar-track {background: #18191d}
+::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 9vh;
+}
+
+input{
+    font-family: monospace;
+}
+
+#stabilitron {
+    /* ПОЗИЦИОНИРОВАНИЕ */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    min-width: 400px;
+    max-width: 80%;
+}
+
+/* ВНЕШНЕЕ КОЛЬЦО */
+#ring_1 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-top: 40px;
+    /* ТЕНИ */
+    box-shadow:
+        0 0 16px 4px white,
+        inset 0 0 9px 1px white;
+}
+
+/* ВНУТРЕННЕЕ КОЛЬЦО */
+#ring_2 {
+    width: 356px;
+    height: 356px;
+    border: 6px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ТЕНИ */
+    box-shadow:
+        0px 0px 10px 4px white,
+        inset 0px 0px 4px 1px white;
+}
+
+#DOLLARS {
+    width: 300px;
+}
+
+/* СТРОКА С ВВОДОМ ПАРОЛЯ */
+/* БЛОК СТРОКИ */
+#intro {
+    margin-top: 54px;
+}
+
+/* 'PASSWORD' */
+#password_ {
+    font-weight: 600;
+    display: inline-flex;
+    font-size: 15px;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ <input> */
+input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+    -webkit-text-security: disc;
+/*
+input { -webkit-text-security: circle; }
+input { -webkit-text-security: square; }
+input { -webkit-text-security: disc;
+*/
+}
+
+/* НОВЫЕ СТИЛИ <input> */
+input {
+    width: 208px;
+    padding: 6px;
+    border-radius: 100px;
+    box-shadow: white 0 0 6px;
+}
+
+/* КНОПКА */
+button {
+    width: 210px;
+    color: white;
+    padding: 6px;
+    border: 2px solid gray;
+    border-radius: 12px;
+    background-color: #111011;
+    margin-top: 40px;
+    text-align: center;
+}
+
+button:active,
+button:focus {
+    opacity: 0.4;
+}
+/* МАКЕТ */
+#maket {
+    position: absolute;
+    top: -81px;
+    left: -12px;
+}
+#box{
+    display: inline-block;
+}
+.D_, .O_, .L_, .A_, .R_, .S_, {
+    display: inline-flex;
+}
+#cluster{
+    width: 287px;
+    height: 49px;
+    display: inline-grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(41, 1fr);
+}
+#x{
+    border-radius: 50%;
+    background-color: transparent;
+}
+#o{
+    border-radius: 50%;
+    background-color: white;
+    /* ТЕНИ */
+    box-shadow: 0px 0px 8px 2px white;
+}
+
+input,
+textarea,
+[contenteditable] {
+    caret-color: black;
+}

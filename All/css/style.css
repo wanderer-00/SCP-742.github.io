@@ -123,12 +123,9 @@ a {
 .d{
     color: lightslategrey;
     font-size: 0.8em;
-    
     padding: 4px 10px;
     display:inline;
-    
     background-color: #121212;
-    
     border: 1px solid #2B2B2B;
     border-top: 0;
     border-radius: 0 0 0 4px;
