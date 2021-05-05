@@ -9,25 +9,13 @@ body {
 }
 
 /* scroll bar */
-::-webkit-scrollbar {
-    width: 8px;
-    max-height: 8px;
-}
-::-webkit-scrollbar-track:vertical {
-    background: #262626;
-}
-/*  */
-::-webkit-scrollbar-thumb:vertical {
-    background: gray;
-}
+::-webkit-scrollbar {width: 8px; max-height: 8px;}
+::-webkit-scrollbar-track:vertical {background: #262626;}
+::-webkit-scrollbar-thumb:vertical {background: gray;}
 /* scroll цвет при наведении */
-::-webkit-scrollbar-thumb:vertical:hover {
-    background: white;
-}
+::-webkit-scrollbar-thumb:vertical:hover {background: white;}
 /* уголок */
-::-webkit-scrollbar-corner {
-    background: #262626;
-}
+::-webkit-scrollbar-corner {background: #262626;}
 
 h1 {
     color: #eee;
@@ -134,4 +122,8 @@ a {
 .d:last-child{
     border-left: 0;
     border-radius: 0 0 4px 0;
+}
+
+@media (orientation: portrait) {
+    .container{padding: 10px}
 }
