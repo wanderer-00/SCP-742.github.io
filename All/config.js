@@ -230,7 +230,7 @@
         "during":false,
         "url":"",
         "image":"../img/anime/etot-glupyj-svin-ne-ponimaet-mechtu-devochki-zajki.jpg"},
-        
+
 {"name":"Пламенная бригада пожарных",
         "type":"Аниме",
         "serial":true,
@@ -238,7 +238,15 @@
         "time":0,
         "url":"",
         "image":"../img/anime/fire-force.jpg"},
-        
+
+{"name":"Пламенная бригада пожарных 2",
+        "type":"Аниме",
+        "serial":true,
+        "during":2,
+        "time":0,
+        "url":"",
+        "image":"../img/anime/fire-force-2.jpg"},
+
 {"name":"Форма голоса",
         "type":"Аниме",
         "serial":false,
