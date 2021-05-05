@@ -50,7 +50,7 @@ a {
     list-style-type: none;
     background-color: #2B2B2B;
     border-radius: 3px;
-    padding: 10px 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: 57fr 1fr;
     /* схема расстановки областей */
