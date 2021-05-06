@@ -1,3 +1,10 @@
+*{
+    /* border & padding входят в расчёт размера */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     color: white;
     margin: 0px;
@@ -37,15 +44,12 @@ a {
 }
 
 #search {
-    width: 85px;
     float: right;
     border: 3px solid #7e7d7d;
     margin: 5px;
     padding: 10px;
     display: flex;
-    align-items: center;
     border-radius: 10px;
-    justify-content: center;
 }
 
 /* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
@@ -58,11 +62,8 @@ a {
     position: relative;
     display: block;
     background-color: rgba(32, 32, 32, 0);
-    /* цвет фона */
     height: auto;
-    /* высота блока */
     width: 718;
-    /* ширина блока */
     border-radius: 0px 0px 25px 25px;
     /* скругление углов [Элипс - 10px/20px; ] */
 }

@@ -5,72 +5,11 @@
     <title>галерея просмотренного</title>
     <meta name="" content="text/html" charset="UTF-8">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 
     <style type="text/css">
-        body {
-            color: white;
-            margin: 0px;
-            padding: 0px;
-            background: #343434 url(img/fon.jpg);
-            font-family: sans-serif;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 0px 0px;
-            background-attachment: fixed;
-            
-            /* border & padding входят в расчёт размера */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        a {
-            color: red;
-            text-decoration: none;
-        }
-        
-        /* scroll bar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #18191d;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b4146;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #474e54;
-        }
-
         /* HEADER */
-        #header {
-            width: 100%;
-            height: 120px;
-            box-shadow: 0px 5px 25px 0px black;
-            background: rgba(21, 21, 21, 0.2);
-            align-items: center;
-            border-bottom: 1px solid #343434;
-            margin-bottom: 40px;
-        }
-
-        #headerIMG {
-            height: 120px;
-        }
-
-        #search {
-            width: 85px;
-            float: right;
-            border: 3px solid #7e7d7d;
-            margin: 5px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            border-radius: 10px;
-            justify-content: center;
-        }
-
-
+        #header {margin-bottom: 40px}
 
         /* СЛАЙДЕР */
         .svaip_gallery {
@@ -92,18 +31,7 @@
         /* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
         .content {
             background-color: rgba(32, 32, 32, 0.8);
-            border-bottom: 0px;
-            border-right: 2px solid #7e7d7d;
-            border-left: 2px solid #7e7d7d;
-            box-sizing: border-box;
-            border-top: 0px;
-            text-align: center;
-            position: relative;
-            display: block;
-            height: auto;
-            /* высота блока */
             width: 100%;
-            /* ширина блока */
         }
 
         .box {
@@ -116,95 +44,11 @@
             padding-top: 30px;
         }
 
-        .hovergallery {
-            color: red;
-        }
-
-        .hovergallery img {
-            position: relative;
-            width: 600px;
-            -webkit-transform: scale(0.9);
-            /*Webkit: уменьшаем размер до 0.8*/
-            -moz-transform: scale(0.9);
-            /*Mozilla: масштабирование*/
-            -o-transform: scale(0.9);
-            /*Opera: масштабирование*/
-            -webkit-transition-duration: 0.5s;
-            /*Webkit: длительность анимации*/
-            -moz-transition-duration: 0.5s;
-            /*Mozilla: длительность анимации*/
-            -o-transition-duration: 0.5s;
-            /*Opera: длительность анимации*/
-            opacity: 0.8;
-            /*Начальная прозрачность изображений*/
-        }
-
-        .hovergallery img:hover {
-            -webkit-transform: scale(1.0);
-            /*Webkit: увеличиваем размер до 1.2x*/
-            -moz-transform: scale(1.0);
-            /*Mozilla: масштабирование*/
-            -o-transform: scale(1.0);
-            /*Opera: масштабирование*/
-            box-shadow: 0px 0px 30px gray;
-            /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
-            -webkit-box-shadow: 0px 0px 30px gray;
-            /*Webkit: тени*/
-            -moz-box-shadow: 0px 0px 30px gray;
-            /*Mozilla: тени*/
-            opacity: 1;
-        }
-        
         /* BOX */
         #animeName {
             color: white;
             font-size: 50px;
         }
-
-
-    /* МОДИФИЦИРОВАНИЕ 07.03.21 */
-        /* КОМПАС */
-        .y {
-            /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
-            user-select: none;
-            border: 2px solid #7e7d7d;
-            border-radius: 25px 0 0 0;
-            width: 100%;
-            background-color: rgba(32, 32, 32, 0.8);
-            
-            /* border & padding входят в расчёт размера */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        .yy {
-            margin: 50px 0;
-            display: flex;
-            /* item по центру */
-            justify-content: center;
-        }
-        .yyy {
-            background-color: rgba(32, 32, 32, 1);
-            padding: 6px 15px;
-            margin: 3px;
-            /* НАСТРОКА ГРАНИЦ */
-            border-radius: 5px;
-            border: 1px solid grey;
-            /* СТИЛИЗАЦИЯ ШРИФТА */
-            color: #7e7d7d;
-            font-size: 1.88em; /* 30px */
-        }
-        .xxx {
-            background-color: rgba(40, 40, 40, 1);
-            border: 1px solid #343434;
-            color: grey;
-        }
-        .yyy:hover {
-            background-color: rgba(40, 40, 40, 1);
-            border: 1px solid #343434;
-            color: red;
-        }
-
 
         /* COUB */
         .c1 {
@@ -324,58 +168,8 @@
 
 
 
-        /* BOTTOM */
-        .bottom {
-            background-color: rgba(34, 34, 34, 0.8);
-            border-radius: 25px 25px 0 0;
-            border: 2px solid #7E7D7D;
-        }
 
-        /* bottomText */
-        .bottomText {
-            font-size: 40px;
-            padding: 40px 0 40px 20px;
-            color: gray;
-        }
 
-        /* Строка данных аккаунта */
-        .bottomAk {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: no-wrap;
-            padding: 20px 0 20px 20px;
-            border-top: 1px solid grey;
-        }
-
-        /* div Иконок аккаунтов */
-        .AkIco {
-            flex-basis: 15%;
-        }
-
-        /* Иконки аккаунтов */
-        .AkIco1 {
-            width: 100%;
-            border-radius: 50%;
-        }
-
-        /* Имя аккаунта */
-        .AkName {
-            flex-basis: 70%;
-            font-size: 60px;
-            margin: auto 0 auto 20px;
-            height: 60px;
-            color: #FFA000;
-        }
-
-        /* ICO соцсети */
-        .PlAk {
-            flex-basis: 15%;
-            padding-right: 20px;
-        }
-
-        .PlAk1 {
-            width: 100%;
-        }
 
 
         /* AUTO Slider */
@@ -409,7 +203,7 @@
 
         #sliderIco {
             background: none;
-
+        }
     </style>
 </head>
 
@@ -459,12 +253,13 @@
                 <a href="page/reinkarnaciya-bezrabotnogo-istoriya-o-priklyucheniyah-v-drugom-mire/index.html">
                     <img id='sliderIMG' src="img/anime/reinkarnaciya-bezrabotnogo-istoriya-o-priklyucheniyah-v-drugom-mire.jpg">
                 </a>
-                <img id='sliderIMG' src="img/anime/ID.invaded.jpg">
-                <img id='sliderIMG' src="img/anime/Fire force.jpg">
-                <img id='sliderIMG' src="img/anime/Castlevania.jpg">
-                <img id='sliderIMG' src="img/anime/OverLord 2.png">
-                <img id='sliderIMG' src="img/anime/Black billet.jpg">
-                <img id='sliderIMG' src="img/anime/Gate.png">
+
+                <img id='sliderIMG' src="img/anime/id-invaded.jpg">
+                <img id='sliderIMG' src="img/anime/fire-force.jpg">
+                <img id='sliderIMG' src="img/anime/castlevaniya.jpg">
+                <img id='sliderIMG' src="img/anime/overlord-3.jpg">
+                <img id='sliderIMG' src="img/anime/black-bullet.jpg">
+                <img id='sliderIMG' src="img/anime/gate.jpg">
             </div>
         </div>
     </div>
@@ -621,7 +416,7 @@
         </div>
 
     </div>
-    
+
     <!-- КОМПАС -->
     <div class="y" style="border-radius: 0px 0px 25px 25px; margin-bottom: 50px; ">
         <div class="yy">
@@ -679,7 +474,7 @@
         </a>
     </div>
 
-    <!--  
+    <!-- 
     ¡i¡
 rgba(21,21,221,0.2)
 -->
@@ -705,5 +500,4 @@ rgba(21,21,221,0.2)
 
     </script>
 </body>
-
 </html>
