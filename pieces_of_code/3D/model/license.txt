@@ -1,0 +1,11 @@
+Model Information:
+* title:	Just a Girl
+* source:	https://sketchfab.com/3d-models/just-a-girl-a4f0f2aabac146fda348288419c8e636
+* author:	mRiot (https://sketchfab.com/malgorzatariot)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Just a Girl" (https://sketchfab.com/3d-models/just-a-girl-a4f0f2aabac146fda348288419c8e636) by mRiot (https://sketchfab.com/malgorzatariot) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
