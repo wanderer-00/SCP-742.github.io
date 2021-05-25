@@ -5,7 +5,7 @@
                 "serial": true,
                 "during": true,
                 "url": "../page/5-santimetrov-v-secundu/5-santimetrov-v-secundu.html",
-                "image": "../img/anime/5-santimetrov-v-secundu.jpg"
+                "image": "../../../img/anime/5-santimetrov-v-secundu.jpg"
         },
 
         {
