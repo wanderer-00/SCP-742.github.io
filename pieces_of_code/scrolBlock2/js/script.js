@@ -33,7 +33,6 @@ searchBar.addEventListener('keyup', (e) => {
 const loadCharacters = async () => {
     // Конструкция try...catch пытается выполнить инструкции в блоке try, и, в случае ошибки, выполняет блок catch.
     try {
-        // const res = await fetch('https://hp-api.herokuapp.com/api/characters');
         const res = await fetch('config.js'); // config.js => ../config.js
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
@@ -49,7 +48,6 @@ const displayCharacters = (characters) => {
     const htmlString = characters.map((character) => {
         // return - останавливает выполнение функции
         return`
-
             <a id="sub-box" href="${character.url}">
                 <div id="icon">
                     <img src="${character.image}">
