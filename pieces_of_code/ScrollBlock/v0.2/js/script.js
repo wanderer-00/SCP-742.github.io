@@ -33,7 +33,7 @@ searchBar.addEventListener('keyup', (e) => {
 const loadCharacters = async () => {
     // Конструкция try...catch пытается выполнить инструкции в блоке try, и, в случае ошибки, выполняет блок catch.
     try {
-        const res = await fetch('config.js'); // config.js => ../config.js
+        const res = await fetch('js/config.js'); // config.js => ../config.js
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
     // переменная err (можно выбрать и другое название)
