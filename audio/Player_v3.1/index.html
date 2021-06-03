@@ -3,17 +3,16 @@
 <!-- ВСЕ ИМЕНА ТРЕКОВ БЕРУТЬСЯ ИЗ МАССИВА -->
 <!-- ВСЕ URL ТРЕКОВ БЕРУТЬСЯ ИЗ МАССИВА -->
 <!-- ОГРАНИЧЕНИЕ НА ПЕРЕЛИСТЫВАНИЕ ЗА ПОСЛЕДНИЙ И ПЕРВЫЙ ТРЕК -->
-<!--  -->
-
-
-
-<!-- СДЕЛАТЬ -->
-
-<!-- СМЕНА ИКОНКИ ПАУЗЫ ПРИ ОКОНЧАНИИ ТРЕКА -->
-<!-- НАЛАДИТЬ РАБОТУ REPEATE И ТД. -->
 <!-- СМЕНА ОБЛОЖЕК -->
 <!--  -->
 
+
+
+<!-- СДЕЛАТЬ: -->
+
+<!-- СМЕНА ИКОНКИ ПАУЗЫ ПРИ ОКОНЧАНИИ ТРЕКА -->
+<!-- НАЛАДИТЬ РАБОТУ REPEATE И ТД. -->
+<!--  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +21,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player_v3.1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <script src="https://kit.fontawesome.com/44a29f837f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -35,90 +34,22 @@
         <div class="search"></div>
         <div class="bodyPlayer"></div>
 
-        <table class="list">
-
-
-            <!-- 1 -->
-            <tr class="song">
-                <td class="nr"><h5>1</h5></td>
-                <td class="title"><h6 id='title'>$UICIDEBOY$ - $OUTH</h6></td>
-                <td class="length"><h5>2:49</h5></td>
-                <td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td>
-            </tr>
-
-            <!-- 2 -->
-            <tr class="song">
-                <td class="nr"><h5>2</h5></td>
-                <td class="title"><div id="titleZ"><h6>Fall Out Boy - Young And Menace</h6></div></td>
-                <td class="length"><h5>3:43</h5></td>
-                <td><input type="checkbox" id="heart1" checked><label for="heart1" class="icons"></label></td>
-            </tr>
-
-            <!-- 3 -->
-            <div class="song">
-                <div class="nr"><h5>3</h5></div>
-                <div class="title"><h6>-</h6></div>
-                <div class="length"><h5>00:00</h5></div>
-                <div><input type="checkbox" id="heart2"><label for="heart2" class="icons"></label></div>
-            </div>
-
-            <!-- 4 -->
-            <tr class="song">
-                <td class="nr"><h5>4</h5></td>
-                <td class="title"><h6>-</h6></td>
-                <td class="length"><h5>00:00</h5></td>
-                <td><input type="checkbox" id="heart3"><label for="heart3" class="icons"></label></td>
-            </tr>
-
-            <!-- 5 -->
-            <tr class="song">
-                <td class="nr"><h5>5</h5></td>
-                <td class="title"><h6>-</h6></td>
-                <td class="length"><h5>00:00</h5></td>
-                <td><input type="checkbox" id="heart4" checked><label for="heart4" class="icons"></label></td>
-            </tr>
-
-            <!-- 6 -->
-            <tr class="song">
-                <td class="nr"><h5>6</h5></td>
-                <td class="title"><h6>-</h6></td>
-                <td class="length"><h5>00:00</h5></td>
-                <td><input type="checkbox" id="heart5"><label for="heart5" class="icons"></label></td>
-            </tr>
-
-            <!-- 7 -->
-            <tr class="song">
-                <td class="nr"><h5>7</h5></td>
-                <td class="title"><h6>-</h6></td>
-                <td class="length"><h5>00:00</h5></td>
-                <td><input type="checkbox" id="heart6"><label for="heart5" class="icons"></label></td>
-            </tr>
-
-            <!-- 8 -->
-            <tr class="song">
-                <td class="nr"><h5>8</h5></td>
-                <td class="title"><h6>-</h6></td>
-                <td class="length"><h5>00:00</h5></td>
-                <td><input type="checkbox" id="heart7"><label for="heart5" class="icons"></label></td>
-            </tr>
-
-
-        </table>
+        <table class="list"></table>
 
         <div class="shadow"></div>
-        
-        <!--<div id="stabilitron"><!-- frm -->
-        
+
+        <!--<div id="stabilitron"> frm -->
+
         <!--<div id="shadovH4"></div>-->
-        
+
         <div class="info">
             <h4 id="info"></h4>
             <!--<div id="shadowH4"></div>-->
         </div>
-        
+
         <!--</div>-->
 
-        <audio preload id="audio" controls loop>
+        <audio preload id="audio" controls>
             <source src="">
         </audio>
 
@@ -130,8 +61,8 @@
 
         <table class="footer">
             <td><input type="checkbox" id="love" checked><label for="love" class="love"></label></td>
-            <td><input type="checkbox" id="repeat"><label for="repeat" class="repeat"></label></td>
-            <td><input type="checkbox" id="shuffle"><label for="shuffle" class="shuffle"></label></td>
+            <td><input type="checkbox" id="repeat" onclick="repeat();"><label for="repeat" class="repeat"></label></td>
+            <td><input type="checkbox" id="shuffle" checked><label for="shuffle" class="shuffle"></label></td>
             <td><input type="checkbox" id="options"><label for="options" class="options"></label></td>
         </table>
 
@@ -139,52 +70,75 @@
             <h2>Demons</h2>
         </div>
     </section>
-    
-    <!-- ССЫЛКИ НА АВТОРА -->
-<!--
-    <a href="https://github.com/Himeld23/MP3-Player">Author</a><br/>
-    <a href="https://www.youtube.com/channel/UCC4E_6H74CPJ3_mFaaM3jXA">Author YouTube</a><br/>
-    <a href="https://www.youtube.com/watch?v=guwSh93MYZo&t=40s">Video tutorial YouTube</a>
--->
+
     <script>
         var audio = document.getElementById('audio');
         var playpause = document.getElementById('play');
         // передача переменной элемента info ( название трека )
         var name_audio = document.getElementById('info');
-        var icon_1 = document.getElementsByClassName('coverImage');
+        var xxx = document.getElementsByClassName("coverImage"),
+            styleXXX = xxx[0].style;
+        var r = document.getElementsByClassName("repeat"),
+            styleRepeat = r[0].style;
 
-        
-        
-        // массив с URL(audio)
-        var urls = [
-        /*  1  */"../audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3",
-        /*  2  */"../audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3",
-        /*  3  */"../audio/N_E_W/",
+// *работает*
+// общий массив
+        let ray12 = [
+            {
+                "url": "audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3",
+                "name": "$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE",
+                "ico": "url('img/S.jpg')"
+            },
+            {
+                "url": "audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3",
+                "name": "ITSOKTOCRY - POP, LOCK & DROPDEAD",
+                "ico": "url('img/ITSOKTOCRY - POP, LOCK & DROPDEAD.jpg')"
+            },
+            {
+                "url": "audio/COUB/Blackbear-IDFC_coub.mp3",
+                "name": "Blackbear - IDFC",
+                "ico": "url('img/Blackbear-IDFC_coub.jpg')"
+            },
+            {
+                "url": "audio/COUB/Glassey-ARVFZ-TRCKRTRT_coub.mp3",
+                "name": "Glassey - ARVFZ TRCKRTRT",
+                "ico": "url('img/Glassey-ARVFZ-TRCKRTRT_coub.jpg')"
+            },
+            {
+                "url": "audio/COUB/Sagath-З.Л.О.coub.mp3",
+                "name": "Sagath - З.Л.О.",
+                "ico": "url('img/Sagath-З.Л.О.coub.jpg')"
+            },
+            {
+                "url": "audio/COUB/Tincup-Lost_coub.mp3",
+                "name": "Tincup - Lost",
+                "ico": "url('img/Tincup - Lost.jpg')"
+            },
+            {
+                "url": "audio/COUB/twenty_one_pilots-Stressed_Out_coub.mp3",
+                "name": "Twenty one pilots - Stressed Out",
+                "ico": "url('img/twenty_one_pilots.jpg')"
+            },
+            {
+                "url": "audio/Dubstep~Skrillex™/Knife Party VS Skrillex.mp3",
+                "name": "Knife Party VS Skrillex",
+                "ico": "url('img/Knife Party VS Skrillex.jpg')"
+            },
+            {
+                "url": "audio/Dubstep~Skrillex™/KUURO - Slap!.mp3",
+                "name": "KUURO - Slap!",
+                "ico": "url('img/KUURO - Slap!.jpg')"
+            }
 
-        ];
-        
-        // массив имён треков
-        var names = [
-        /*  1  */"$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE",
-        /*  2  */"ITSOKTOCRY - POP, LOCK & DROPDEAD",
-        /*  3  */"",
-        ];
-        
-        // массив с обложками треков
-        var icons1 = [
-        /*  1  */"",
-        /*  2  */"",
-        /*  3  */"",
-        /*  4  */"",
-        /*  5  */"",
-        /*  6  */"",
-        /*  7  */"",
-        /*  8  */"",
-        /*  9  */"",
-        ];
+        ]
 
-        
-        
+            // {
+            //     "url": "audio/",
+            //     "name": "",
+            //     "ico": "url('')"
+            // },
+
+
         function togglePlayPause() {
             // если аудио на паузе или окончено, то
             if (audio.paused || audio.ended) {
@@ -199,73 +153,74 @@
                 audio.pause();
             }
         }
-        
-        
 
-        
-        // счётчик номера трека
+        // считает: какой трек проигрывался, проигрывается или будет проигрываться
+        // начальное значение = 0
         var number_audio = 0;
-        var ico = 0;
         // счётчик "включенно ли audio [ 0-выкл | 1-вкл ] "
         var on_off = 0;
-        
-        
-        
-        // НАЧАЛЬНЫЙ ТРЕК
-        audio.src = urls[number_audio];
-        // НАЧАЛЬНОЕ НАЗВАНИЕ ТРЕКА
-        name_audio.innerHTML = names[number_audio];
-        
-        
-        
-        
+        var Repeat = 0;
+
+        function repeat (){
+            if(Repeat==0)
+            {Repeat++;styleRepeat.color="var(--colorA)";audio.loop=true;}
+            else
+            {Repeat--;styleRepeat.color="var(--colorP)";audio.loop=false;}
+        };
+
+
+        // Начальные значения
+        audio.src = ray12[number_audio].url;
+        name_audio.innerHTML = ray12[number_audio].name;
+        styleXXX.backgroundImage = ray12[number_audio].ico;
+
+
+
         // включить следующий трек
         function next(){
-            function bbb (){
-                icon_1.style.backgroundImage = "url(../img/cover.png)";  
-            };
-            
-            // не перелистывать вперед, если играет последний трек 
-            if(number_audio == 1){}
+
+            // не перелистывать вперед, если играет последний трек
+            // если(номер_трека == кол-ву( кол-во_элементов_в_ray12 - 1 )){}
+            if(number_audio == ray12.length-1){}
             else{
-            
+
             // Включено ли аудио?
             if(audio.paused || audio.ended)
                 {on_off = 0;}
             else{on_off = 1};
-            
+
             // прибавить 1 к счётчику
             number_audio ++;
             // сменить URL(audio) на следующие (в массиве)
-            audio.src = urls[number_audio];
+            audio.src = ray12[number_audio].url;
             // сменить название трека на следующее (в массиве)
-            name_audio.innerHTML = names[number_audio];
-            
-            
+            name_audio.innerHTML = ray12[number_audio].name;
+            styleXXX.backgroundImage = ray12[number_audio].ico;
+
             if (on_off == 1) {
                 // проигрывать аудио
                 audio.play();
             };
             };
         };
-        
+
         // включить предыдущий трек
         function back(){
 
-            // не перелистывать назад, если играет первый трек 
+            // не перелистывать назад, если играет первый трек
             if(number_audio == 0){}
             else{
-                
+
             // Включено ли аудио?
             if(audio.paused || audio.ended)
                 {on_off = 0;}
             else{on_off = 1};
-            
+
             number_audio --;
-            audio.src = urls[number_audio];
-            name_audio.innerHTML = names[number_audio];
-            
-            
+            audio.src = ray12[number_audio].url;
+            name_audio.innerHTML = ray12[number_audio].name;
+            styleXXX.backgroundImage = ray12[number_audio].ico;
+
             if (on_off == 1) {
                 // проигрывать аудио
                 audio.play();
@@ -273,6 +228,13 @@
             };
         };
     </script>
-</body>
 
+    <!-- ССЫЛКИ НА АВТОРА -->
+
+    <a href="https://github.com/Himeld23/MP3-Player">Author</a><br/>
+    <a href="https://www.youtube.com/channel/UCC4E_6H74CPJ3_mFaaM3jXA">Author YouTube</a><br/>
+    <a href="https://www.youtube.com/watch?v=guwSh93MYZo&t=40s">Video tutorial YouTube</a><br/>
+    <a href="https://vk.com/v_o_r_a_c_i_t_y">Не украл, а позаимствовал и доработал...</a>
+
+</body>
 </html>
