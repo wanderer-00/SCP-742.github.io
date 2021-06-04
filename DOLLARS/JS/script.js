@@ -5,8 +5,8 @@ function log_in(){
     // ЕСЛИ ПАРОЛЬ СОВПАДАЕТ ТО
     if (pasw == pass)
         // ВЫВЕСТИ 1
-        {window.location.assign('../../index1.html');}
+        {window.location.assign('index1.html');}
         // ИНАЧЕ ВЫВЕСТИ 0
-        else{window.location.assign('../../index.html');
+        else{window.location.assign('https://www.ozon.ru/brand/brawl-stars-87277336/');
             alert('Досвидания :3');}
     }
