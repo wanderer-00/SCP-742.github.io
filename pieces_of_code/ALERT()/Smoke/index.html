@@ -1,0 +1,32 @@
+<!--
+Пример создан сайтом: http://blogjquery.ru/zamena-standartnogo-alert-prompt-confirm-stilizaciya-alert/
+ -->
+
+<html>
+<body>
+<link charset="utf-8" rel="stylesheet" type="text/css" href="smoke-pure.css" />
+<script type="text/javascript" src="smoke-pure.js"></script>
+<script type="text/javascript">
+
+//Обычный alert
+smoke.alert ("Заменяет стандартный alert, prompt, confirm на свои с возможностью вставки <b>html кода</b> прямо внутрь alert-a <br> Также имеет множество настроек в <b>smoke-pure.js</b> и вызывать функции в зависимости от нажатия кнопок.");
+
+//Подтверждение действия
+/*
+smoke.confirm ("Вы действительно хотите удалить файл?", function (result) {
+if (result === false) return;                                                   //Выбрали отмена
+smoke.alert ("Файл был удален!", function (result) {window.location = '';})
+})
+*/
+
+//Просьба ввести что-то
+/*
+smoke.prompt ("Введите ваше имя", function (result) {
+if (result === false) return;                                                   //Выбрали отмена
+smoke.alert ("Вы ввели \"" + result + "\".");
+})
+*/
+
+</script>
+</body>
+</html>
