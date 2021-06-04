@@ -68,15 +68,7 @@ input{
     font-family: monospace;
 }
 
-#stabilitron {
-    /* ПОЗИЦИОНИРОВАНИЕ */
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    min-width: 400px;
-    max-width: 80%;
-}
+
 
 /* ВНЕШНЕЕ КОЛЬЦО */
 #ring_1 {
@@ -198,4 +190,32 @@ input,
 textarea,
 [contenteditable] {
     caret-color: black;
+}
+
+#stabilitron {
+    /* ПОЗИЦИОНИРОВАНИЕ */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    min-width: 400px;
+    max-width: 80%;
+}
+
+@media (orientation: portrait) {
+    #stabilitron{
+        min-width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+    #ring_1 {
+        padding: 20px;
+        width: 900px;
+        height: 900px;
+        margin: 100px auto;
+    }
+    #ring_2{
+        width: 100%;
+        height: 100%;
+    }
 }
