@@ -180,8 +180,11 @@ input {
     width: 380px;
     font-size: 20px;
 }
-@media (max-width: 1111px) {
+
+@media (orientation: portrait) {
     /* УДАЛЕНИЕ ПРАВОЙ ПАНЕЛИ */
     #right_box {display: none}
-    #sub_box{width: 720px}
-}
+    #sub_box{width: 100%}
+    #left_box{
+        width: 100%;
+    }
