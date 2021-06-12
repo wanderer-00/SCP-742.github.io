@@ -4,31 +4,56 @@
     <meta charset="UTF-8">
     <title>DirectorY</title>
     <style>
-        body{
-            background: #343434;
-        }
-
-
-        /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
-        html {
-            box-sizing: border-box;
-        }
-
+        /* ОБЯЗАТЕЛЬНОЕ */
         *,
         *:after,
-        *:before {
-            box-sizing: inherit;
-        }
+        *:before {box-sizing: border-box}/* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
 
-        /* АЛЬТЕРНАТИВА */
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        /* ОБНУЛЕНИЕ СТИЛЕЙ */
+        /* SCROLL BAR */
+        ::-webkit-scrollbar {width: 8px}
+        ::-webkit-scrollbar-track {background: #18191d}
+        ::-webkit-scrollbar-thumb {background: #3b4146}
+        ::-webkit-scrollbar-thumb:hover {background: #474e54}
+        
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {/* 1 - скроллбар */}
+        ::-webkit-scrollbar-butto {/* 2 - кнопка */}
+        ::-webkit-scrollbar-track {/* 3 - трек */}
+        ::-webkit-scrollbar-track-piece {/* 4 - видимая часть трека */}
+        ::-webkit-scrollbar-thumb {/* 5 - ползунок */}
+        ::-webkit-scrollbar-corner {/* 6 - уголок */}
+        ::-webkit-resizer {/* 7 - изменение размеров */}
+
+        // ОБНУЛЕНИЕ СТИЛЕЙ
+        button {
+            /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
+            padding: 0;
+            border: none;
+            font: inherit;
+            color: inherit;
+            background-color: transparent;
+        }
+
+        /* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
+        :active,
+        :hover,
+        :focus {
+            outline: 0;
+            outline-offset: 0;
+            box-shadow: 0;/* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+        }
+
         input {
+            background-color: transparent;/* ПРОЗРАЧНЫЙ ФОН */
+            /* DEL ОБВОДКА */
+            outline: 0;
+            outline-offset: 0;
+            box-shadow: 0;/* DEL ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
             padding: 0;
             margin: 0;
             border: 0;
@@ -42,45 +67,6 @@
             outline: 0;
             outline-offset: 0;
         }
-
-        /* SCROLLBAR */
-        ::-webkit-scrollbar {
-            /* 1 - скроллбар */
-        }
-
-        ::-webkit-scrollbar-button {
-            /* 2 - кнопка */
-        }
-
-        ::-webkit-scrollbar-track {
-            /* 3 - трек */
-        }
-
-        ::-webkit-scrollbar-track-piece {
-            /* 4 - видимая часть трека */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            /* 5 - ползунок */
-        }
-
-        ::-webkit-scrollbar-corner {
-            /* 6 - уголок */
-        }
-
-        ::-webkit-resizer {
-            /* 7 - изменение размеров */
-        }
-
-
-
-
-
-
-
-
-
-
 
 
 

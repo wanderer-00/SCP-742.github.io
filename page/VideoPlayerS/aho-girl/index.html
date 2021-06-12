@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Aho girl</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
-<!--   
-   <img src="img/1.png" style="width: 100%;">-->
-    
+
+<!--<img src="img/1.png" style="width: 100%;">-->
 
     <div id="box">
         <div id="sub_box">
@@ -27,25 +25,26 @@
                         <div id="serial">Сериия:</div>
                         <div id="cluster">
                             <div id="line">
-                                <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
-                                <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
-                                <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
-                                <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
-                                <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
-                                <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
-                                <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
-                                <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
-                                <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
-                                <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
-                                <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
-                                <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
-                                <input id="segment" type="button" value="AMV" onclick="s13(document.getElementById('player'))">
+                                <input id="segment" type="button" value="1" onclick="s1()">
+                                <input id="segment" type="button" value="2" onclick="s2()">
+                                <input id="segment" type="button" value="3" onclick="s3()">
+                                <input id="segment" type="button" value="4" onclick="s4()">
+                                <input id="segment" type="button" value="5" onclick="s5()">
+                                <input id="segment" type="button" value="6" onclick="s6()">
+                                <input id="segment" type="button" value="7" onclick="s7()">
+                                <input id="segment" type="button" value="8" onclick="s8()">
+                                <input id="segment" type="button" value="9" onclick="s9()">
+                                <input id="segment" type="button" value="10" onclick="s10()">
+                                <input id="segment" type="button" value="11" onclick="s11()">
+                                <input id="segment" type="button" value="12" onclick="s12()">
+                                <input id="segment" type="button" value="AMV" onclick="s13()">
                             </div>
                         </div>
-                    <div id="controller">
-                        <input id="segment" type="button" value="<" onclick="left1()">
-                        <input id="segment" type="button" value=">" onclick="right1()">
-                    </div>
+                        <!-- Стрелочки -->
+                        <div id="controller">
+                            <input id="segment" type="button" value="<" onclick="left1()">
+                            <input id="segment" type="button" value=">" onclick="right1()">
+                        </div>
                     </div>
                 </div>
                 <div id="right_box">
@@ -77,68 +76,28 @@
                 "//kodik.info/seria/130356/4a52f8b638240b6d80ddcfcd1036bdc0/720p",  // 12
                 "../../video/Video_maket_v1.0/video/comments-that-make-me-cry.mp4",  // AMV
                 ];
+
+    var player = document.getElementById('player');
+    var line13 = document.getElementById('line').style.width;
+    alert(line13);
     
-    function s1(frame) {
-        frame.src = urls[0];
-    };
-
-    function s2(frame) {
-        frame.src = urls[1];
-    };
-
-    function s3(frame) {
-        frame.src = urls[2];
-    };
-
-    function s4(frame) {
-        frame.src = urls[3];
-    };
-
-    function s5(frame) {
-        frame.src = urls[4];
-    };
-
-    function s6(frame) {
-        frame.src = urls[5];
-    };
-
-    function s7(frame) {
-        frame.src = urls[6];
-    };
-
-    function s8(frame) {
-        frame.src = urls[7];
-    };
-
-    function s9(frame) {
-        frame.src = urls[8];
-    };
-
-    function s10(frame) {
-        frame.src = urls[9];
-    };
-
-    function s11(frame) {
-        frame.src = urls[10];
-    };
-
-    function s12(frame) {
-        frame.src = urls[11];
-    };
-    
-    function s13(frame) {
-        frame.src = urls[12];
-    };
-    
-    
-    
-    
-    
-    
+    function s1() {player.src = urls[0]};
+    function s2() {player.src = urls[1]};
+    function s3() {player.src = urls[2]};
+    function s4() {player.src = urls[3]};
+    function s5() {player.src = urls[4]};
+    function s6() {player.src = urls[5]};
+    function s7() {player.src = urls[6]};
+    function s8() {player.src = urls[7]};
+    function s9() {player.src = urls[8]};
+    function s10() {player.src = urls[9]};
+    function s11() {player.src = urls[10]};
+    function s12() {player.src = urls[11]};
+    function s13() {player.src = urls[12]};
 
     var left = 0;
     var line = document.getElementById('line');
-    
+
     function left1() {
         left = left + 260;
         if (left > 0) {
@@ -146,7 +105,7 @@
         }
         line.style.left = left + 'px';
     };
-    
+
     function right1(){
         left = left - 260;
         if (left < -260) {
@@ -154,10 +113,4 @@
             }
         line.style.left = left + 'px';
     };
-    
-
-
-    
-    // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
-    alert('Beta-test версия сайта, ориентированна на PC :)');
 </script></html>

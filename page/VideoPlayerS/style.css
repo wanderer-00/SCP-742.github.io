@@ -1,13 +1,20 @@
-* {
-    box-sizing: border-box;
-}
+// ОБЯЗАТЕЛЬНОЕ
+* {box-sizing: border-box}
 
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: black;
 }
 
+/* SCROLL BAR */
+::-webkit-scrollbar {width: 8px}
+::-webkit-scrollbar-track {background: #18191d}
+::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+// ОБНУЛЕНИЕ СТИЛЕЙ
 button {
     /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
     padding: 0;
@@ -16,6 +23,25 @@ button {
     color: inherit;
     background-color: transparent;
 }
+
+/* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+    /* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+    box-shadow: 0;
+}
+
+input {
+    background-color: transparent;/* ПРОЗРАЧНЫЙ ФОН */
+    /* DEL ОБВОДКА */
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: 0;/* DEL ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+}
+
 
 h1 {
     margin: 0;
@@ -28,33 +54,11 @@ hr {
     background-color: aquamarine;
 }
 
-/* ОБНУЛЕНИЕ СТИЛЕЙ */
-/* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
-:active,
-:hover,
-:focus {
-    outline: 0;
-    outline-offset: 0;
-    /* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
-    box-shadow: 0;
-}
-
-input {
-    /* ПРОЗРАЧНЫЙ ФОН */
-    background-color: transparent;
-    /* DEL ОБВОДКА */
-    outline: 0;
-    outline-offset: 0;
-    /* DEL ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
-    box-shadow: 0;
-}
-
-
 /* фон позди плеера */
 #box {
     height: 100vh;
     width: 100%;
-    background: black;
+/*    background: black;*/
 }
 
 /* стабилизатор */
@@ -73,8 +77,6 @@ input {
 
 }
 
-#name_age_box {}
-
 #name {
     padding: 12px 0px 6px 10px;
 }
@@ -91,15 +93,13 @@ input {
 
 #container {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    width: 100%;
     background-color: #0D0E0E;
 }
 
 /* ЛЕВАЯ СТОРОНА ПЛЕЕРА */
 #left_box {
     width: 720px;
-    background: black;
 }
 
 #videoBox {
@@ -113,26 +113,34 @@ input {
     width: 100%;
     height: 408px;
 }
-
+#eee{
+    width: 100%;
+    /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
+    user-select: none;
+    background-color: #161616;
+    overflow: hidden;
+    
+}
 #player {
     width: 100%;
     height: 408px;
 }
-#eee{
-    width: 720px;
-    /* ЗАПРЕТ НА ВЫДЕЛЕНИЕ ТЕКСТА */
-    user-select: none;
-    background-color: #161616;
-    
+/**/
+#panel {
+    width: 100%;
+    padding: 10px;
+    display: flex;
 }
+
 /* ПОДПИСЬ */
 #serial {
-    width: 100px;
     color: darkgray;
     padding: 0 10px;
     font-size: 20px;
     /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 #cluster {
     display: inline-flex;
@@ -141,18 +149,18 @@ input {
     /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
     overflow: hidden;
     height: 50px;
-    width: 500px;
+    width: 480px;
     align-items: center;
-}
-#controller{
-    display: inline-block;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
 }
 #line{
     position: relative;
     left: 0;
     transition: all ease 0.5s;
+}
+#controller{
+    display: inline-block;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
 }
 
 /* НАСТРОЙКИ СЕГМЕНТА */
@@ -169,14 +177,33 @@ input {
     border: 2px solid rgba(255, 255, 255, .15);
 }
 
+#segment:active {
+    border: 2px solid red;
+}
+
 #segment:focus {
     border: 2px solid darkseagreen;
 }
 
-
+#cluster {
+    /* Запрещаем перенос строк */
+    white-space: nowrap;
+    /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
+    overflow: hidden;
+}
 
 /* ПРАВАЯ СТОРОНА ПЛЕЕРА */
 #right_box {
+    overflow: hidden;
     padding: 2%;
+    width: 380px;
     font-size: 20px;
 }
+
+@media (orientation: portrait) {
+    /* УДАЛЕНИЕ ПРАВОЙ ПАНЕЛИ */
+    #right_box {display: none}
+    #sub_box{width: 100%}
+    #left_box{
+        width: 100%;
+    }
