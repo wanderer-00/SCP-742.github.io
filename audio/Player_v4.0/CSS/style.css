@@ -6,6 +6,8 @@ body {
     background-color: #181A1B;
 }
 
+h1{padding-left: 20px;}
+
 button {
     cursor: pointer;
 }
@@ -39,7 +41,13 @@ button {
 #audioBox {
     display: inline-block;
 }
-
+#vol{
+    display: inline-block;
+    padding: 4px;
+    background: #343434;
+    border: 1px solid pink;
+    border-radius: 4px;
+}
 #icoBox {
     margin: 0;
     padding: 0;

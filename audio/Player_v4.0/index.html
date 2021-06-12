@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h1>Методы &lt;audio&gt;</h1>
     <div id="box">
 
         <audio id="player" src="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3"></audio>
@@ -15,58 +16,42 @@
             <button onclick="document.getElementById('player').play()">Play</button>
             <button onclick="document.getElementById('player').pause()">Pause</button>
             <button onclick="Button_PlayPause()">Play | Pause</button>
-            <button onclick="document.getElementById('player').volume += 0.1">+ </button>
-            <button onclick="document.getElementById('player').volume -= 0.1">- </button>
+            <a href="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3" download><button onclick="">Download</button></a>
+            <div id="vol">
+                <button onclick="VolUp()">+ </button>
+                <button onclick="VolDown()">- </button>
+                <font id='ValueVol'></font>
+            </div>
             <font id='name'>Blackbear - IDFC</font>
         </div>
     </div>
     <script>
+        var audioData = document.getElementById("player");
+        
+        // Play | Pause
         function Button_PlayPause() {
-            var PlayPause = document.getElementById("player");
-            if (PlayPause.paused) {
-                PlayPause.play();
+            if (audioData.paused) {
+                audioData.play();
             } else {
-                PlayPause.pause();
-            }
-        }
-    </script>
-
-
-    <div id="box">
-        <audio id="player1" src="../Player_v3.1/audio/COUB/Glassey-ARVFZ-TRCKRTRT_coub.mp3"></audio>
-        <div id='audioBox'>
-            <button onclick="document.getElementById('player1').play()">Play</button>
-            <button onclick="document.getElementById('player1').pause()">Pause</button>
-            <button onclick="document.getElementById('player1').volume += 0.1">+ </button>
-            <button onclick="document.getElementById('player1').volume -= 0.1">- </button>
-            <font id='name'>Glassey - ARVFZ - TRCKRTRT</font>
-        </div>
-    </div>
-
-    <div id="box">
-        <audio id="player2" src="../Player_v3.1/audio/COUB/Tincup-Lost_coub.mp3"></audio>
-        <div id='audioBox'>
-            <button onclick="document.getElementById('player2').play()">Play</button>
-            <button onclick="document.getElementById('player2').pause()">Pause</button>
-            <button onclick="document.getElementById('player2').volume += 0.1">+ </button>
-            <button onclick="document.getElementById('player2').volume -= 0.1">-</button>
-            <font id='name'>Tincup - Lost</font>
-        </div>
-    </div>
-
-    <audio id="myTune" src='../Player_v3.1/audio/COUB/Tincup-Lost_coub.mp3'></audio>
-    <button type="button" onclick="aud_play_pause()">Play/Pause</button>
-
-    <script>
-        function aud_play_pause() {
-            var myAudio = document.getElementById("myTune");
-            if (myAudio.paused) {
-                myAudio.play();
-            } else {
-                myAudio.pause();
+                audioData.pause();
             }
         };
+        
+        
+        // Volume
+        var ValueVol = document.getElementById('ValueVol');
+        
+        ValueVol.innerHTML = parseFloat(audioData.volume).toFixed(1);
 
+        function VolUp () {
+            audioData.volume += 0.1;
+            ValueVol.innerHTML = parseFloat(audioData.volume).toFixed(1);
+        };
+
+        function VolDown () {
+            audioData.volume -= 0.1;
+            ValueVol.innerHTML = parseFloat(audioData.volume).toFixed(1);
+        };
     </script>
 
 </body>
