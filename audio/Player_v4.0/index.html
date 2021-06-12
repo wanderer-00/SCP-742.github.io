@@ -4,80 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Player v4</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            color: rgb(168, 161, 149);
-            font-family: sans-serif;
-            background-color: #181A1B;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        #box {
-            margin: 0px 20px 0px 20px;
-            border-bottom: 1px solid rgb(168, 161, 149);
-            padding: 10px;
-        }
-
-        #box:first-child {
-            margin-top: 20px;
-            border-top: 1px solid rgb(168, 161, 149);
-        }
-
-        .play {
-            /* обнуление стилей */
-            padding: 0;
-            border: none;
-            font: inherit;
-            color: inherit;
-            background-color: transparent;
-
-
-            display: inline-block;
-            border: 10px solid transparent;
-            border-left: 15px solid #007AB3;
-            cursor: pointer;
-        }
-
-        #audioBox {
-            display: inline-block;
-        }
-
-        #icoBox {
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-            height: 40px;
-        }
-
-        #ico {
-            height: 100%;
-        }
-
-        #name {}
-
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
     <div id="box">
 
-        <audio id="player" src="../audio/COUB/Blackbear-IDFC_coub.mp3"></audio>
+        <audio id="player" src="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3"></audio>
         <div id='audioBox'>
             <button onclick="document.getElementById('player').play()">Play</button>
             <button onclick="document.getElementById('player').pause()">Pause</button>
+            <button onclick="Button_PlayPause()">Play | Pause</button>
             <button onclick="document.getElementById('player').volume += 0.1">+ </button>
             <button onclick="document.getElementById('player').volume -= 0.1">- </button>
             <font id='name'>Blackbear - IDFC</font>
         </div>
     </div>
+    <script>
+        function Button_PlayPause() {
+            var PlayPause = document.getElementById("player");
+            if (PlayPause.paused) {
+                PlayPause.play();
+            } else {
+                PlayPause.pause();
+            }
+        }
+    </script>
+
 
     <div id="box">
-        <audio id="player1" src="../audio/COUB/Glassey-ARVFZ-TRCKRTRT_coub.mp3"></audio>
+        <audio id="player1" src="../Player_v3.1/audio/COUB/Glassey-ARVFZ-TRCKRTRT_coub.mp3"></audio>
         <div id='audioBox'>
             <button onclick="document.getElementById('player1').play()">Play</button>
             <button onclick="document.getElementById('player1').pause()">Pause</button>
@@ -88,7 +44,7 @@
     </div>
 
     <div id="box">
-        <audio id="player2" src="../audio/COUB/Tincup-Lost_coub.mp3"></audio>
+        <audio id="player2" src="../Player_v3.1/audio/COUB/Tincup-Lost_coub.mp3"></audio>
         <div id='audioBox'>
             <button onclick="document.getElementById('player2').play()">Play</button>
             <button onclick="document.getElementById('player2').pause()">Pause</button>
@@ -98,7 +54,7 @@
         </div>
     </div>
 
-    <audio id="myTune" src='../audio/COUB/Tincup-Lost_coub.mp3'></audio>
+    <audio id="myTune" src='../Player_v3.1/audio/COUB/Tincup-Lost_coub.mp3'></audio>
     <button type="button" onclick="aud_play_pause()">Play/Pause</button>
 
     <script>
@@ -109,7 +65,7 @@
             } else {
                 myAudio.pause();
             }
-        }
+        };
 
     </script>
 

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(168, 161, 149);
+    font-family: sans-serif;
+    background-color: #181A1B;
+}
+
+button {
+    cursor: pointer;
+}
+
+#box {
+    margin: 0px 20px 0px 20px;
+    border-bottom: 1px solid rgb(168, 161, 149);
+    padding: 10px;
+}
+
+#box:first-child {
+    margin-top: 20px;
+    border-top: 1px solid rgb(168, 161, 149);
+}
+
+.play {
+    /* обнуление стилей */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+
+
+    display: inline-block;
+    border: 10px solid transparent;
+    border-left: 15px solid #007AB3;
+    cursor: pointer;
+}
+
+#audioBox {
+    display: inline-block;
+}
+
+#icoBox {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 40px;
+}
+
+#ico {
+    height: 100%;
+}
