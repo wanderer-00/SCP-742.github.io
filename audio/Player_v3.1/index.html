@@ -23,7 +23,17 @@
     <title>Player_v3.1</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="https://kit.fontawesome.com/44a29f837f.js" crossorigin="anonymous"></script>
+    <script src='JS/BD.js'></script>
 </head>
+
+    <!--  https://jqueryui.com/draggable/  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+        $(".screen").draggable();
+        } );
+    </script>
 
 <body>
     <section class="screen">
@@ -57,6 +67,7 @@
             <td><input type="checkbox" id="backward"><label for="backward" class="backward" onclick="back()"></label></td>
             <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"><label for="play" class="play"></label></td>
             <td><input type="checkbox" id="forward"><label for="forward" class="forward" onclick="next()"></label></td>
+            <font class='vol' style='color:#FFF;position: absolute;top: 410px'>0.0</font>
         </table>
 
         <table class="footer">
@@ -81,62 +92,9 @@
         var r = document.getElementsByClassName("repeat"),
             styleRepeat = r[0].style;
 
-// *работает*
-// общий массив
-        let ray12 = [
-            {
-                "url": "audio/top/$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE.mp3",
-                "name": "$UICIDEBOY$ x POUYA - $OUTH $IDE $UICIDE",
-                "ico": "url('img/s.jpg')"
-            },
-            {
-                "url": "audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3",
-                "name": "ITSOKTOCRY - POP, LOCK & DROPDEAD",
-                "ico": "url('img/ITSOKTOCRY - POP, LOCK & DROPDEAD.jpg')"
-            },
-            {
-                "url": "audio/COUB/Blackbear-IDFC_coub.mp3",
-                "name": "Blackbear - IDFC",
-                "ico": "url('img/Blackbear-IDFC_coub.jpg')"
-            },
-            {
-                "url": "audio/COUB/Glassey-ARVFZ-TRCKRTRT_coub.mp3",
-                "name": "Glassey - ARVFZ TRCKRTRT",
-                "ico": "url('img/Glassey-ARVFZ-TRCKRTRT_coub.jpg')"
-            },
-            {
-                "url": "audio/COUB/Sagath-З.Л.О.coub.mp3",
-                "name": "Sagath - З.Л.О.",
-                "ico": "url('img/Sagath-З.Л.О.coub.jpg')"
-            },
-            {
-                "url": "audio/COUB/Tincup-Lost_coub.mp3",
-                "name": "Tincup - Lost",
-                "ico": "url('img/Tincup - Lost.jpg')"
-            },
-            {
-                "url": "audio/COUB/twenty_one_pilots-Stressed_Out_coub.mp3",
-                "name": "Twenty one pilots - Stressed Out",
-                "ico": "url('img/twenty_one_pilots.jpg')"
-            },
-            {
-                "url": "audio/Dubstep~Skrillex™/Knife Party VS Skrillex.mp3",
-                "name": "Knife Party VS Skrillex",
-                "ico": "url('img/Knife Party VS Skrillex.jpg')"
-            },
-            {
-                "url": "audio/Dubstep~Skrillex™/KUURO - Slap!.mp3",
-                "name": "KUURO - Slap!",
-                "ico": "url('img/KUURO - Slap!.jpg')"
-            }
+        var vol = document.getElementsByClassName('vol')[0];
+        vol.innerHTML = audio.volume * 100 + '%';
 
-        ]
-
-            // {
-            //     "url": "audio/",
-            //     "name": "",
-            //     "ico": "url('')"
-            // },
 
 
         function togglePlayPause() {
@@ -175,6 +133,38 @@
         styleXXX.backgroundImage = ray12[number_audio].ico;
 
 
+        // УПРАВЛЕНИЕ С КЛАВИАТУРЫ
+        document.onkeypress = function(event) {
+            console.log(event);
+            // Если нажата 'a' или 'A' то,
+            if (event.code == 'KeyA'){back()}; // И выполнить инструкцию 'back'
+            // Если нажата 'd' или 'D' то,
+            if (event.code == 'KeyD'){next()};  // И выполнить инструкцию 'next'
+
+            if (event.code == 'KeyW'){togglePlayPause()};
+            if (event.code == 'KeyQ'){
+                audio.volume -= 0.1;
+                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
+            };
+            if (event.code == 'KeyE'){
+                audio.volume += 0.1;
+                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
+            };
+        };
+        
+        document.onkeydown = function(event) {
+            console.log(event);
+            if (event.code == 'ArrowDown'){
+                audio.volume -= 0.1;
+                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
+            };
+            if (event.code == 'ArrowUp') {
+                audio.volume += 0.1;
+                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
+            };
+            if (event.code == 'ArrowLeft') {back()};
+            if (event.code == 'ArrowRight'){next()};
+        };
 
         // включить следующий трек
         function next(){
@@ -203,6 +193,7 @@
             };
             };
         };
+
 
         // включить предыдущий трек
         function back(){
