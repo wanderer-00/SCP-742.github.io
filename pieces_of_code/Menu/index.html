@@ -5,9 +5,10 @@
     <title>Menu</title>
     <link rel="stylesheet" href="css/style.css">
     
-    <!--  https://jqueryui.com/draggable/  -->
+    <!-- https://jqueryui.com/draggable/  -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Передаем класс перетаскиваемого объекта -->
     <script>
     $( function() {
     $(".navigator").draggable();
@@ -16,6 +17,47 @@
     
 </head>
 <body>
+    <!-- source --> 
+    <div class="navigator">
+        <div class="toggle"></div>
+        <ul>
+            <!-- 1 -->
+            <li>
+                <a href="#">
+                    <img class="icon" src="../../img/web/vk.png">
+                    <span class='title'>Home</span>
+                </a>
+            </li>
+            <!-- 2 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home1</span>
+                </a>
+            </li>
+            <!-- 3 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home2</span>
+                </a>
+            </li>
+            <!-- 4 -->
+            <li>
+                <a href="#">
+                    <span class='icon'>#</span>
+                    <span class='title'>Home2</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+​    <!-- Google Drive -->
     <div class="navigator">
         <div class="toggle"></div>
         <ul>
@@ -51,8 +93,10 @@
         </ul>
     </div>
     
+    
     <a class='Author' href="https://www.youtube.com/watch?v=sI2Oe7EkKMI">Author: https://www.youtube.com/watch?v=sI2Oe7EkKMI</a>
     
+    <!-- Механика сворачивания / разворачиваания заметки -->
     <script>
         // передача элемента 'navigator' константе
         const navigator = document.querySelector('.navigator');
