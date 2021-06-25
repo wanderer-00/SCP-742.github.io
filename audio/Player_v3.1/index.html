@@ -42,9 +42,12 @@
 
         <div class="coverImage"></div>
         <div class="search"></div>
-        <div class="bodyPlayer"></div>
-
+        <div class="bodyPlayer">
+        </div>
+        
+        <div class="scroll">
         <table class="list"></table>
+        </div>
 
         <div class="shadow"></div>
 
@@ -218,6 +221,32 @@
             };
             };
         };
+        
+        
+        
+        // СПИСОК ПЕСЕН - SCROLL BAR
+    n=0;
+    let sun =
+            `<tr class="song">
+                <td class="nr">
+                    <h5 class="number">${n}</h5>
+                </td>
+                <td class="title">
+                    <h6 style="color: #ff564c;">${ray12[n].name}</h6>
+                </td>
+                <td class="length">
+                    <h5>2:49</h5>
+                </td>
+                <td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td>
+            </tr>`;
+    
+    var list = document.getElementsByClassName('list');
+    
+    for (i=0; i < 10; i++) {
+//        list[0].innerHTML += sun;
+//        list[0].innerHTML += `<img style='width: 100px;' src="img/0.jpg">`;
+        list[0].innerHTML += `<tr class="song"><td class="nr"><h5 class="number">${i}</h5></td><td class="title"><h6 style="color: #ff564c;">${ray12[i].name}</h6></td><td class="length"><h5>2:49</h5></td><td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td></tr>`;
+    };
     </script>
 
     <!-- ССЫЛКИ НА АВТОРА -->

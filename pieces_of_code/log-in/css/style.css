@@ -1,0 +1,125 @@
+/* к документу */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* к видимой части документа */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #154367;
+    overflow: hidden;
+}
+/* + */
+.navigator{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    /*    ?    */
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+    
+    z-index: 10;
+    border-radius: 4px;
+    overflow: hidden;
+}
+/* + в активном состоянии */
+.navigator.active{
+    width: 250px;
+    height: 350px;
+    /*    ?    */
+    transition: width 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+.navigator .toggle{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    /*  положение крестика  */
+    justify-content: flex-end;
+    /*    ?    */
+    align-items: center;
+    
+    background: #ff4081;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.navigator .toggle.active{
+    background: #2196f3;
+}
+.navigator .toggle::before{
+    /*  ?  */
+    content: '+';
+    position: absolute;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.navigator .toggle.active::before{
+    transform: rotate(315deg);
+}
+.navigator ul{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.navigator ul li{
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+.navigator ul li:hover{
+    background: #03a9f4;
+}
+.navigator ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #154367;
+}
+.navigator ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.navigator ul li a .icon .fa{
+    font-size: 24px;
+    color: #154367;
+}
+.navigator ul li a .title {
+    position: relative;
+    display: block;
+    line-height: 50px;
+    text-align: start;
+    white-space: nowrap;
+}
+.navigator ul li:hover a .icon .fa,
+.navigator ul li:hover a .title{
+    color: #fff;
+}
+
+.Author{
+    position: absolute;
+    bottom: 10px;
+    color: gray;
+}

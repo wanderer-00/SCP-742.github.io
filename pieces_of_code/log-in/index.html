@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--  https://jqueryui.com/draggable/  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $(".navigator").draggable();
+    } );
+        
+    const ul_ = document.getElementsByClassName('toggle');
+
+    ul[0].innerHTML = `<li><a href='#'><span class='icon'>111</span><span class='title'>222</span></a></li>` * 2;
+    </script>
+    
+</head>
+<body>
+    <div class="navigator">
+        <div class="toggle"></div>
+        <ul>
+            <!-- 1 -->
+            <li>
+                <a href="#">
+                    <span class='icon'></span>
+                    <span class='title'></span>
+                </a>
+            </li>
+            <!-- 2 -->
+            <li>
+                <a href="#">
+                    <span class='icon'></span>
+                    <span class='title'></span>
+                </a>
+            </li>
+            <!-- 3 -->
+            <li>
+                <a href="#">
+                    <span class='icon'></span>
+                    <span class='title'></span>
+                </a>
+            </li>
+            <!-- 4 -->
+            <li>
+                <a href="#">
+                    <span class='icon'></span>
+                    <span class='title'></span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <a class='Author' href="https://www.youtube.com/watch?v=sI2Oe7EkKMI">Author: https://www.youtube.com/watch?v=sI2Oe7EkKMI</a>
+    
+    <script>
+        // передача элемента 'navigator' константе
+        const navigator = document.querySelector('.navigator');
+        
+        // при даблклике
+        document.querySelector('.toggle').ondblclick = function(){
+            // добавляет к классу 'toggle' класс 'active'
+            this.classList.toggle('active');
+            // добавляет к классу 'navigator' класс 'active'
+            navigator.classList.toggle('active');
+            // класс 'active' трансформирует меню 'navigator' путём изменения его размеров, добавления новых элементов, изменение старых
+        }
+        
+        
+        // НУМЕРАЦИЯ ЭЛЕМЕНТОВ СПИСКА
+        const number = document.getElementsByClassName('icon');
+        n = 1;
+        for (i = 0; i < number.length; i++) { number[i].innerHTML=n; n++ }
+        
+        
+        
+        
+        let ray1 = [
+            '1',
+            '2',
+            '3',
+            '4',
+        ];
+        
+        const title = document.getElementsByClassName('title');
+        m = 0;
+        for (i = 0; i < title.length; i++) { title[i].innerHTML= ray1[m] + '-ый пункт'; m++ }
+    </script>
+    
+</body>
+</html>

@@ -5,6 +5,13 @@
     --colorA: #ff564c;
     --colorP: #6d6d6d;
 }
+
+/* SCROLL BAR */
+::-webkit-scrollbar {width: 8px}
+::-webkit-scrollbar-track {background: #18191d}
+::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb:hover {background: #474e54}
+
 body {
     font-family: 'Open sans', sans-serif;
     background: orange;
@@ -216,13 +223,29 @@ label.main:hover:before {
     transition: all 0.3s ease-in;
 }
 
+/*
+.scroll{
+    overflow: scroll;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 366px;
+    width: 100%;
+}
+*/
+
 .list {
+    overflow: scroll;
+    
     border-spacing: 0px 2px;
     width: 342px;
     visibility: hidden;
     opacity: 0;
     position: absolute;
     top: 378px;
+    top: 0;
     left: 12px;
     transform-origin: 0% 0%;
     transform: scale(0.1, 0.1);
@@ -244,27 +267,16 @@ label.main:hover:before {
 
 .title {
     color: white;
-    width: 215px;
+    max-width: 215px;
     text-align: left;
     text-indent: 15px;
     transition: all 0.11s ease-in;
-}
-
-
-#titleZ{
-    width: 215px;
-    background-color:;/* frm */
-    white-space: nowrap;
-    /* Запрещаем перенос строк */
     overflow: hidden;
-    /* Обрезаем все, что не помещается в область */
+    white-space: nowrap;
 }
-
-
 
 .list tr:hover .title {
     padding-left: 5px;
-    width: 210px;
     transition: all 011s ease-in;
 }
 

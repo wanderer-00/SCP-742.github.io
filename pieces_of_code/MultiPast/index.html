@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        .box{
+            display: inline-flex;
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+    2112
+    </div>
+</body>
+<script>
+    let ray = ['COUB.png', '2', '3', '4'];
+
+    let sun = `<img src='${ray[0]}'>`;
+    
+    var box = document.getElementsByClassName('box');
+    
+    for (i=0; i < 6; i++) {
+        box[0].innerHTML += sun;
+    };
+    
+
+    
+    
+    
+
+</script>
+</html>
