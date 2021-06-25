@@ -72,7 +72,10 @@ a {
     border-bottom: 0;
     background-color: rgba(32, 32, 32, 0.8);
 }
-
+.name{
+    color: white;
+    font-size: 56px;
+}
 #box_ico {
     float: left;
     padding: 20px 10px 20px 0;
@@ -217,7 +220,6 @@ a {
     }
     
     .name{
-        color: white;
         font-size: 28px;
     }
 
