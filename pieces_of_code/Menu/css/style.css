@@ -29,6 +29,9 @@ body{
     border-radius: 4px;
     overflow: hidden;
 }
+.n1{
+    background: url("../../../img/web/vk.png");
+}
 /* + в активном состоянии */
 .navigator.active{
     width: 250px;
@@ -101,6 +104,8 @@ body{
     height: 50px;
     text-align: center;
     line-height: 50px;
+    padding: 4px;
+    border-radius: 8px;
 }
 .navigator ul li a .icon .fa{
     font-size: 24px;
