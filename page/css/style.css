@@ -128,8 +128,8 @@ a {
     opacity: 1;
 }
 
-#claster {
-    border: 2px solid #7e7d7d;
+#cluster {
+    border: 2px solid var(--gray);
     position: relative;
     text-align: center;
     padding-top: 30px;
@@ -167,11 +167,8 @@ a {
     display: flex;
     flex-flow: row wrap;
 }
-#block_op video{
-    
-}
 
-#opening {
+#block_op div{
     color: var(--gray);
     margin: 10px 0 0 0;
     padding: 10px;
@@ -184,41 +181,27 @@ a {
 
 .opening {
     width: 100%;
-    margin: 0 0 100px 0;
-    border-top: 2px solid #7e7d7d;
-    border-bottom: 2px solid #7e7d7d;
+    margin: 0 0 20px 0;
+    border-top: 2px solid var(--gray);
+    border-bottom: 2px solid var(--gray);
 }
 
 
 @media screen and (max-width: 680px){
     /* HEADER */
     #header {
-        width: 100%;
-        height: 60px !important;
-        box-shadow: 0px 5px 25px 0px black;
-        /*box-shadow: [x] [y] [плотность] [размытие] [цвет]; */
-        background: rgba(21, 21, 21, 0.2);
-        align-items: center;
-        /*выравнивает[y]: center, top, bottom */
-        border-bottom: 1px solid #343434;
+        height: 60px;
         margin-bottom: 40px;
     }
 
     #search {
         width: 56px;
-        float: right;
-        border: 2px solid #7e7d7d;
+        border: 2px solid var(--gray);
         margin: 3px;
-        padding: 10px;
         border-radius: 6px;
         background: url(../../img/search.png) 4px 4px / 80% no-repeat;
     }
 
-
-    h1{
-        font-size: 40px;
-    }
-    
     .name{
         font-size: 28px;
     }
@@ -245,7 +228,6 @@ a {
     }
 
 
-
     #info {
         font-size: 1em;
     }
@@ -265,26 +247,92 @@ a {
         border-radius: 12px;
     }
 
-    #block_op {
-        display: flex;
-        flex-flow: row wrap;
-    }
 
-    #opening {
-        color: var(--gray);
-        margin: 10px 0 0 0;
-        padding: 10px;
+    #block_op div{
         font-size: 20px;
-        border-top: 2px solid #7e7d7d;
-        flex-basis: auto;
-        border-right: 2px solid #7e7d7d;
-        border-radius: 0 25px 0 0;
+        border-radius: 0 16px 0 0;
+    }
+}
+
+@media (orientation: landscape){
+    .wrapper{
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+    }
+    /* HEADER */
+    #header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
     }
 
-    .opening {
+    #search {
+        width: 56px;
+        border: 2px solid var(--gray);
+        margin: 3px;
+        border-radius: 6px;
+        background: url(../../img/search.png) 4px 4px / 80% no-repeat;
+    }
+    #cluster {
         width: 100%;
-        margin: 0 0 100px 0;
-        border-top: 2px solid #7e7d7d;
-        border-bottom: 2px solid #7e7d7d;
+        margin: auto;
+        position: relative;
+        text-align: left;
+        border-radius: 25px 0px 0 0;
+        background-color: rgba(32, 32, 32, 1);
+    }
+    .name{
+        font-size: 28px;
+    }
+
+    /* ССЫЛКИ НА СОЦ СЕТИ */
+
+    #box_ico {
+        padding: 10px 5px 10px 0;
+    }
+
+    #box_ico:first-child {
+        padding: 10px 5px 10px 10px;
+    }
+
+    #ico {
+        height: 50px;
+    }
+
+
+
+    /* ОСНОВНОЙ КОНТЕЙНЕР */
+    #touch img {
+        width: 300px;
+        display: inline;
+    }
+
+
+    #info {
+        font-size: 1em;
+        display: inline
+    }
+
+    #p720 {
+        border-radius: 3px;
+        padding: 2px;
+    }
+
+    /* ПРИМЕЧАНИЯ */
+    #center {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #screenShot {
+        border-radius: 12px;
+    }
+
+
+    #block_op div{
+        font-size: 20px;
+        border-radius: 0 16px 0 0;
     }
 }
