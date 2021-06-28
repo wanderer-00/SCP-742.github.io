@@ -70,7 +70,7 @@
             <td><input type="checkbox" id="backward"><label for="backward" class="backward" onclick="back()"></label></td>
             <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"><label for="play" class="play"></label></td>
             <td><input type="checkbox" id="forward"><label for="forward" class="forward" onclick="next()"></label></td>
-            <font class='vol' style='color:#FFF;position: absolute;top: 410px'>0.0</font>
+            <input type="range" class='vol'>
         </table>
 
         <table class="footer">
@@ -84,6 +84,7 @@
             <h2>Demons</h2>
         </div>
     </section>
+
 
     <script>
         var audio = document.getElementById('audio');
