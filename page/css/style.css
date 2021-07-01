@@ -1,9 +1,25 @@
+:root{
+    --gray: #7E7D7D;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font-family: sans-serif;  
+}
+
+
+/* SCROLL BAR */
+::-webkit-scrollbar {width: 8px}
+::-webkit-scrollbar-track {background: #18191d}
+::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb:hover {background: #474e54}
+
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background: #343434;
-    font-family: sans-serif;
 }
 
 a {
@@ -24,16 +40,18 @@ a {
     margin-bottom: 150px;
 }
 
+#header img{height: 100%}
+
 #search {
-    width: 85px;
+    height: 90%;
+    width: 108px;
     float: right;
-    border: 3px solid #7e7d7d;
-    margin: 5px;
-    padding: 10px;
+    border: 3px solid var(--gray);
+    margin: 6px;
+    padding: 10px 0;
     display: flex;
-    align-items: center;
     border-radius: 10px;
-    justify-content: center;
+    background: url(../../img/search.png) 10px 10px / 80% no-repeat;
 }
 
 
@@ -54,7 +72,10 @@ a {
     border-bottom: 0;
     background-color: rgba(32, 32, 32, 0.8);
 }
-
+.name{
+    color: white;
+    font-size: 56px;
+}
 #box_ico {
     float: left;
     padding: 20px 10px 20px 0;
@@ -107,8 +128,8 @@ a {
     opacity: 1;
 }
 
-#claster {
-    border: 2px solid #7e7d7d;
+#cluster {
+    border: 2px solid var(--gray);
     position: relative;
     text-align: center;
     padding-top: 30px;
@@ -117,14 +138,14 @@ a {
 }
 
 #info {
-    color: #7e7d7d;
+    color: var(--gray);
     margin: 4%;
     font-size: 2em;
     text-align: left;
 }
 
 #p720 {
-    background-color: #7e7d7d;
+    background-color: var(--gray);
     border-radius: 5px;
     align-items: center;
     font-size: 0.8em;
@@ -147,8 +168,8 @@ a {
     flex-flow: row wrap;
 }
 
-#opening {
-    color: #7e7d7d;
+#block_op div{
+    color: var(--gray);
     margin: 10px 0 0 0;
     padding: 10px;
     font-size: 40px;
@@ -160,7 +181,158 @@ a {
 
 .opening {
     width: 100%;
-    margin: 0 0 100px 0;
-    border-top: 2px solid #7e7d7d;
-    border-bottom: 2px solid #7e7d7d;
+    margin: 0 0 20px 0;
+    border-top: 2px solid var(--gray);
+    border-bottom: 2px solid var(--gray);
+}
+
+
+@media screen and (max-width: 680px){
+    /* HEADER */
+    #header {
+        height: 60px;
+        margin-bottom: 40px;
+    }
+
+    #search {
+        width: 56px;
+        border: 2px solid var(--gray);
+        margin: 3px;
+        border-radius: 6px;
+        background: url(../../img/search.png) 4px 4px / 80% no-repeat;
+    }
+
+    .name{
+        font-size: 28px;
+    }
+
+    /* ССЫЛКИ НА СОЦ СЕТИ */
+
+    #box_ico {
+        padding: 10px 5px 10px 0;
+    }
+
+    #box_ico:first-child {
+        padding: 10px 5px 10px 10px;
+    }
+
+    #ico {
+        height: 50px;
+    }
+
+
+
+    /* ОСНОВНОЙ КОНТЕЙНЕР */
+    #touch img {
+        width: 300px;
+    }
+
+
+    #info {
+        font-size: 1em;
+    }
+
+    #p720 {
+        border-radius: 3px;
+        padding: 2px;
+    }
+
+    /* ПРИМЕЧАНИЯ */
+    #center {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #screenShot {
+        border-radius: 12px;
+    }
+
+
+    #block_op div{
+        font-size: 20px;
+        border-radius: 0 16px 0 0;
+    }
+}
+
+@media (orientation: landscape){
+    .wrapper{
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+    }
+    /* HEADER */
+    #header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
+    }
+
+    #search {
+        width: 56px;
+        border: 2px solid var(--gray);
+        margin: 3px;
+        border-radius: 6px;
+        background: url(../../img/search.png) 4px 4px / 80% no-repeat;
+    }
+    #cluster {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        text-align: left;
+        border-radius: 25px 0px 0 0;
+        background-color: rgba(32, 32, 32, 1);
+    }
+    .name{
+        font-size: 28px;
+    }
+
+    /* ССЫЛКИ НА СОЦ СЕТИ */
+
+    #box_ico {
+        padding: 10px 5px 10px 0;
+    }
+
+    #box_ico:first-child {
+        padding: 10px 5px 10px 10px;
+    }
+
+    #ico {
+        height: 50px;
+    }
+
+
+
+    /* ОСНОВНОЙ КОНТЕЙНЕР */
+    #touch img {
+        width: 300px;
+        display: inline;
+    }
+
+
+    #info {
+        font-size: 1em;
+        display: inline
+    }
+
+    #p720 {
+        border-radius: 3px;
+        padding: 2px;
+    }
+
+    /* ПРИМЕЧАНИЯ */
+    #center {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #screenShot {
+        border-radius: 12px;
+    }
+
+
+    #block_op div{
+        font-size: 20px;
+        border-radius: 0 16px 0 0;
+    }
 }
