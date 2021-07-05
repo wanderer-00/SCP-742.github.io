@@ -130,7 +130,6 @@
             {Repeat--;styleRepeat.color="var(--colorP)";audio.loop=false;}
         };
 
-
         // Начальные значения
         audio.src = ray12[number_audio].url;
         name_audio.innerHTML = ray12[number_audio].name;
@@ -155,7 +154,7 @@
                 vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
             };
         };
-        
+
         document.onkeydown = function(event) {
             console.log(event);
             if (event.code == 'ArrowDown'){
@@ -222,9 +221,9 @@
             };
             };
         };
-        
-        
-        
+
+
+
         // СПИСОК ПЕСЕН - SCROLL BAR
     n=0;
     let sun =
@@ -240,9 +239,9 @@
                 </td>
                 <td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td>
             </tr>`;
-    
+
     var list = document.getElementsByClassName('list');
-    
+
     for (i=0; i < 10; i++) {
 //        list[0].innerHTML += sun;
 //        list[0].innerHTML += `<img style='width: 100px;' src="img/0.jpg">`;
