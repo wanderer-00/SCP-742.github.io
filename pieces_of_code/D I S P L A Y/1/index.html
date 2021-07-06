@@ -11,7 +11,9 @@
         :root{
             --base: #FFF;
             --fon: #343434;
-            --color: #04494D;
+/*            --color: #04494D;*/
+            --color: #625EEC;
+            --color: #34CCCC;
         }
         
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
@@ -35,6 +37,18 @@
             /*box-shadow: 0 0 10px red;*/
             box-shadow: 10px 0 0 var(--color);
             padding: 20px 0 20px 10px;
+            
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;           /* Non-prefixed version, currently
+                                          not supported by any browser */
+        }
+        
+        p::selection{
+            background: pink
         }
         
         .navigation lu li {
@@ -74,6 +88,10 @@
         li:hover{
             background: var(--color);
         }
+        
+        
+        
+
     </style>
     
 </head>
@@ -82,7 +100,7 @@
         <lu>
 
             <li class="list active">
-                <a href="#">
+                <a href="">
                     <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                     </span>
@@ -145,7 +163,9 @@
             </li>
 
         </lu>
+        
     </div>
+    
 </body>
     
     <script>
