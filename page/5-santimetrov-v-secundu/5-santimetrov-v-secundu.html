@@ -6,6 +6,12 @@
     <meta name="" content="text/html" charset="UTF-8">
     <link rel="shortcut icon" href='../../favicon.png' type="image/png">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *{border: 1px solid pink;}
+        #touch{
+            display: inline-grid;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,16 +39,18 @@
         <div id='touch'>
 
             <!-- НАЗВАНИЕ -->
-            <font class='name'>5 сантиметров в секунду</font><br>
+            <font class='name grid-item'>5 сантиметров в секунду</font><br>
 
             <!-- ОБЛОЖКА -->
-            <img src="../../img/anime/5-santimetrov-v-secundu.jpg" />
+            <div class="icon grid-item">
+                <img src="../../img/anime/5-santimetrov-v-secundu.jpg" />
+            </div>
 
             <!-- ОПИСАНИЕ -->
-            <p id='info'>Такаки и его подруга Акари мечтали после окончания начальной школы поступить вместе в одну среднюю школу. Но, из-за переезда родителей, этим планам не суждено было сбыться. Расстояние в десятки километров — гигантское для ребенка и совсем небольшое — для взрослого… но умение преодолевать расстояния не всегда помогает преодолеть растущую пропасть между людьми.</p>
+            <div class='info grid-item'>Такаки и его подруга Акари мечтали после окончания начальной школы поступить вместе в одну среднюю школу. Но, из-за переезда родителей, этим планам не суждено было сбыться. Расстояние в десятки километров — гигантское для ребенка и совсем небольшое — для взрослого… но умение преодолевать расстояния не всегда помогает преодолеть растущую пропасть между людьми.</div>
 
             <!-- ПРИМЕЧАНИЯ -->
-            <div id='center'>
+            <div class='log grid-item'>
                 <font color="#D50000">Добавлен трейлер на русском языке</font><br>
                 <font color="#AEEA00">HTML [ 84 line ]</font><br>
                 <font color="#FFC400">CSS [ общий ]</font>
@@ -50,7 +58,7 @@
 
             <!-- ИНФО -->
             <div>
-                <p id='info'>
+                <p class='info'>
                     <b>Год: </b>2007<br>
                     <b>Релиз: </b><font color="orange">3/ 3/ 2007</font><br>
                     <b>Источник: </b>оригинал<br>

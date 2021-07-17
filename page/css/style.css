@@ -72,10 +72,6 @@ a {
     border-bottom: 0;
     background-color: rgba(32, 32, 32, 0.8);
 }
-.name{
-    color: white;
-    font-size: 56px;
-}
 #box_ico {
     float: left;
     padding: 20px 10px 20px 0;
@@ -88,6 +84,17 @@ a {
 
 #ico {
     height: 90px;
+}
+
+.name{
+    grid-area: name;
+    text-align: center;
+    color: white;
+    font-size: 56px;
+}
+.icon{
+    grid-area: icon;
+    text-align: center;
 }
 
 
@@ -129,6 +136,12 @@ a {
 }
 
 #cluster {
+    display: inline-grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: "name name"
+                         "ico info";
+    
     border: 2px solid var(--gray);
     position: relative;
     text-align: center;
@@ -137,7 +150,8 @@ a {
     background-color: rgba(32, 32, 32, 1);
 }
 
-#info {
+.info {
+    grid-area: info;
     color: var(--gray);
     margin: 4%;
     font-size: 2em;
@@ -228,7 +242,7 @@ a {
     }
 
 
-    #info {
+    .info {
         font-size: 1em;
     }
 
@@ -256,8 +270,7 @@ a {
 
 @media (orientation: landscape){
     .wrapper{
-        width: 80%;
-        margin: auto;
+        width: 100%;
         padding-top: 100px;
     }
     /* HEADER */
@@ -285,6 +298,7 @@ a {
     }
     .name{
         font-size: 28px;
+        
     }
 
     /* ССЫЛКИ НА СОЦ СЕТИ */
@@ -310,7 +324,7 @@ a {
     }
 
 
-    #info {
+    .info {
         font-size: 1em;
         display: inline
     }
@@ -321,7 +335,7 @@ a {
     }
 
     /* ПРИМЕЧАНИЯ */
-    #center {
+    .log {
         text-align: center;
         font-size: 1em;
     }
