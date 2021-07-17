@@ -1,0 +1,13 @@
+*
+{
+    color: antiquewhite;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body
+{
+    padding: 10px;
+    background-color: #2D2D2D;
+}

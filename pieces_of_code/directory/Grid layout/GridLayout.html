@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="standart.css">
+    
+    <style>
+        .box{
+            background: gray;
+            padding: 6px;
+            margin: 10px 0;
+        }
+        .grid{
+            display: grid;
+        }
+        .inlayn-grid
+        {
+            display: inline-grid;
+        }
+        
+        .grid_item
+        {
+            text-align: center;
+            border: 2px dashed gray;
+            padding: 10px;
+        }
+        
+        .grid_cluster
+        {
+            grid-auto-columns: ; /* % | px | fr | repeat([кол-во_эл, размер]) | fit-content() [ограничитель] | minmax(мин_знач, макс_знач) */
+            grid-auto-rows: ;
+        }
+        
+        .repeat
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* % | px | fr | repeat([кол-во_эл, размер]) | fit-content() [ограничитель] | minmax(мин_знач, макс_знач) */
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Grid layout</h1>
+    <p>Grid layout - Область сетки</p>
+    
+    <div class="grid box">display: grid;</div>
+    
+    <div class="grid_cluster grid">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">8</div>
+    </div>
+    
+    <div class="inlayn-grid box">display: inlayn-grid;</div><br>
+    
+    <div class="grid_cluster inlayn-grid">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">8</div>
+    </div>
+    
+<pre class="box">display: grid;
+grid-auto-columns: repeat(3, 1fr);
+</pre>
+    
+    <div class="repeat">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">8</div>
+    </div>
+    
+</body>
+</html>
