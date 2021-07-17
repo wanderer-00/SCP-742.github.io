@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5 Сантиметров в секунду</title>
+    <meta name="" content="text/html" charset="UTF-8">
+    <link rel="shortcut icon" href='../../favicon.png' type="image/png">
+    
+    <style>
+        :root {
+            --gray: #7E7D7D;
+            --dark_Grey: #2D2D2D;
+            --light_Grey: #343434;
+        }
+        
+        /* SCROLL BAR */
+        ::-webkit-scrollbar {width: 8px}
+        ::-webkit-scrollbar-track {background: #18191d}
+        ::-webkit-scrollbar-thumb {background: #3b4146}
+        ::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+        *,
+        *:after,
+        *:before 
+        {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        a {
+            color: #CC93CC;
+            text-decoration: none;
+        }
+
+        body
+        {
+            color: #FFF;
+            min-height: 100vh;
+            background-color: var(--light_Grey);
+        }
+
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+        }
+
+        header
+        {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 100px;
+            box-shadow: 0px 1px 25px 0px black;
+            background: rgba(21, 21, 21, 0.2);
+            align-items: center;
+    /*выравнивает[y]: center, top, bottom */
+    border-bottom: 1px solid #343434;
+        }
+        header img{
+            height: 90%;
+        }
+        
+        .grid
+        {
+            border: 2px solid var(--gray);
+            border-radius: 25px 0px 0 0;
+            width: 100%;
+            display: grid;
+            background: #202020;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas: "image name"
+                                 "image info"
+                                 "image logs"
+                                 "image tags"
+                                 "scr opening";
+        }
+
+        .box:first-child {margin: 10px;}
+
+        .box
+        {
+            background-color: var(--light_Grey);
+            display: inline-grid;
+            width: 40px;
+            height: 40px;
+            margin: 10px 10px 10px 0;
+        }
+        
+        header .box:last-child, footer .box:last-child
+        {
+            position: absolute;
+            right: 0;
+        }
+        
+        .grid-item:first-child { margin: 10px }
+
+        .grid-item
+        {
+            margin: 0px 10px 10px 10px;
+            text-align: center;
+        }
+        
+        .name
+        {
+            grid-area: name;
+            font-size: 28px;
+        }
+
+        .icon
+        {
+            grid-area: image;
+            padding: 10px;
+            height: 500px
+        }
+        .ico
+        {
+            height: 100%;
+            border-radius: 8px;
+        }
+
+/*
+        .mico
+        {
+            width: 300px;
+            height: 400px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: var(--dark_Grey);
+        }
+*/
+        .info { grid-area: info }
+        .info, .tags { text-align: left; color: var(--gray)}
+        .logs { grid-area: logs }
+        
+        .screen-shot { grid-area: scr ; text-align: center}
+        .scr
+        {
+            display: inline-block;
+            width: 90%;
+            margin: 10px 0 0 0;
+            border-radius: 10px;
+            background-color: var(--dark_Grey);
+        }
+        
+        
+        .opening { grid-area: opening }
+        .video
+        {
+            width: 100%
+        }
+
+        footer
+        {
+            margin-top: 40px;
+            background: var(--dark_Grey);
+        }
+        
+        /* АНИМАЦИЯ КАРТИНОК */
+        .grid img {
+            position: relative;
+            -webkit-transform: scale(0.96);
+            -moz-transform: scale(0.96);
+            -o-transform: scale(0.96);
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            opacity: 0.8;
+        }
+
+        .grid img:hover {
+            -webkit-transform: scale(1.0);
+            -moz-transform: scale(1.0);
+            -o-transform: scale(1.0);
+            box-shadow: 0px 0px 30px gray;
+            -webkit-box-shadow: 0px 0px 30px gray;
+            -moz-box-shadow: 0px 0px 30px gray;
+            opacity: 1;
+        }
+        
+        @media (orientation: portrait)
+        {
+            .grid
+            {
+                grid-template-columns: 1fr !important;
+                grid-template-areas:'name'
+                                    'image'
+                                    'info'
+                                    'logs'
+                                    'tags'
+                                    'scr'
+                                    'opening' !important;
+            }
+            .scr
+            {
+                width: 45%;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+    <!-- HEADER -->
+        <header>
+            <img src="../../img/logo.png">
+            <img src="../../img/name.png">
+            <div class="box"></div>
+        </header>
+
+        <div class="grid">
+            <div class="grid-item name">5 сантиметров в секунду</div>
+            <div class="grid-item icon">
+                <!--<div class='mico'></div>-->
+                <img class="ico" src="../../img/anime/5-santimetrov-v-secundu.jpg" alt="камни очень старые...">
+            </div>
+            
+            <!-- ОПИСАНИЕ -->
+            <div class="grid-item info">Такаки и его подруга Акари мечтали после окончания начальной школы поступить вместе в одну среднюю школу. Но, из-за переезда родителей, этим планам не суждено было сбыться. Расстояние в десятки километров — гигантское для ребенка и совсем небольшое — для взрослого… но умение преодолевать расстояния не всегда помогает преодолеть растущую пропасть между людьми.</div>
+
+            <!-- ПРИМЕЧАНИЯ -->
+            <div class='grid-item logs'>
+                <font color="#D50000">Добавлен трейлер на русском языке</font><br>
+                <font color="#AEEA00">HTML [ 84 line ]</font><br>
+                <font color="#FFC400">CSS [ общий ]</font>
+            </div>
+            
+            <!-- ИНФО -->
+            <div class="grid-item tags">
+                <p class='info'>
+                    <b>Год: </b>2007<br>
+                    <b>Релиз: </b><font color="orange">3/ 3/ 2007</font><br>
+                    <b>Источник: </b>оригинал<br>
+                    <b>Жанры: </b>драма, романтика<br>
+                    <b>Качество: </b><font id='p720'>720p</font><br>
+                    <b>Перевод: </b><font color="red">да</font><br>
+                    <b>Возрастной рейтинг: </b>PG-13 (от 13 лет)<br>
+                    <b>Тип: </b>Полнометражный фильм<br>
+                    <b>Продолжительность: </b>1ч 3мин<br>
+                    <b>Оригинальное название: </b>秒速５センチメートル<br>
+                    <br>
+                    <b>Режиссёр: </b>Синкай Макото<br>
+                    <b>Студия: </b><a href="https://shikimori.one/animes/studio/291-CoMix-Wave-Films">CoMix Wave Films</a><br>
+                </p>
+            </div>
+
+           
+            <!-- СКРИНЫ -->
+            <div class="grid-item screen-shot">
+                <img class='scr' src="img/1.jpg">
+                <img class='scr' src="img/2.jpg">
+<!--
+                <div class="scr"></div>
+                <div class="scr"></div>
+-->
+            </div>
+            
+    
+            <div class="grid-item opening">
+                <video class='video' controls poster="img/poster.jpg">
+                    <source src="../5-santimetrov-v-secundu/video/5-santimetrov-v-secundu.mp4">
+                </video>
+<!--                <div class="video"></div>-->
+            </div>
+        </div>
+
+        <footer>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </footer>
+    </div>
+</body>
+</html>

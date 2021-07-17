@@ -87,13 +87,11 @@ a {
 }
 
 .name{
-    grid-area: name;
     text-align: center;
     color: white;
     font-size: 56px;
 }
 .icon{
-    grid-area: icon;
     text-align: center;
 }
 
@@ -136,12 +134,6 @@ a {
 }
 
 #cluster {
-    display: inline-grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    grid-template-areas: "name name"
-                         "ico info";
-    
     border: 2px solid var(--gray);
     position: relative;
     text-align: center;
@@ -151,7 +143,6 @@ a {
 }
 
 .info {
-    grid-area: info;
     color: var(--gray);
     margin: 4%;
     font-size: 2em;
