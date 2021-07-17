@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    
+    <style>
+        :root {
+            --dark_Grey: #2D2D2D;
+            --light_Grey: #343434;
+        }
+        
+        /* SCROLL BAR */
+        ::-webkit-scrollbar {width: 8px}
+        ::-webkit-scrollbar-track {background: #18191d}
+        ::-webkit-scrollbar-thumb {background: #3b4146}
+        ::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+        *
+        {
+            color: white;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body
+        {
+            min-height: 100vh;
+            background-color: var(--light_Grey);
+        }
+
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+        }
+
+        header
+        {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 40px;
+            background: var(--dark_Grey);
+        }
+        
+        .grid
+        {
+            display: grid;
+
+            grid-template-rows: ;
+            width: 100%;
+            background: var(--dark_Grey);
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas: "name name"
+                                 "image info"
+                                 "image tags"
+                                 "logs logs"
+                                 "scr scr"
+                                 "opening opening";
+        }
+
+        .box:first-child {margin: 10px;}
+
+        .box
+        {
+            background-color: var(--light_Grey);
+            display: inline-grid;
+            width: 40px;
+            height: 40px;
+            margin: 10px 10px 10px 0;
+        }
+        
+        header .box:last-child
+        {
+            position: absolute;
+            right: 0;
+        }
+        
+        .grid-item:first-child { margin: 10px }
+
+        .grid-item
+        {
+            background-color: var(--light_Grey);
+            margin: 0px 10px 10px 10px;
+            text-align: center;
+        }
+        
+        .name
+        {
+            grid-area: name;
+            font-size: 28px;
+        }
+
+        .icon
+        {
+            grid-area: image;
+            padding: 10px;
+        }
+        
+        .screen-shot { grid-area: scr }
+        .mico
+        {
+            width: 300px;
+            height: 400px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: var(--dark_Grey);
+        }
+        .info { grid-area: info }
+        .info, .tags { text-align: left }
+        .logs { grid-area: logs }
+        .scr
+        {
+            display: inline-block;
+            width: 200px;
+            height: 120px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: var(--dark_Grey);
+        }
+        
+        
+        .opening { grid-area: opening }
+        .video
+        {
+            width: 100%;
+            height: 300px;
+        }
+
+        footer
+        {
+            margin-top: 40px;
+            background: var(--dark_Grey);
+        }
+        
+        
+        @media (orientation: portrait)
+        {
+            .grid
+            {
+                grid-template-columns: 1fr !important;
+                grid-template-areas:'name'
+                                    'image'
+                                    'info'
+                                    'logs'
+                                    'tags'
+                                    'scr'
+                                    'opening';
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </header>
+
+        <div class="grid">
+            <div class="grid-item name">Name anime serial</div>
+            <div class="grid-item icon">
+                <div class='mico'></div>
+            </div>
+            <div class="grid-item info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, autem itaque doloremque, ut veritatis quisquam voluptatum, totam voluptates similique dolore sint repudiandae facere nam quaerat sed quibusdam consequatur, nemo dicta.</div>
+            <div class="grid-item logs">logs</div>
+            <div class="grid-item tags">tags</div>
+            <div class="grid-item screen-shot">
+                <div class="scr"></div>
+                <div class="scr"></div>
+            </div>
+            <div class="grid-item opening">
+                <div class="video"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </footer>
+    </div>
+</body>
+</html>
