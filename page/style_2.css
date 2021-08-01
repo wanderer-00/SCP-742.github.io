@@ -1,7 +1,9 @@
+/* ПАЛИТРА */
 :root {
     --gray: #7E7D7D;
     --dark_Grey: #2D2D2D;
     --light_Grey: #343434;
+    --pink: #CC93CC;
 }
 
 /* SCROLL BAR */
@@ -10,17 +12,24 @@
 ::-webkit-scrollbar-thumb {background: #3b4146}
 ::-webkit-scrollbar-thumb:hover {background: #474e54}
 
+/* ОБНУЛЕНИЯ */
 *,
 *:after,
 *:before 
 {
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+*::selection
+{
+    color: var(--pink);
+    background: ;
 }
 
+/* ССЫЛКА */
 a {
-    color: #CC93CC;
+    color: var(--pink);
     text-decoration: none;
 }
 
@@ -31,11 +40,13 @@ body
     background-color: var(--light_Grey);
 }
 
+/* ОГРАНИЧИТЕЛЬ */
 .wrapper{
     width: 100%;
     height: 100vh;
 }
 
+/* ВЕРХУШКА */
 header
 {
     width: 100%;
@@ -94,12 +105,15 @@ header .box:last-child, footer .box:last-child
     text-align: center;
 }
 
+/* НАЗВАНИЕ */
 .name
 {
     grid-area: name;
     font-size: 28px;
+
 }
 
+/* ПОСТЕР */
 .icon
 {
     grid-area: image;
@@ -112,21 +126,23 @@ header .box:last-child, footer .box:last-child
     border-radius: 8px;
 }
 
-/*
-.mico
+/*  */
+.info
 {
-    width: 300px;
-    height: 400px;
-    margin: auto;
-    border-radius: 10px;
-    background-color: var(--dark_Grey);
+    grid-area: info;
 }
-*/
-.info { grid-area: info }
 .info, .tags { text-align: left; color: var(--gray)}
-.logs { grid-area: logs }
 
+/* ЛОГИ */
+.logs 
+{
+    grid-area: logs;
+    font-family: 'Oswald', sans-serif
+}
+
+/* СКРИНЫ */
 .screen-shot { grid-area: scr ; text-align: center}
+
 .scr
 {
     display: inline-block;
@@ -136,18 +152,9 @@ header .box:last-child, footer .box:last-child
     background-color: var(--dark_Grey);
 }
 
-
+/* ВИДЕО */
 .opening { grid-area: opening }
-.video
-{
-    width: 100%
-}
-
-footer
-{
-    margin-top: 40px;
-    background: var(--dark_Grey);
-}
+.video {width: 100%}
 
 /* АНИМАЦИЯ КАРТИНОК */
 .grid img {
@@ -171,8 +178,18 @@ footer
     opacity: 1;
 }
 
-/* FOOTER */
+/* ПОДВАЛ */
+footer
+{
+    margin-top: 40px;
+    background: var(--dark_Grey);
+    padding: 10px;
+}
+footer p { font-family: 'Oswald', sans-serif; }
+footer a img {height: 50px;}
+footer p {  }
 
+/* ТЕЛЕФОННАЯ ВЕРСИЯ */
 @media (orientation: portrait)
 {
     .grid
