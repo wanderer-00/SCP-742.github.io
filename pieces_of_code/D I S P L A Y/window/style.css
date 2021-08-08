@@ -1,0 +1,99 @@
+*,
+*:after,
+*:before
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: url(img/-.png) 0 0 / 100% round;
+    overflow: hidden
+}
+
+/* ОКНО */
+.window
+{
+    display: inline-block;
+    border: 1px solid #4c4a48;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, .6);
+
+}
+/* HEADER ОКНА */
+.header
+{
+    display: flex;
+    align-items: center;
+    background-color: #4c4a48;
+}
+/* НАЗВАНИЕ ОКНА */
+.title
+{
+    flex-basis: 100%;
+    color: white;
+    padding: 0 10px;
+}
+/* СВЕНУТЬ | ФУЛЛ | ЗАКРЫТЬ */
+.turn-close
+{
+
+    display: flex;
+}
+.clos, .full, .turn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 29px;
+}
+
+.turn:hover, .full:hover { background-color: #5E5C5B }
+
+/* РИСОВАНИЕ КРЕСТИКА */
+.clos:hover { background-color: #E81123 }
+.clos:before, .clos:after
+{
+    position: absolute;
+    content: '';
+    height: 13px;
+    width: 1px;
+    background-color: white;
+}
+.clos:before { transform: rotate(45deg) }
+.clos:after { transform: rotate(-45deg) }
+
+/* ФУЛЛ */
+.full div
+{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+}
+
+/* СВЕРНУТЬ */
+.turn:before {
+    position: absolute;
+    content: '';
+    height: 11px;
+    width: 1px;
+    background-color: white;
+    transform: rotate(90deg)
+}
+
+/* КОНТЕНТ ОКНА */
+.content
+{
+    display: inline-block;
+    background-color: #444241;
+}
+.ico
+{
+    width: 400px;
+    margin: 20px;
+    opacity: 10%;
+}
+.turn_{display: none;}
