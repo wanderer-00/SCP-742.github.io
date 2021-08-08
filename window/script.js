@@ -2,19 +2,25 @@ var $turn = $('.turn');
 var $window = $('.window');
 var $content = $('.content');
 
-let $Y_ = 1;
+let $Y_ = 0;
 
 $('.turn').on('click', function() {$window.css('display', 'none');});
-$('.full').on('click', function() { if ($Y_ == 1) {
+$('.full').on('click', function() { if ($Y_ == 0) {
                                         $window.css('width', '100%');
                                         $window.css('height', '100%');
                                         $window.css('position', 'absolute');
+                                        $window.css('left', '0');
+                                        $window.css('top', '0');
                                         $content.css('width', '100%');
                                         $content.css('height', '100%');
-                                        $window.removeClass('ui-draggable ui-draggable-handle');
+                                        $Y_++;
                                     }
                                     else {
-                                        alert($Y_)
+                                        $window.css('width', '');
+                                        $window.css('height', '');
+                                        $content.css('width', '440px');
+                                        $content.css('height', '440px');
+                                        $Y_--;
                                     }
     }
 );
