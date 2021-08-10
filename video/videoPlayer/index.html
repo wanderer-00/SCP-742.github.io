@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <!-- JQery -->
+    <!-- подключение стиля -->
+    <link rel='stylesheet' href='style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- https://jqueryui.com/draggable/  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Передаем класс перетаскиваемого объекта -->
+    <script>
+    $( function() {
+    $(".window").draggable();
+    } );
+    </script>    
+</head>
+<body>
+
+    <!-- BOOTanimation -->
+    <div class="backgroundBootanimation">
+       <div class="bootanimationBox">
+           <div class="bootLogo">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+           </div>
+           <div class="bootanimation">
+                <div class="loader"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+           </div>
+       </div>
+    </div>
+
+<!-- background -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+<!--
+By:
+Manuel Pinto
+https://manuelpinto.in
+-->
+    <!-- ОКНО -->
+    <div class="window shadow">
+        <div class="header">
+            <div class="icon"></div>
+            <div class="title">Menu</div>
+            <div class="turn-close">
+                <span class='turn'></span>
+                <span class='full'><div></div></span>
+                <span class='clos'></span>
+            </div>
+        </div>
+        <div class="content">
+            <video class='video1' controls src="video/Евангелион 1.11- Ты (не) одинок.mp4"></video>
+        </div>
+    </div>
+
+    <!-- панель управления -->
+    <div class="panel shadow">
+        <div class="cell cell-video"></div>
+    </div>
+
+</body>
+
+    <!-- подключение скрипта -->
+    <script src='script.js'></script>
+    <script>
+        $(window).on('load', function() {
+            $('.backgroundBootanimation').delay(2000).fadeOut().end().fadeOut('slow');
+        });
+    </script>
+
+</html>

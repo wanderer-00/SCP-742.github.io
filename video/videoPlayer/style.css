@@ -1,0 +1,289 @@
+:root
+{
+    --title: #4c4a48;
+    --hover: #5E5C5B;
+}
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*:after,
+*:before
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+/* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: 0;/* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+}
+
+input {
+    background-color: transparent;/* ПРОЗРАЧНЫЙ ФОН */
+    /* DEL ОБВОДКА */
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: 0;/* DEL ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+    
+    color: #FFF;
+    padding: 4px;
+}
+
+/* фон */
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+	0% { background-position: 0% 50% }
+	50% { background-position: 100% 50% }
+	100% { background-position: 0% 50% }
+}
+
+/* КЛАСС ТЕНЕЙ */
+.shadow { box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, .4) }
+
+/* ОКНО */
+.window
+{
+    position: absolute;
+    border: 1px solid var(--title);
+
+}
+/* HEADER ОКНА */
+.header
+{
+    min-height: 29px;
+    display: flex;
+    align-items: center;
+    background-color: var(--title);
+}
+/* ИКОНКА ПРИЛОЖЕНИЯ */
+.icon
+{
+    margin: 0 0 0 5px;
+    width: 20px;
+    height: 20px;
+    background: url('img/play-button.png') 0 0 /100% no-repeat;
+}
+/* НАЗВАНИЕ ОКНА */
+.title
+{
+    color: white;
+    padding: 0 10px;
+}
+/* СВЕНУТЬ | ФУЛЛ | ЗАКРЫТЬ */
+.turn-close
+{
+    right: 0;
+    position: absolute;
+    display: flex
+}
+.clos, .full, .turn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 29px;
+}
+
+.turn:hover, .full:hover { background-color: var(--hover) }
+
+/* РИСОВАНИЕ КРЕСТИКА */
+.clos:hover { background-color: #E81123 }
+.clos:before, .clos:after
+{
+    position: absolute;
+    content: '';
+    height: 13px;
+    width: 1px;
+    background-color: white;
+}
+.clos:before { transform: rotate(45deg) }
+.clos:after { transform: rotate(-45deg) }
+
+/* ФУЛЛ */
+.full div
+{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+}
+
+/* СВЕРНУТЬ */
+.turn:before {
+    position: absolute;
+    content: '';
+    height: 11px;
+    width: 1px;
+    background-color: white;
+    transform: rotate(90deg)
+}
+
+/* КОНТЕНТ ОКНА */
+.content
+{
+    color: white;
+    min-width: 440px;
+    min-height: 50px;
+    display: inline-block;
+    background-color: #444241;
+}
+
+.content button
+{
+    display: inline-flex;
+    border: 1px solid gray;
+    padding: 2px 14px;
+    color: #FFF;
+    background-color: var(--title);
+}
+
+.content button:hover
+{
+    background-color: var(--hover);
+}
+
+.turn_{display: none;}
+
+
+/* Boot */
+.backgroundBootanimation
+{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.bootLogo
+{
+    margin-top: 30vh; 
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.bootLogo div {
+    margin: 2px;
+    background-color: #1890C7;
+}
+.bootanimation
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40vh;
+}
+.loader {
+    width: 30px;
+}
+.circle {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    transform: rotate(225deg);
+    animation-iteration-count: infinite;
+    animation-name: orbit;
+    animation-duration: 5.5s;
+}
+.circle:after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: white; /* Pick a color */
+    }
+    
+    .circle:nth-child(2) {  animation-delay: 240ms; }
+    .circle:nth-child(3) {  animation-delay: 480ms; }
+    .circle:nth-child(4) {  animation-delay: 720ms; }
+    .circle:nth-child(5) {  animation-delay: 960ms; }
+
+
+@keyframes orbit { 
+  0%   { transform:rotate(225deg); opacity: 1;
+         animation-timing-function: ease-out; } 
+    
+  7%   { transform:rotate(345deg);
+         animation-timing-function: linear; }
+    
+  30%   { transform:rotate(455deg);
+          animation-timing-function: ease-in-out; }
+    
+  39%   { transform:rotate(690deg);
+          animation-timing-function: linear; }
+    
+  70%   { transform:rotate(815deg); opacity: 1;
+         animation-timing-function: ease-out; }
+    
+  75%   { transform:rotate(945deg); 
+         animation-timing-function: ease-out; }
+    
+  76% { transform:rotate(945deg); opacity: 0; }
+  100% { transform:rotate(945deg); opacity: 0; } 
+}
+
+video
+{
+    height: 300px;
+}
+
+
+/* ПАНЕЛЬ УПРАВЛЕНИЯ */
+.panel
+{
+    position: fixed;
+    left: 0;
+    border-radius: 0 6px 6px 0;
+    padding: 4px 4px 4px 0;
+    width: 30px;
+    height: 60vh;
+    background-color: var(--title);
+}
+.cell-video
+{
+    width: 26px;
+    height: 26px;
+    margin: 0 0 4px 0;
+    background: url('img/play-button.png') 0 0 /100% no-repeat;
+}
+.cell-video:last-child
+{
+    margin: 0; 
+}
+.cell:hover { background-color: var(--hover) }

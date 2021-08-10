@@ -14,19 +14,44 @@
     <script>
     $( function() {
     $(".window").draggable();
+    $('.password').draggable();
+    $('.video').draggable();
     } );
     </script>    
 </head>
 <body>
+
+    <!-- BOOTanimation -->
+    <div class="backgroundBootanimation">
+       <div class="bootanimationBox">
+           <div class="bootLogo">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+           </div>
+           <div class="bootanimation">
+                <div class="loader"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+           </div>
+       </div>
+    </div>
+
+<!-- background -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 <!--
 By:
 Manuel Pinto
 https://manuelpinto.in
 -->
+   
     <div class="window">
         <div class="header">
-            <div class="title">Virus.exe</div>
+            <div class="title">Menu</div>
             <div class="turn-close">
                 <span class='turn'></span>
                 <span class='full'><div></div></span>
@@ -34,36 +59,73 @@ https://manuelpinto.in
             </div>
         </div>
         <div class="content">
-            <img src="window/img/SVG/win_10.svg" class="ico"/>
-            <a class='animu'>оняме</a>
-            <a href="#">Книги</a>
-            <a href="#">Test place</a>
+            <button class='animu'>оняме</button>
         </div>
     </div>
-    
+
+    <!-- ОКНО -->
+    <div class="video shadow">
+        <div class="header">
+            <div class="icon"></div>
+            <div class="title">Евангелион 1.11- Ты (не) одинок.mp4</div>
+            <div class="turn-close">
+                <span class='turn turn-video'></span>
+                <span class='full'><div></div></span>
+                <span class='clos clos-video'></span>
+            </div>
+        </div>
+        <div class="content">
+            <video class='video1' controls src="window/video/Евангелион 1.11- Ты (не) одинок.mp4"></video>
+        </div>
+    </div>
+
+    <!-- панель управления -->
+    <div class="panel shadow">
+        <div class="cell cell-video"></div>
+    </div>
+
+<!--
     <div class="password">
         <div class="header">
             <div class="title">Password.exe</div>
         </div>
         <div class="content contentPassword">
-            <input class='n11' type="text"><button onclick='checkPassword();'>ENTER</button>Password: 1234
+            <input id='n11' type="text"><button onclick='checkPassword();'>ENTER</button>Password: 1234
         </div>
     </div>
+-->
 
 </body>
 
     <!-- подключение скрипта -->
     <script src='window/script.js'></script>
+    
+    
     <script>
     var $password = $('.password');
     var $animu = $('.animu');
 //    alert($password);
-    $('.animu').on('click', function() {$password.css('display', 'inline');});
+//    $('.animu').on('click', function() {$password.css('display', 'inline');});
+    $('.animu').on('click', function() { window.location.assign('index1.html');});
     
-    function checkPassword () {
-        let $userPass = document.getElementsByClassName('n11');
-        alert($userPass); 
-    }
+//    function checkPassword () {
+//        var pasw = document.getElementById('n11').value;
+//        let pass = 1234;
+//        if ( pasw == pass ) {
+//            window.location.assign('index1.html');
+//        } else {
+////            window.location.assign('https://www.ozon.ru/brand/brawl-stars-87277336/');
+////            alert('Досвидания :3');
+//            alert(pasw.value);
+//            alert(pass);
+//        };
+//    }
+    </script>
+    
+    <script>
+        $(window).on('load', function() {
+            $('.backgroundBootanimation').delay(2000).fadeOut().end().fadeOut('slow');
+        });
     </script>
 
 </html>
