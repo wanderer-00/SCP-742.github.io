@@ -295,6 +295,7 @@ video
 /* ПАНЕЛЬ УПРАВЛЕНИЯ */
 .panel
 {
+    z-index: 9;
     position: fixed;
     left: 0;
     border-radius: 0 6px 6px 0;
