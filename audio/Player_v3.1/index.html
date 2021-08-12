@@ -9,6 +9,8 @@
 
 
 
+
+
 <!-- СДЕЛАТЬ: -->
 
 <!-- СМЕНА ИКОНКИ ПАУЗЫ ПРИ ОКОНЧАНИИ ТРЕКА -->
@@ -98,10 +100,33 @@
 
         var vol = document.getElementsByClassName('vol')[0];
         vol.innerHTML = audio.volume * 100 + '%';
+        
+        alert('Горячие клавиши: ↑ - громче ↓ - тише ← - прошлая композиция → - следующая композиция space - play/pause');
+        
+        // УПРАВЛЕНИЕ С КЛАВИАТУРЫ
+        // ↑ - громче
+        // ↓ - тише
+        // ← - прошлая композиция
+        // → - следующая композиция
+        // space - play/pause
 
-
+        document.onkeydown = function(event) {
+            console.log(event);
+            if (event.code == 'ArrowDown'){
+                audio.volume -= 0.1;
+                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
+            };
+            if (event.code == 'ArrowUp') {
+                audio.volume += 0.1;
+                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
+            };
+            if (event.code == 'ArrowLeft') {back()};
+            if (event.code == 'ArrowRight'){next()};
+            if (event.code == 'Space'){togglePlayPause()};
+        };
 
         function togglePlayPause() {
+            var play_pause = document.getElementsByClassName('play:before');
             // если аудио на паузе или окончено, то
             if (audio.paused || audio.ended) {
                 // иконка паузы
@@ -135,39 +160,6 @@
         name_audio.innerHTML = ray12[number_audio].name;
         styleXXX.backgroundImage = ray12[number_audio].ico;
 
-
-        // УПРАВЛЕНИЕ С КЛАВИАТУРЫ
-        document.onkeypress = function(event) {
-            console.log(event);
-            // Если нажата 'a' или 'A' то,
-            if (event.code == 'KeyA'){back()}; // И выполнить инструкцию 'back'
-            // Если нажата 'd' или 'D' то,
-            if (event.code == 'KeyD'){next()};  // И выполнить инструкцию 'next'
-
-            if (event.code == 'KeyW'){togglePlayPause()};
-            if (event.code == 'KeyQ'){
-                audio.volume -= 0.1;
-                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
-            };
-            if (event.code == 'KeyE'){
-                audio.volume += 0.1;
-                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
-            };
-        };
-
-        document.onkeydown = function(event) {
-            console.log(event);
-            if (event.code == 'ArrowDown'){
-                audio.volume -= 0.1;
-                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
-            };
-            if (event.code == 'ArrowUp') {
-                audio.volume += 0.1;
-                vol.innerHTML = parseFloat(audio.volume).toFixed(1) * 100 + '%';
-            };
-            if (event.code == 'ArrowLeft') {back()};
-            if (event.code == 'ArrowRight'){next()};
-        };
 
         // включить следующий трек
         function next(){
@@ -254,11 +246,13 @@
     </script>
 
     <!-- ССЫЛКИ НА АВТОРА -->
+    <div class="author">
+        <a href="https://github.com/Himeld23/MP3-Player">Author</a><br/>
+        <a href="https://www.youtube.com/channel/UCC4E_6H74CPJ3_mFaaM3jXA">Author YouTube</a><br/>
+        <a href="https://www.youtube.com/watch?v=guwSh93MYZo&t=40s">Video tutorial YouTube</a><br/>
+        <a href="https://vk.com/v_o_r_a_c_i_t_y">Не украл, а позаимствовал и доработал...</a>
+        <div class="vol_display">v.22</div>
+    </div>
 
-    <a href="https://github.com/Himeld23/MP3-Player">Author</a><br/>
-    <a href="https://www.youtube.com/channel/UCC4E_6H74CPJ3_mFaaM3jXA">Author YouTube</a><br/>
-    <a href="https://www.youtube.com/watch?v=guwSh93MYZo&t=40s">Video tutorial YouTube</a><br/>
-    <a href="https://vk.com/v_o_r_a_c_i_t_y">Не украл, а позаимствовал и доработал...</a>
-    <div class="vol_display">22</div>
 </body>
 </html>

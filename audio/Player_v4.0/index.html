@@ -5,17 +5,74 @@
     <meta charset="UTF-8">
     <title>Player v4</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        :root{
+            --clr_Tag: #2462E3;
+            --clr_Attribute: #85A311;
+        }
+        /* полоса прокрутки (скроллбар) */
+        ::-webkit-scrollbar {
+            width: 0px; /* ширина для вертикального скролла */
+            height: 8px; /* высота для горизонтального скролла */
+        }
+
+        /* ползунок скроллбара */
+        ::-webkit-scrollbar-thumb {
+            background-color: #843465;
+            border-radius: 9em;
+            box-shadow: inset 1px 1px 10px #f3faf7;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #253861;
+        }
+        /* scroll bar */
+/*
+        ::-webkit-scrollbar {width: 3px}
+        ::-webkit-scrollbar-track {background: #18191d}
+        ::-webkit-scrollbar-thumb {background: #3b4146}
+        ::-webkit-scrollbar-thumb:hover {background: #474e54}
+*/
+
+        .box{
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid white;
+        }
+        .code{
+            margin: 0 0 10px 0;
+            padding: 10px 0;
+            overflow: scroll;
+            white-space: nowrap;
+            background-color: #343434;
+
+            
+        }
+        .tag{
+            color: var(--clr_Tag);
+        }
+        .attribute { color: var(--clr_Attribute) }
+    </style>
 </head>
 
 <body>
     <h1>Методы &lt;audio&gt;</h1>
-    <div id="box">
-
-        <audio id="player" src="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3"></audio>
-        <div id='audioBox'>
-            <button onclick="document.getElementById('player').play()">Play</button>
-            <button onclick="document.getElementById('player').pause()">Pause</button>
-            <button onclick="Button_PlayPause()">Play | Pause</button>
+    
+    <div class="box">
+    <div class="code">
+        <font class='tag'>&lt;audio</font> <font class='attribute'>id</font>="player" <font class='attribute'>src</font>="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3" <font class='attribute'>controls</font><font class='tag'>&gt;&lt;/audio&gt;</font>
+    </div>
+        <audio id="player" src="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3" controls></audio>
+    </div>
+    
+    <div class="box">
+    <div class="code">
+        <font class='tag'>&lt;button</font> <font class='attribute'>onclick</font>="document.getElementById('player').play()"<font class='tag'>&gt;</font>Play<font class='tag'>&lt;/button&gt;</font>
+    </div>
+        <button onclick="document.getElementById('player').play()">Play</button>
+    </div>
+        <button onclick="document.getElementById('player').pause()">Pause</button>
+        <button onclick="Button_PlayPause()">Play | Pause</button>
             <a href="../Player_v3.1/audio/COUB/Blackbear-IDFC_coub.mp3" download><button onclick="">Download</button></a>
             <div id="vol">
                 <button onclick="VolUp()">+ </button>
@@ -23,11 +80,8 @@
                 <font id='ValueVol'></font>
             </div>
             <font id='name'>Blackbear - IDFC</font>
-        </div>
-    </div>
     
-    <audio controls src='https://drive.google.com/file/d/1840aSPQi1myoUi0QGkBxpjqLcbcq-yHA/view?usp=sharing'>
-    </audio>
+
     
     <a href='https://drive.google.com/file/d/1840aSPQi1myoUi0QGkBxpjqLcbcq-yHA/view?usp=sharing'>Download</a>
     

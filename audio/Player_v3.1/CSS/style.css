@@ -17,6 +17,7 @@ body {
     background: orange;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 @keyframes harlem {
     0% {
@@ -116,14 +117,12 @@ h6 {
     padding: 0;
     height: 550px;
     width: 366px;
-    position: absolute;
-/*
     left: 50%;
     top: 0;
     transform: translate(-50%, 0);
-*/
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
     overflow: hidden;
+    border-radius: 6px;
     margin: 30px 0;
 
 }
@@ -636,4 +635,16 @@ input[type="range"]::-ms-fill-lower {
 }
 input[type="range"]::-ms-fill-upper {  
     background-color: blue;
+}
+
+
+
+
+.author
+{
+    padding: 10px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
 }
