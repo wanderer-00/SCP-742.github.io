@@ -8,8 +8,6 @@
 </head>
 <body>
 <!--<img src="img/1.png" style="width: 100%;">-->
-
-
     <div id="box">
         <div id="sub_box">
             <div id="name_age_box">
@@ -24,34 +22,7 @@
                     <div id="eee">
                         <div id="serial">Сериия:</div>
                         <div id="cluster">
-                            <div id="line">
-                                <input id="segment" type="button" value="1" onclick="s1(document.getElementById('player'))">
-                                <input id="segment" type="button" value="2" onclick="s2(document.getElementById('player'))">
-                                <input id="segment" type="button" value="3" onclick="s3(document.getElementById('player'))">
-                                <input id="segment" type="button" value="4" onclick="s4(document.getElementById('player'))">
-                                <input id="segment" type="button" value="5" onclick="s5(document.getElementById('player'))">
-                                <input id="segment" type="button" value="6" onclick="s6(document.getElementById('player'))">
-                                <input id="segment" type="button" value="7" onclick="s7(document.getElementById('player'))">
-                                <input id="segment" type="button" value="8" onclick="s8(document.getElementById('player'))">
-                                <input id="segment" type="button" value="9" onclick="s9(document.getElementById('player'))">
-                                <input id="segment" type="button" value="10" onclick="s10(document.getElementById('player'))">
-                                <input id="segment" type="button" value="11" onclick="s11(document.getElementById('player'))">
-                                <input id="segment" type="button" value="12" onclick="s12(document.getElementById('player'))">
-                                <input id="segment" type="button" value="спэшл 1" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="13" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="14" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="15" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="16" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="17" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="18" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="19" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="20" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="21" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="22" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="23" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="24" onclick="s13(document.getElementById('player'))">
-                                <input id="segment" type="button" value="спэшл 2" onclick="s13(document.getElementById('player'))">
-                            </div>
+                            <div id="line" class="line"></div>
                         </div>
                     <div id="controller">
                         <input id="segment" type="button" value="<" onclick="left1()">
@@ -103,118 +74,51 @@
 				"//kodik.info/seria/157545/200e03686b9a8e478039095c31af879f/720p",  // 24
 				"//kodik.info/seria/639933/7bd9d30116966d27f8730eee03ed23c8/720p",  // СПЭШЛ2
                 ];
+    
+    // кол-во кнопок
+    var numberButtons = urls.length;
+        console.log('Кол-во эпизодов:', numberButtons);
 
-    function s1(frame) {
-        frame.src = urls[0];
-    };
-
-    function s2(frame) {
-        frame.src = urls[1];
-    };
-
-    function s3(frame) {
-        frame.src = urls[2];
-    };
-
-    function s4(frame) {
-        frame.src = urls[3];
-    };
-
-    function s5(frame) {
-        frame.src = urls[4];
-    };
-
-    function s6(frame) {
-        frame.src = urls[5];
-    };
-
-    function s7(frame) {
-        frame.src = urls[6];
-    };
-
-    function s8(frame) {
-        frame.src = urls[7];
-    };
-
-    function s9(frame) {
-        frame.src = urls[8];
-    };
-
-    function s10(frame) {
-        frame.src = urls[9];
-    };
-
-    function s11(frame) {
-        frame.src = urls[10];
-    };
-
-    function s12(frame) {
-        frame.src = urls[11];
-    };
-
-    function s13(frame) {
-        frame.src = urls[12];
-    };
-
-    function s14(frame) {
-        frame.src = urls[13];
-    };
-
-    function s15(frame) {
-        frame.src = urls[14];
-    };
-
-    function s16(frame) {
-        frame.src = urls[15];
-    };
-
-    function s17(frame) {
-        frame.src = urls[16];
-    };
-
-    function s18(frame) {
-        frame.src = urls[17];
-    };
-
-    function s19(frame) {
-        frame.src = urls[18];
-    };
-
-    function s20(frame) {
-        frame.src = urls[19];
-    };
-
-    function s21(frame) {
-        frame.src = urls[20];
-    };
-
-    function s22(frame) {
-        frame.src = urls[21];
-    };
-
-    function s23(frame) {
-        frame.src = urls[22];
-    };
-
-    function s24(frame) {
-        frame.src = urls[23];
-    };
-
-    function s25(frame) {
-        frame.src = urls[24];
-    };
-
-    function s26(frame) {
-        frame.src = urls[25];
-    };
-
-    function s27(frame) {
-        frame.src = urls[26];
-    };
-
-    function s28(frame) {
-        frame.src = urls[27];
-    };
+    var buttons = document.getElementsByClassName('line');
+    
+    // 1-12
+    for ( n=1; n<=numberButtons/2-1; n++ ) { buttons[0].innerHTML += `<input id="segment" type="button" value="${n}" onclick="s${n}(document.getElementById('player'))">` };
+    // Спешл 1
+    buttons[0].innerHTML += `<input id="segment" type="button" value="спешл 1" onclick="s13(document.getElementById('player'))">`;
+    // 13-25
+    for ( n=13; n<=numberButtons-1; n++ ) { buttons[0].innerHTML += `<input id="segment" type="button" value="${n}" onclick="s${n}(document.getElementById('player'))">` };
+    // Спешл 2
+    buttons[0].innerHTML += `<input id="segment" type="button" value="спешл 2" onclick="s26(document.getElementById('player'))">`;
+    
+    // Да, да, да, я знаю, не умничай...
+    function s1(frame) { frame.src = urls[0] };
+    function s2(frame) { frame.src = urls[1] };
+    function s3(frame) { frame.src = urls[2] };
+    function s4(frame) { frame.src = urls[3] };
+    function s5(frame) { frame.src = urls[4] };
+    function s6(frame) { frame.src = urls[5] };
+    function s7(frame) { frame.src = urls[6] };
+    function s8(frame) { frame.src = urls[7] };
+    function s9(frame) { frame.src = urls[8] };
+    function s10(frame) { frame.src = urls[9] };
+    function s11(frame) { frame.src = urls[10] };
+    function s12(frame) { frame.src = urls[11] };
+    function s13(frame) { frame.src = urls[12] };
+    function s14(frame) { frame.src = urls[13] };
+    function s15(frame) { frame.src = urls[14] };
+    function s16(frame) { frame.src = urls[15] };
+    function s17(frame) { frame.src = urls[16] };
+    function s18(frame) { frame.src = urls[17] };
+    function s19(frame) { frame.src = urls[18] };
+    function s20(frame) { frame.src = urls[19] };
+    function s21(frame) { frame.src = urls[20] };
+    function s22(frame) { frame.src = urls[21] };
+    function s23(frame) { frame.src = urls[22] };
+    function s24(frame) { frame.src = urls[23] };
+    function s25(frame) { frame.src = urls[24] };
+    function s26(frame) { frame.src = urls[25] };
+    function s27(frame) { frame.src = urls[26] };
+    function s28(frame) { frame.src = urls[27] };
 
     var left = 0;
     var line = document.getElementById('line');
@@ -237,5 +141,6 @@
 
 
     // УВЕДОМЛЕНИЕ О БЕТАТЕСТЕ
-    alert('Beta-test версия сайта, ориентированна на PC :)');
+//    alert('Beta-test версия сайта, ориентированна на PC :)');
+    
 </script></html>

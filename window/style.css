@@ -68,8 +68,9 @@ body{
     align-items: center;
     overflow: hidden;
 }
-.content button
+.content button, .content a
 {
+    text-decoration: none;
     display: inline-flex;
     border: 1px solid gray;
     padding: 2px 14px;
@@ -83,6 +84,7 @@ body{
 /* ОКНО */
 .window
 {
+    max-width: 90%;
     z-index: 2;
     position: absolute;
     display: inline-block;

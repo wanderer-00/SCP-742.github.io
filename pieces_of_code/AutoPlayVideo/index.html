@@ -26,26 +26,16 @@
             top: 50%;
             background-color: cyan;
         }
+        @media screen (orientation: portrait) {
+        video{
+            max-width: 100%;
+        }
+        }
     </style>
     
 </head>
 <body>
 <div class="center"></div>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi temporibus ut laborum placeat distinctio maiores id delectus exercitationem aspernatur alias hic, suscipit reprehenderit eligendi repudiandae, repellendus dolore tempore cupiditate ipsa.</p>
-<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam recusandae, nostrum quam ipsa commodi, soluta aut sunt doloremque aperiam odit laboriosam neque? Iure sapiente placeat in beatae non dignissimos veniam?</span>
-<span>Vitae atque aspernatur soluta accusamus illum excepturi, nam blanditiis et ratione fugiat. Vitae a aut eius fugiat laudantium optio distinctio ad inventore quis, aliquam quisquam quo quia dolores, repellendus quod.</span>
-<span>Quo repellat voluptatem rem at atque similique ipsa culpa quaerat quidem, sequi est, harum ex maiores ullam dicta non corporis voluptas. Molestias repellendus cumque fuga non vero assumenda, facilis suscipit?</span>
-<span>Quae sit delectus, tempore nisi commodi dolores facere illum tenetur quos quis, aut accusamus itaque et cumque excepturi ratione aliquid a libero. Voluptas itaque minus ullam sequi quod, tenetur accusamus.</span>
-<span>Assumenda suscipit temporibus fugiat quia nesciunt quod incidunt sed error libero ex blanditiis repudiandae, tempora soluta animi nihil iusto vel distinctio laboriosam ipsam eaque reiciendis deserunt accusamus! Odio, necessitatibus, neque.</span>
-<span>Sunt unde ipsum mollitia accusantium facilis nesciunt cumque, quae, repudiandae expedita accusamus vero asperiores eligendi. Minus magni temporibus eveniet, fuga ad et ducimus necessitatibus ipsam accusantium nostrum, voluptate placeat error.</span>
-<span>Repellendus sed deserunt officia fuga tempore, quae atque ipsam hic, itaque dolor est aut iure illum recusandae ea sequi unde incidunt consectetur dicta, voluptas ut aspernatur. Ipsam officiis, reiciendis voluptatum.</span>
-<span>Harum, sed deleniti est tempora dolorem tempore nisi qui tenetur ipsum rerum adipisci maxime provident, eaque praesentium eveniet ad vel iusto non. Quae enim ab, adipisci magnam molestiae debitis, vero.</span>
-<span>Provident cumque optio tempora quae, veritatis. Odit, quam, harum possimus, laudantium nisi quasi repellendus perferendis perspiciatis corporis magni voluptate ad modi nobis culpa dolores voluptatem voluptas deleniti accusantium, iusto expedita?</span>
-<span>Et molestiae consequuntur repudiandae reprehenderit, alias incidunt exercitationem, quae? Reprehenderit totam, distinctio doloremque pariatur, numquam laudantium at. Corporis maxime, cupiditate odio ex commodi, nihil est aliquam sit incidunt sunt quo.</span>
-
-<video id='video1' src="video/𝓔𝓽𝓸 𝓨𝓸𝓼𝓱𝓲𝓶𝓾𝓻𝓪.mp4" loop></video>
-
 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat dolores minima nostrum quasi officia, illo commodi! Eveniet deserunt tempore ducimus, numquam et. Impedit iure, non facere consequuntur et corporis recusandae.</div>
 <div>Harum vel sint autem, id rem necessitatibus vero doloremque temporibus debitis quod quas iste assumenda! Explicabo eum dolorum ab doloribus tenetur soluta, error placeat cupiditate voluptatem, modi consequatur odio voluptates.</div>
 <div>Omnis accusamus accusantium ratione odio quia dolor similique, expedita, error ex eius minus consequatur laudantium ea voluptatibus iusto iure nobis reprehenderit veniam praesentium! Similique consequuntur aliquid ratione quis, nisi placeat.</div>
@@ -57,15 +47,27 @@
 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem cupiditate provident aut vel impedit explicabo similique! Placeat blanditiis consectetur quas aliquam, consequuntur aliquid error illum repellat sint modi ipsam, provident.</div>
 <div>Eligendi accusamus, tenetur, numquam aliquid esse, quae consequatur eaque minus temporibus neque maiores quo? Dolores aspernatur, sed architecto maxime perspiciatis distinctio voluptate, est optio libero ullam doloremque error accusamus. Ratione!</div>
 
+<video id='video1' src="video/𝓔𝓽𝓸 𝓨𝓸𝓼𝓱𝓲𝓶𝓾𝓻𝓪.mp4" loop></video>
+<video id='video1' src="video/𝓔𝓽𝓸 𝓨𝓸𝓼𝓱𝓲𝓶𝓾𝓻𝓪.mp4" loop></video>
+<video id='video1' src="video/𝓔𝓽𝓸 𝓨𝓸𝓼𝓱𝓲𝓶𝓾𝓻𝓪.mp4" loop></video>
+<video id='video1' src="video/𝓔𝓽𝓸 𝓨𝓸𝓼𝓱𝓲𝓶𝓾𝓻𝓪.mp4" loop></video>
+
+
 <script type="text/javascript">
     var vid = document.getElementById('video1');
     
     // video(Y)
     var videoY = $('#video1').offset().top;
         console.log('video(Y)', videoY);
-
+    
+    // высота блока
+    var heightBlock = $('#video1').height();
+        console.log('Высота блока:', heightBlock);
+        console.log('videoY + widthBlock / 2 = ', videoY + heightBlock / 2);
+    
     // следит за всем 0_0
     function seeAll () {
+
         // высота окна
         var windowH = $(window).height();
             console.log('Высота окна:', windowH);
@@ -79,7 +81,7 @@
             console.log('Y центра камеры:', line);
         
         // если видео по центру камеры, то воспроизвести
-        if (line > videoY) {
+        if (line > videoY && line < videoY + heightBlock) {
             // воспроизвести
             vid.play();
         } else {
