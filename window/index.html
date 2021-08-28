@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcum</title>
+    <!-- JQery -->
+    <!-- подключение стиля -->
+    <link rel='stylesheet' href='window/style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- https://jqueryui.com/draggable/  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Передаем класс перетаскиваемого объекта -->
+    <script>
+    $( function() {
+    $(".window").draggable();
+    $('.password').draggable();
+    $('.video').draggable();
+    } );
+    </script>    
+</head>
+<body>
+
+    <!-- BOOTanimation -->
+    <div class="backgroundBootanimation">
+       <div class="bootanimationBox">
+           <div class="bootLogo">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+           </div>
+           <div class="bootanimation">
+                <div class="loader"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+           </div>
+       </div>
+    </div>
+
+<!-- background -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+<!--
+By:
+Manuel Pinto
+https://manuelpinto.in
+-->
+   
+    <div class="window">
+        <div class="header">
+            <div class="title">Menu</div>
+            <div class="turn-close">
+                <span class='turn'></span>
+                <span class='full'><div></div></span>
+                <span class='clos'></span>
+            </div>
+        </div>
+        <div class="content">
+            <button class='animu'>OBSERVER DIARY</button>
+            <a href="audio/Player_v2.0/audio2.html">audio v.2</a>
+            <a href="audio/Player_v3.0/index.html">audio v.3</a>
+            <a href="audio/Player_v3.1/index.html">audio v.3.1</a>
+            <a href="audio/Player_v3.2/index.html">audio v.3.2</a>
+            <a href="audio/Player_v4/index.html">audio v.4</a>
+            <a href="COUB/COUB.html">COUB</a>
+            <a href="COUB/coub v.0.2.html">COUB v.2</a>
+            <a href="DOLLARS/index.html">DOLLARS</a>
+            <a href="pieces_of_code/+ -/index.html">+-</a>
+            <a href="pieces_of_code/ALERT()/Smoke/index.html">Smoke</a>
+        </div>
+    </div>
+
+    <!-- ОКНО -->
+    <div class="video shadow">
+        <div class="header">
+            <div class="icon"></div>
+            <div class="title">Евангелион 1.11- Ты (не) одинок.mp4</div>
+            <div class="turn-close">
+                <span class='turn turn-video'></span>
+                <span class='full'><div></div></span>
+                <span class='clos clos-video'></span>
+            </div>
+        </div>
+        <div class="content">
+            <video class='video1' controls src="window/video/Евангелион 1.11- Ты (не) одинок.mp4"></video>
+        </div>
+    </div>
+
+    <!-- панель управления -->
+    <div class="panel shadow">
+        <div class="cell cell-video"></div>
+    </div>
+
+<!--
+    <div class="password">
+        <div class="header">
+            <div class="title">Password.exe</div>
+        </div>
+        <div class="content contentPassword">
+            <input id='n11' type="text"><button onclick='checkPassword();'>ENTER</button>Password: 1234
+        </div>
+    </div>
+-->
+
+</body>
+
+    <!-- подключение скрипта -->
+    <script src='window/script.js'></script>
+    
+    
+    <script>
+    var $password = $('.password');
+    var $animu = $('.animu');
+//    alert($password);
+//    $('.animu').on('click', function() {$password.css('display', 'inline');});
+    $('.animu').on('click', function() { window.location.assign('index1.html');});
+    
+//    function checkPassword () {
+//        var pasw = document.getElementById('n11').value;
+//        let pass = 1234;
+//        if ( pasw == pass ) {
+//            window.location.assign('index1.html');
+//        } else {
+////            window.location.assign('https://www.ozon.ru/brand/brawl-stars-87277336/');
+////            alert('Досвидания :3');
+//            alert(pasw.value);
+//            alert(pass);
+//        };
+//    }
+        
+    // bootanimation
+    $(window).on('load', function() {
+        $('.backgroundBootanimation').delay(2000).fadeOut().end().fadeOut('slow');
+    });
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

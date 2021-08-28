@@ -2,164 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>welcum</title>
-    <!-- JQery -->
-    <!-- подключение стиля -->
-    <link rel='stylesheet' href='window/style.css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- https://jqueryui.com/draggable/  -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- Передаем класс перетаскиваемого объекта -->
-    <script>
-    $( function() {
-    $(".window").draggable();
-    $('.password').draggable();
-    $('.video').draggable();
-    } );
-    </script>    
+    <title>Menu</title>
+    <!-- ИМПОРТ ШРИФТА -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root{
+            --base: #FFF;
+            --fon: #343434;
+            --color: #04494D;
+            --color: #625EEC;
+            --color: #34CCCC;
+        }
+        
+        /* ИМПОРТ ШРИФТА */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        body{
+            min-height: 100vh;
+            display: flex;
+            background: #2D2D2D;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .navigation{
+            background: var(--fon);
+            /*box-shadow: 0 0 10px red;*/
+            box-shadow: 10px 0 0 var(--color);
+            padding: 20px 0 20px 10px;
+            border-radius: 6px 0 0 6px;
+            
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;           /* Non-prefixed version, currently
+                                          not supported by any browser */
+        }
+        
+        p::selection{
+            background: pink
+        }
+        
+        .navigation li {  }
+        .navigation lu li {
+            border-radius: 10px 0 0 10px;
+        }
+        
+/*
+        .navigation lu li.active {
+            background: var(--color);
+        }
+*/
+        
+        .list span{
+            color: var(--base);
+            font-size: 20px;
+        }
+
+        /* удаление маркеров */
+        .list a{
+            text-decoration: none;
+        }
+        
+        .navigation lu{
+            width: 100%;
+        }
+        
+        li{
+            padding: 10px 30px 10px 10px;
+            list-style-type: none;
+
+        }
+        
+        .icon {
+            padding: 0 10px 0 6px;
+        }
+    
+        li:hover{
+            background: var(--color);
+        }
+        .active { background: var(--color) }
+        
+        
+
+    </style>
+    
 </head>
 <body>
+    <div class="navigation">
+        <lu>
 
-    <!-- BOOTanimation -->
-    <div class="backgroundBootanimation">
-       <div class="bootanimationBox">
-           <div class="bootLogo">
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
-           </div>
-           <div class="bootanimation">
-                <div class="loader"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-           </div>
-       </div>
+            <li class="list">
+                <a href="index1.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="Manuals/index.html">
+                    <span class="icon">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+                    </span>
+                    <span class="title">Programms</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="title">Setting</span>
+                </a>
+            </li>
+
+        </lu>
+        
     </div>
-
-<!-- background -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-<!--
-By:
-Manuel Pinto
-https://manuelpinto.in
--->
-   
-    <div class="window">
-        <div class="header">
-            <div class="title">Menu</div>
-            <div class="turn-close">
-                <span class='turn'></span>
-                <span class='full'><div></div></span>
-                <span class='clos'></span>
-            </div>
-        </div>
-        <div class="content">
-            <button class='animu'>OBSERVER DIARY</button>
-            <a href="audio/Player_v2.0/audio2.html">audio v.2</a>
-            <a href="audio/Player_v3.0/index.html">audio v.3</a>
-            <a href="audio/Player_v3.1/index.html">audio v.3.1</a>
-            <a href="audio/Player_v3.2/index.html">audio v.3.2</a>
-            <a href="audio/Player_v4/index.html">audio v.4</a>
-            <a href="COUB/COUB.html">COUB</a>
-            <a href="COUB/coub v.0.2.html">COUB v.2</a>
-            <a href="DOLLARS/index.html">DOLLARS</a>
-            <a href="pieces_of_code/+ -/index.html">+-</a>
-            <a href="pieces_of_code/ALERT()/Smoke/index.html">Smoke</a>
-        </div>
-    </div>
-
-    <!-- ОКНО -->
-    <div class="video shadow">
-        <div class="header">
-            <div class="icon"></div>
-            <div class="title">Евангелион 1.11- Ты (не) одинок.mp4</div>
-            <div class="turn-close">
-                <span class='turn turn-video'></span>
-                <span class='full'><div></div></span>
-                <span class='clos clos-video'></span>
-            </div>
-        </div>
-        <div class="content">
-            <video class='video1' controls src="window/video/Евангелион 1.11- Ты (не) одинок.mp4"></video>
-        </div>
-    </div>
-
-    <!-- панель управления -->
-    <div class="panel shadow">
-        <div class="cell cell-video"></div>
-    </div>
-
-<!--
-    <div class="password">
-        <div class="header">
-            <div class="title">Password.exe</div>
-        </div>
-        <div class="content contentPassword">
-            <input id='n11' type="text"><button onclick='checkPassword();'>ENTER</button>Password: 1234
-        </div>
-    </div>
--->
-
-</body>
-
-    <!-- подключение скрипта -->
-    <script src='window/script.js'></script>
     
+</body>
     
     <script>
-    var $password = $('.password');
-    var $animu = $('.animu');
-//    alert($password);
-//    $('.animu').on('click', function() {$password.css('display', 'inline');});
-    $('.animu').on('click', function() { window.location.assign('index1.html');});
-    
-//    function checkPassword () {
-//        var pasw = document.getElementById('n11').value;
-//        let pass = 1234;
-//        if ( pasw == pass ) {
-//            window.location.assign('index1.html');
-//        } else {
-////            window.location.assign('https://www.ozon.ru/brand/brawl-stars-87277336/');
-////            alert('Досвидания :3');
-//            alert(pasw.value);
-//            alert(pass);
-//        };
-//    }
+        const list = document.getElementsByClassName('list');
         
-    // bootanimation
-    $(window).on('load', function() {
-        $('.backgroundBootanimation').delay(2000).fadeOut().end().fadeOut('slow');
-    });
+        var n = 1;
+        var l = 0;
+
+        document.onkeydown = function(event) {
+            if (event.code == 'ArrowUp'){
+                console.log(n);
+                list[n].classList.add('active');
+                list[l].classList.remove('active');
+                n++;
+                l++
+            };
+            
+            
+            
+            if (event.code == 'ArrowDown'){
+                list[n].classList.add('active');
+                list[l].classList.remove('active');
+                n--;
+                l-2
+            }
+        };
+
+
     </script>
+    <!-- ПОДКЛЮЧЕНИЕ ИКОНОК -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- ПРОССМОТР ИКОНОК (Ionicons 5.5.2 Cheatsheet) -->
+    <!-- https://unpkg.com/ionicons@5.5.2/dist/cheatsheet.html -->
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

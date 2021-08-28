@@ -93,6 +93,9 @@
         #blue{
             color: cornflowerblue;
         }
+        #comment{
+            color: #767676;
+        }
     </style>
 </head>
 
@@ -128,6 +131,7 @@ black
 
     <!-- VIDEO -->
 <pre>
+    <h1>ТЕГ VIDEO</h1>
     <font id='blue'>&lt;video&gt;</font>
         <font id='blue'>&lt;source</font> <font id='c'>src</font>="dir/film.mp4" <font id='c'>type</font>="video/mp4"<font id='blue'>&gt;</font>
         <font id='blue'>&lt;source</font> <font id='c'>src</font>="dir/film.ogv" <font id='c'>type</font>="video/ogg"<font id='blue'>&gt;</font>
@@ -146,6 +150,33 @@ black
 
 </pre>
 
+   
+<pre>
+<h1>ПОДКЛЮЧЕНИЕ SVG-ИКОНОК</h1>
+<font id='comment'>&lt;!-- ПОДКЛЮЧЕНИЕ ИКОНОК --&gt;</font>
+<font id='blue'>&lt;script</font> <font id='c'>type</font>="module" <font id='c'>src</font>="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"<font id='blue'>&gt;&lt;/script&gt;</font>
+<font id='blue'>&lt;script</font> <font id='c'>nomodule src</font>="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"<font id='blue'>&gt;&lt;/script&gt;</font>
+<font id='comment'>&lt;!-- ПРОССМОТР ИКОНОК (Ionicons 5.5.2 Cheatsheet) --&gt;</font>
+<a href="https://unpkg.com/ionicons@5.5.2/dist/cheatsheet.html"><font id='comment'>&lt;!-- https://unpkg.com/ionicons@5.5.2/dist/cheatsheet.html --&gt;</font></a>
+<button onclick="SVG_icon()">Копировать</button>
+<script>
+function SVG_icon(){
+    var copyText = document.getElementById("");
+    copyText.select();
+    document.execCommand("copy");
+}
+</script>
+
+<code>
+<script>
+function SVG_icon(){
+    var copyText = document.getElementById("");
+    copyText.select();
+    document.execCommand("copy");
+}
+</script>
+</code>
+</pre>
     <!-- перенаправление на новую страницу
     window.location.href = 'http://www.example.com/';
     то же, что и window.location.href = ...
