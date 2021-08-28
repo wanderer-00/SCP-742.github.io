@@ -4,7 +4,10 @@
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
+html,
 body{
+    margin: 0;
+    height: 100%;
     padding: 0 10px;
     color: #FFF;
     background: #1E1E1E;
@@ -12,6 +15,17 @@ body{
 }
 a{
     color: mediumspringgreen;
+}
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1 1 auto;
+}
+footer{
+    border-top: 2px solid white;
 }
 @media (orientation: portrait){
     img{ width: 100% }
