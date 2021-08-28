@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Как скачать с JW Player [8.21.2]</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>КАК ПРОПИСАТЬ АДМИНКУ НА HLDS-СЕРВЕРЕ</h1>
+    <p>Админ права прописываются в файле <a href="#">\cstrike\addons\amxmodx\configs\users.ini</a></p>
+<pre>
+Файл настроен администрации сервера
+Расположение файла: $moddir/addons/amxmodx/configs/users.ini
+Строка начинающиеся со знака ";" распознается как комментарий
+
+Флаги для прав:
+a - иммунитет от киков , банов , слапов и т.д 
+b - резервированный слот (игрок может зайти на зарезервировынаый слот) 
+c - использывания команды amx_kick 
+d - использывания команд amx_ban и amx_unban
+e - использывания команд amx_slay и amx_slap 
+f - использывания команды amx_map 
+g - использывания команды amx_cvar (не все cvar'ы будут доступны)
+h - использывания команды amx_cfg
+i - использывания команды amx_chat и других команд для чата 
+j - использывания команды amx_vote и других команд для голосования
+k - доступ к команде sv_password (через команду amx_cvar)
+l - доступ к командам amx_rcon и rcon_password  (через команду amx_cvar)
+m - левел А (для дополнительных плагинов)
+n - левел B
+o - левел C
+p - левел D
+q - левел E
+r - левел F
+s - левел G
+t - левел H
+u - доступ к меню
+z - простой юзер (не админ)
+
+Флаги для аккаунта:
+a - кикнуть игрока при ввидении неправильного пароля 
+b - название клана
+c - это steamid или wonid
+d - это IP 
+e - пароль не проверяется (только имя/ip/steamid )
+k - ник чувствителен , тоисть: если вы поставите ник "Ham"
+    то он будет защищён и игроки смогут использывать 
+    ники  "haM", "HAM", "ham" и т.д , но не "Ham" 
+
+Пароль:
+Добавьте в конфиг autoexec.cfg: setinfo _pw "пароль"
+Поменять таг _pw можно командой amx_password_field (смотреть файл amxx.cfg)
+
+Чтобы прописать админку, нужно открыть файл users.ini. Находится он в cstrike/addons/amxmodx/configs.
+В самый низ прописываем админку в формате:
+"имя/ник, ip-адрес или steamid" "пароль" "права админа" "доступ к аккаунту"Например:
+По нику: «makefrag.ru» «my_password» «abcdefghijklmnopqrstu» «a»
+По STEAM_ID: «STEAM_0:0:123456» «» «abcdefghijklmnopqrstu» «ce»
+По IP: «123.45.67.89» «» «abcdefghijklmnopqrstu» «de»
+
+Формат аккаунта админа:
+"имя|ip|steamid" "пароль" "флаги для прав" "флаги для аккаунта"
+
+Действующии админы
+"Имя" "Пароль" "abcdefghijklmnopqrstu" "de"
+
+Levi
+"STEAM_0:0:1036100552" " " "abcdefghijklmnopqrstu" "ce"
+
+Я CS 1.6 ESWC gaming
+"STEAM_0:0:676109207" " " "abcdefghijklmnopqrstu" "ce"
+
+notebook
+"STEAM_0:0:1961722674" " " "abcdefghijklmnopqrstu" "ce"
+</pre>
+</body>
+</html>
