@@ -1,0 +1,18 @@
+/* ИМПОРТ ШРИФТА */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    padding: 0 10px;
+    color: #FFF;
+    background: #1E1E1E;
+    font-size: 20px;
+}
+a{
+    color: mediumspringgreen;
+}
+@media (orientation: portrait){
+    img{ width: 100% }
+}
