@@ -24,8 +24,15 @@ a{
 main{
     flex: 1 1 auto;
 }
+ion-icon{
+
+}
 footer{
     border-top: 2px solid white;
+    text-align: center
+}
+footer ion-icon{
+    font-size: 50px;
 }
 @media (orientation: portrait){
     img{ width: 100% }
