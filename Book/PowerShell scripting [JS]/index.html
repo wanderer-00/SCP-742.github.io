@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scripting PowerShell на JS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h1>Скрипты на JS для PowerShell</h1>
+    <h2>этот скрипт эмулирует нажатия клавишь клавиатуры</h2>
+    <div class="code">
+        <font class="comment">// КЛАВИШИ, НАЖАТИЯ КОТОРЫХ МУЛИРУЕМ</font> <br>
+        var str = "человек по натуре склонен к саморазрушеню"; <br> <br>
+
+        <font class="comment">// ПОДКЛЮЧЕНИЕ ИСПОЛНЯЙМОЙ ЧАСТИ POWER SHELL</font> <br>
+        var WshShell; <br>
+        WshShell = WScript.CreateObject("WScript.Shell"); <br> <br>
+
+        <font class="comment">// ЖДАТЬ [ms]</font> <br>
+        WScript.Sleep (5000); <br> <br>
+
+        array = str.split(''); <br>
+        var e1 = array.length; <br>
+        <font class="comment">//WshShell.SendKeys(array[1]);</font> <br> <br>
+
+        for (i=0; i < e1; i++){ <br> 
+            <font class="comment">//console.log(array[i]);</font><br>
+            WshShell.SendKeys(array[i]);<br>
+            WScript.Sleep (4);<br>
+        };<br><br>
+
+        <font class="comment">// ОКОШКО С ТЕКСТОМ И КНОПКОЙ 'ОК'</font><br>
+        WScript.Echo ("конец");
+    </div>
+    
+    <a href="3.js" download="">Скачать script</a>
+    
+    <h2>Так где же можно применить данный скрипт?</h2>
+    <p>Диапазон применений ограничивается лишь твоей фантазуей, я использовал его для побития рекордов по скорости печати на сайте: <a href="https://www.ratatype.ru/typing-test/">https://www.ratatype.ru/typing-test/</a></p>
+    <video controls loop src="video/speedrun.mp4"></video>
+</body></html>

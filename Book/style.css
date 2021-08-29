@@ -24,6 +24,17 @@ a{
 main{
     flex: 1 1 auto;
 }
+.comment{color: gray;}
+video{
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 4px;
+}
+.code{
+    padding: 10px;
+    border: 2px solid pink;
+    background-color: #232323
+}
 ion-icon{
 
 }
