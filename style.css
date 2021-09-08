@@ -51,6 +51,9 @@ a {
     display: flex;
     border-radius: 10px;
 }
+#search img{
+    height: 80px;
+}
 
 /* ОСНОВНАЯ КОНТЕНТ-ЛЕНТА */
 .content {
@@ -220,4 +223,25 @@ a {
 
 .PlAk1 {
     width: 100%;
+}
+
+@media (orientation: landscape){
+    /* scroll bar */
+    ::-webkit-scrollbar {width: 16px}
+    ::-webkit-scrollbar-track {background: #18191d}
+    ::-webkit-scrollbar-thumb {background: #3b4146}
+    ::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+    #header{
+        height: 70px;
+    }
+    #search{
+        width: 60px;
+        height: 60px;
+        padding: 2px;
+    }
+    #search img {
+        width: 50px;
+        height: 50px;
+    }
 }
