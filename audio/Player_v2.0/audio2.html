@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <title>PLAYER v2.1</title>
     <style>
-        /* v04 */
+        /* ОБЯЗАТЕЛЬНОЕ */
+        *,
+        *:after,
+        *:before 
+        {
+            box-sizing: border-box; /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
+        }
+
         body {
-            color: gray;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        /* SCROLL BAR */
+        ::-webkit-scrollbar {width: 8px}
+        ::-webkit-scrollbar-track {background: #18191d}
+        ::-webkit-scrollbar-thumb {background: #3b4146}
+        ::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+        /* v04 */
+        body {
             background: #343434;
             font-family: sans-serif;
-            font-size: 20px;
         }
 
         a {
@@ -78,479 +92,57 @@
             width: 100%;
             outline: none;
         }
+        
+        /* logs */
+        #logs 
+        {
+            width: 500px;
+            border: 1px solid gray;
+            
+        }
+        #title_logs
+        {
+            width: 100%;
+            color: black;
+            padding: 2px 6px;
+            background: #FFF;
+        }
+        #content_logs
+        {
+            padding: 6px;
+            background: #000;
+        }
+        #logs font
+        {
+            color: #FFF;
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
-    
-    тень на длинные названия<br/>
-    совместная пауза<br/>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/empty.gif">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">The Pierces - Secret</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/The Pierces - Secret.mp3' type="audio/mp3">
-                </audio>
-            </div>
+    <!-- logs -->
+    <div id="logs">
+        <div id="title_logs">logs</div>
+        <div id="content_logs">
+            <font>- тень на название</font>
+            <font>- совместная пауза</font>
         </div>
     </div>
 
     <!-- Player v04 -->
     <div id="box_v04">
         <div id="ico_v04">
-            <img id=img_v04 src="../img/Remi wolf - Photo id.jpg">
+            <img id=img_v04 src="img/poster.png">
         </div>
         <div id="body_v04">
-            <div id="name_v04">Remi wolf - Photo id</div>
+            <div id="name_v04">Re: Re:</div>
             <div id="player_v04">
                 <audio controls>
-                    <source src='../audio/N_E_W/Remi wolf - Photo id.mp3' type="audio/mp3">
+                    <source src='audio/Город, в котором меня нет.mp3' type="audio/mp3">
                 </audio>
             </div>
         </div>
     </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Calvin Harris.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Calvin Harris Feat. Ellie Goulding - Outside (Ian Asher Remix).mp3</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Calvin Harris Feat. Ellie Goulding - Outside (Ian Asher Remix).mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/twenty_one_pilots.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Twenty One Pilots - Ride</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Twenty One Pilots - Ride.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/United Idol - Hai Phút Hơn.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">KUnited Idol - Hai Phút Hơn</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/United Idol - Hai Phút Hơn.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Jack Stauber - Buttercup.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Jack Stauber - Buttercup</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Jack Stauber - Buttercup.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Keys N Krates - Dum Dee Dum.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Keys N Krates - Dum Dee Dum</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Keys N Krates - Dum Dee Dum.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/0.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">IC3PEAK - Смерти больше нет</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/IC3PEAK - Смерти больше нет.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/0.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">IC3PEAK - Пламя</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/IC3PEAK - Пламя.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Kumarion - 1984.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Kumarion - 1984</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Kumarion - 1984.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Kumarion - 1984.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Kumarion - 1984 (remix)</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Kumarion - 1984 (remix).mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-   
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/2rbina 2rista.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">2rbina 2rista - MAGIC</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/2rbina 2rista - MAGIC.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/0.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">nebesa ԅ(≖‿≖ԅ)</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/nebesa ԅ(≖‿≖ԅ).mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Fytch - Sirens Over Paris.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Fytch - Sirens Over Paris</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Fytch - Sirens Over Paris.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Code. Pandorum.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Code. Pandorum - Renaissance</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Code. Pandorum - Renaissance.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Ciara.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Ciara - Promise (Midliife Remix)</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Ciara - Promise (Midliife Remix).mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Sagath.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Sagath - З.Л.О.</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Sagath - З.Л.О..mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Yvng Swag - Hit My Phone.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Yvng Swag - Hit My Phone</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Yvng Swag - Hit My Phone.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Tincup - Lost.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Tincup - Lost</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Tincup - Lost.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/The Neighbourhood - Sweater Weather.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">The Neighbourhood - Sweater Weather</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/The Neighbourhood - Sweater Weather.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/cover.png">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">twenty one pilots - Stressed Out (cover by Our Last Night)</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/twenty one pilots - Stressed Out (cover by Our Last Night).mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/nozhevye raneniya - ИНЕЙ.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">nozhevye raneniya - ИНЕЙ</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/nozhevye raneniya - ИНЕЙ.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Men in Black The Series intro.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Men in Black The Series intro</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Men in Black The Series intro.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/cover.png">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Eiro Nareth - GTA San Andreas Theme</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Eiro Nareth - GTA San Andreas Theme.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Owl Vision - Jockz.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Owl Vision - Jockz</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Owl Vision - Jockz.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/empty.gif">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Fire Force</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Fire Force .mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/Asper X.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Asper X - Картонная</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Asper X - Картонная.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/TJR featuring Benji Madden - Come Back Down.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">TJR featuring Benji Madden - Come Back Down.mp3</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/TJR featuring Benji Madden - Come Back Down.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/empty.gif">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">Its Satou, bitch</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/Its Satou, bitch.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/ITSOKTOCRY - POP, LOCK & DROPDEAD.jpg">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04">ITSOKTOCRY - POP, LOCK & DROPDEAD</div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/ITSOKTOCRY - POP, LOCK & DROPDEAD.mp3' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <!-- Player v04 -->
-    <div id="box_v04">
-        <div id="ico_v04">
-            <img id=img_v04 src="../img/empty.gif">
-        </div>
-        <div id="body_v04">
-            <div id="name_v04"></div>
-            <div id="player_v04">
-                <audio controls>
-                    <source src='../audio/N_E_W/' type="audio/mp3">
-                </audio>
-            </div>
-        </div>
-    </div>
-
-
 
 </body></html>
