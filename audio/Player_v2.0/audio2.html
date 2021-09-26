@@ -3,121 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>PLAYER v2.1</title>
-    <style>
-        /* ОБЯЗАТЕЛЬНОЕ */
-        *,
-        *:after,
-        *:before 
-        {
-            box-sizing: border-box; /* РАЗМЕР БЛОКА РАСЧИТЫВАЕТСЯ С УЧЁТОМ BORDER & PADDING [ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ] */
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* SCROLL BAR */
-        ::-webkit-scrollbar {width: 8px}
-        ::-webkit-scrollbar-track {background: #18191d}
-        ::-webkit-scrollbar-thumb {background: #3b4146}
-        ::-webkit-scrollbar-thumb:hover {background: #474e54}
-
-        /* v04 */
-        body {
-            background: #343434;
-            font-family: sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        #box_v04 {
-            width: 96%;
-            height: 100px;
-            margin: 2%;
-            background-color: #F1F3F4;
-
-            display: flex;
-            flex-wrap: no-wrap;
-            flex-direction: row;
-        }
-
-        #ico_v04 {
-            height: 100%;
-        }
-
-        #img_v04 {
-            height: 100%;
-        }
-
-        /* audio & name */
-        #body_v04 {
-            overflow: hidden;
-            flex-basis: 100%;
-        }
-
-        #name_v04 {
-            color: black;
-            height: 50%;
-            margin-right: 20px;
-            padding-left: 20px;
-            /* НАСТРОЙКА ШРИФТОВ */
-            font-size: 22px;
-            font-weight: 550;
-            font-family: sans-serif;
-            /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
-            display: flex;
-            align-items: center;
-            /* Запрещаем перенос строк */
-            white-space: nowrap;
-            /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
-            overflow: hidden;
-
-
-        }
-
-        #player_v04 {
-            height: 50%;
-            /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
-            overflow: hidden;
-            /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #player_v04 audio {
-            width: 100%;
-            outline: none;
-        }
-        
-        /* logs */
-        #logs 
-        {
-            width: 500px;
-            border: 1px solid gray;
-            
-        }
-        #title_logs
-        {
-            width: 100%;
-            color: black;
-            padding: 2px 6px;
-            background: #FFF;
-        }
-        #content_logs
-        {
-            padding: 6px;
-            background: #000;
-        }
-        #logs font
-        {
-            color: #FFF;
-            display: flex;
-        }
-    </style>
+    <!-- logs -->
+    <link rel="stylesheet" href="CSS/logs.css">
+    <!-- style -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- это база -->
+    <link rel="stylesheet" href="CSS/base.css">
 </head>
 
 <body>

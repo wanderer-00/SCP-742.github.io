@@ -1,0 +1,64 @@
+/* v04 */
+body {
+    background: #343434;
+    font-family: sans-serif;
+}
+
+#box_v04 {
+    height: 100px;
+    margin: 10px;
+    background-color: #F1F3F4;
+
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+}
+
+#ico_v04 {
+    height: 100%;
+}
+
+#img_v04 {
+    height: 100%;
+}
+
+/* audio & name */
+#body_v04 {
+    overflow: hidden;
+    flex-basis: 100%;
+}
+
+#name_v04 {
+    color: black;
+    height: 50%;
+    margin-right: 20px;
+    padding-left: 20px;
+    /* НАСТРОЙКА ШРИФТОВ */
+    font-size: 22px;
+    font-weight: 550;
+    font-family: sans-serif;
+    /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
+    display: flex;
+    align-items: center;
+    /* Запрещаем перенос строк */
+    white-space: nowrap;
+    /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
+    overflow: hidden;
+
+
+}
+
+#player_v04 {
+    height: 50%;
+    /* ОБРЕЗАТЬ ПО КРАЯМ БЛОКА */
+    overflow: hidden;
+    /* ПОЗИЦИАНИРОВАНИЕ ПО ЦЕНТРАЛЬНОЙ ТОЧКЕ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player_v04 audio {
+    width: 100%;
+    outline: none;
+}
