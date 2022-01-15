@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>code</title>
+    <link rel="stylesheet" href="0.css">
+    <link rel="stylesheet" href="MODULs/highlight/styles/base16/atelier-forest.min.css">
+</head>
+<body>
+
+<h1>ОБНУЛЕНИЕ стилей</h1>
+<h5>*</h5>
+<pre class='code'><code>/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*:after,
+*:before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+</code></pre>
+
+<h5>button</h5>
+<pre class='code'><code>/* ОБНУЛЕНИЕ СТИЛЕЙ */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+</code></pre>
+<button>old</button>
+
+
+<h5>a</h5>
+<pre class='code'><code>/* ОБНУЛЕНИЕ СТИЛЕЙ */
+a {text-decoration: none}
+</code></pre>
+<a href='#'>old</a>
+<a href='#' style='text-decoration: none'>new</a>
+
+
+<h5>input, select, button, a:</h5>
+<pre class='code'>
+<code>/* Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a: */
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: 0;/* УДАЛЕНИЕ ТЕНИ ДЛЯ ЭТИХ ПСЕВДОКЛАССОВ */
+}
+</code>
+</pre>
+<input type='text' value='old'>
+<input type='text' value='new' style='outline: 0; outline-offset: 0; box-shadow: 0;'>
+
+
+<h1>цвет в переменную css</h1>
+<pre class='code'>
+<code>/* ПАЛИТРА */
+:root
+{
+    --имя1: цвет1;
+    --имя2: цвет2;
+    --имя3: цвет3;
+}
+</code>
+</pre>
+
+<h5>пример</h5>
+<pre class='code'>
+<code>/* ПАЛИТРА */
+:root
+{
+    --BAG: #4c4a48;
+    --TXT: #F8E6C8;
+    --COL: #9DCFB6;
+}
+</code>
+</pre>
+
+
+
+<h1>настройка scrollbar</h1>
+<pre class='code'>
+<code>/* SCROLLBAR */
+::-webkit-scrollbar {/* 1 - скроллбар */}
+::-webkit-scrollbar-butto {/* 2 - кнопка */}
+::-webkit-scrollbar-track {/* 3 - трек */}
+::-webkit-scrollbar-track-piece {/* 4 - видимая часть трека */}
+::-webkit-scrollbar-thumb {/* 5 - ползунок */}
+::-webkit-scrollbar-corner {/* 6 - уголок */}
+::-webkit-resizer {/* 7 - изменение размеров */}
+</code>
+</pre>
+
+<h5>пример</h5>
+<pre class='code'>
+<code>/* SCROLL BAR */
+::-webkit-scrollbar {width: 8px}
+::-webkit-scrollbar-track {background: #18191d}
+::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb:hover {background: #474e54}
+</code>
+</pre>
+
+<!--
+<p id="p1">P1: I am paragraph 1</p>
+<p id="p2">P2: I am a second paragraph</p>
+<button onclick="copyToClipboard('p1')">Copy P1</button>
+<button onclick="copyToClipboard('p2')">Copy P2</button>
+<br/>
+<br/>
+<input type="text" style="height: 400px; width: 80%" placeholder="Paste here for test" />
+-->
+
+<script src="MODULs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+
+<!--
+<script>
+function copyToClipboard(elementId) {
+
+  // сщздает скрытый input
+  var aux = document.createElement("input");
+
+  // записывает в атрибут value текст параграфа
+  aux.setAttribute("value", document.getElementById("w").innerHTML);
+
+  // Append it to the body
+  document.body.appendChild(aux);
+
+  // Highlight its content
+  aux.select();
+
+  // Copy the highlighted text
+  document.execCommand("copy");
+
+  // Remove it from the body
+  document.body.removeChild(aux);
+
+}
+</script>
+-->
+
+</html>

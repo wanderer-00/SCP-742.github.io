@@ -1,0 +1,33 @@
+*
+{
+    box-sizing: border-box;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {width: 8px; height: 8px}
+::-webkit-scrollbar-track {background: #18191d}
+::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb:hover {background: #474e54}
+
+body
+{
+    color: antiquewhite;
+    font-family: sans-serif;
+    background: #1D1C19;
+}
+
+h1, h2, h3, h4, h5
+{
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+code
+{
+    overflow-x: scroll;
+    border: 1px solid rgb(70, 68, 61);
+    border-radius: 4px;
+
+}
+/* СИНТАКСИС */
+.comment{color: gray}
