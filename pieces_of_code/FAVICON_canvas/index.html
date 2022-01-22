@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animate favicon</title>
+    <link rel="icon" type="image/png" href="" width=32px>
+	<!--Подключаем библиотеку-->
+	<script src="jquery-3.6.0.slim.min.js"></script>
+</head>
+<body>
+    <canvas width=32 height=32></canvas>
+    <button>Load</button>
+</body>
+
+    <script>
+    favicon = document.querySelector('link')
+    // ПРОВЕРКА ПОДДЕРЖКИ CANVAS
+    onload = ()=> {
+      canvas = document.querySelector('canvas'),
+      context = canvas.getContext('2d');
+      if (!!context) {
+          /* если canvas поддерживается*/
+          a = true
+      } else {
+          a = false
+      }
+      console.log('ПОДДЕРЖКА:')
+      console.log('canvas', a)
+    };
+        
+    // ОБРАБОТЧИК BUTTON
+    button = document.querySelector('button');
+    button.addEventListener('click', function() { 
+        /* Переменная, используемая для управления анимацией */
+        n = 0, 
+        /* Длительность интервала анимации */
+        loadingInterval = setInterval(drawLoader, 60); 
+    });
+        
+    function drawLoader() {
+      with(context) {
+        clearRect(0, 0, 32, 32);
+        beginPath();
+        /* До 25% времени, выделенного на рисование*/
+        if (n<=25){ 
+          /*
+            (0,0)-----(32,0)
+          */
+          moveTo(0, 0); lineTo((32/25)*n, 0);
+        }
+        /* Между 25 и 50 процентами */
+        else if(n>25 && n<=50){ 
+          /*
+            (0,0)-----(32,0)
+                      |
+                      |
+                      (32,32)
+          */
+          moveTo(0, 0); lineTo(32, 0);
+          moveTo(32, 0); lineTo(32, (32/25)*(n-25));
+        }
+        /* Между 50 и 75 процентами */
+        else if(n>50 && n<= 75){ 
+          /*
+            (0,0)-----(32,0)
+                      |
+                      |
+            (0,32)----(32,32)
+          */
+          moveTo(0, 0); lineTo(32, 0);
+          moveTo(32, 0); lineTo(32, 32);
+          moveTo(32, 32); lineTo(-((32/25)*(n-75)), 32);
+        }
+          /* Между 75 и 100 процентами */
+        else if(n>75 && n<=100){
+          /*
+            (0,0)-----(32,0)
+                |      |
+                |      |
+            (0,32)----(32,32)
+          */
+          moveTo(0, 0); lineTo(32, 0);
+          moveTo(32, 0); lineTo(32, 32);
+          moveTo(32, 32); lineTo(0, 32);
+          moveTo(0, 32); lineTo(0, -((32/25)*(n-100)));
+        }
+        stroke();
+      }
+      // Преобразуем то, что нарисовано на элементе <canvas>, в формат PNG, и сделаем полученное изображение фавиконом
+      favicon.href = canvas.toDataURL('image/png');
+      /* После того, как рисование завершено */
+      if (n === 100) {
+        clearInterval(loadingInterval);
+        return;
+      }
+      // Инкрементируем переменную, которая используется для управления анимацией
+      n++;
+    }
+    </script>
+
+</html>
