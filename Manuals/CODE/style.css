@@ -1,0 +1,13 @@
+*,*:active,*::before{
+    box-sizing: border-box;
+    /* HITBOX *///border: 1px solid red;
+}
+body{
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: #000;
+}
+pre{border: 1px solid #FFF}

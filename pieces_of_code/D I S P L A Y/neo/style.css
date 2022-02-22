@@ -1,0 +1,175 @@
+:root{
+    --BG: #363844;
+    --CL: #78E0B4;
+    
+    --SH_LITE: #3c3d42;
+    --SH_DARK: #202124;
+}
+
+*{box-sizing: border-box}
+
+body{
+    background-color: var(--BG);
+    font-family: sans-serif;
+    font-weight: 700;
+    color: gray;
+    caret-color: #FFF;
+}
+
+input{
+    outline: none;
+    border: none
+}
+
+div.Ui{
+    color:var(--CL);
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.HILL{
+    box-shadow:  3px 3px 2px var(--SH_DARK),
+                -3px -3px 2px var(--SH_LITE);
+}
+.PIT{
+    box-shadow: inset 3px 3px 2px var(--SH_DARK),
+                inset -3px -3px 2px var(--SH_LITE)
+}
+
+.CLUSTER{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* СВЕТЛАЯ КНОПКА */
+input.LITE_BUTTON{
+    color: var(--BG) !important;
+    background-color: var(--CL) !important;
+} input.LITE_BUTTON:active{
+    color: var(--CL) !important;
+    background-color: var(--BG) !important;
+}
+
+
+
+.box{ display: flex }
+
+/* КНОПКА */
+button{
+    --SIZE:40px;
+    margin: 10px;
+    background-color: var(--BG);
+    border-radius: 10px;
+    border: none;
+    color: gray;
+    display: flex;
+    width: var(--SIZE);
+    height: var(--SIZE);
+    align-items: center;
+    justify-content: center;
+    box-shadow:  3px 3px 2px var(--SH_DARK),
+                -3px -3px 2px var(--SH_LITE);
+} button:active {
+    box-shadow: inset 3px 3px 2px var(--SH_DARK),
+                inset -3px -3px 2px var(--SH_LITE);
+}
+/* КРУГЛАЯ КНОПКА */
+.circle{
+    border-radius: 50%;
+}
+/* СКРУГЛЕННАЯ КНОПКА */
+.cube{
+    border-radius: 10px;
+}
+/* СВЕТЛАЯ КНОПКА */
+.lite{
+    color: var(--CL);
+}
+
+
+
+input{
+    color: #FFF;
+    caret-color: #FFF;
+    margin: 10px;
+    padding: 10px;
+}
+
+input[type='button']{
+    color: var(--CL);
+    background-color: var(--BG);
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius: 100px;
+    font-weight: 600;
+} input[type='button']:active{
+    color: gray;
+    background-color: var(--BG);
+    box-shadow: inset 3px 3px 2px var(--SH_DARK),
+                inset -3px -3px 2px var(--SH_LITE)
+}
+
+/* ТЕКСТОВОЕ ПОЛЕ */
+input[type='text']{
+    background-color: var(--BG);
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 2px var(--SH_DARK),
+                inset -3px -3px 2px var(--SH_LITE);
+} input[type='text']::placeholder {position: absolute}
+
+input[type='radio']{
+    margin: 10px;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* radio */
+.form_radio {
+	margin-bottom: 10px;
+}
+.form_radio input[type='radio'] {
+display: none
+}
+.form_radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+}
+.form_radio label:before {
+	content: "";
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background: url(https://snipp.ru/img/radio-1.png) 0 0 no-repeat;
+}
+ 
+/* Checked */
+.form_radio input[type=radio]:checked + label:before {
+	background: url(https://snipp.ru/img/radio-2.png) 0 0 no-repeat;
+}
+ 
+/* Hover */
+.form_radio label:hover:before {
+	filter: brightness(120%);
+}
+ 
+/* Disabled */
+.form_radio input[type=radio]:disabled + label:before {
+	filter: grayscale(100%);
+}
