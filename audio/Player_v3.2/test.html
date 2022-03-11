@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        body{
+            background-color: #343434
+        }
+#textbox{
+    max-height:100px;
+    overflow:hidden;
+    margin-top:-20px;
+}
+#textbox:before{
+    content:"";
+    display:block;
+    height:40px;
+    position:absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0), #fff 75%)
+}
+    </style>
+    
+</head>
+<body>
+                <!-- тест -->
+<div id="textbox">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+</div>
+</body>
+</html>

@@ -7,9 +7,9 @@
 }
 
 /* SCROLL BAR */
-::-webkit-scrollbar {width: 8px}
+::-webkit-scrollbar {width: 6px}
 ::-webkit-scrollbar-track {background: #18191d}
-::-webkit-scrollbar-thumb {background: #3b4146}
+::-webkit-scrollbar-thumb {background: #3b4146;}
 ::-webkit-scrollbar-thumb:hover {background: #474e54}
 
 body {
@@ -69,51 +69,35 @@ body {
     }
 }
 
-h2 {
+h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans';
+    font-weight: 700;
+
+    font-size: 13px;
+    line-height: 13px;
+}
+
+h2 {
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 2.5px;
-    font-family: 'Open Sans';
-    font-weight: 700;
     color: #fff;
 }
-
-
 
 h4 {
-    margin: 0;    /* frm *//* margin: 0 0 5px 29px; */
-    padding: 0;
+    /* frm *//* margin: 0 0 5px 29px; */
     font-size: 14px;
     line-height: 14px;
-    font-family: 'Open Sans';
-    font-weight: 700;
     color: #fff;
 }
 
-h5 {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    line-height: 13px;
-    font-family: 'Open Sans';
-    font-weight: 700;
-    color: #6d6d6d;
-}
-
-h6 {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    line-height: 13px;
-    font-family: 'Open Sans';
-    font-weight: 700;
-    color: #f0f0f0;
-}
+h5 {color: #6d6d6d}
+h6 {color: #f0f0f0}
 
 .screen {
-    background-color: #000;
+    background-color: #FFF;
     padding: 0;
     height: 550px;
     width: 366px;
@@ -203,17 +187,7 @@ label.main:hover:before {
     color: #ff564c;
 }
 
-.bodyPlayer {
-    position: absolute;
-    top: 366px;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 286px;
-    width: 366px;
-    background: #111;
-    transition: all 0.3s ease-in;
-}
+
 
 .screen > #magicButton:checked ~ .bodyPlayer {
     height: 470px;
@@ -594,6 +568,8 @@ audio {
     top: 410px;
     left: 300px;
     transform: rotate(-90deg);
+    
+    display: none;
 }
 
 /* ПОЛЗУНОК */
@@ -647,4 +623,43 @@ input[type="range"]::-ms-fill-upper {
     left: 0;
     position: absolute;
     z-index: -1;
+}
+
+
+.bodyPlayer {
+    overflow: scroll;
+    position: absolute;
+    top: 366px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    width: 348px;
+    transition: all 0.3s ease-in;
+    background-color: #000;
+    padding: 0.5rem;
+
+/*    border: 1px solid red;*/
+}
+
+.box{
+    display: flex;
+    color: #FFF;
+    width: 328px;
+    margin-bottom: 0.2rem;
+    border: 1px solid green;
+}
+.box > div{
+    display: flex;
+    padding: 0.5rem;
+    background-color: #1D1D1D;
+    
+/*    border: 1px solid pink;*/
+}
+
+/* NAME */
+.box>div:nth-child(2){
+    overflow: hidden;
+    white-space: pre;
+    flex-grow: 3;
 }

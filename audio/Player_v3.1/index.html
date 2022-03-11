@@ -45,7 +45,6 @@
         <div class="coverImage"></div>
         <div class="search"></div>
         <div class="bodyPlayer">
-<!--        <div style="width: 100px; height: 100px; background-color: red"></div>-->
         </div>
         
         <div class="scroll">
@@ -196,19 +195,9 @@
 
             // прибавить 1 к счётчику
             number_audio ++;
-            // отображение ID трека на страницe [+1]
-            display_number_track.innerHTML = `ID трека = ${number_audio}`;
-            
-            // сменить URL(audio) на следующие (в массиве)
-            audio.src = ray12[number_audio].url;
-            // сменить название трека на следующее (в массиве)
-            name_audio.innerHTML = ray12[number_audio].name;
-            styleXXX.backgroundImage = ray12[number_audio].ico;
 
-            if (on_off == 1) {
-                // проигрывать аудио
-                audio.play();
-            };
+            // переключение трека
+            TOGGLE();
         };
 
 
@@ -223,6 +212,13 @@
             // записать
             // номер
             number_audio --;
+
+            // переключение трека
+            TOGGLE();
+        };
+
+        // переключение трека
+        function TOGGLE() {
             // отображение ID трека на страницe [-1]
             display_number_track.innerHTML = `ID трека = ${number_audio}`;
             // адрес
@@ -237,7 +233,6 @@
                 audio.play();
             };
         };
-
         
         
         var vol_display = document.getElementsByClassName('vol_display');
@@ -267,6 +262,10 @@
 //        list[0].innerHTML += `<img style='width: 100px;' src="img/0.jpg">`;
         list[0].innerHTML += `<tr class="song"><td class="nr"><h5 class="number">${i}</h5></td><td class="title"><h6 style="color: #ff564c;">${ray12[i].name}</h6></td><td class="length"><h5>2:49</h5></td><td><input type="checkbox" id="heart"><label for="heart" class="icons"></label></td></tr>`;
     };
+
     </script>
 </body>
+
+<script src="script.js"></script>
+
 </html>
