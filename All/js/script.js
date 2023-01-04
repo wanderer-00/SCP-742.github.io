@@ -54,7 +54,7 @@ const displayCharacters = (characters) => {
                     <h2>${character.name}</h2>
                 </a>
                 <p>during: ${character.during}</p>
-                <img src="${character.image}"></img>
+                <img src="../img/anime/${character.image}"></img>
             </li>
         `;
         }).join(''); // Метод join() объединяет все элементы массива (или массивоподобного объекта) в строку.

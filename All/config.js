@@ -5,7 +5,7 @@
                 "serial": true,
                 "during": true,
                 "url": "../page/5-santimetrov-v-secundu/5-santimetrov-v-secundu.html",
-                "image": "../img/anime/5-santimetrov-v-secundu.jpg"
+                "image": "5-santimetrov-v-secundu.jpg"
         },
 
         {
@@ -15,7 +15,7 @@
                 "during": false,
                 "wand": { "wood": "holly", "core": "phoenix feather", "length": 11 },
                 "url": "",
-                "image": "../img/anime/91-day.jpg"
+                "image": "91-day.jpg"
         },
 
         {
@@ -24,7 +24,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/absolyutnyj-duet.jpg"
+                "image": "absolyutnyj-duet.jpg"
         },
 
         {
@@ -33,7 +33,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/agent-paranoi.jpg"
+                "image": "agent-paranoi.jpg"
         },
 
         {
@@ -42,7 +42,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/aho-girl.jpg"
+                "image": "aho-girl.jpg"
         },
 
         {
@@ -51,7 +51,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/angelskie-ritmy.jpg"
+                "image": "angelskie-ritmy.jpg"
         },
 
         {
@@ -60,7 +60,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/another.jpg"
+                "image": "another.jpg"
         },
 
         {
@@ -69,7 +69,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/arifureta-silnejshij-remeslennik-v-mire.jpg"
+                "image": "arifureta-silnejshij-remeslennik-v-mire.jpg"
         },
 
         {
@@ -78,7 +78,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/arifureta-silnejshij-remeslennik-v-mire-2.jpg"
+                "image": "arifureta-silnejshij-remeslennik-v-mire-2.jpg"
         },
 
         {
@@ -87,7 +87,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/arifureta-silnejshij-remeslennik-v-mire-dopolnitelnye-epizody.jpg"
+                "image": "arifureta-silnejshij-remeslennik-v-mire-dopolnitelnye-epizody.jpg"
         },
 
         {
@@ -96,7 +96,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/ataka-titanov.jpg"
+                "image": "ataka-titanov.jpg"
         },
 
         {
@@ -105,7 +105,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/ataka-titanov-2.jpg"
+                "image": "ataka-titanov-2.jpg"
         },
 
         {
@@ -114,7 +114,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/ataka-titanov-3.jpg"
+                "image": "ataka-titanov-3.jpg"
         },
 
         {
@@ -123,7 +123,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/ataka-titanov-bez-sozhalenij.jpg"
+                "image": "ataka-titanov-bez-sozhalenij.jpg"
         },
 
         {
@@ -132,7 +132,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/ataka-titanov-dnevnik-ilze.jpg"
+                "image": "ataka-titanov-dnevnik-ilze.jpg"
         },
 
         {
@@ -141,7 +141,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/ataka-titanov-poterjannye-devushki.jpg"
+                "image": "ataka-titanov-poterjannye-devushki.jpg"
         },
 
         {
@@ -150,7 +150,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/ataka-titanov-final.jpg"
+                "image": "ataka-titanov-final.jpg"
         },
 
         {
@@ -159,7 +159,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/bezdarnaya-nana.jpg"
+                "image": "bezdarnaya-nana.jpg"
         },
 
         {
@@ -168,7 +168,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/bezdomnyj-bog.jpg"
+                "image": "bezdomnyj-bog.jpg"
         },
 
         {
@@ -177,7 +177,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/bezdomnyj-bog-aragoto.jpg"
+                "image": "bezdomnyj-bog-aragoto.jpg"
         },
 
         {
@@ -186,7 +186,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/biljard-smerti.jpg"
+                "image": "biljard-smerti.jpg"
         },
 
         {
@@ -195,7 +195,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/black-bullet.jpg"
+                "image": "black-bullet.jpg"
         },
 
         {
@@ -204,7 +204,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/castlevaniya.jpg"
+                "image": "castlevaniya.jpg"
         },
 
         {
@@ -213,7 +213,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/celostnometallicheskij-alhimik.jpg"
+                "image": "celostnometallicheskij-alhimik.jpg"
         },
 
         {
@@ -222,7 +222,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/celostnometallicheskij-alhimik-2.jpg"
+                "image": "celostnometallicheskij-alhimik-2.jpg"
         },
 
         {
@@ -231,7 +231,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/chernyj-klever.jpg"
+                "image": "chernyj-klever.jpg"
         },
 
         {
@@ -240,7 +240,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/dnevnik-budushego.jpg"
+                "image": "dnevnik-budushego.jpg"
         },
 
         {
@@ -249,7 +249,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/doroga-zverya.jpg"
+                "image": "doroga-zverya.jpg"
         },
 
         {
@@ -258,7 +258,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/dororo.jpg"
+                "image": "dororo.jpg"
         },
 
         {
@@ -267,7 +267,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/dyurarara.jpg"
+                "image": "dyurarara.jpg"
         },
 
         {
@@ -276,7 +276,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/eho-terrora.jpg"
+                "image": "eho-terrora.jpg"
         },
 
         {
@@ -285,7 +285,7 @@
                 "serial": true,
                 "during": true,
                 "url": "",
-                "image": "../img/anime/elfijskaja-pesn.jpg"
+                "image": "elfijskaja-pesn.jpg"
         },
 
         {
@@ -294,7 +294,7 @@
                 "serial": true,
                 "during": false,
                 "url": "",
-                "image": "../img/anime/etot-glupyj-svin-ne-ponimaet-mechtu-devochki-zajki.jpg"
+                "image": "etot-glupyj-svin-ne-ponimaet-mechtu-devochki-zajki.jpg"
         },
 
         {
@@ -304,7 +304,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/fire-force.jpg"
+                "image": "fire-force.jpg"
         },
 
         {
@@ -314,7 +314,7 @@
                 "during": 2,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/fire-force-2.jpg"
+                "image": "fire-force-2.jpg"
         },
 
         {
@@ -324,7 +324,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/forma-golosa.jpg"
+                "image": "forma-golosa.jpg"
         },
 
         {
@@ -334,7 +334,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/furi-kuri.jpg"
+                "image": "furi-kuri.jpg"
         },
 
         {
@@ -344,7 +344,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/gate.jpg"
+                "image": "gate.jpg"
         },
 
         {
@@ -354,7 +354,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/gate-2.jpg"
+                "image": "gate-2.jpg"
         },
 
         {
@@ -364,7 +364,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/gorod-akterov.jpg"
+                "image": "gorod-akterov.jpg"
         },
 
         {
@@ -374,7 +374,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/gorod-v-kotorom-menja-net.jpg"
+                "image": "gorod-v-kotorom-menja-net.jpg"
         },
 
         {
@@ -384,7 +384,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne.jpg"
+                "image": "gospozha-kaguya-v-lyubvi-kak-na-voyne.jpg"
         },
 
         {
@@ -394,7 +394,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne-2.jpg"
+                "image": "gospozha-kaguya-v-lyubvi-kak-na-voyne-2.jpg"
         },
 
         {
@@ -404,7 +404,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/hanter-x-hanter-1999.jpg"
+                "image": "hanter-x-hanter-1999.jpg"
         },
 
         {
@@ -414,7 +414,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/hanter-x-hanter-pilotnaja-serija.jpg"
+                "image": "hanter-x-hanter-pilotnaja-serija.jpg"
         },
 
         {
@@ -424,7 +424,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/hodjachij-zamok.jpg"
+                "image": "hodjachij-zamok.jpg"
         },
 
         {
@@ -434,7 +434,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/horimiya.jpg"
+                "image": "horimiya.jpg"
         },
 
         {
@@ -444,7 +444,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/id-invaded.jpg"
+                "image": "id-invaded.jpg"
         },
 
         {
@@ -454,7 +454,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/igra-darvina.jpg"
+                "image": "igra-darvina.jpg"
         },
 
         {
@@ -464,7 +464,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/incident-kemono.jpg"
+                "image": "incident-kemono.jpg"
         },
 
         {
@@ -474,7 +474,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/inujashiki.jpg"
+                "image": "inujashiki.jpg"
         },
 
         {
@@ -484,7 +484,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/ja-hochu-sest-tvoju-podzheludochnuju.jpg"
+                "image": "ja-hochu-sest-tvoju-podzheludochnuju.jpg"
         },
 
         {
@@ -494,7 +494,7 @@
                 "during": true,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/jamado-i-7-vedm.jpg"
+                "image": "jamado-i-7-vedm.jpg"
         },
 
         {
@@ -504,7 +504,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kak-i-ozhidal-moja-shkolnaja-romanticheskaja-zhizn-ne-udolas-[ova-1].jpg"
+                "image": "kak-i-ozhidal-moja-shkolnaja-romanticheskaja-zhizn-ne-udolas-[ova-1].jpg"
         },
 
         {
@@ -514,7 +514,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kak-i-ozhidal-moja-shkolnaja-romanticheskaja-zhizn-ne-udolas-[tv-1].jpg"
+                "image": "kak-i-ozhidal-moja-shkolnaja-romanticheskaja-zhizn-ne-udolas-[tv-1].jpg"
         },
 
         {
@@ -524,7 +524,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kengan-asura.jpg"
+                "image": "kengan-asura.jpg"
         },
 
         {
@@ -534,7 +534,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kengan-asura.jpg"
+                "image": "kengan-asura.jpg"
         },
 
         {
@@ -544,7 +544,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kill-la-kill.jpg"
+                "image": "kill-la-kill.jpg"
         },
 
         {
@@ -554,7 +554,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/klass-ubijc.jpg"
+                "image": "klass-ubijc.jpg"
         },
 
         {
@@ -564,7 +564,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/klass-ubijc-2.jpg"
+                "image": "klass-ubijc-2.jpg"
         },
 
         {
@@ -574,7 +574,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/klinok-rassekajuschij-demonov.jpg"
+                "image": "klinok-rassekajuschij-demonov.jpg"
         },
 
         {
@@ -584,7 +584,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kod-gias-vosstanie-lelusha.jpg"
+                "image": "kod-gias-vosstanie-lelusha.jpg"
         },
 
         {
@@ -594,7 +594,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/kod-gias-vosstanie-lelusha-r2.jpg"
+                "image": "kod-gias-vosstanie-lelusha-r2.jpg"
         },
 
         {
@@ -604,7 +604,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/konosuba.jpg"
+                "image": "konosuba.jpg"
         },
 
         {
@@ -614,7 +614,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/konosuba-2.jpg"
+                "image": "konosuba-2.jpg"
         },
 
         {
@@ -624,7 +624,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/konosuba-bagrovaj-legenda.jpg"
+                "image": "konosuba-bagrovaj-legenda.jpg"
         },
 
         {
@@ -634,7 +634,7 @@
                 "during": false,
                 "time": 0,
                 "url": "",
-                "image": "../img/anime/control.jpg"
+                "image": "control.jpg"
         },
 
         {
