@@ -282,112 +282,404 @@ const DURING = [
     },
 
     {
-        "NAME": "",
+        "NAME": "Необъятный океан",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "neobjatnyj-okean.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Нет игры — нет жизни",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "net-igry-net-zhizni.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Нет игры — нет жизни: начало",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "net-igry-net-zhizni-nachalo.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "О моём перерождении в слизь",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "o-moem-pererozhdenii-v-sliz.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "О моём перерождении в слизь 2",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "o-moem-pererozhdenii-v-sliz-2.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Паразит: учение о жизни",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "parazit-uchenie-o-zhizni.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Патэма наоборот",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "patema-naoborot.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Пособие по выживанию в альтернативном мире с нуля",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "re-zero.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Пособие по выживанию в альтернативном мире с нуля 2",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "re-zero-2.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Пособие по выживанию в альтернативном мире с нуля [OVA]",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "re-zero-%5Bova%5D.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Пособие по выживанию в альтернативном мире с нуля. снежные воспоминания",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "re-zero-snezhnye-vospominanija.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Сакамото а что?",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "sakamoto-a-chto.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Сатана на подработке",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "satana-na-podrabotke.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Связанные болью",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "svjazannye-bolju.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Связанные небом",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "svjazannye-nebom.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Семь смертных грехов",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "sem-smertnyh-grehov.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Семь смертных грехов 2",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "sem-smertnyh-grehov-2.jpg"
     },
 
     {
-        "NAME": "",
+        "NAME": "Семь смертных грехов: узники небес",
         "TEXT": "",
-        "IMG": ""
+        "IMG": "sem-smertnyh-grehov-uzniki-nebes.jpg"
     },
 
+    {
+        "NAME": "Сердцу хочется кричать",
+        "TEXT": "",
+        "IMG": "serdcu-hochetsja-krichat.jpg"
+    },
 
+    {
+        "NAME": "Твоё имя",
+        "TEXT": "",
+        "IMG": "tvoe-imja.jpg"
+    },
+
+    {
+        "NAME": "Тёмный дворецкий",
+        "TEXT": "",
+        "IMG": "temnyj-dvoreckij.jpg"
+    },
+
+    {
+        "NAME": "Тёмный дворецкий 2",
+        "TEXT": "",
+        "IMG": "temnyj-dvoreckij-2.jpg"
+    },
+
+    {
+        "NAME": "Тёмный дворецкий: глава об Атлантике",
+        "TEXT": "",
+        "IMG": "temnyj-dvoreckij-glava-ob-atlantike.jpg"
+    },
+
+    {
+        "NAME": "Тёмный дворецкий: глава о цирке",
+        "TEXT": "",
+        "IMG": "temnyj-dvoreckij-glava-o-cirke.jpg"
+    },
+
+    {
+        "NAME": "Тетрадь смерти",
+        "TEXT": "",
+        "IMG": "tetrad-smerti.jpg"
+    },
+
+    {
+        "NAME": "Убийца Акаме",
+        "TEXT": "",
+        "IMG": "ubijca-akame.jpg"
+    },
+
+    {
+        "NAME": "Укрась прощальное утро цветами обящания",
+        "TEXT": "",
+        "IMG": "ukras-proschalnoe-utro-cvetami-objaschanija.jpg"
+    },
+
+    {
+        "NAME": "Форма голоса",
+        "TEXT": "",
+        "IMG": "forma-golosa.jpg"
+    },
+
+    {
+        "NAME": "Ходячий замок",
+        "TEXT": "",
+        "IMG": "hodjachij-zamok.jpg"
+    },
+
+    {
+        "NAME": "Целостнометаллический алхимик",
+        "TEXT": "",
+        "IMG": "celostnometallicheskij-alhimik.jpg"
+    },
+
+    {
+        "NAME": "Целостнометаллический алхимик 2",
+        "TEXT": "",
+        "IMG": "celostnometallicheskij-alhimik-2.jpg"
+    },
+
+    {
+        "NAME": "Школа-тюрьма",
+        "TEXT": "",
+        "IMG": "shkola-tjurma.jpg"
+    },
+
+    {
+        "NAME": "Школа-тюрьма: мастерское скольжение",
+        "TEXT": "",
+        "IMG": "shkola-tjurma-masterskoe-skolzhenie.jpg"
+    },
+
+    {
+        "NAME": "Эльфийская песнь",
+        "TEXT": "",
+        "IMG": "elfijskaja-pesn.jpg"
+    },
+
+    {
+        "NAME": "Этот глупый свин не понимает мечту девочки-зайки",
+        "TEXT": "",
+        "IMG": "etot-glupyj-svin-ne-ponimaet-mechtu-devochki-zajki.jpg"
+    },
+
+    {
+        "NAME": "Эхо террора",
+        "TEXT": "",
+        "IMG": "eho-terrora.jpg"
+    },
+
+    {
+        "NAME": "Я хочу съесть твою поджелудочную",
+        "TEXT": "",
+        "IMG": "ja-hochu-sest-tvoju-podzheludochnuju.jpg"
+    },
+
+    {
+        "NAME": "Ямадо и 7 ведьм",
+        "TEXT": "",
+        "IMG": "jamado-i-7-vedm.jpg"
+    },
+
+    {
+        "NAME": "Иная",
+        "TEXT": "",
+        "IMG": "Another.jpg"
+    },
+
+    {
+        "NAME": "Чёрная пуля",
+        "TEXT": "",
+        "IMG": "black-bullet.jpg"
+    },
+
+    {
+        "NAME": "Castlevania",
+        "TEXT": "",
+        "IMG": "castlevaniya.jpg"
+    },
+
+    {
+        "NAME": "Пламенная бригада пожарных",
+        "TEXT": "",
+        "IMG": "fire-force.jpg"
+    },
+
+    {
+        "NAME": "Врата",
+        "TEXT": "",
+        "IMG": "gate.jpg"
+    },
+
+    {
+        "NAME": "Врата ll",
+        "TEXT": "",
+        "IMG": "gate-2.jpg"
+    },
+
+    {
+        "NAME": "ID:invaded",
+        "TEXT": "",
+        "IMG": "id-invaded.jpg"
+    },
+
+    {
+        "NAME": "KILL la KILL",
+        "TEXT": "",
+        "IMG": "KILL-la-KILL.jpg"
+    },
+
+    {
+        "NAME": "Богиня благославляет этот прекрасный мир",
+        "TEXT": "",
+        "IMG": "konosuba.jpg"
+    },
+
+    {
+        "NAME": "Богиня благославляет этот прекрасный мир 2",
+        "TEXT": "",
+        "IMG": "Konosuba-2.jpg"
+    },
+
+    {
+        "NAME": "One Punch Men",
+        "TEXT": "",
+        "IMG": "one-punch-man.jpg"
+    },
+
+    {
+        "NAME": "One Punch Men: спецвыпуски",
+        "TEXT": "",
+        "IMG": "one-punch-man-specvypusk.jpg"
+    },
+
+    {
+        "NAME": "One Punch Men: путь к становлению героем",
+        "TEXT": "",
+        "IMG": "one-punch-man-put-k-stanovleniu-geroem.jpg"
+    },
+
+    {
+        "NAME": "One Punch Men 2",
+        "TEXT": "",
+        "IMG": "one-punch-man-2.jpg"
+    },
+
+    {
+        "NAME": "One Punch Men: спецвыпуски 2",
+        "TEXT": "",
+        "IMG": "one-punch-man-2-specvypusk.jpg"
+    },
+
+    {
+        "NAME": "OverLord",
+        "TEXT": "",
+        "IMG": "overlord.jpg"
+    },
+
+    {
+        "NAME": "OverLord 2",
+        "TEXT": "",
+        "IMG": "overlord-2.jpg"
+    },
+
+    {
+        "NAME": "OverLord 3",
+        "TEXT": "",
+        "IMG": "overlord-3.jpg"
+    },
+
+    {
+        "NAME": "OverLord: бессмертный король",
+        "TEXT": "",
+        "IMG": "overlord-bessmertny-korol.jpg"
+    },
+
+    {
+        "NAME": "OverLord: тёмный воитель",
+        "TEXT": "",
+        "IMG": "overlord-temny-voitel.jpg"
+    },
+
+    {
+        "NAME": "Rainbow: семеро из шестой камеры",
+        "TEXT": "",
+        "IMG": "rainbow-semero-iz-shestoy-kamery.jpg"
+    },
+
+    {
+        "NAME": "Повторная жизнь",
+        "TEXT": "",
+        "IMG": "relife.jpg"
+    },
+
+    {
+        "NAME": "Сквозь слёзы я притворяюсь кошкой",
+        "TEXT": "",
+        "IMG": "skvoz-slezy-ja-pritvorjajus-koshkoj.jpg"
+    },
+
+    {
+        "NAME": "Госпожа Кагуя: в любви, как на войне",
+        "TEXT": "",
+        "IMG": "gospozha-kaguya-v-lyubvi-kak-na-voyne.jpg"
+    },
+
+    {
+        "NAME": "Бездарная Нана",
+        "TEXT": "",
+        "IMG": "bezdarnaya-nana.jpg"
+    },
+
+    {
+        "NAME": "Кенган Ашура",
+        "TEXT": "",
+        "IMG": "kengan-asura.jpg"
+    },
+
+    {
+        "NAME": "Кенган Ашура 2",
+        "TEXT": "",
+        "IMG": "kengan-asura.jpg"
+    },
+
+    {
+        "NAME": "Довод",
+        "TEXT": "",
+        "IMG": "dovod.jpg"
+    },
+
+    {
+        "NAME": "CODE8",
+        "TEXT": "",
+        "IMG": "code-8.jpg"
+    }
 ];

@@ -63,17 +63,21 @@ https://manuelpinto.in
     </div>
 
     <!-- панель управления -->
-    <div class="panel shadow">
-        <div class="cell cell-video"></div>
-    </div>
+    <div class="AppPanel shadow"></div>
 
 </body>
-
+    
+    
+    <!-- App Panel -->
+    <script type="text/javascript" src="DATA/AppPanel.js"></script>
+    <script type="text/javascript" src="SCRIPT/AppPanel.js"></script>
+    
+    
     <!-- подключение скрипта -->
     <script src='script.js'></script>
     <script>
         $(window).on('load', function() {
-            $('.backgroundBootanimation').delay(2000).fadeOut().end().fadeOut('slow');
+            $('.backgroundBootanimation').delay(10000).fadeOut().end().fadeOut('slow');
         });
     </script>
 
