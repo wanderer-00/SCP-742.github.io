@@ -14,6 +14,8 @@
     box-sizing: border-box;
 }
 
+video { width: 100% }
+
 button {
     /* ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ */
     padding: 0;
@@ -72,6 +74,7 @@ body {
 /* ОКНО */
 .window
 {
+    width: 500px;
     position: absolute;
     border: 1px solid var(--title);
 
@@ -152,9 +155,6 @@ body {
 /* КОНТЕНТ ОКНА */
 .content
 {
-    color: white;
-    min-width: 440px;
-    min-height: 50px;
     display: inline-block;
     background-color: #444241;
 }
@@ -258,10 +258,6 @@ body {
   100% { transform:rotate(945deg); opacity: 0; } 
 }
 
-video
-{
-    height: 300px;
-}
 
 
 /* ПАНЕЛЬ УПРАВЛЕНИЯ */

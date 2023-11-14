@@ -29,25 +29,12 @@ $('.cell-video').on('click', function() {
                                     }
 });
 
-$('.full').on('click', function() { alert('Эта функция ещё не работает ^ ^"')
-//                                    if ($Y_ == 0) {
-//                                        $window.css('width', '100%');
-//                                        $window.css('height', '100%');
-//                                        $window.css('position', 'absolute');
-//                                        $window.css('left', '0');
-//                                        $window.css('top', '0');
-//                                        $content.css('width', '100%');
-//                                        $content.css('height', '100%');
-//                                        $Y_++;
-//                                    }
-//                                    else {
-//                                        $window.css('width', '');
-//                                        $window.css('height', '');
-//                                        $content.css('width', '440px');
-//                                        $content.css('height', '440px');
-//                                        $Y_--;
-//                                    }
-    }
-);
+
+var FullStatus = 0;
+$('.full').on('click', function() {  alert('Эта функция ещё не работает ^ ^"')
+//    if ( FullStatus == 0 ) {
+//        $window.css('width', '100%');
+//    }
+});
 
 $('.clos').on('click', function() {$window.css('display', 'none');});
