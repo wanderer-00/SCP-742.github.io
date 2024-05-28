@@ -4,33 +4,52 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        body{
+        body {
             background: #323232;
         }
-        .box{
-            width: 500px;
-            height: 500px;
+
+        .wrapper {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .box {
+            width: 100%;
+            aspect-ratio: 1/1;
             background-image: url(img/1.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 0px 0px;
         }
+        
+        button {
+            font-size: 1.2em;
+            padding: 0.4em 0.6em;
+            margin: 1em 0;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
-    <div class="box"></div>
-    <button onclick='vv()'>сменить фон</button>
+
+    <div class="wrapper">
+        <div class="box"></div>
+        <button onclick='vv()'>сменить фон</button>
+    </div>
+
 </body>
-    <script>
-        var ssss = document.getElementsByClassName('box');
-        n=1;
-        
-        function vv(){
-            ssss[0].style.backgroundImage = `url(img/${n}.jpg)`;
-            if (n==1) 
-            {n++}
-            else
-            {n--}
+<script>
+    var ssss = document.getElementsByClassName('box');
+    n = 1;
+
+    function vv() {
+        ssss[0].style.backgroundImage = `url(img/${n}.jpg)`;
+        if (n == 1) {
+            n++
+        } else {
+            n--
         }
-    </script>
-</html>
+    }
+</script></html>

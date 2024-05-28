@@ -6,62 +6,69 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="script.js"></script>
-    
+
     <style>
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
 
-.switch input {display:none;}
+        .switch input {
+            display: none;
+        }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--BG);
-  -webkit-transition: .4s;
-  transition: .4s;
-    box-shadow:  3px 3px 2px var(--SH_DARK), -3px -3px 2px var(--SH_LITE);
-}
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--BG);
+            -webkit-transition: .4s;
+            transition: .4s;
+            box-shadow: 3px 3px 2px var(--SH_DARK), -3px -3px 2px var(--SH_LITE);
+        }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--BG);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: var(--BG);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
 
-input:checked + .slider {
-  background-color: var(--CL);
-}
+        input:checked+.slider {
+            background-color: var(--CL);
+        }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
 
-/* Rounded sliders */
-.slider.round {
-    border-radius: 30px;
-}
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 30px;
+        }
 
-.slider.round:before {
-  border-radius: 50%;
-}
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        
+        button {
+            cursor: pointer
+        }
     </style>
 </head>
+
 <body>
     <div class="Ui HILL">Ui</div>
     <div class="CLUSTER">
@@ -70,7 +77,7 @@ input:checked + .slider:before {
             <input type="button" value="BUTTON" class="HILL">
             <input type="button" value="Pressed button" style="color: gray; box-shadow: inset 3px 3px 2px var(--SH_DARK),inset -3px -3px 2px var(--SH_LITE)">
         </div>
-        
+
         <div class="box" id="CIRCLE">
             <button class="circle">
                 <span class="material-icons">add</span>
@@ -85,7 +92,7 @@ input:checked + .slider:before {
                 <span class="material-icons">arrow_forward_ios</span>
             </button>
         </div>
-        
+
         <div class="box">
             <button class="button_cube cube">
                 <span class="material-icons">search</span>
@@ -106,26 +113,25 @@ input:checked + .slider:before {
                 <span class="material-icons">bookmark</span>
             </button>
         </div>
-        
+
         <div class="box">
             <button class="back"></button>
             <button class="play"></button>
             <button class="next"></button>
         </div>
-        
+
         <input type="text" placeholder="Your massage" style="height: 100px">
         <input type="text" placeholder="Search...">
-        
+
         <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
+            <input type="checkbox">
+            <span class="slider round"></span>
         </label>
 
         <label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round">
-          </span>
+            <input type="checkbox" checked>
+            <span class="slider round">
+            </span>
         </label>
     </div>
-</body>
-</html>
+</body></html>
