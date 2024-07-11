@@ -1,3 +1,8 @@
+:root {
+    --text-color: #FFF;
+    --background-color: #343434;
+}
+
 *{
     /* border & padding входят в расчёт размера */
     -webkit-box-sizing: border-box;
@@ -6,10 +11,10 @@
 }
 
 body {
-    color: white;
+    color: var(--text-color);
     margin: 0px;
     padding: 0px;
-    background: #343434 url(img/fon.jpg);
+    background-color: var(--background-color);
     font-family: sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
